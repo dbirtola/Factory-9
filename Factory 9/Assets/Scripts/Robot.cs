@@ -19,7 +19,12 @@ public class Robot : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+        if (leftArm != null)
+            EquipLeftArm(leftArm);
+        if (rightArm != null)
+            EquipRightArm(rightArm);
+        if (legs != null)
+            swapLegs(legs);
 	}
 	
 	// Update is called once per frame

@@ -105,6 +105,12 @@ public class RobotController : MonoBehaviour {
     }
 
 
+    void PlayerDetected()
+    {
+        Debug.Log("Player detected!");
+    }
+
+
     void OnCollisionEnter2D(Collision2D col)
     {
         //Still need to do a tag or layer check to see if we hit a surface instead of any object

@@ -51,11 +51,14 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AIController.cs" />
+     <Compile Include="Assets\AIVision.cs" />
      <Compile Include="Assets\BasicSwitch.cs" />
      <Compile Include="Assets\BodyPartItem.cs" />
      <Compile Include="Assets\FinishDoor.cs" />
      <Compile Include="Assets\GunRightArm.cs" />
      <Compile Include="Assets\LegSlot.cs" />
+     <Compile Include="Assets\LeverSwitch.cs" />
      <Compile Include="Assets\Projectile.cs" />
      <Compile Include="Assets\RightArmSlot.cs" />
      <Compile Include="Assets\Rope.cs" />
@@ -76,6 +79,7 @@
      <Compile Include="Assets\Scripts\RopeCustomEditor.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
      <Compile Include="Assets\SlidingUpDoor.cs" />
+     <Compile Include="Assets\VisionCone.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
