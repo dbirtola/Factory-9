@@ -18,7 +18,6 @@ public class FactoryCamera : MonoBehaviour {
 
     void FixedUpdate()
     {
-        Debug.Log("ABAA");
         Vector3 newPosition = new Vector3();
         //Set x and y to the targets x and y
         newPosition.x = target.transform.position.x + offset.x;
