@@ -82,8 +82,10 @@ public class Robot : MonoBehaviour {
         if (legs != null)
         {
             jumpPower -= legs.jumpPowerBoost;
+            speed -= legs.speedBoost;
         }
         jumpPower += newLegs.jumpPowerBoost;
+        speed += newLegs.speedBoost;
 
         legs = newLegs;
         return true;

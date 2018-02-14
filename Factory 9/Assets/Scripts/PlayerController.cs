@@ -47,7 +47,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKey(KeyCode.D))
         {
-            playerRC.MoveHorizontal(player.speed * Time.deltaTime);
+            playerRC.MoveHorizontal(playerRobot.speed * Time.deltaTime);
 
         }else if (Input.GetKey(KeyCode.A))
         {

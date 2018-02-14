@@ -58,6 +58,7 @@
      <Compile Include="Assets\FinishDoor.cs" />
      <Compile Include="Assets\GunRightArm.cs" />
      <Compile Include="Assets\LegSlot.cs" />
+     <Compile Include="Assets\LeverHandle.cs" />
      <Compile Include="Assets\LeverSwitch.cs" />
      <Compile Include="Assets\Projectile.cs" />
      <Compile Include="Assets\RightArmSlot.cs" />
@@ -67,6 +68,7 @@
      <Compile Include="Assets\Scripts\BasicLeftArm.cs" />
      <Compile Include="Assets\Scripts\BasicLegs.cs" />
      <Compile Include="Assets\Scripts\BodyPart.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\FactoryCamera.cs" />
      <Compile Include="Assets\Scripts\Head.cs" />
      <Compile Include="Assets\Scripts\LeftArm.cs" />
