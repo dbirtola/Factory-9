@@ -58,6 +58,7 @@
      <Compile Include="Assets\FinishDoor.cs" />
      <Compile Include="Assets\GunRightArm.cs" />
      <Compile Include="Assets\LegSlot.cs" />
+     <Compile Include="Assets\LeverHandle.cs" />
      <Compile Include="Assets\LeverSwitch.cs" />
      <Compile Include="Assets\Projectile.cs" />
      <Compile Include="Assets\RightArmSlot.cs" />

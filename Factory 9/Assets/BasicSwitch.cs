@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class BasicSwitch : Switch {
 
-
+    bool isTriggered = false;
 
     void OnCollisionEnter2D(Collision2D col)
     {
@@ -15,7 +15,12 @@ public class BasicSwitch : Switch {
 
         if(normalOfCollision == worldUp)
         {
-            activateTargets();
+            if(isTriggered == false)
+            {
+                activateTargets();
+                GetComponent<Animation>().Play("BasicSwitchAnim");
+                isTriggered = true;
+            }
         }
     }
 }

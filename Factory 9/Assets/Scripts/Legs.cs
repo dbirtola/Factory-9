@@ -4,8 +4,8 @@ using UnityEngine;
 
 public class Legs : BodyPart {
 
-    public float jumpPowerBoost = 400;
-
+    public float jumpPowerBoost = 3000;
+    public float speedBoost = 3000;
 	// Use this for initialization
 	void Start () {
 		
