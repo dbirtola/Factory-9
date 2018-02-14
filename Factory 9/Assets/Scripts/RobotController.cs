@@ -15,7 +15,7 @@ public enum RobotState
 
 public class RobotController : MonoBehaviour {
 
-    RobotState state = RobotState.Idle;
+    public RobotState state = RobotState.Idle;
 
     GameObject lastSurfaceHit;
 
@@ -23,9 +23,14 @@ public class RobotController : MonoBehaviour {
     Robot robot;
 
     bool canJump = true;
+    private float timeAttatchedToWall;
 
     public float WallJumpBonusPercent = 0.10f;
     public float TheFloatyFeelingFixingFloat = -100f;
+    public float wallStickDuration = 0.2f;
+    public float WallJumpPushOffPower = 1000f;
+
+    
 
     void Awake()
     {
@@ -40,13 +45,14 @@ public class RobotController : MonoBehaviour {
         {
             var distanceFromLastSurface = lastSurfaceHit.GetComponent<Collider2D>().Distance(GetComponent<Collider2D>());
             //Debug.DrawLine(distanceFromLastSurface.pointA, distanceFromLastSurface.pointB, Color.white);
-            if (distanceFromLastSurface.distance >= 0.2)
+            if (distanceFromLastSurface.distance >= 0.2f)
             {
+
                 state = RobotState.InAir;
             }
         }
 
-        if(rb.velocity.y <= 0)
+        if(rb.velocity.y < 0)
         {
             rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat));
         }
@@ -54,9 +60,20 @@ public class RobotController : MonoBehaviour {
        
     }
 
-    public void GrabClimeableObject()
+    void FixedUpdate()
     {
+        if (state == RobotState.OnWall && rb.velocity.y <= 0)
+        {
+            rb.velocity = new Vector2(rb.velocity.x, 0);
+        }
+
+        if (state == RobotState.OnWall && Time.time - timeAttatchedToWall >= wallStickDuration)
+        {
+            state = RobotState.InAir;
+        }
     }
+
+
 
     public void FireRightArm()
     {
@@ -89,6 +106,18 @@ public class RobotController : MonoBehaviour {
             if(state == RobotState.OnWall)
             {
                 rb.AddForce(Vector2.up * robot.jumpPower * WallJumpBonusPercent);
+                Vector2 dir = new Vector2();
+
+                if(lastSurfaceHit.transform.position.x - transform.position.x > 0)
+                {
+                    Debug.Log("GO FUCKING RIGHT");
+                    dir = Vector2.right * -1;
+                }else
+                {
+                    Debug.Log("go left");
+                    dir = Vector2.right;
+                }
+                rb.AddForce(dir * WallJumpPushOffPower);
             }
             state = RobotState.InAir;
         }
@@ -105,6 +134,7 @@ public class RobotController : MonoBehaviour {
         if(lastSurfaceHit != wall)
         {
             canJump = true;
+            timeAttatchedToWall = Time.time;
             state = RobotState.OnWall;
         }
 
@@ -122,6 +152,15 @@ public class RobotController : MonoBehaviour {
         Debug.Log("Player detected!");
     }
 
+    void OnCollisionStay2D(Collision2D col)
+    {
+
+        float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
+        if (angleOfCollision < 45)
+        {
+            HitGround();
+        }
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
