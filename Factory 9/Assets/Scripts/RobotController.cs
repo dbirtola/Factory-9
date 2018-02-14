@@ -24,6 +24,9 @@ public class RobotController : MonoBehaviour {
 
     bool canJump = true;
 
+    public float WallJumpBonusPercent = 0.10f;
+    public float TheFloatyFeelingFixingFloat = -100f;
+
     void Awake()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -41,6 +44,11 @@ public class RobotController : MonoBehaviour {
             {
                 state = RobotState.InAir;
             }
+        }
+
+        if(rb.velocity.y <= 0)
+        {
+            rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat));
         }
 
        
@@ -78,6 +86,10 @@ public class RobotController : MonoBehaviour {
         {
             canJump = false;
             rb.AddForce(Vector2.up * robot.jumpPower);
+            if(state == RobotState.OnWall)
+            {
+                rb.AddForce(Vector2.up * robot.jumpPower * WallJumpBonusPercent);
+            }
             state = RobotState.InAir;
         }
     }

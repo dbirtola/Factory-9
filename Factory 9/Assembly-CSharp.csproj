@@ -68,6 +68,7 @@
      <Compile Include="Assets\Scripts\BasicLeftArm.cs" />
      <Compile Include="Assets\Scripts\BasicLegs.cs" />
      <Compile Include="Assets\Scripts\BodyPart.cs" />
+     <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\FactoryCamera.cs" />
      <Compile Include="Assets\Scripts\Head.cs" />
      <Compile Include="Assets\Scripts\LeftArm.cs" />
