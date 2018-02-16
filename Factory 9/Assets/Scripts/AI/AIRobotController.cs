@@ -2,15 +2,17 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIRobotController : MonoBehaviour {
+public class AIRobotController : AIController {
 
 	// Use this for initialization
-	void Start () {
-		
+	protected override void Start () {
+        base.Start();
 	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+
+    protected override void OnPlayerSpotted(GameObject player)
+    {
+        base.OnPlayerSpotted(player);
+
+        //Enter code here for when the robot finds a player.
+    }
 }
