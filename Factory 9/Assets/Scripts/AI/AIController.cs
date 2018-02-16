@@ -5,6 +5,7 @@ using UnityEngine;
 public class AIController : MonoBehaviour {
 
     public GameObject target;
+
     protected virtual void Start()
     {
         var vis = GetComponent<AIVision>();

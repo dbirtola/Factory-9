@@ -9,6 +9,8 @@ public class Projectile : MonoBehaviour {
     Vector3 direction;
     public bool canCutRope = false;
 
+    public bool destroyOnImpact = true;
+
     void Start()
     {
          direction = (destination - transform.position).normalized;
@@ -17,5 +19,12 @@ public class Projectile : MonoBehaviour {
     void FixedUpdate()
     {
         GetComponent<Rigidbody2D>().velocity = direction * speed;
+    }
+
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        if (destroyOnImpact)
+            Destroy(gameObject);
     }
 }
