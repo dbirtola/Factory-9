@@ -55,19 +55,24 @@
      <Compile Include="Assets\AIVision.cs" />
      <Compile Include="Assets\BasicSwitch.cs" />
      <Compile Include="Assets\BodyPartItem.cs" />
+     <Compile Include="Assets\Dispenser.cs" />
      <Compile Include="Assets\FinishDoor.cs" />
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GunRightArm.cs" />
+     <Compile Include="Assets\KillZone.cs" />
      <Compile Include="Assets\LegSlot.cs" />
      <Compile Include="Assets\LeverHandle.cs" />
      <Compile Include="Assets\LeverSwitch.cs" />
      <Compile Include="Assets\Projectile.cs" />
      <Compile Include="Assets\RightArmSlot.cs" />
+     <Compile Include="Assets\RobotHeadLamp.cs" />
      <Compile Include="Assets\Rope.cs" />
      <Compile Include="Assets\Scripts\Activateable.cs" />
      <Compile Include="Assets\Scripts\Arm.cs" />
      <Compile Include="Assets\Scripts\BasicLeftArm.cs" />
      <Compile Include="Assets\Scripts\BasicLegs.cs" />
      <Compile Include="Assets\Scripts\BodyPart.cs" />
+     <Compile Include="Assets\Scripts\CauseOfDeath.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\FactoryCamera.cs" />
      <Compile Include="Assets\Scripts\Head.cs" />
@@ -78,9 +83,9 @@
      <Compile Include="Assets\Scripts\RightArm.cs" />
      <Compile Include="Assets\Scripts\Robot.cs" />
      <Compile Include="Assets\Scripts\RobotController.cs" />
-     <Compile Include="Assets\Scripts\RopeCustomEditor.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
      <Compile Include="Assets\SlidingUpDoor.cs" />
+     <Compile Include="Assets\UIManager.cs" />
      <Compile Include="Assets\VisionCone.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>

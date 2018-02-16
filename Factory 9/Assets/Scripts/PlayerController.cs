@@ -6,9 +6,11 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour {
     public static PlayerController playerController;
     public static Player player;
-    Robot playerRobot;
-    RobotController playerRC;
+    public Robot playerRobot;
+    public RobotController playerRC;
     Rigidbody2D rb;
+
+    public bool movementEnabled = true;
 
     static public Vector2 GetMouseInWorldSpace()
     {
@@ -38,6 +40,8 @@ public class PlayerController : MonoBehaviour {
         }
 
         player = GetComponent<Player>();
+
+        playerRobot.robotDiedEvent.AddListener(OnDeath);
     }
 
 
@@ -45,18 +49,28 @@ public class PlayerController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
 
-        if (Input.GetKey(KeyCode.D))
+        if (movementEnabled)
         {
-            playerRC.MoveHorizontal(playerRobot.speed * Time.deltaTime);
+            if (Input.GetKey(KeyCode.D))
+            {
+                playerRC.MoveHorizontal(playerRobot.speed * Time.deltaTime);
 
-        }else if (Input.GetKey(KeyCode.A))
-        {
-            playerRC.MoveHorizontal(-1 * playerRobot.speed * Time.deltaTime);
+            }
+            else if (Input.GetKey(KeyCode.A))
+            {
+                playerRC.MoveHorizontal(-1 * playerRobot.speed * Time.deltaTime);
+            }
+
+            if (Input.GetKeyDown(KeyCode.Space))
+            {
+                playerRC.Jump();
+            }
         }
 
         if (Input.GetKeyDown(KeyCode.G))
         {
             playerRobot.headLampActive = !playerRobot.headLampActive;
+            //playerRC.SetHeadlightOn(true);
         }
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
@@ -64,36 +78,27 @@ public class PlayerController : MonoBehaviour {
             playerRC.FireRightArm();
         }
 
-        if (Input.GetKeyDown(KeyCode.Space))
-        {
-            playerRC.Jump();
-        }
 
+        //Test function since enemies not implemented
         if (Input.GetKeyDown(KeyCode.T))
         {
             //For testing
             player.GetComponent<Robot>().takeDamage();
         }
 
+
+        //Looting body parts
         if (Input.GetKeyDown(KeyCode.E))
         {
             Vector2 pos = new Vector2(transform.position.x + 1, transform.position.y);
-            var colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 1), 0);
+            var colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 1.5f), 0);
 
             foreach(Collider2D col in colls)
             {
-                /*
-                if (col.gameObject.GetComponent<BodyPartItem>())
-                {
-                    Debug.Log("Equipping: " + col.gameObject.GetComponent<BodyPartItem>().bodyPart);
-                    PlayerController.player.GetComponent<Robot>().EquipBodyPart(col.gameObject.GetComponent<BodyPartItem>().bodyPart);
-                    //Destroy(col.gameObject);
-                }*/
                 if (col.gameObject.GetComponent<BodyPart>())
                 {
                     Debug.Log("Equipping: " + col.gameObject);
                     PlayerController.player.GetComponent<Robot>().EquipBodyPart(col.gameObject.GetComponent<BodyPart>());
-                    //Destroy(col.gameObject);
                 }
             }
         }
@@ -120,5 +125,27 @@ public class PlayerController : MonoBehaviour {
 
 
 
+    public void SetMovementEnabled(bool enabled)
+    {
+        movementEnabled = enabled;
+    }
 
+    public void DisableMovementForDuration(float duration)
+    {
+        StartCoroutine(TimedDisable(duration));
+    }
+
+    //Disables movement and enables after 'duration' period of time
+    IEnumerator TimedDisable(float duration)
+    {
+        SetMovementEnabled(false);
+        yield return new WaitForSeconds(duration);
+        SetMovementEnabled(true);
+        yield return null;
+    }
+
+    public void OnDeath(GameObject killer)
+    {
+        Debug.Log("You have died");
+    }
 }

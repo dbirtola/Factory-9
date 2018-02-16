@@ -30,6 +30,8 @@ public class RobotController : MonoBehaviour {
     public float wallStickDuration = 0.2f;
     public float WallJumpPushOffPower = 1000f;
 
+    public float WallJumpMovementDisableDuration = 0.5f;
+
     
 
     void Awake()
@@ -114,10 +116,10 @@ public class RobotController : MonoBehaviour {
                     dir = Vector2.right * -1;
                 }else
                 {
-                    Debug.Log("go left");
                     dir = Vector2.right;
                 }
                 rb.AddForce(dir * WallJumpPushOffPower);
+                PlayerController.playerController.DisableMovementForDuration(WallJumpMovementDisableDuration);
             }
             state = RobotState.InAir;
         }
@@ -185,7 +187,12 @@ public class RobotController : MonoBehaviour {
         lastSurfaceHit = col.gameObject;
 
     }
+    
 
-
+    public void SetHeadlightOn(bool on = true)
+    {
+        var light = GetComponentInChildren<RobotHeadLamp>();
+        light.FlickerLight(true);
+    }
 
 }

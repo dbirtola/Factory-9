@@ -104,7 +104,6 @@ public class EnemyMovement : MonoBehaviour {
             }
         else
         {
-            Debug.Log("not close enough yet");
             GetComponent<RobotController>().MoveHorizontal(currentSpeed);//keep moving robot 
         }
 
