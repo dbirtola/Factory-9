@@ -1,13 +1,21 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.Events;
 
+
+public class RobotDiedEvent : UnityEvent<GameObject>
+{
+
+}
 
 
 
 
 public class Robot : MonoBehaviour {
-    
+
+    public RobotDiedEvent robotDiedEvent;
+
     public Legs legs;
     public LeftArm leftArm;
     public RightArm rightArm;
@@ -16,6 +24,12 @@ public class Robot : MonoBehaviour {
 
     public float speed = 300;
     public float jumpPower = 200;
+
+
+    void Awake()
+    {
+        robotDiedEvent = new RobotDiedEvent();
+    }
 
 	// Use this for initialization
 	void Start () {
@@ -54,25 +68,31 @@ public class Robot : MonoBehaviour {
 
         if (bodyPart.GetComponent<RightArm>())
         {
-            EquipRightArm(bodyPart.GetComponent<RightArm>());
+            oldPart =  EquipRightArm(bodyPart.GetComponent<RightArm>());
+            return true;
         }
 
+        if(oldPart != null)
+        {
+            //oldPart.transform.SetParent(null);
+            //oldPart.AddComponent<rigid
+        }
         return false;
     }
 
     
     public bool swapLegs(Legs newLegs)
     {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (legs == null)
         {
-            Rigidbody2D rb = GetComponent<Rigidbody2D>();
             transform.position += new Vector3(0, 1);
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
             transform.rotation = Quaternion.identity;
-            rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         }
 
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         newLegs.transform.SetParent(transform.Find("LegsSlot"), false);
         newLegs.transform.localPosition = Vector3.zero;
         newLegs.transform.rotation = Quaternion.identity;
@@ -156,4 +176,8 @@ public class Robot : MonoBehaviour {
     }
 
 
+    public void Die(GameObject killer = null)
+    {
+        robotDiedEvent.Invoke(killer);
+    }
 }

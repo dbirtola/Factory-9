@@ -51,23 +51,7 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\2DLightAsset\Scripts\2DLight\Editor\DynamicLightEditor.cs" />
-     <Compile Include="Assets\2DLightAsset\Scripts\2DLight\Editor\DynamicLightMenu.cs" />
-     <Compile Include="Assets\2DLightAsset\Scripts\2DLight\Editor\EditorUtils.cs" />
-     <Compile Include="Assets\Light2D\Editor\Light2DMenu.cs" />
-     <Compile Include="Assets\Light2D\Editor\LightingSystemCreationWindow.cs" />
-     <Compile Include="Assets\Light2D\Editor\LightingSystemEditor.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\BlockTilingInfoDrawer.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\EditorCameraWindow.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\HingeAutoRotatorEditor.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\HingeJointUtil.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\LandingLegEditor.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\Point2Drawer.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\ReadOnlyDrawer.cs" />
-     <Compile Include="Assets\Light2D\Examples\Editor\ScriptableObjectCreatorWindow.cs" />
- <Reference Include="Assembly-UnityScript">
- <HintPath>C:/Users/Damen/Documents/GitHub/Factory-9/Factory 9/Library/ScriptAssemblies/Assembly-UnityScript.dll</HintPath>
- </Reference>
+     <Compile Include="Assets\Editor\RopeCustomEditor.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>

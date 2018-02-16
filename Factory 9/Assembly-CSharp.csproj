@@ -51,37 +51,44 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-     <Compile Include="Assets\AIController.cs" />
-     <Compile Include="Assets\AIVision.cs" />
-     <Compile Include="Assets\BasicSwitch.cs" />
-     <Compile Include="Assets\BodyPartItem.cs" />
-     <Compile Include="Assets\FinishDoor.cs" />
-     <Compile Include="Assets\GunRightArm.cs" />
-     <Compile Include="Assets\LegSlot.cs" />
-     <Compile Include="Assets\LeverHandle.cs" />
-     <Compile Include="Assets\LeverSwitch.cs" />
-     <Compile Include="Assets\Projectile.cs" />
-     <Compile Include="Assets\RightArmSlot.cs" />
-     <Compile Include="Assets\Rope.cs" />
+     <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\Scripts\Activateable.cs" />
+     <Compile Include="Assets\Scripts\AI\AIController.cs" />
+     <Compile Include="Assets\Scripts\AI\AIRobotController.cs" />
+     <Compile Include="Assets\Scripts\AI\AITurretController.cs" />
+     <Compile Include="Assets\Scripts\AI\AIVision.cs" />
      <Compile Include="Assets\Scripts\Arm.cs" />
      <Compile Include="Assets\Scripts\BasicLeftArm.cs" />
      <Compile Include="Assets\Scripts\BasicLegs.cs" />
+     <Compile Include="Assets\Scripts\BasicSwitch.cs" />
      <Compile Include="Assets\Scripts\BodyPart.cs" />
+     <Compile Include="Assets\Scripts\BodyPartItem.cs" />
+     <Compile Include="Assets\Scripts\CauseOfDeath.cs" />
+     <Compile Include="Assets\Scripts\Dispenser.cs" />
      <Compile Include="Assets\Scripts\EnemyMovement.cs" />
      <Compile Include="Assets\Scripts\FactoryCamera.cs" />
+     <Compile Include="Assets\Scripts\FinishDoor.cs" />
+     <Compile Include="Assets\Scripts\GunRightArm.cs" />
      <Compile Include="Assets\Scripts\Head.cs" />
+     <Compile Include="Assets\Scripts\KillZone.cs" />
      <Compile Include="Assets\Scripts\LeftArm.cs" />
      <Compile Include="Assets\Scripts\Legs.cs" />
+     <Compile Include="Assets\Scripts\LegSlot.cs" />
+     <Compile Include="Assets\Scripts\LeverHandle.cs" />
+     <Compile Include="Assets\Scripts\LeverSwitch.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\PlayerController.cs" />
+     <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\RightArm.cs" />
+     <Compile Include="Assets\Scripts\RightArmSlot.cs" />
      <Compile Include="Assets\Scripts\Robot.cs" />
      <Compile Include="Assets\Scripts\RobotController.cs" />
-     <Compile Include="Assets\Scripts\RopeCustomEditor.cs" />
+     <Compile Include="Assets\Scripts\RobotHeadLamp.cs" />
+     <Compile Include="Assets\Scripts\Rope.cs" />
+     <Compile Include="Assets\Scripts\SlidingUpDoor.cs" />
      <Compile Include="Assets\Scripts\Switch.cs" />
-     <Compile Include="Assets\SlidingUpDoor.cs" />
-     <Compile Include="Assets\VisionCone.cs" />
+     <Compile Include="Assets\Scripts\UIManager.cs" />
+     <Compile Include="Assets\Scripts\VisionCone.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
