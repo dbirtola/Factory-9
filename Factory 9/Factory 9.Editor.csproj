@@ -5,16 +5,16 @@
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
     <ProductVersion>10.0.20506</ProductVersion>
     <SchemaVersion>2.0</SchemaVersion>
-    <ProjectGuid>{0B1A0AEC-F099-E7B4-C5AD-2C79DB06CDBB}</ProjectGuid>
+    <ProjectGuid>{29BEE510-4815-D14F-E9A2-CE5FA5D3B342}</ProjectGuid>
     <OutputType>Library</OutputType>
-    <AssemblyName>Assembly-CSharp</AssemblyName>
+    <AssemblyName>Assembly-CSharp-Editor</AssemblyName>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{E097FAD1-6243-4DAD-9C02-E9B9EFC3FFC1};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <TargetFrameworkIdentifier>.NETFramework</TargetFrameworkIdentifier>
     <TargetFrameworkVersion>v3.5</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Unity Subset v3.5</TargetFrameworkProfile>
+    <TargetFrameworkProfile>Unity Full v3.5</TargetFrameworkProfile>
     <CompilerResponseFile></CompilerResponseFile>
-    <UnityProjectType>Game:1</UnityProjectType>
+    <UnityProjectType>Editor:5</UnityProjectType>
     <UnityBuildTarget>StandaloneWindows64:19</UnityBuildTarget>
     <UnityVersion>2017.3.0f3</UnityVersion>
     <RootNamespace></RootNamespace>
@@ -282,45 +282,13 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Assets\GameManager.cs" />
-    <Compile Include="Assets\Scripts\Activateable.cs" />
-    <Compile Include="Assets\Scripts\AI\AIChase.cs" />
-    <Compile Include="Assets\Scripts\AI\AIController.cs" />
-    <Compile Include="Assets\Scripts\AI\AIRobotController.cs" />
-    <Compile Include="Assets\Scripts\AI\AITurretController.cs" />
-    <Compile Include="Assets\Scripts\AI\AIVision.cs" />
-    <Compile Include="Assets\Scripts\Arm.cs" />
-    <Compile Include="Assets\Scripts\BasicLeftArm.cs" />
-    <Compile Include="Assets\Scripts\BasicLegs.cs" />
-    <Compile Include="Assets\Scripts\BasicSwitch.cs" />
-    <Compile Include="Assets\Scripts\BodyPart.cs" />
-    <Compile Include="Assets\Scripts\BodyPartItem.cs" />
-    <Compile Include="Assets\Scripts\CauseOfDeath.cs" />
-    <Compile Include="Assets\Scripts\Dispenser.cs" />
-    <Compile Include="Assets\Scripts\EnemyMovement.cs" />
-    <Compile Include="Assets\Scripts\FactoryCamera.cs" />
-    <Compile Include="Assets\Scripts\FinishDoor.cs" />
-    <Compile Include="Assets\Scripts\GunRightArm.cs" />
-    <Compile Include="Assets\Scripts\Head.cs" />
-    <Compile Include="Assets\Scripts\KillZone.cs" />
-    <Compile Include="Assets\Scripts\LeftArm.cs" />
-    <Compile Include="Assets\Scripts\Legs.cs" />
-    <Compile Include="Assets\Scripts\LegSlot.cs" />
-    <Compile Include="Assets\Scripts\LeverHandle.cs" />
-    <Compile Include="Assets\Scripts\LeverSwitch.cs" />
-    <Compile Include="Assets\Scripts\Player.cs" />
-    <Compile Include="Assets\Scripts\PlayerController.cs" />
-    <Compile Include="Assets\Scripts\Projectile.cs" />
-    <Compile Include="Assets\Scripts\RightArm.cs" />
-    <Compile Include="Assets\Scripts\RightArmSlot.cs" />
-    <Compile Include="Assets\Scripts\Robot.cs" />
-    <Compile Include="Assets\Scripts\RobotController.cs" />
-    <Compile Include="Assets\Scripts\RobotHeadLamp.cs" />
-    <Compile Include="Assets\Scripts\Rope.cs" />
-    <Compile Include="Assets\Scripts\SlidingUpDoor.cs" />
-    <Compile Include="Assets\Scripts\Switch.cs" />
-    <Compile Include="Assets\Scripts\UIManager.cs" />
-    <Compile Include="Assets\Scripts\VisionCone.cs" />
+    <ProjectReference Include="Factory 9.csproj">
+      <Project>{0B1A0AEC-F099-E7B4-C5AD-2C79DB06CDBB}</Project>
+      <Name>Factory 9</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Assets\Editor\RopeCustomEditor.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />

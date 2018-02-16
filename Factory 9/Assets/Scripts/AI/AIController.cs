@@ -3,8 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class AIController : MonoBehaviour {
-    
 
+    public GameObject target;
     protected virtual void Start()
     {
         var vis = GetComponent<AIVision>();
@@ -17,6 +17,7 @@ public class AIController : MonoBehaviour {
 
     protected virtual void OnPlayerSpotted(GameObject player)
     {
-        Debug.Log("Spotted Player");
+        target = player;
+        player.GetComponent<AIChase>().isChasing = true;
     }
 }
