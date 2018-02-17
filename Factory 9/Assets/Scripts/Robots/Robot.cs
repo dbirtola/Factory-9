@@ -86,6 +86,11 @@ public class Robot : MonoBehaviour {
         return false;
     }
 
+    public void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log(col.relativeVelocity);
+    }
+
     
     public bool swapLegs(Legs newLegs)
     {
@@ -103,6 +108,7 @@ public class Robot : MonoBehaviour {
         newLegs.transform.localPosition = Vector3.zero;
         newLegs.transform.rotation = Quaternion.identity;
         Destroy(newLegs.GetComponent<Rigidbody2D>());
+        //newLegs.GetComponent<Rigidbody2D>().simulated = false;
 
 
         if (legs != null)
@@ -145,17 +151,24 @@ public class Robot : MonoBehaviour {
     }
 
 
-    public void takeDamage(GameObject attacker)
+    public void takeDamage(int damage, GameObject attacker)
     {
         if (isInvulnerable == true)
             return;
 
         robotDamagedEvent.Invoke(attacker);
 
-        if(LoseArm() == false)
+        for(int i = 0; i < damage; i++)
         {
-            
+            if (LoseArm() == false)
+            {
+                if (LoseLegs(new Vector2(100, 0)) == false)
+                {
+                    Die();
+                }
+            }
         }
+
 
     }
 
@@ -182,6 +195,15 @@ public class Robot : MonoBehaviour {
         return true;
     }
 
+    public bool LoseLegs(Vector2 knockPower)
+    {
+        if (legs == null)
+            return false;
+        legs.transform.SetParent(null);
+        legs.GetComponent<Rigidbody2D>().isKinematic = false;
+        legs.GetComponent<Rigidbody2D>().AddForce(knockPower);
+        return true;
+    }
 
     public void Die(GameObject killer = null)
     {

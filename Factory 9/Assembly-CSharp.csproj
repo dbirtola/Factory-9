@@ -56,6 +56,7 @@
      <Compile Include="Assets\Scripts\Activators\LeverHandle.cs" />
      <Compile Include="Assets\Scripts\Activators\LeverSwitch.cs" />
      <Compile Include="Assets\Scripts\Activators\Switch.cs" />
+     <Compile Include="Assets\Scripts\AI\AIChase.cs" />
      <Compile Include="Assets\Scripts\AI\AIController.cs" />
      <Compile Include="Assets\Scripts\AI\AIRobotController.cs" />
      <Compile Include="Assets\Scripts\AI\AITurretController.cs" />

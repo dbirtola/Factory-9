@@ -96,7 +96,7 @@ public class RobotController : MonoBehaviour {
     public void MoveHorizontal(float speed)
     {
         //transform.position += Vector3.right * speed;
-        rb.AddForce(Vector2.right * speed);
+        rb.AddForce(Vector2.right * speed * Time.deltaTime);
     }
 
     public void Jump()
@@ -114,12 +114,16 @@ public class RobotController : MonoBehaviour {
                 {
                     Debug.Log("GO FUCKING RIGHT");
                     dir = Vector2.right * -1;
-                }else
+                    PlayerController.playerController.DisableSingleSidedMovementForDuration(WallJumpMovementDisableDuration, true);
+                }
+                else
                 {
                     dir = Vector2.right;
+                    PlayerController.playerController.DisableSingleSidedMovementForDuration(WallJumpMovementDisableDuration, false);
+
                 }
                 rb.AddForce(dir * WallJumpPushOffPower);
-                PlayerController.playerController.DisableMovementForDuration(WallJumpMovementDisableDuration);
+               //PlayerController.playerController.DisableMovementForDuration(WallJumpMovementDisableDuration);
             }
             state = RobotState.InAir;
         }

@@ -69,6 +69,8 @@ GameObject:
   m_Component:
   - component: {fileID: 4473008821241230}
   - component: {fileID: 108831528447401020}
+  - component: {fileID: 111715393574939730}
+  - component: {fileID: 114567124849631840}
   m_Layer: 0
   m_Name: HeadLamp
   m_TagString: Untagged
@@ -185,7 +187,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938563163598774}
   m_LocalRotation: {x: -0, y: -0, z: 0.40077162, w: 0.91617805}
-  m_LocalPosition: {x: -17.19, y: 0.51, z: 0}
+  m_LocalPosition: {x: 79.58, y: -4.6, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4721447157465246}
@@ -207,7 +209,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 1
+  m_Mass: 15
   m_LinearDrag: 0.9
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -470,6 +472,21 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!111 &111715393574939730
+Animation:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683854880691942}
+  m_Enabled: 1
+  serializedVersion: 3
+  m_Animation: {fileID: 7400000, guid: 4f430ba30057ea14e95eb7a13a496f9b, type: 2}
+  m_Animations:
+  - {fileID: 7400000, guid: 4f430ba30057ea14e95eb7a13a496f9b, type: 2}
+  m_WrapMode: 0
+  m_PlayAutomatically: 0
+  m_AnimatePhysics: 0
+  m_CullingType: 0
 --- !u!114 &114034461689133398
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -486,8 +503,8 @@ MonoBehaviour:
   rightArm: {fileID: 0}
   headLampActive: 0
   isInvulnerable: 0
-  speed: 300
-  jumpPower: 300
+  speed: 300000
+  jumpPower: 3750
 --- !u!114 &114318819814871782
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -499,6 +516,12 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: e249906aef479ac41abd9ba461a85445, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  state: 0
+  WallJumpBonusPercent: 0.1
+  TheFloatyFeelingFixingFloat: -100
+  wallStickDuration: 0.4
+  WallJumpPushOffPower: 1000
+  WallJumpMovementDisableDuration: 0.2
 --- !u!114 &114436177729277394
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -508,6 +531,20 @@ MonoBehaviour:
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: b9b5f44c5b14b624e9364c7fb2d48b28, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  playerRobot: {fileID: 0}
+  playerRC: {fileID: 0}
+  movementEnabled: 1
+--- !u!114 &114567124849631840
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1683854880691942}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 157833f47f998534ba5889c859446405, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
 --- !u!114 &114765211919246872
