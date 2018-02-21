@@ -25,7 +25,6 @@ public class AIChase : MonoBehaviour {
             { // if the player get far away, then go back to patrolling
                 isChasing = false;
                 GetComponent<EnemyMovement>().isPatrolling = true;
-                Debug.Log("ESCAPED");
                 GetComponent<RobotController>().MoveHorizontal(0);//has no speed
                 StartCoroutine(RobotStuck(2f));
             }
@@ -33,7 +32,6 @@ public class AIChase : MonoBehaviour {
             //If robot gets too close to the player, slow down
             if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) < 2)
             {
-                Debug.Log("CONTACT");
 
                 GetComponent<RobotController>().MoveHorizontal(0);//has no speed
                 StartCoroutine(RobotStuck(.5f));
@@ -62,14 +60,12 @@ public class AIChase : MonoBehaviour {
         directionToChase = GetComponent<AIController>().target.transform.position - GetComponent<Rigidbody2D>().transform.position;
         if (directionToChase.x > 0 && currentSpeed < 0)
         {//set speed positive
-            Debug.Log("RIGHT");
 
             currentSpeed = -1 * currentSpeed;
 
         }
         else if (directionToChase.x < 0 && currentSpeed > 0)//set speed negative
         {
-            Debug.Log("LEFT");
 
             currentSpeed = -1 * currentSpeed;
 

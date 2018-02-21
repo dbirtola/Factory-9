@@ -22,8 +22,5 @@ public class AIController : MonoBehaviour {
         target = player.gameObject;
         GetComponent<AIChase>().isChasing = true;
 
-        //shoot the player
-        if (target.GetComponent<Robot>().rightArm != null)
-            target.GetComponent<AIShoot>().isShooting = true;
     }
 }

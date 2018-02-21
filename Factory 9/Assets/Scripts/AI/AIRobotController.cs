@@ -14,5 +14,10 @@ public class AIRobotController : AIController {
         base.OnPlayerSpotted(player);
 
         //Enter code here for when the robot finds a player.
+        //shoot the player
+        if (target.GetComponent<Robot>().rightArm != null)
+        {
+            GetComponent<GunRightArm>().Fire(target.GetComponent<Robot>().transform.position);
+        }
     }
 }
