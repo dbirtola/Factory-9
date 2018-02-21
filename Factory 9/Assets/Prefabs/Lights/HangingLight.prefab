@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1736552888739296}
   m_LocalRotation: {x: 0.7071068, y: -0, z: -0, w: 0.7071068}
-  m_LocalPosition: {x: 0, y: 4.52, z: -1.0509863}
+  m_LocalPosition: {x: 0, y: 4.63, z: -1}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4422556970701144}
@@ -66,7 +66,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1326078349124692}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 20.402798, y: -1.8939228, z: 0.010986328}
+  m_LocalPosition: {x: 8.849564, y: 0.443074, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4002001854373472}
@@ -118,9 +118,9 @@ Light:
   serializedVersion: 8
   m_Type: 0
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 90.19
-  m_Range: 8.3
-  m_SpotAngle: 30
+  m_Intensity: 60
+  m_Range: 15
+  m_SpotAngle: 50
   m_CookieSize: 10
   m_Shadows:
     m_Type: 2
@@ -202,7 +202,7 @@ HingeJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0.49}
-  m_ConnectedAnchor: {x: 20.402798, y: -1.4039228}
+  m_ConnectedAnchor: {x: 8.849564, y: 0.933074}
   m_UseMotor: 0
   m_Motor:
     m_MotorSpeed: 0
