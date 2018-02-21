@@ -45,7 +45,9 @@ public class EnemyMovement : MonoBehaviour {
                 else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
                         currentSpeed = -1 * currentSpeed;
 
-            GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+            var robot = GetComponent<Robot>();
+            //GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+            GetComponent<RobotController>().MoveHorizontal(robot.speed);
 
             //GetComponent<Rigidbody2D>().transform.position
             if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)

@@ -120,6 +120,7 @@ public class RobotController : MonoBehaviour {
 
     public void MoveHorizontal(float speed)
     {
+        Debug.Log(gameObject + " is moving horizontal at speed" + speed);
         //transform.position += Vector3.right * speed;
         rb.AddForce(Vector2.right * speed * Time.deltaTime);
 
@@ -133,7 +134,6 @@ public class RobotController : MonoBehaviour {
 
             state = RobotState.OnGround;
         }
-        Debug.Log(hit.distance);
 
         //Animations
 
