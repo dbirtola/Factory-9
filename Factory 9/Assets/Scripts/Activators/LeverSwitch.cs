@@ -10,8 +10,8 @@ public class LeverSwitch : Switch {
     {
         Vector2 colNorm = col.contacts[0].normal;
         float AngleOfCol = Vector2.Angle( colNorm, transform.right);
-        Debug.Log(AngleOfCol);
-        Debug.DrawRay(col.contacts[0].point, col.contacts[0].normal * 15, Color.white, 1f);
+
+        //Debug.DrawRay(col.contacts[0].point, col.contacts[0].normal * 15, Color.white, 1f);
         if(AngleOfCol < 90)
         {
             //Debug.Log("NotToggling!");

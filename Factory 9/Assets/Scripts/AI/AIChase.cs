@@ -7,17 +7,17 @@ public class AIChase : MonoBehaviour {
     private Vector2 directionToChase;
     public bool isChasing = false;
     public float distance = 10;
-    private float currentSpeed = 9;
+    private float currentSpeed;
 
     // Use this for initialization
     void Start () {
-	}
+    }
 
     // Update is called once per frame
     void Update() {
         if (isChasing == true)
         {
-
+            currentSpeed = GetComponent<Robot>().speed;
             GetComponent<EnemyMovement>().isPatrolling = false;
             StartCoroutine(ChasingDirection(.35f));
 
@@ -33,9 +33,9 @@ public class AIChase : MonoBehaviour {
             if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) < 2)
             {
 
+               // GetComponent<RobotController>().MoveHorizontal(0);//has no speed
+                StartCoroutine(RobotStuck(.45f));
                 GetComponent<RobotController>().MoveHorizontal(0);//has no speed
-                StartCoroutine(RobotStuck(.5f));
-                GetComponent<RobotController>().MoveHorizontal(currentSpeed);//has no speed
 
                 //if robot has arms, punch
                 //else if robot has a gun, shoot
@@ -70,6 +70,7 @@ public class AIChase : MonoBehaviour {
             currentSpeed = -1 * currentSpeed;
 
         }
+        GetComponent<RobotController>().MoveHorizontal(currentSpeed);
 
         yield return new WaitForSeconds(pauseTime);
        // GetComponent<Rigidbody2D>().velocity.Set(GetComponent<Robot>().speed,0);

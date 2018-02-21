@@ -22,7 +22,6 @@ public class GunRightArm : RightArm {
     public override void Fire(Vector3 targetPosition)
     {
         base.Fire(targetPosition);
-        
         Vector3 temp = new Vector3(targetPosition.x, targetPosition.y, 0);
         transform.up = -1 *( temp - transform.position);
 

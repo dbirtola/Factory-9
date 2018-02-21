@@ -2,23 +2,37 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class AIRobotController : AIController {
-
-	// Use this for initialization
-	protected override void Start () {
+public class AIRobotController : AIController
+{
+    private GameObject Target;
+    // Use this for initialization
+    protected override void Start()
+    {
         base.Start();
-	}
+    }
 
     protected override void OnPlayerSpotted(GameObject player)
     {
+        Target = player;
         base.OnPlayerSpotted(player);
+        StartCoroutine(ShootAtPlayer(4));
 
-        //Enter code here for when the robot finds a player.
-        //shoot the player
-        if (target.GetComponent<Robot>().rightArm != null)
+    }
+    void Update()
+    {
+        if (GetComponent<Robot>().rightArm != null && GetComponent<AIChase>().isChasing == true)
         {
-            GetComponent<GunRightArm>().Fire(target.GetComponent<Robot>().transform.position);
+            OnPlayerSpotted(Target);
 
         }
     }
+    IEnumerator ShootAtPlayer(float timePerShot)
+    {
+
+        yield return new WaitForSeconds(timePerShot);
+
+        GetComponent<Robot>().rightArm.Fire(Target.GetComponent<Robot>().transform.position);
+
+    }
+
 }

@@ -11,7 +11,6 @@ public class VisionCone : MonoBehaviour {
         var vis = owningAIVision.GetComponent<AIVision>();
         if (col.gameObject.GetComponent<Player>() && vis != null)
         {
-            Debug.Log("player in sight");
             vis.playerSpottedEvent.Invoke(col.gameObject);
         }
     }

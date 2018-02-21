@@ -19,7 +19,7 @@ public class AIController : MonoBehaviour {
     protected virtual void OnPlayerSpotted(GameObject player)
     {
         //chase the player
-        target = player.gameObject;
+        target = player;
         GetComponent<AIChase>().isChasing = true;
 
     }

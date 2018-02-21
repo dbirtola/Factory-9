@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour {
     private Transform currentPatrolPoint;//the current patrol point the enemy is traveling to
     private int currentPatrolIndex;//array index counter
     private Vector2 patrolPointDirection;//vector in direction of currentPatrolPoint
-    private float currentSpeed = 6;
+    private float currentSpeed;
     private Vector2 stoppingForce = new Vector2(0, 0);
     // Use this for initialization
     void Start () {
