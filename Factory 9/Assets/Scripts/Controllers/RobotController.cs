@@ -102,19 +102,19 @@ public class RobotController : MonoBehaviour {
     
 
 
-    public void FireRightArm()
+    public void FireRightArm(Vector3 targetPosition)
     {
         if(robot.rightArm != null)
         {
-            robot.rightArm.Fire();
+            robot.rightArm.Fire(targetPosition);
         }
     }
 
-    public void FireLeftArm()
+    public void FireLeftArm(Vector3 targetPosition)
     {
         if(robot.leftArm != null)
         {
-            robot.leftArm.Fire();
+            robot.leftArm.Fire(targetPosition);
         }
     }
 
