@@ -11,7 +11,8 @@ public class PlayerController : MonoBehaviour {
     Rigidbody2D rb;
 
     public bool movementEnabled = true;
-
+    public bool leftMovementEnabled = true;
+    public bool rightMovementEnabled = true;
     static public Vector2 GetMouseInWorldSpace()
     {
         Vector2 pos;
@@ -53,12 +54,14 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.D))
             {
-                playerRC.MoveHorizontal(playerRobot.speed * Time.deltaTime);
+                if(rightMovementEnabled)
+                    playerRC.MoveHorizontal(playerRobot.speed * Time.deltaTime);
 
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                playerRC.MoveHorizontal(-1 * playerRobot.speed * Time.deltaTime);
+                if(leftMovementEnabled)
+                    playerRC.MoveHorizontal(-1 * playerRobot.speed * Time.deltaTime);
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -83,7 +86,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.T))
         {
             //For testing
-            player.GetComponent<Robot>().takeDamage(gameObject);
+            player.GetComponent<Robot>().takeDamage(1, gameObject);
         }
 
 
@@ -135,12 +138,39 @@ public class PlayerController : MonoBehaviour {
         StartCoroutine(TimedDisable(duration));
     }
 
+    public void DisableSingleSidedMovementForDuration(float duration, bool right)
+    {
+        StartCoroutine(TimedDisableSingleSided(duration, right));
+    }
+
     //Disables movement and enables after 'duration' period of time
     IEnumerator TimedDisable(float duration)
     {
         SetMovementEnabled(false);
         yield return new WaitForSeconds(duration);
         SetMovementEnabled(true);
+        yield return null;
+    }
+
+    IEnumerator TimedDisableSingleSided(float duration, bool right)
+    {
+        if(right == true)
+        {
+            rightMovementEnabled = false;
+        }else
+        {
+            leftMovementEnabled = false;
+        }
+        yield return new WaitForSeconds(duration);
+
+        if (right == true)
+        {
+            rightMovementEnabled = true;
+        }
+        else
+        {
+            leftMovementEnabled = true;
+        }
         yield return null;
     }
 

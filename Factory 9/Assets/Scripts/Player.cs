@@ -5,9 +5,6 @@ using UnityEngine;
 public class Player : MonoBehaviour {
 
 
-    public float speed = 400;
-    public float jumpPower = 400;
-
 	// Use this for initialization
 	void Start () {
 		
