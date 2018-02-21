@@ -255,6 +255,7 @@ public class RobotController : MonoBehaviour {
             timeAttatchedToWall = Time.time;
             state = RobotState.OnWall;
 
+            Debug.Log("hit wall");
             
         }
 
@@ -305,7 +306,6 @@ public class RobotController : MonoBehaviour {
         else if (angleOfCollision < 100)
         {
             HitWall(col.gameObject);
-            Debug.Log("WALL HIT: " + col.relativeVelocity);
             if(col.relativeVelocity.x > 0)
             {
                 FaceLeft();
