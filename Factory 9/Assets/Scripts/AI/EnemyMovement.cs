@@ -30,6 +30,7 @@ public class EnemyMovement : MonoBehaviour {
     // Update is called once per frame
     void Update()
     {
+        currentSpeed = GetComponent<Robot>().speed;
 
         if (isPatrolling)
         {
@@ -40,14 +41,17 @@ public class EnemyMovement : MonoBehaviour {
             patrolPointDirection = currentPatrolPoint.position - transform.position;//find the direction to travel
 
 
-            if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
-                    currentSpeed = -1 * currentSpeed;
-                else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
-                        currentSpeed = -1 * currentSpeed;
-
             var robot = GetComponent<Robot>();
-            //GetComponent<RobotController>().MoveHorizontal(currentSpeed);
-            GetComponent<RobotController>().MoveHorizontal(robot.speed);
+
+            if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
+                currentSpeed = -1 * currentSpeed;
+            else if (patrolPointDirection.x < 0)// && currentSpeed > 0)// speed was positive, make it negative
+                currentSpeed = -1 * currentSpeed;
+
+
+            GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+
+
 
             //GetComponent<Rigidbody2D>().transform.position
             if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
