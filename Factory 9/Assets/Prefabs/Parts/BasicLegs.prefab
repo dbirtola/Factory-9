@@ -21,9 +21,9 @@ GameObject:
   - component: {fileID: 4389825113945066}
   - component: {fileID: 114176489796296368}
   - component: {fileID: 212439325277639392}
-  - component: {fileID: 50876168489321516}
   - component: {fileID: 95637441492487440}
   - component: {fileID: 60066355627444332}
+  - component: {fileID: 50930458950132724}
   m_Layer: 0
   m_Name: BasicLegs
   m_TagString: Untagged
@@ -38,13 +38,17 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1359007390670530}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
+<<<<<<< HEAD
+  m_LocalPosition: {x: 73.79, y: -5.3, z: 0}
+=======
   m_LocalPosition: {x: 100.11, y: -10.53, z: 0}
+>>>>>>> 632fdbf92e988ffac7d9f643de9ebc5afdb5d8f5
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!50 &50876168489321516
+--- !u!50 &50930458950132724
 Rigidbody2D:
   serializedVersion: 4
   m_ObjectHideFlags: 1
@@ -243,7 +247,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   jumpPowerBoost: 1250
-  speedBoost: 200000
+  speedBoost: 2000
 --- !u!212 &212439325277639392
 SpriteRenderer:
   m_ObjectHideFlags: 1
