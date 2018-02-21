@@ -33,6 +33,8 @@ public class EnemyMovement : MonoBehaviour {
 
         if (isPatrolling)
         {
+            if (patrolPoints.Length <= 0)
+                return;
 
             currentPatrolPoint = patrolPoints[currentPatrolIndex];//set patrol point
             patrolPointDirection = currentPatrolPoint.position - transform.position;//find the direction to travel
