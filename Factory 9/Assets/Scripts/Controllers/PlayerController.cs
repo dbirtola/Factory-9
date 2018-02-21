@@ -55,13 +55,13 @@ public class PlayerController : MonoBehaviour {
             if (Input.GetKey(KeyCode.D))
             {
                 if(rightMovementEnabled)
-                    playerRC.MoveHorizontal(playerRobot.speed * Time.deltaTime);
+                    playerRC.MoveHorizontal(playerRobot.speed);
 
             }
             else if (Input.GetKey(KeyCode.A))
             {
                 if(leftMovementEnabled)
-                    playerRC.MoveHorizontal(-1 * playerRobot.speed * Time.deltaTime);
+                    playerRC.MoveHorizontal(-1 * playerRobot.speed);
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
