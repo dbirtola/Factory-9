@@ -9,6 +9,8 @@ public class GunRightArm : RightArm {
 
     public Vector2 projectileSpawnPoint;
 
+    float timeFired = -1;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -16,20 +18,32 @@ public class GunRightArm : RightArm {
 	
 	// Update is called once per frame
 	void Update () {
-		
+		if(timeFired != -1)
+        {
+            if(Time.time - timeFired >= 0.5f)
+            {
+                transform.right = Vector3.right;
+            }else
+            {
+                GetComponent<Animator>().Play("PunchArm");
+            }
+        }
 	}
 
     public override void Fire(Vector3 targetPosition)
     {
         base.Fire(targetPosition);
         Vector3 temp = new Vector3(targetPosition.x, targetPosition.y, 0);
-        transform.up = -1 *( temp - transform.position);
+        transform.right = ( temp - transform.position);
 
         Vector3 projectilePos = transform.TransformPoint(projectileSpawnPoint);
         var proj = Instantiate(projectile, projectilePos, Quaternion.identity);
         proj.GetComponent<Projectile>().destination = targetPosition;
         Physics2D.IgnoreCollision(proj.GetComponent<Collider2D>(), transform.parent.parent.GetComponent<Collider2D>());
+        timeFired = Time.time;
     }
+
+
 
     void OnDrawGizmosSelected()
     {

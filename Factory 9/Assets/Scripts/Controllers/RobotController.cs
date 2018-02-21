@@ -306,13 +306,20 @@ public class RobotController : MonoBehaviour {
         else if (angleOfCollision < 100)
         {
             HitWall(col.gameObject);
-            if(col.relativeVelocity.x > 0)
+
+            if(robot.legs != null)
             {
-                FaceLeft();
-            }else
-            {
-                FaceLeft(false);
+                if (col.relativeVelocity.x > 0)
+                {
+                    FaceLeft();
+                }
+                else
+                {
+                    FaceLeft(false);
+                }
+
             }
+
         }
         else
         {

@@ -73,14 +73,22 @@ public class PlayerController : MonoBehaviour {
         {
             if (Input.GetKey(KeyCode.D))
             {
-                if(rightMovementEnabled)
+                if (rightMovementEnabled)
+                {
                     playerRC.MoveHorizontal(playerRobot.speed);
+                    LeaveStealth();
+                }
 
             }
             else if (Input.GetKey(KeyCode.A))
             {
-                if(leftMovementEnabled)
+                if (leftMovementEnabled)
+                {
                     playerRC.MoveHorizontal(-1 * playerRobot.speed);
+                    LeaveStealth();
+                }
+                
+               
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
@@ -113,7 +121,7 @@ public class PlayerController : MonoBehaviour {
 
         if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
         {
-            if(GetComponent<Rigidbody2D>().velocity.magnitude == 0 && playerRC.state == RobotState.OnGround)
+            if(GetComponent<Rigidbody2D>().velocity.magnitude <= 0.5f && playerRC.state == RobotState.OnGround)
             {
                 EnterStealth();
             }
@@ -124,7 +132,7 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.E))
         {
             Vector2 pos = new Vector2(transform.position.x + 1, transform.position.y);
-            var colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 1.5f), 0);
+            var colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 2.5f), 0);
 
             foreach(Collider2D col in colls)
             {
@@ -143,7 +151,6 @@ public class PlayerController : MonoBehaviour {
     public void EnterStealth()
     {
         isStealthed = true;
-        Debug.Log("entering Stealth");
         foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
         {
             var color = sr.color;
@@ -151,6 +158,19 @@ public class PlayerController : MonoBehaviour {
             sr.color = color;
         }
        
+
+    }
+
+    public void LeaveStealth()
+    {
+        isStealthed = false;
+
+        foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            var color = sr.color;
+            color.a = 1.0f;
+            sr.color = color;
+        }
 
     }
 
