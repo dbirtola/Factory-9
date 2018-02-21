@@ -188,7 +188,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938563163598774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -5.68, y: -3.301, z: 0}
+  m_LocalPosition: {x: 112.85, y: -3.301, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4721447157465246}
@@ -650,7 +650,7 @@ MonoBehaviour:
   state: 1
   WallJumpBonusPercent: 0.1
   TheFloatyFeelingFixingFloat: -150
-  wallStickDuration: 0.4
+  wallStickDuration: 0.7
   WallJumpPushOffPower: 1000
   WallJumpMovementDisableDuration: 0.2
 --- !u!114 &114436177729277394

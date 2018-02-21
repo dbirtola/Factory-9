@@ -34,13 +34,13 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1324513569943776}
-  m_LocalRotation: {x: -0, y: -0, z: -0.99995285, w: 0.009714116}
-  m_LocalPosition: {x: -7.94, y: 7.48, z: -1.5960972}
-  m_LocalScale: {x: 1, y: 7.025006, z: 1}
+  m_LocalRotation: {x: -0, y: -0, z: 0.69900864, w: -0.7151132}
+  m_LocalPosition: {x: -7.66, y: 5.12, z: -1.5960972}
+  m_LocalScale: {x: 1.5052254, y: 1.6942255, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
-  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -178.88701}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: -88.69501}
 --- !u!114 &114634985274316036
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -52,12 +52,11 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5e0b931335008d4e8a2c8c6c6de6ffb, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  activated: 0
-  dispensedObject: {fileID: 1856272288662024, guid: 43ee052162d8829418b2e1b1d21cb23a,
+  activated: 1
+  dispensedObject: {fileID: 1936902927341974, guid: c49d09f6906c3d14c8e02d3a9a1c0b49,
     type: 2}
   timeBetweenDispenses: 3
-  shouldDispense: 1
-  spawnPoint: {x: 0, y: 0.39}
+  spawnPoint: {x: 1.74, y: 0.01}
   initialForce: 0
 --- !u!212 &212311109299633386
 SpriteRenderer:
@@ -93,7 +92,7 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: 9d9402b8c03fbb741820ab9e1820cc7b, type: 3}
+  m_Sprite: {fileID: 21300000, guid: 85c00a9b321c54a41b9c16aeb64a2a1c, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
