@@ -568,6 +568,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: adfd367556b82274a8d088e8f23d6e62, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  target: {fileID: 0}
 --- !u!114 &114479399846037138
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -586,6 +587,7 @@ MonoBehaviour:
   isInvulnerable: 0
   speed: 300
   jumpPower: 300
+  invulnerableTimeAfterDamaged: 0.5
 --- !u!114 &114891294144468442
 MonoBehaviour:
   m_ObjectHideFlags: 1

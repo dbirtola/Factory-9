@@ -32,7 +32,7 @@ public class RobotController : MonoBehaviour {
 
     public float WallJumpMovementDisableDuration = 0.5f;
 
-    
+    bool isFacingLeft = false;
 
     void Awake()
     {
@@ -64,6 +64,19 @@ public class RobotController : MonoBehaviour {
 
     void FixedUpdate()
     {
+        if(state == RobotState.OnGround && rb.velocity.magnitude <= 0.2f)
+        {
+            if(robot.legs != null)
+                robot.legs.GetComponent<Animator>().Play("Idle");
+            if(robot.rightArm != null)
+                robot.rightArm.GetComponent<Animator>().Play("Idle");
+            if(transform.Find("Body").GetComponent<Animator>() != null)
+            {
+
+                transform.Find("Body").GetComponent<Animator>().Play("Idle");
+            }
+        }
+
         if (state == RobotState.OnWall && rb.velocity.y <= 0)
         {
             rb.velocity = new Vector2(rb.velocity.x, 0);
@@ -73,8 +86,20 @@ public class RobotController : MonoBehaviour {
         {
             state = RobotState.InAir;
         }
+
+        if (state == RobotState.OnWall && robot.legs != null)
+        {
+            robot.legs.GetComponent<Animator>().Play("WallJump");
+
+        }
+        /*if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
+        {
+            rb.velocity = new Vector2(0, rb.velocity.y);
+        }*/
     }
 
+
+    
 
 
     public void FireRightArm()
@@ -97,6 +122,89 @@ public class RobotController : MonoBehaviour {
     {
         //transform.position += Vector3.right * speed;
         rb.AddForce(Vector2.right * speed * Time.deltaTime);
+
+
+
+        //Check if on ground
+        RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 3, 0)), transform.up * -1, 1f);
+
+        if (hit.collider != null && hit.distance <= 0.2f)
+        {
+
+            state = RobotState.OnGround;
+        }
+        Debug.Log(hit.distance);
+
+        //Animations
+
+        if (robot.legs != null && state != RobotState.OnWall)
+        {
+            var anim = robot.legs.GetComponent<Animator>();
+            anim.Play("LegRunAnimation");
+
+            transform.Find("Body").GetComponent<Animator>().Play("HeadBob");
+
+
+        }
+        if(robot.legs != null)
+        {
+            if (speed > 0)
+            {
+                FaceLeft(false);
+            }
+            else if(speed < 0)
+            {
+                FaceLeft(true);
+            }
+
+        }
+
+
+        if (robot.rightArm != null)
+        {
+            robot.rightArm.GetComponent<Animator>().Play("RightArmRun");
+
+        }
+
+    }
+
+
+    public void FaceLeft(bool shouldFaceLeft = true)
+    {
+        var renderers = GetComponentsInChildren<SpriteRenderer>();
+
+        foreach(SpriteRenderer sr in renderers)
+        {
+            {
+                sr.flipX = shouldFaceLeft;
+
+            }
+        }
+
+        if(shouldFaceLeft != isFacingLeft)
+        {
+
+            GameObject leftTemp = transform.Find("LeftArmSlot").gameObject;
+            GameObject rightTemp = transform.Find("RightArmSlot").gameObject;
+            Vector3 posTemp = leftTemp.transform.position;
+            int orderTemp = leftTemp.GetComponent<SpriteRenderer>().sortingOrder;
+            leftTemp.transform.position = rightTemp.transform.position;
+            leftTemp.GetComponent<SpriteRenderer>().sortingOrder = rightTemp.GetComponent<SpriteRenderer>().sortingOrder;
+            rightTemp.transform.position = posTemp;
+            rightTemp.GetComponent<SpriteRenderer>().sortingOrder = orderTemp;
+
+
+        }
+        if (robot.legs != null && state == RobotState.OnWall)
+        {
+            Debug.Log("Flipping legs");
+            robot.legs.GetComponent<SpriteRenderer>().flipX = !shouldFaceLeft;
+            transform.Find("Body").GetComponent<SpriteRenderer>().flipX = !shouldFaceLeft;
+        }
+
+
+
+        isFacingLeft = shouldFaceLeft;
     }
 
     public void Jump()
@@ -142,6 +250,7 @@ public class RobotController : MonoBehaviour {
             canJump = true;
             timeAttatchedToWall = Time.time;
             state = RobotState.OnWall;
+
         }
 
         lastSurfaceHit = wall;
@@ -158,21 +267,29 @@ public class RobotController : MonoBehaviour {
         Debug.Log("Player detected!");
     }
 
+    
     void OnCollisionStay2D(Collision2D col)
     {
-
-        float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
-        if (angleOfCollision < 45)
+        if(col.contacts.Length <= 0)
         {
-            HitGround();
+            float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
+            if (angleOfCollision < 45)
+            {
+                HitGround();
+            }
+
         }
+
     }
+    
 
     void OnCollisionEnter2D(Collision2D col)
     {
         //Still need to do a tag or layer check to see if we hit a surface instead of any object
         //This treats up as 0 degrees. Left and right are 90 degrees.
 
+        if (col.contacts.Length < 1)
+            return;
 
         float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
 

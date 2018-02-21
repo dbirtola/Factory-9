@@ -30,6 +30,8 @@ public class Robot : MonoBehaviour {
     public float speed = 300;
     public float jumpPower = 200;
 
+    public const float impactThresholdForDamage = 40;
+    public  float invulnerableTimeAfterDamaged = 0.5f;
 
     void Awake()
     {
@@ -88,7 +90,33 @@ public class Robot : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log(col.relativeVelocity);
+        if (col.gameObject.GetComponent<HingeJoint2D>())
+        {
+            
+
+            //Only deal damage if player is slower than the other object
+            //Player should not take damage for going too fast
+            if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+            {
+                if(col.contacts.Length <= 0)
+                {
+                    Debug.Log("Contacts 0");
+                    return;
+                }
+
+                if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
+                {
+                    Debug.Log("Took damage from impulse of: " + col.contacts[0].normalImpulse + "(" + col.gameObject + ")");
+                  
+                    takeDamage(1, col.gameObject);
+                }
+
+            }
+                //Debug.Log(col.relativeVelocity.magnitude * col.gameObject.GetComponent<Rigidbody2D>().mass);// < impactThresholdForDamage);
+
+
+            
+        }
     }
 
     
@@ -97,6 +125,7 @@ public class Robot : MonoBehaviour {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
         if (legs == null)
         {
+            //Prepare body to have legs placed underneath
             transform.position += new Vector3(0, 1);
             rb.velocity = Vector2.zero;
             rb.angularVelocity = 0;
@@ -111,11 +140,8 @@ public class Robot : MonoBehaviour {
         //newLegs.GetComponent<Rigidbody2D>().simulated = false;
 
 
-        if (legs != null)
-        {
-            jumpPower -= legs.jumpPowerBoost;
-            speed -= legs.speedBoost;
-        }
+        LoseLegs(new Vector2(0, 0));
+
         jumpPower += newLegs.jumpPowerBoost;
         speed += newLegs.speedBoost;
 
@@ -162,7 +188,7 @@ public class Robot : MonoBehaviour {
         {
             if (LoseArm() == false)
             {
-                if (LoseLegs(new Vector2(100, 0)) == false)
+                if (LoseLegs(new Vector2(0, 0)) == false)
                 {
                     Die();
                 }
@@ -190,7 +216,9 @@ public class Robot : MonoBehaviour {
         }
 
         lostArm.transform.SetParent(null);
-        lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
+        //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
+        lostArm.gameObject.AddComponent<Rigidbody2D>();
+
         lostArm = null;
         return true;
     }
@@ -199,9 +227,20 @@ public class Robot : MonoBehaviour {
     {
         if (legs == null)
             return false;
+
+        speed -= legs.speedBoost;
+        jumpPower -= legs.jumpPowerBoost;
+
         legs.transform.SetParent(null);
-        legs.GetComponent<Rigidbody2D>().isKinematic = false;
-        legs.GetComponent<Rigidbody2D>().AddForce(knockPower);
+        var rb = legs.gameObject.AddComponent<Rigidbody2D>();
+        rb.mass = 10;
+        //legs.GetComponent<Rigidbody2D>().isKinematic = false;
+        rb.AddForce(knockPower);
+        legs = null;
+
+        //Allow robot core to rotate freely
+        GetComponent<Rigidbody2D>().constraints = RigidbodyConstraints2D.None;
+
         return true;
     }
 
