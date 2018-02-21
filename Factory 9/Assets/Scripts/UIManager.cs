@@ -19,4 +19,10 @@ public class UIManager : MonoBehaviour {
         var ds = transform.Find("DeathScreen").gameObject;
         ds.SetActive(true);
     }
+
+    public void ShowVictoryScreen()
+    {
+        var vs = transform.Find("VictoryScreen").gameObject;
+        vs.SetActive(true);
+    }
 }

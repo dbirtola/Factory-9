@@ -24,6 +24,10 @@ public class Projectile : MonoBehaviour {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.gameObject.GetComponent<Robot>())
+        {
+            col.gameObject.GetComponent<Robot>().takeDamage(1, gameObject);
+        }
         if (destroyOnImpact)
             Destroy(gameObject);
     }

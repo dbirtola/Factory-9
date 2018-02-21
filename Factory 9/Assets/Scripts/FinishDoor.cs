@@ -19,6 +19,7 @@ public class FinishDoor : MonoBehaviour {
         if (col.gameObject.GetComponent<Player>())
         {
             Debug.Log("You won!");
+            FindObjectOfType<UIManager>().ShowVictoryScreen();
         }
     }
 }
