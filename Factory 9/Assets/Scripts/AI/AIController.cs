@@ -18,7 +18,12 @@ public class AIController : MonoBehaviour {
 
     protected virtual void OnPlayerSpotted(GameObject player)
     {
-        target = player;
-        player.GetComponent<AIChase>().isChasing = true;
+        //chase the player
+        target = player.gameObject;
+        GetComponent<AIChase>().isChasing = true;
+
+        //shoot the player
+        if (target.GetComponent<Robot>().rightArm != null)
+            target.GetComponent<AIShoot>().isShooting = true;
     }
 }

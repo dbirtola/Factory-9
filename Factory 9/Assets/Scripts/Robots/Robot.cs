@@ -27,7 +27,7 @@ public class Robot : MonoBehaviour {
     public bool headLampActive = false;
     public bool isInvulnerable = false;
 
-    public float speed = 300;
+    public float speed = 100;
     public float jumpPower = 200;
 
     public const float impactThresholdForDamage = 40;

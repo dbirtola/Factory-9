@@ -220,7 +220,6 @@ public class RobotController : MonoBehaviour {
 
                 if(lastSurfaceHit.transform.position.x - transform.position.x > 0)
                 {
-                    Debug.Log("GO FUCKING RIGHT");
                     dir = Vector2.right * -1;
                     PlayerController.playerController.DisableSingleSidedMovementForDuration(WallJumpMovementDisableDuration, true);
                 }
