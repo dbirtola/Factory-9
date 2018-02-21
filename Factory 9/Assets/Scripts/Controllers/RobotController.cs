@@ -192,11 +192,17 @@ public class RobotController : MonoBehaviour {
             rightTemp.transform.position = posTemp;
             rightTemp.GetComponent<SpriteRenderer>().sortingOrder = orderTemp;
 
+            var cone = GetComponentInChildren<VisionCone>();
+            if(cone != null)
+            {
+                var scale = cone.gameObject.transform.localScale;
 
+                cone.gameObject.transform.localScale = new Vector3(-1 * scale.x, scale.y, scale.z);
+
+            }
         }
         if (robot.legs != null && state == RobotState.OnWall)
         {
-            Debug.Log("Flipping legs");
             robot.legs.GetComponent<SpriteRenderer>().flipX = !shouldFaceLeft;
             transform.Find("Body").GetComponent<SpriteRenderer>().flipX = !shouldFaceLeft;
         }
@@ -249,6 +255,7 @@ public class RobotController : MonoBehaviour {
             timeAttatchedToWall = Time.time;
             state = RobotState.OnWall;
 
+            
         }
 
         lastSurfaceHit = wall;
@@ -298,6 +305,14 @@ public class RobotController : MonoBehaviour {
         else if (angleOfCollision < 100)
         {
             HitWall(col.gameObject);
+            Debug.Log("WALL HIT: " + col.relativeVelocity);
+            if(col.relativeVelocity.x > 0)
+            {
+                FaceLeft();
+            }else
+            {
+                FaceLeft(false);
+            }
         }
         else
         {

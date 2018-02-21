@@ -13,6 +13,11 @@ public class PlayerController : MonoBehaviour {
     public bool movementEnabled = true;
     public bool leftMovementEnabled = true;
     public bool rightMovementEnabled = true;
+
+
+
+    public bool isStealthed = false;
+
     static public Vector2 GetMouseInWorldSpace()
     {
         Vector2 pos;
@@ -106,6 +111,14 @@ public class PlayerController : MonoBehaviour {
             player.GetComponent<Robot>().takeDamage(1, gameObject);
         }
 
+        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        {
+            if(GetComponent<Rigidbody2D>().velocity.magnitude == 0 && playerRC.state == RobotState.OnGround)
+            {
+                EnterStealth();
+            }
+        }
+
 
         //Looting body parts
         if (Input.GetKeyDown(KeyCode.E))
@@ -127,13 +140,20 @@ public class PlayerController : MonoBehaviour {
 
 
 
-
-
-
-    void OnTriggerEnter2D(Collider2D col)
+    public void EnterStealth()
     {
+        isStealthed = true;
+        Debug.Log("entering Stealth");
+        foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
+        {
+            var color = sr.color;
+            color.a = 0.5f;
+            sr.color = color;
+        }
+       
 
     }
+
 
     void resetPose(float xOffset = 0, float yOffset = 0)
     {
