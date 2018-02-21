@@ -18,6 +18,7 @@ public class AIRobotController : AIController {
         if (target.GetComponent<Robot>().rightArm != null)
         {
             GetComponent<GunRightArm>().Fire(target.GetComponent<Robot>().transform.position);
+
         }
     }
 }
