@@ -14,8 +14,9 @@ public class Arm : BodyPart {
 		
 	}
 
-    public virtual void Fire()
+    public virtual void Fire(Vector3 targetLocation)
     {
 
     }
+    
 }

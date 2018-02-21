@@ -59,6 +59,7 @@
      <Compile Include="Assets\Scripts\AI\AIChase.cs" />
      <Compile Include="Assets\Scripts\AI\AIController.cs" />
      <Compile Include="Assets\Scripts\AI\AIRobotController.cs" />
+     <Compile Include="Assets\Scripts\AI\AIShoot.cs" />
      <Compile Include="Assets\Scripts\AI\AITurretController.cs" />
      <Compile Include="Assets\Scripts\AI\AIVision.cs" />
      <Compile Include="Assets\Scripts\AI\EnemyMovement.cs" />

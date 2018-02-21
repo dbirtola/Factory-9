@@ -102,24 +102,25 @@ public class RobotController : MonoBehaviour {
     
 
 
-    public void FireRightArm()
+    public void FireRightArm(Vector3 targetPosition)
     {
         if(robot.rightArm != null)
         {
-            robot.rightArm.Fire();
+            robot.rightArm.Fire(targetPosition);
         }
     }
 
-    public void FireLeftArm()
+    public void FireLeftArm(Vector3 targetPosition)
     {
         if(robot.leftArm != null)
         {
-            robot.leftArm.Fire();
+            robot.leftArm.Fire(targetPosition);
         }
     }
 
     public void MoveHorizontal(float speed)
     {
+        Debug.Log(gameObject + " is moving horizontal at speed" + speed);
         //transform.position += Vector3.right * speed;
         rb.AddForce(Vector2.right * speed * Time.deltaTime);
 
@@ -133,7 +134,6 @@ public class RobotController : MonoBehaviour {
 
             state = RobotState.OnGround;
         }
-        Debug.Log(hit.distance);
 
         //Animations
 
@@ -220,7 +220,6 @@ public class RobotController : MonoBehaviour {
 
                 if(lastSurfaceHit.transform.position.x - transform.position.x > 0)
                 {
-                    Debug.Log("GO FUCKING RIGHT");
                     dir = Vector2.right * -1;
                     PlayerController.playerController.DisableSingleSidedMovementForDuration(WallJumpMovementDisableDuration, true);
                 }

@@ -19,17 +19,16 @@ public class GunRightArm : RightArm {
 		
 	}
 
-    public override void Fire()
+    public override void Fire(Vector3 targetPosition)
     {
-        base.Fire();
-
-        Vector2 mousePosition = PlayerController.GetMouseInWorldSpace();
-        Vector3 temp = new Vector3(mousePosition.x, mousePosition.y, 0);
+        base.Fire(targetPosition);
+        
+        Vector3 temp = new Vector3(targetPosition.x, targetPosition.y, 0);
         transform.up = -1 *( temp - transform.position);
 
         Vector3 projectilePos = transform.TransformPoint(projectileSpawnPoint);
         var proj = Instantiate(projectile, projectilePos, Quaternion.identity);
-        proj.GetComponent<Projectile>().destination = mousePosition;
+        proj.GetComponent<Projectile>().destination = targetPosition;
         Physics2D.IgnoreCollision(proj.GetComponent<Collider2D>(), transform.parent.parent.GetComponent<Collider2D>());
     }
 

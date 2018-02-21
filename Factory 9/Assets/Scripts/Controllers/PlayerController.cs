@@ -46,6 +46,20 @@ public class PlayerController : MonoBehaviour {
     }
 
 
+    /*
+     *         base.Fire();
+
+        Vector2 mousePosition = PlayerController.GetMouseInWorldSpace();
+        Vector3 temp = new Vector3(mousePosition.x, mousePosition.y, 0);
+        transform.up = -1 *( temp - transform.position);
+
+        Vector3 projectilePos = transform.TransformPoint(projectileSpawnPoint);
+        var proj = Instantiate(projectile, projectilePos, Quaternion.identity);
+        proj.GetComponent<Projectile>().destination = mousePosition;
+        Physics2D.IgnoreCollision(proj.GetComponent<Collider2D>(), transform.parent.parent.GetComponent<Collider2D>());
+
+    */
+
 	
 	// Update is called once per frame
 	void Update () {
@@ -78,7 +92,10 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Mouse0))
         {
-            playerRC.FireRightArm();
+
+            Vector2 mousePosition = PlayerController.GetMouseInWorldSpace();
+
+            playerRC.FireRightArm(mousePosition);
         }
 
 

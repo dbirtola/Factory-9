@@ -27,7 +27,7 @@ public class Robot : MonoBehaviour {
     public bool headLampActive = false;
     public bool isInvulnerable = false;
 
-    public float speed = 300;
+    public float speed = 100;
     public float jumpPower = 200;
 
     public const float impactThresholdForDamage = 40;
@@ -41,12 +41,14 @@ public class Robot : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
+        /*
         if (leftArm != null)
             EquipLeftArm(leftArm);
         if (rightArm != null)
             EquipRightArm(rightArm);
         if (legs != null)
             swapLegs(legs);
+            */
 	}
 	
 	// Update is called once per frame
@@ -119,7 +121,33 @@ public class Robot : MonoBehaviour {
         }
     }
 
-    
+    public bool addLegs(Legs newLegs)
+    {
+        Rigidbody2D rb = GetComponent<Rigidbody2D>();
+
+            //Prepare body to have legs placed underneath
+            transform.position += new Vector3(0, 1);
+            rb.velocity = Vector2.zero;
+            rb.angularVelocity = 0;
+            transform.rotation = Quaternion.identity;
+
+
+        rb.constraints = RigidbodyConstraints2D.FreezeRotation;
+        newLegs.transform.SetParent(transform.Find("LegsSlot"), false);
+        newLegs.transform.localPosition = Vector3.zero;
+        newLegs.transform.rotation = Quaternion.identity;
+        Destroy(newLegs.GetComponent<Rigidbody2D>());
+        //newLegs.GetComponent<Rigidbody2D>().simulated = false;
+
+
+        jumpPower += newLegs.jumpPowerBoost;
+        speed += newLegs.speedBoost;
+
+        legs = newLegs;
+        return true;
+    }
+
+
     public bool swapLegs(Legs newLegs)
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
