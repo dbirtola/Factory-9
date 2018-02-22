@@ -54,9 +54,12 @@ public class RobotController : MonoBehaviour {
             }
         }
 
+        //Adding an additional force to make robots drop faster as to improve game feel.
         if(rb.velocity.y < 0)
         {
-            rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat));
+            //Multiplying by 100 in here so that the addition of Time.deltaTime can be consistent throughout all existing robots
+            
+            rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat * Time.deltaTime * 100));
         }
 
        
@@ -126,11 +129,12 @@ public class RobotController : MonoBehaviour {
 
 
         //Check if on ground
-        RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 3, 0)), transform.up * -1, 1f);
-
+        RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
+        Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
         {
-
+            Debug.Log("Hitting ground: " + hit.collider.gameObject);
+            Debug.Log("Distance: " + hit.distance);
             state = RobotState.OnGround;
         }
 
@@ -216,6 +220,7 @@ public class RobotController : MonoBehaviour {
     {
         if (state != RobotState.InAir)
         {
+            Debug.Log("State is: " + state.ToString());
             canJump = false;
             rb.AddForce(Vector2.up * robot.jumpPower);
             if(state == RobotState.OnWall)
