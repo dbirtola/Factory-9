@@ -133,8 +133,6 @@ public class RobotController : MonoBehaviour {
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
         {
-            Debug.Log("Hitting ground: " + hit.collider.gameObject);
-            Debug.Log("Distance: " + hit.distance);
             state = RobotState.OnGround;
         }
 
@@ -171,7 +169,8 @@ public class RobotController : MonoBehaviour {
 
     }
 
-
+    //Rewrote function. Keeping this here in case we need to revert.
+    /*
     public void FaceLeft(bool shouldFaceLeft = true)
     {
         var renderers = GetComponentsInChildren<SpriteRenderer>();
@@ -215,7 +214,43 @@ public class RobotController : MonoBehaviour {
 
         isFacingLeft = shouldFaceLeft;
     }
+    */
 
+
+    public void FaceLeft(bool shouldFaceLeft = true)
+    {
+
+        if (shouldFaceLeft)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (shouldFaceLeft != isFacingLeft)
+        {
+            
+        }
+        
+        if(robot.legs != null)
+        {
+           if(state == RobotState.OnWall)  {
+                Debug.Log("Flipping legs");
+                robot.legs.GetComponent<SpriteRenderer>().flipX = shouldFaceLeft;
+                transform.Find("Body").GetComponent<SpriteRenderer>().flipX = shouldFaceLeft;
+            }else
+            {
+                robot.legs.GetComponent<SpriteRenderer>().flipX = false;
+                transform.Find("Body").GetComponent<SpriteRenderer>().flipX = false;
+
+            }
+        }
+
+
+
+        isFacingLeft = shouldFaceLeft;
+    }
     public void Jump()
     {
         if (state != RobotState.InAir)

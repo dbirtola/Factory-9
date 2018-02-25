@@ -27,5 +27,13 @@ public class RopeCustomEditor : Editor {
         {
             rope.GenerateRope();
         }
+        if (GUILayout.Button("AddSegment"))
+        {
+            rope.AddSegment() ;
+        }
+        if (GUILayout.Button("DeleteLastSegment"))
+        {
+            rope.DeleteLastSegment();
+        }
     }
 }
