@@ -1,4 +1,8 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/PipeLevel.unity
+=======
+- path: Assets/Scenes/DamenTest.unity
+>>>>>>> 99eb3d2dbe88a34c72f7181010b0020ed5830d2a
   isLoaded: 1
   isActive: 1

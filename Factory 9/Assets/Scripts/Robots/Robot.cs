@@ -53,7 +53,9 @@ public class Robot : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-        transform.Find("HeadLamp").gameObject.SetActive(headLampActive);
+        //Debugging
+        if(GetComponent<Player>())
+            transform.Find("Body").Find("HeadLamp").gameObject.SetActive(headLampActive);
 		
 	}
 
@@ -212,6 +214,7 @@ public class Robot : MonoBehaviour {
 
         robotDamagedEvent.Invoke(attacker);
 
+        //We want the player to first lose his arms, then lose his legs. If he has neither he dies
         for(int i = 0; i < damage; i++)
         {
             if (LoseArm() == false)
@@ -230,14 +233,17 @@ public class Robot : MonoBehaviour {
     public bool LoseArm(bool shouldKnock = false)
     {
         Arm lostArm = null;
+        //If we have a left arm we will drop it. If not we drop the right arm. If neither we return false and move on
         if (leftArm != null)
         {
             lostArm = leftArm;
+            leftArm = null;
 
         }
         else if (rightArm != null)
         {
             lostArm = rightArm;
+            rightArm = null;
         }else
         {
             return false;

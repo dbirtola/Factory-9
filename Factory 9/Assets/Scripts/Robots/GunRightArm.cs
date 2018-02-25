@@ -41,6 +41,12 @@ public class GunRightArm : RightArm {
         proj.GetComponent<Projectile>().destination = targetPosition;
         Physics2D.IgnoreCollision(proj.GetComponent<Collider2D>(), transform.parent.parent.GetComponent<Collider2D>());
         timeFired = Time.time;
+
+
+        if (proj.GetComponent<GrapplingHook>())
+        {
+            proj.GetComponent<GrapplingHook>().objectFiredFrom = gameObject;
+        }
     }
 
 

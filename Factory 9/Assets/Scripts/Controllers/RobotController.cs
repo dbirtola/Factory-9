@@ -54,9 +54,12 @@ public class RobotController : MonoBehaviour {
             }
         }
 
+        //Adding an additional force to make robots drop faster as to improve game feel.
         if(rb.velocity.y < 0)
         {
-            rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat));
+            //Multiplying by 100 in here so that the addition of Time.deltaTime can be consistent throughout all existing robots
+            
+            rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat * Time.deltaTime * 100));
         }
 
        
@@ -126,11 +129,10 @@ public class RobotController : MonoBehaviour {
 
 
         //Check if on ground
-        RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 3, 0)), transform.up * -1, 1f);
-
+        RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
+        Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
         {
-
             state = RobotState.OnGround;
         }
 
@@ -167,7 +169,8 @@ public class RobotController : MonoBehaviour {
 
     }
 
-
+    //Rewrote function. Keeping this here in case we need to revert.
+    /*
     public void FaceLeft(bool shouldFaceLeft = true)
     {
         var renderers = GetComponentsInChildren<SpriteRenderer>();
@@ -211,11 +214,48 @@ public class RobotController : MonoBehaviour {
 
         isFacingLeft = shouldFaceLeft;
     }
+    */
 
+
+    public void FaceLeft(bool shouldFaceLeft = true)
+    {
+
+        if (shouldFaceLeft)
+        {
+            transform.localScale = new Vector3(-1, 1, 1);
+        }else
+        {
+            transform.localScale = new Vector3(1, 1, 1);
+        }
+
+        if (shouldFaceLeft != isFacingLeft)
+        {
+            
+        }
+        
+        if(robot.legs != null)
+        {
+           if(state == RobotState.OnWall)  {
+                Debug.Log("Flipping legs");
+                robot.legs.GetComponent<SpriteRenderer>().flipX = shouldFaceLeft;
+                transform.Find("Body").GetComponent<SpriteRenderer>().flipX = shouldFaceLeft;
+            }else
+            {
+                robot.legs.GetComponent<SpriteRenderer>().flipX = false;
+                transform.Find("Body").GetComponent<SpriteRenderer>().flipX = false;
+
+            }
+        }
+
+
+
+        isFacingLeft = shouldFaceLeft;
+    }
     public void Jump()
     {
         if (state != RobotState.InAir)
         {
+            Debug.Log("State is: " + state.ToString());
             canJump = false;
             rb.AddForce(Vector2.up * robot.jumpPower);
             if(state == RobotState.OnWall)
