@@ -6,7 +6,6 @@ public class AIChase : MonoBehaviour {
 
     private Vector2 directionToChase;
     public bool isChasing = false;
-    public float distance = 10;
     private float currentSpeed;
 
     // Use this for initialization
@@ -21,7 +20,7 @@ public class AIChase : MonoBehaviour {
             GetComponent<EnemyMovement>().isPatrolling = false;
             StartCoroutine(ChasingDirection(.35f));
 
-            if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) > 10)
+            if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) > 20)
             { // if the player get far away, then go back to patrolling
                 isChasing = false;
                 GetComponent<EnemyMovement>().isPatrolling = true;
