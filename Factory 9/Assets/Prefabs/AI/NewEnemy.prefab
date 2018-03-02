@@ -21,7 +21,7 @@ GameObject:
   - component: {fileID: 4646036917171352}
   - component: {fileID: 60591184959228430}
   - component: {fileID: 114083620740538800}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: VisionCone
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -37,7 +37,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4166091481998218}
   - component: {fileID: 212403450981593560}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LeftArmSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -61,7 +61,7 @@ GameObject:
   - component: {fileID: 114852064517856672}
   - component: {fileID: 114939792070385258}
   - component: {fileID: 114679811881798102}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: NewEnemy
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -77,7 +77,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4152845455005466}
   - component: {fileID: 212812429873562186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: LegsSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -96,7 +96,7 @@ GameObject:
   - component: {fileID: 114330730329617868}
   - component: {fileID: 60015444201241516}
   - component: {fileID: 95266263544360030}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BasicRightArm (1)
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -112,7 +112,7 @@ GameObject:
   m_Component:
   - component: {fileID: 4348606019499536}
   - component: {fileID: 212115861577720970}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: RightArmSlot
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -130,7 +130,7 @@ GameObject:
   - component: {fileID: 108417885760921078}
   - component: {fileID: 111854562820157408}
   - component: {fileID: 114950471584531628}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: HeadLamp
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -149,7 +149,7 @@ GameObject:
   - component: {fileID: 212042025072200142}
   - component: {fileID: 95015770655042334}
   - component: {fileID: 60067729327552186}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: BasicLegs
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -167,7 +167,7 @@ GameObject:
   - component: {fileID: 212572515256590044}
   - component: {fileID: 60970527484941898}
   - component: {fileID: 95610448475418362}
-  m_Layer: 0
+  m_Layer: 10
   m_Name: Body
   m_TagString: Untagged
   m_Icon: {fileID: 0}
@@ -261,7 +261,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1225359232900380}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 46.64707, y: -3.09, z: 0}
+  m_LocalPosition: {x: 50.875202, y: -3.0282528, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4660433901584172}
@@ -1597,9 +1597,6 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   isPatrolling: 1
   patrolPoints:
-  - {fileID: 0}
-  - {fileID: 0}
-  - {fileID: 0}
   - {fileID: 0}
   - {fileID: 0}
 --- !u!114 &114679811881798102

@@ -15,24 +15,31 @@ public class AIRobotController : AIController
     {
         Target = player;
         base.OnPlayerSpotted(player);
-        StartCoroutine(ShootAtPlayer(4));
+        if (GetComponent<Robot>().rightArm != null && GetComponent<AIChase>().isChasing == true)
+            StartCoroutine(ShootAtPlayer(1.5f));
 
     }
+    /*
     void Update()
     {
         if (GetComponent<Robot>().rightArm != null && GetComponent<AIChase>().isChasing == true)
         {
+
             OnPlayerSpotted(Target);
 
         }
     }
+    */
     IEnumerator ShootAtPlayer(float timePerShot)
     {
-
-        yield return new WaitForSeconds(timePerShot);
-
-        GetComponent<Robot>().rightArm.Fire(Target.GetComponent<Robot>().transform.position);
-
+        while (GetComponent<Robot>().rightArm != null && GetComponent<AIChase>().isChasing == true)
+        {
+            yield return new WaitForSeconds(timePerShot);
+            GetComponent<Robot>().rightArm.Fire(Target.GetComponent<Robot>().transform.position);
+        }
     }
-
+    IEnumerator WaitForNextShot(float wait)
+    {
+        yield return new WaitForSeconds(wait);
+    }
 }

@@ -178,7 +178,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   projectile: {fileID: 1628977543485810, guid: 150738fdf75b9534382062fe81f73717, type: 2}
-  projectileSpawnPoint: {x: 0, y: -0.51}
+  projectileSpawnPoint: {x: 0.75, y: -0.05}
 --- !u!212 &212130352360315876
 SpriteRenderer:
   m_ObjectHideFlags: 1
