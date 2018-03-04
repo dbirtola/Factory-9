@@ -23,16 +23,10 @@ public class AirVentEntrance : MonoBehaviour {
             return;
 
         Debug.Log("Col : " + col.gameObject);
-        Physics2D.IgnoreLayerCollision(col.gameObject.layer, LayerMask.NameToLayer("Platform"));
-            /*
-        foreach(Collider2D c in colliders)
-        {
-            if (c.gameObject.layer == LayerMask.NameToLayer("Platform"))
-            {
-                Physics2D.IgnoreCollision(col, c);
-            }
-        }
-        */
+
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"));
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"));
+
     }
 
     void OnTriggerExit2D(Collider2D col)
@@ -48,7 +42,8 @@ public class AirVentEntrance : MonoBehaviour {
         if(angle < 0)
         {
 
-            Physics2D.IgnoreLayerCollision(col.gameObject.layer, LayerMask.NameToLayer("Platform"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"), false);
+            Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"), false);
         }
 
     }

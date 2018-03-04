@@ -227,18 +227,13 @@ public class RobotController : MonoBehaviour {
         {
             transform.localScale = new Vector3(1, 1, 1);
         }
-
-        if (shouldFaceLeft != isFacingLeft)
-        {
-            
-        }
         
         if(robot.legs != null)
         {
            if(state == RobotState.OnWall)  {
                 Debug.Log("Flipping legs");
-                robot.legs.GetComponent<SpriteRenderer>().flipX = shouldFaceLeft;
-                transform.Find("Body").GetComponent<SpriteRenderer>().flipX = shouldFaceLeft;
+                robot.legs.GetComponent<SpriteRenderer>().flipX = true;
+                transform.Find("Body").GetComponent<SpriteRenderer>().flipX = true;
             }else
             {
                 robot.legs.GetComponent<SpriteRenderer>().flipX = false;
@@ -246,7 +241,7 @@ public class RobotController : MonoBehaviour {
 
             }
         }
-
+        
 
 
         isFacingLeft = shouldFaceLeft;

@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/PartsLevel.unity
-=======
 - path: Assets/Scenes/DamenTest.unity
->>>>>>> 625c05ae3f76a6f3a943b889cb5034d9fe1014da
   isLoaded: 1
   isActive: 1
