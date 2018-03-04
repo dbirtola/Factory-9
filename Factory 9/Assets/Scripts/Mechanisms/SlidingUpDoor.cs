@@ -5,9 +5,7 @@ using UnityEngine;
 
 public class SlidingUpDoor : Activateable {
 
-
-
-
+    
     public void Open()
     {
         if(activated == false)
@@ -32,12 +30,16 @@ public class SlidingUpDoor : Activateable {
 
     public override void Activate()
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
         Open();
         base.Activate();
     }
 
     public override void Deactivate()
     {
+        AudioSource audio = GetComponent<AudioSource>();
+        audio.Play();
         Close();
         base.Deactivate();
     }
