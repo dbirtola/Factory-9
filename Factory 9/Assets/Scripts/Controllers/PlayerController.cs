@@ -165,7 +165,7 @@ public class PlayerController : MonoBehaviour {
     public void LeaveStealth()
     {
         isStealthed = false;
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Player");
         foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
         {
             var color = sr.color;
