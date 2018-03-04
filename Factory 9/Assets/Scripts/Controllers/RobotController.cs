@@ -25,11 +25,21 @@ public class RobotController : MonoBehaviour {
     bool canJump = true;
     private float timeAttatchedToWall;
 
+    //These are variables to improve the feel of the robot
+    //Bonus jump height when jumping off a wall
     public float WallJumpBonusPercent = 0.10f;
+
+    //Pulls robot back down from the peak of their jump faster
     public float TheFloatyFeelingFixingFloat = -100f;
+
+    //How long a robot can hold onto the wall
     public float wallStickDuration = 0.2f;
+
+    //Force exerted on a robot from their legs kicking off a wall
     public float WallJumpPushOffPower = 1000f;
 
+    //Time before a robot regains control after jumping off a wall.
+    //Used to prevent players who hold a and d while jumping from running back into the wall.
     public float WallJumpMovementDisableDuration = 0.5f;
 
     bool isFacingLeft = false;
@@ -92,8 +102,7 @@ public class RobotController : MonoBehaviour {
 
         if (state == RobotState.OnWall && robot.legs != null)
         {
-            robot.legs.GetComponent<Animator>().Play("WallJump");
-
+            robot.legs.GetComponent<Animator>().Play("WallGrab");
         }
         /*if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
         {
@@ -138,16 +147,27 @@ public class RobotController : MonoBehaviour {
 
         //Animations
 
-        if (robot.legs != null && state != RobotState.OnWall)
+        //if (robot.legs != null && state != RobotState.OnWall)
+        if (robot.legs != null && state == RobotState.OnGround)
         {
             var anim = robot.legs.GetComponent<Animator>();
             anim.Play("LegRunAnimation");
 
             transform.Find("Body").GetComponent<Animator>().Play("HeadBob");
+        }
 
+        if(robot.legs != null && state == RobotState.InAir)
+        {
+            var anim = robot.legs.GetComponent<Animator>();
+            Debug.Log("Velocity: " + rb.velocity.y);
+            if(rb.velocity.y < 0)
+            {
+                Debug.Log("Playing down");
+                anim.Play("InAirDown");
+            }
 
         }
-        if(robot.legs != null)
+        if (robot.legs != null)
         {
             if (speed > 0)
             {
