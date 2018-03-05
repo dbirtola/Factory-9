@@ -51,6 +51,9 @@
     </Reference>
   </ItemGroup>
   <ItemGroup>
+     <Compile Include="Assets\AirVent.cs" />
+     <Compile Include="Assets\AirVentEntrance.cs" />
+     <Compile Include="Assets\ConveyerBelt.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
@@ -59,6 +62,7 @@
      <Compile Include="Assets\Scripts\Activators\Switch.cs" />
      <Compile Include="Assets\Scripts\AI\AIChase.cs" />
      <Compile Include="Assets\Scripts\AI\AIController.cs" />
+     <Compile Include="Assets\Scripts\AI\AIJump.cs" />
      <Compile Include="Assets\Scripts\AI\AIRobotController.cs" />
      <Compile Include="Assets\Scripts\AI\AITurretController.cs" />
      <Compile Include="Assets\Scripts\AI\AIVision.cs" />

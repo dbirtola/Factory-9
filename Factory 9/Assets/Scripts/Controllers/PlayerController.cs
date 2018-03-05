@@ -139,7 +139,10 @@ public class PlayerController : MonoBehaviour {
                 if (col.gameObject.GetComponent<BodyPart>())
                 {
                     Debug.Log("Equipping: " + col.gameObject);
-                    PlayerController.player.GetComponent<Robot>().EquipBodyPart(col.gameObject.GetComponent<BodyPart>());
+                    bool success = PlayerController.player.GetComponent<Robot>().EquipBodyPart(col.gameObject.GetComponent<BodyPart>());
+
+                    if (success == true)
+                        break;
                 }
             }
         }
@@ -165,7 +168,7 @@ public class PlayerController : MonoBehaviour {
     public void LeaveStealth()
     {
         isStealthed = false;
-        gameObject.layer = LayerMask.NameToLayer("Default");
+        gameObject.layer = LayerMask.NameToLayer("Player");
         foreach (SpriteRenderer sr in GetComponentsInChildren<SpriteRenderer>())
         {
             var color = sr.color;
