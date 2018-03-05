@@ -5,11 +5,10 @@ using UnityEngine;
 
 public enum RobotState
 {
-    Idle,
-    OnGround,
-    InAir,
-    OnWall,
-    Climbing
+    Idle,       //0
+    OnGround,   //1
+    InAir,      //2
+    OnWall,     //3
 }
 
 
@@ -53,13 +52,32 @@ public class RobotController : MonoBehaviour {
 
     void Update()
     {
+        //Update the animator parameters
+        if(robot.legs != null)
+        {
+            var anim = robot.legs.GetComponent<Animator>();
+            anim.SetFloat("HorizontalSpeed", rb.velocity.x);
+            anim.SetFloat("VerticalSpeed", rb.velocity.y);
+            anim.SetInteger("RobotState", (int)state);
+        }
+        if(robot.leftArm != null)
+        {
+
+        }
+        if(robot.rightArm != null)
+        {
+            var anim = robot.rightArm.GetComponent<Animator>();
+            anim.SetFloat("HorizontalSpeed", rb.velocity.x);
+            anim.SetInteger("RobotState", (int)state);
+        }
+
+        //Considers the robot falling if they simply move off the wall instead of jumping off it
         if(lastSurfaceHit != null)
         {
             var distanceFromLastSurface = lastSurfaceHit.GetComponent<Collider2D>().Distance(GetComponent<Collider2D>());
             //Debug.DrawLine(distanceFromLastSurface.pointA, distanceFromLastSurface.pointB, Color.white);
             if (distanceFromLastSurface.distance >= 0.2f)
             {
-
                 state = RobotState.InAir;
             }
         }
@@ -67,8 +85,6 @@ public class RobotController : MonoBehaviour {
         //Adding an additional force to make robots drop faster as to improve game feel.
         if(rb.velocity.y < 0)
         {
-            //Multiplying by 100 in here so that the addition of Time.deltaTime can be consistent throughout all existing robots
-            
             rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat * Time.deltaTime * 100));
         }
 
@@ -77,43 +93,30 @@ public class RobotController : MonoBehaviour {
 
     void FixedUpdate()
     {
+        
         if(state == RobotState.OnGround && rb.velocity.magnitude <= 0.2f)
         {
-            if(robot.legs != null)
-                robot.legs.GetComponent<Animator>().Play("Idle");
-            if(robot.rightArm != null)
-                robot.rightArm.GetComponent<Animator>().Play("Idle");
             if(transform.Find("Body").GetComponent<Animator>() != null)
             {
-
                 transform.Find("Body").GetComponent<Animator>().Play("Idle");
             }
         }
 
+
+
+        //Have the robot grab the wall
         if (state == RobotState.OnWall && rb.velocity.y <= 0)
         {
-            rb.velocity = new Vector2(rb.velocity.x, 0);
-        }
+            if(rb.velocity.y <= 0)
+                rb.velocity = new Vector2(rb.velocity.x, 0);
+            
+            if(Time.time - timeAttatchedToWall >= wallStickDuration)
+                state = RobotState.InAir;
 
-        if (state == RobotState.OnWall && Time.time - timeAttatchedToWall >= wallStickDuration)
-        {
-            state = RobotState.InAir;
         }
-
-        if (state == RobotState.OnWall && robot.legs != null)
-        {
-            robot.legs.GetComponent<Animator>().Play("WallGrab");
-        }
-        /*if (Input.GetKeyUp(KeyCode.W) || Input.GetKeyUp(KeyCode.A) || Input.GetKeyUp(KeyCode.S) || Input.GetKeyUp(KeyCode.D))
-        {
-            rb.velocity = new Vector2(0, rb.velocity.y);
-        }*/
     }
 
-
     
-
-
     public void FireRightArm(Vector3 targetPosition)
     {
         if(robot.rightArm != null)
@@ -147,26 +150,6 @@ public class RobotController : MonoBehaviour {
 
         //Animations
 
-        //if (robot.legs != null && state != RobotState.OnWall)
-        if (robot.legs != null && state == RobotState.OnGround)
-        {
-            var anim = robot.legs.GetComponent<Animator>();
-            anim.Play("LegRunAnimation");
-
-            transform.Find("Body").GetComponent<Animator>().Play("HeadBob");
-        }
-
-        if(robot.legs != null && state == RobotState.InAir)
-        {
-            var anim = robot.legs.GetComponent<Animator>();
-            Debug.Log("Velocity: " + rb.velocity.y);
-            if(rb.velocity.y < 0)
-            {
-                Debug.Log("Playing down");
-                anim.Play("InAirDown");
-            }
-
-        }
         if (robot.legs != null)
         {
             if (speed > 0)
@@ -178,64 +161,14 @@ public class RobotController : MonoBehaviour {
                 FaceLeft(true);
             }
 
-        }
 
-
-        if (robot.rightArm != null)
-        {
-            robot.rightArm.GetComponent<Animator>().Play("RightArmRun");
-
-        }
-
-    }
-
-    //Rewrote function. Keeping this here in case we need to revert.
-    /*
-    public void FaceLeft(bool shouldFaceLeft = true)
-    {
-        var renderers = GetComponentsInChildren<SpriteRenderer>();
-
-        foreach(SpriteRenderer sr in renderers)
-        {
+            if (state == RobotState.OnGround)
             {
-                sr.flipX = shouldFaceLeft;
-
+                transform.Find("Body").GetComponent<Animator>().Play("HeadBob");
             }
         }
-
-        if(shouldFaceLeft != isFacingLeft)
-        {
-
-            GameObject leftTemp = transform.Find("LeftArmSlot").gameObject;
-            GameObject rightTemp = transform.Find("RightArmSlot").gameObject;
-            Vector3 posTemp = leftTemp.transform.position;
-            int orderTemp = leftTemp.GetComponent<SpriteRenderer>().sortingOrder;
-            leftTemp.transform.position = rightTemp.transform.position;
-            leftTemp.GetComponent<SpriteRenderer>().sortingOrder = rightTemp.GetComponent<SpriteRenderer>().sortingOrder;
-            rightTemp.transform.position = posTemp;
-            rightTemp.GetComponent<SpriteRenderer>().sortingOrder = orderTemp;
-
-            var cone = GetComponentInChildren<VisionCone>();
-            if(cone != null)
-            {
-                var scale = cone.gameObject.transform.localScale;
-
-                cone.gameObject.transform.localScale = new Vector3(-1 * scale.x, scale.y, scale.z);
-
-            }
-        }
-        if (robot.legs != null && state == RobotState.OnWall)
-        {
-            robot.legs.GetComponent<SpriteRenderer>().flipX = !shouldFaceLeft;
-            transform.Find("Body").GetComponent<SpriteRenderer>().flipX = !shouldFaceLeft;
-        }
-
-
-
-        isFacingLeft = shouldFaceLeft;
     }
-    */
-
+   
 
     public void FaceLeft(bool shouldFaceLeft = true)
     {
@@ -250,6 +183,8 @@ public class RobotController : MonoBehaviour {
         
         if(robot.legs != null)
         {
+
+            
            if(state == RobotState.OnWall)  {
                 Debug.Log("Flipping legs");
                 robot.legs.GetComponent<SpriteRenderer>().flipX = true;
@@ -258,26 +193,26 @@ public class RobotController : MonoBehaviour {
             {
                 robot.legs.GetComponent<SpriteRenderer>().flipX = false;
                 transform.Find("Body").GetComponent<SpriteRenderer>().flipX = false;
-
+           
             }
         }
-        
-
-
         isFacingLeft = shouldFaceLeft;
     }
+
+
+
     public void Jump()
     {
         if (state != RobotState.InAir)
         {
-            Debug.Log("State is: " + state.ToString());
-            canJump = false;
             rb.AddForce(Vector2.up * robot.jumpPower);
             if(state == RobotState.OnWall)
             {
+                //Adding a bonus force to wall jumps for game feel
                 rb.AddForce(Vector2.up * robot.jumpPower * WallJumpBonusPercent);
-                Vector2 dir = new Vector2();
 
+                //Calculate direction to push away from wall
+                Vector2 dir = new Vector2();
                 if(lastSurfaceHit.transform.position.x - transform.position.x > 0)
                 {
                     dir = Vector2.right * -1;
@@ -287,10 +222,10 @@ public class RobotController : MonoBehaviour {
                 {
                     dir = Vector2.right;
                     PlayerController.playerController.DisableSingleSidedMovementForDuration(WallJumpMovementDisableDuration, false);
-
                 }
+
+                //Pushes player away from the wall
                 rb.AddForce(dir * WallJumpPushOffPower);
-               //PlayerController.playerController.DisableMovementForDuration(WallJumpMovementDisableDuration);
             }
             state = RobotState.InAir;
         }
@@ -298,20 +233,20 @@ public class RobotController : MonoBehaviour {
 
     void HitGround()
     {
-        canJump = true;
         state = RobotState.OnGround;
+        if(robot.legs != null)
+        {
+            var anim = robot.legs.GetComponent<Animator>();
+            anim.SetTrigger("HitGround");
+        }
     }
 
     void HitWall(GameObject wall)
     {
         if(lastSurfaceHit != wall)
         {
-            canJump = true;
             timeAttatchedToWall = Time.time;
             state = RobotState.OnWall;
-
-            Debug.Log("hit wall");
-            
         }
 
         lastSurfaceHit = wall;
@@ -323,32 +258,9 @@ public class RobotController : MonoBehaviour {
     }
 
 
-    void PlayerDetected()
-    {
-        Debug.Log("Player detected!");
-    }
-
-    
-    void OnCollisionStay2D(Collision2D col)
-    {
-        if(col.contacts.Length <= 0)
-        {
-            float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
-            if (angleOfCollision < 45)
-            {
-                HitGround();
-            }
-
-        }
-
-    }
-    
-
     void OnCollisionEnter2D(Collision2D col)
     {
-        //Still need to do a tag or layer check to see if we hit a surface instead of any object
         //This treats up as 0 degrees. Left and right are 90 degrees.
-
         if (col.contacts.Length < 1)
             return;
 
