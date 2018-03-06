@@ -8,7 +8,7 @@ public class SlidingUpDoor : Activateable {
 
     public void Start()
     {
-        AudioSource audioSource = GetComponent<AudioSource>();
+        audioSource = GetComponent<AudioSource>();
     }
 
     public void Open()

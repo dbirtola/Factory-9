@@ -1,4 +1,24 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/PartsLevel.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/LukeLevel-Aseembly_Room.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/PartsLevel.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/LukeLevel-Aseembly_Room.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/PartsLevel.unity
+=======
+- path: Assets/Scenes/DamenTest.unity
+>>>>>>> d4a4dabf392ee83384653014412cc5c190311545
+>>>>>>> 4183816b4fa8b66da46541173f3a67de5911fa56
+>>>>>>> 03e9e8fef69723ec0a8907854d2297e44053bc99
+>>>>>>> bed2e0c33f1cd5c5d4fdd95b2e45cc0097ae0e38
+>>>>>>> f71128d51a852124d2c137f71e17033dd077de48
   isLoaded: 1
   isActive: 1
