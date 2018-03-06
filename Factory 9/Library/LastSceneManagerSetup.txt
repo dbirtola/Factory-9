@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/CrusherIncinerator.unity
-=======
-- path: Assets/Scenes/Main.unity
->>>>>>> bbec9752ba15c88cf62152d8c85682984cf742c8
+- path: Assets/Scenes/LukeLevel-Aseembly_Room.unity
   isLoaded: 1
   isActive: 1
