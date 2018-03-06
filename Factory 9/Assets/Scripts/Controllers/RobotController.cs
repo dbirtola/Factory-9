@@ -80,9 +80,9 @@ public class RobotController : MonoBehaviour {
     }
 
     void FixedUpdate()
-    {        
+    {
         //Considers the robot falling if they simply move off the wall instead of jumping off it
-        if (lastSurfaceHit != null && state != RobotState.OnGround)
+        if (lastSurfaceHit != null)
         {
             var distanceFromLastSurface = lastSurfaceHit.GetComponent<Collider2D>().Distance(GetComponent<Collider2D>());
             //Debug.DrawLine(distanceFromLastSurface.pointA, distanceFromLastSurface.pointB, Color.white);
@@ -98,14 +98,15 @@ public class RobotController : MonoBehaviour {
             rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat * Time.deltaTime * 100));
         }
 
+        //Check if on ground
 
-        /*
+        
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
         {
             state = RobotState.OnGround;
-        }*/
+        }
 
         //Have the robot grab the wall
         if (state == RobotState.OnWall && rb.velocity.y <= 0)
@@ -151,23 +152,21 @@ public class RobotController : MonoBehaviour {
         //transform.position += Vector3.right * speed;
         rb.AddForce(Vector2.right * speed * Time.deltaTime);
 
-
-        /*
-        //Check if on ground
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
         {
             state = RobotState.OnGround;
         }
-        */
+
 
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x * 0.2f, Color.white, 0.2f);
         RaycastHit2D pushHit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 1, 0) + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x, 0.2f);
         if(state == RobotState.OnGround && robot.pushingPower != 0 && pushHit.collider != null && pushHit.distance <= 0.2f)
         {
             Debug.Log("PushingL " + pushHit.collider.gameObject);
-            state = RobotState.Pushing;
+            //state = RobotState.Pushing;
+            pushing = true;
             Vector3 direction;
             if (isFacingLeft)
             {
@@ -185,14 +184,8 @@ public class RobotController : MonoBehaviour {
             }
 
         }else
-        {        //Check if on ground
-            RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
-            Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
-            if (hit.collider != null && hit.distance <= 0.2f)
-            {
-                state = RobotState.OnGround;
-            }
-
+        {
+            pushing = false;
         }
         //Animations
 

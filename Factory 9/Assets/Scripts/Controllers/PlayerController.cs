@@ -74,6 +74,8 @@ public class PlayerController : MonoBehaviour {
 
         if (movementEnabled)
         {
+
+            
             if (Input.GetKey(KeyCode.D))
             {
                 if (rightMovementEnabled)
@@ -90,8 +92,8 @@ public class PlayerController : MonoBehaviour {
                     playerRC.MoveHorizontal(-1 * playerRobot.speed);
                     LeaveStealth();
                 }
-                
-               
+
+
             }
 
             if (Input.GetKeyDown(KeyCode.Space))
