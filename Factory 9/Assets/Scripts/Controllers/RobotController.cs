@@ -9,6 +9,7 @@ public enum RobotState
     OnGround,   //1
     InAir,      //2
     OnWall,     //3
+    Pushing
 }
 
 
@@ -21,7 +22,7 @@ public class RobotController : MonoBehaviour {
     Rigidbody2D rb;
     Robot robot;
 
-    bool canJump = true;
+    bool pushing = false;
     private float timeAttatchedToWall;
 
     //These are variables to improve the feel of the robot
@@ -59,6 +60,7 @@ public class RobotController : MonoBehaviour {
             anim.SetFloat("HorizontalSpeed", rb.velocity.x);
             anim.SetFloat("VerticalSpeed", rb.velocity.y);
             anim.SetInteger("RobotState", (int)state);
+            anim.SetBool("Pushing", pushing);
         }
         if(robot.leftArm != null)
         {
@@ -83,7 +85,8 @@ public class RobotController : MonoBehaviour {
         }
 
         //Adding an additional force to make robots drop faster as to improve game feel.
-        if(rb.velocity.y < 0)
+        //if(rb.velocity.y < 0)
+        if(state == RobotState.InAir && rb.velocity.y < 0)
         {
             rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat * Time.deltaTime * 100));
         }
@@ -243,6 +246,7 @@ public class RobotController : MonoBehaviour {
 
     void HitWall(GameObject wall)
     {
+        Debug.Log("HitWall");
         if(lastSurfaceHit != wall)
         {
             timeAttatchedToWall = Time.time;
@@ -256,14 +260,51 @@ public class RobotController : MonoBehaviour {
     {
 
     }
+    
+    void OnCollisionStay2D(Collision2D col)
+    {
+        if(state == RobotState.OnGround)
+        {
+            //This treats up as 0 degrees. Left and right are 90 degrees.
+            float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
 
+            if (angleOfCollision > 45 && angleOfCollision < 100)
+            {
+
+                Vector3 direction;
+                if (isFacingLeft)
+                {
+                    direction = Vector3.left;
+                }else
+                {
+                    direction = Vector3.right;
+                }
+                pushing = true;
+                
+
+                Rigidbody2D otherRb = col.gameObject.GetComponent<Rigidbody2D>();
+                if (otherRb != null)
+                    otherRb.AddForce(direction * robot.pushingPower * Time.deltaTime);
+
+            }else
+            {
+                pushing = false;
+            }
+
+        }
+        else
+        {
+            pushing = false;
+        }
+           
+    }
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        //This treats up as 0 degrees. Left and right are 90 degrees.
         if (col.contacts.Length < 1)
             return;
 
+        //This treats up as 0 degrees. Left and right are 90 degrees.
         float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
 
         if (angleOfCollision < 45)

@@ -30,6 +30,8 @@ public class Robot : MonoBehaviour {
     public float speed = 100;
     public float jumpPower = 200;
 
+    public float pushingPower = 300f;
+
     public const float impactThresholdForDamage = 40;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 

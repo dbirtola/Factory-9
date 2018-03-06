@@ -1,4 +1,4 @@
 sceneSetups:
-- path: Assets/Scenes/DamenTest.unity
+- path: Assets/Scenes/CrusherIncinerator.unity
   isLoaded: 1
   isActive: 1

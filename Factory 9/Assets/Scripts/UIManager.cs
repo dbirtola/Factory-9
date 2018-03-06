@@ -4,6 +4,11 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
+    void Awake()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
+
 	// Use this for initialization
 	void Start () {
         PlayerController.playerController.playerRobot.robotDiedEvent.AddListener(ShowDeathScreen);

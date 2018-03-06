@@ -42,15 +42,15 @@ public class ConveyerBelt : Activateable {
 
     void OnCollisionStay2D(Collision2D col)
     {
-        if (activated == false)
-            return;
-
-        
         Rigidbody2D rb = col.gameObject.GetComponent<Rigidbody2D>();
+
+        if (activated == false || rb == null)
+            return;
 
         Vector2 direction = transform.right;
         if (rotatingRight == false)
             direction *= -1;
+
         //Mass needed so all objects go the same speed
         rb.AddForce(direction * speed * Time.deltaTime * col.gameObject.GetComponent<Rigidbody2D>().mass);
     }

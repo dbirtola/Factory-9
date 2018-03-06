@@ -30,7 +30,7 @@ public class GunRightArm : RightArm {
             }
         }*/
         //Reset arm angle if not shooting
-        Debug.Log(GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("PunchArm"));
+
         if (!GetComponent<Animator>().GetCurrentAnimatorStateInfo(0).IsName("PunchArm"))
         {
             transform.right = Vector3.right;
@@ -46,7 +46,6 @@ public class GunRightArm : RightArm {
         //We know the robot is flipped 
         if(transform.lossyScale.x <= -1)
         {
-            Debug.Log("Scale -1");
             transform.right *= -1f;
         }
 

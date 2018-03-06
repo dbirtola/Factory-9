@@ -16,7 +16,10 @@ public class FactoryCamera : MonoBehaviour {
 
     bool shouldTrackTarget = true;
 
-
+    void Start()
+    {
+        DontDestroyOnLoad(gameObject);
+    }
 
     void FixedUpdate()
     {
