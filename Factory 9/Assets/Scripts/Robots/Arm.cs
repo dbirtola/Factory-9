@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Arm : BodyPart {
 
+    public float pushingPower = 200f;
 	// Use this for initialization
 	void Start () {
 		
