@@ -58,6 +58,7 @@
      <Compile Include="Assets\CrusherSensor.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
+     <Compile Include="Assets\InvisibleTrigger.cs" />
      <Compile Include="Assets\LevelLoadingBounds.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
      <Compile Include="Assets\Scripts\Activators\LeverHandle.cs" />
@@ -80,6 +81,7 @@
      <Compile Include="Assets\Scripts\Mechanisms\Activateable.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Dispenser.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\FactoryMachine.cs" />
+     <Compile Include="Assets\Scripts\Mechanisms\MovingObjects.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Rope.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\SlidingUpDoor.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
