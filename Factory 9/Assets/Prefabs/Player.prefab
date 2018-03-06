@@ -188,7 +188,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1938563163598774}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 112.85, y: -3.301, z: 0}
+  m_LocalPosition: {x: -5.56, y: -3.301, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4721447157465246}
@@ -634,7 +634,7 @@ MonoBehaviour:
   headLampActive: 0
   isInvulnerable: 0
   speed: 7200
-  jumpPower: 3400
+  jumpPower: 3650
   invulnerableTimeAfterDamaged: 0.5
 --- !u!114 &114318819814871782
 MonoBehaviour:
@@ -649,8 +649,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   state: 1
   WallJumpBonusPercent: 0.1
-  TheFloatyFeelingFixingFloat: -150
-  wallStickDuration: 0.7
+  TheFloatyFeelingFixingFloat: -145
+  wallStickDuration: 0.65
   WallJumpPushOffPower: 1000
   WallJumpMovementDisableDuration: 0.2
 --- !u!114 &114436177729277394
@@ -669,6 +669,7 @@ MonoBehaviour:
   movementEnabled: 1
   leftMovementEnabled: 1
   rightMovementEnabled: 1
+  isStealthed: 0
 --- !u!114 &114567124849631840
 MonoBehaviour:
   m_ObjectHideFlags: 1

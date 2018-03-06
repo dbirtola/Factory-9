@@ -29,6 +29,9 @@ public class PlayerController : MonoBehaviour {
 
     void Awake()
     {
+        DontDestroyOnLoad(gameObject);
+
+
         rb = GetComponent<Rigidbody2D>();
         player = GetComponent<Player>();
         playerRobot = GetComponent<Robot>();
@@ -138,8 +141,10 @@ public class PlayerController : MonoBehaviour {
             {
                 if (col.gameObject.GetComponent<BodyPart>())
                 {
-                    Debug.Log("Equipping: " + col.gameObject);
-                    PlayerController.player.GetComponent<Robot>().EquipBodyPart(col.gameObject.GetComponent<BodyPart>());
+                    bool success = PlayerController.player.GetComponent<Robot>().EquipBodyPart(col.gameObject.GetComponent<BodyPart>());
+
+                    if (success == true)
+                        break;
                 }
             }
         }
