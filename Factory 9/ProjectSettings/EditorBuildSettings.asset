@@ -8,9 +8,9 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/DamenTest.unity
     guid: 78afacee5df4f7f48b293dfa8250b5c8
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: b517053ea8ad612468c2ec50c1e379aa
-  - enabled: 1
+  - enabled: 0
     path: Assets/Scenes/LukeTest.unity
     guid: 94f565a6ea7aa88429aebe2ad252ab57
