@@ -4,13 +4,15 @@ using UnityEngine;
 
 public class EnemyMovement : MonoBehaviour {
 
+    public float waitTime = 2f;
     public bool isPatrolling = true;//if enemy sees the player, then set this bool False
     public Transform[] patrolPoints;//array of patrol points enemy will travel to in order
     private Transform currentPatrolPoint;//the current patrol point the enemy is traveling to
     private int currentPatrolIndex;//array index counter
+
+
     private Vector2 patrolPointDirection;//vector in direction of currentPatrolPoint
     private float currentSpeed;
-    private Vector2 stoppingForce = new Vector2(0, 0);
     // Use this for initialization
     void Start () {
         currentPatrolIndex = 0;
@@ -56,8 +58,8 @@ public class EnemyMovement : MonoBehaviour {
             //GetComponent<Rigidbody2D>().transform.position
             if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
             {
-                GetComponent<Rigidbody2D>().velocity = stoppingForce;
-                StartCoroutine(PausePatrol(2));
+               // GetComponent<Rigidbody2D>().velocity = stoppingForce;
+                StartCoroutine(PausePatrol(waitTime));
                 //we have reached the patrol point
                 //load up next patrol point if we have not reached the last patrol point
 
@@ -77,6 +79,8 @@ public class EnemyMovement : MonoBehaviour {
                     else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
                         currentSpeed = -1 * currentSpeed;
 
+                  //  GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+
                 }
                 else // end of array is reached, loop back through the patrol points
                 {
@@ -87,18 +91,11 @@ public class EnemyMovement : MonoBehaviour {
 
                     patrolPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
 
-                    if (patrolPointDirection.x < 0)
-                    {  //if vector is neg in the x, go left
-                        currentSpeed = -6;//set speed NEG
-                        GetComponent<RobotController>().MoveHorizontal(currentSpeed);
-                    }
-                    else if (patrolPointDirection.x > 0)
-                    { //if vector is pos in the x, go right
-
-                        currentSpeed = 6;//set speed POS
-                        GetComponent<RobotController>().MoveHorizontal(currentSpeed);
-                    }
-                    GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+                    if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
+                        currentSpeed = -1 * currentSpeed;
+                    else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
+                        currentSpeed = -1 * currentSpeed;
+                    //   GetComponent<RobotController>().MoveHorizontal(currentSpeed);
 
 
                 }
