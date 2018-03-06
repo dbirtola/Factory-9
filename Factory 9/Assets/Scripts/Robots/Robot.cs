@@ -30,7 +30,7 @@ public class Robot : MonoBehaviour {
     public float speed = 100;
     public float jumpPower = 200;
 
-    public float pushingPower = 300f;
+    public float pushingPower = 0f;
 
     public const float impactThresholdForDamage = 40;
     public  float invulnerableTimeAfterDamaged = 0.5f;
@@ -184,6 +184,8 @@ public class Robot : MonoBehaviour {
     public LeftArm EquipLeftArm(LeftArm newArm)
     {
         LeftArm temp = leftArm;
+        if(leftArm != null)
+            pushingPower -= leftArm.pushingPower;
 
         newArm.transform.SetParent(transform.Find("LeftArmSlot"));
         newArm.transform.localPosition = Vector3.zero;
@@ -191,12 +193,15 @@ public class Robot : MonoBehaviour {
         Destroy(newArm.GetComponent<Rigidbody2D>());
 
         leftArm = newArm;
+        pushingPower += newArm.pushingPower;
         return temp;
     }
 
     public RightArm EquipRightArm(RightArm newArm)
     {
         RightArm temp = rightArm;
+        if(rightArm != null)
+            pushingPower -= rightArm.pushingPower;
 
         newArm.transform.SetParent(transform.Find("RightArmSlot"));
         newArm.transform.localPosition = Vector3.zero;
@@ -204,6 +209,7 @@ public class Robot : MonoBehaviour {
         Destroy(newArm.GetComponent<Rigidbody2D>());
 
         rightArm = newArm;
+        pushingPower += newArm.pushingPower;
 
         return temp;
     }
@@ -250,7 +256,7 @@ public class Robot : MonoBehaviour {
         {
             return false;
         }
-
+        pushingPower -= lostArm.pushingPower;
         lostArm.transform.SetParent(null);
         //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
         lostArm.gameObject.AddComponent<Rigidbody2D>();

@@ -4,13 +4,64 @@ using UnityEngine;
 
 public class AITurretController : MonoBehaviour {
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    public float TurretSpeed;
+    private bool playerSpotted = false;
+    public float angle;
+    // Update is called once per frame
+    void FixedUpdate()
+    {
+
+        ScanArea();
+    }
+    protected virtual void Start()
+    {
+
+        var vis = GetComponent<AIVision>();
+        if (vis != null)
+        {
+            vis.playerSpottedEvent.AddListener(OnPlayerSpotted);
+
+        }
+    }
+
+    protected virtual void OnPlayerSpotted(GameObject player)
+    {
+        //follow player with light
+        //increase spotlight power
+        //If player reaches max distance, go back to scanning area with spotlight
+        playerSpotted = true;
+
+    }
+    public void ScanArea() {
+
+
+        if ( angle - GetComponent<Rigidbody2D>().rotation > 5 || (angle < 0 && angle - GetComponent<Rigidbody2D>().rotation > -5))
+        {
+            if (angle < 0)
+                angle *= -1;
+            // transform.Rotate(Vector3.forward);
+            GetComponent<Rigidbody2D>().MoveRotation(Mathf.LerpAngle(GetComponent<Rigidbody2D>().rotation, angle,t: TurretSpeed * Time.deltaTime));
+        }
+         else if (angle - GetComponent<Rigidbody2D>().rotation < 5)
+        {
+            if(angle > 0)
+              angle *= -1;
+            //   transform.Rotate(Vector3.back);
+            GetComponent<Rigidbody2D>().MoveRotation(Mathf.LerpAngle(GetComponent<Rigidbody2D>().rotation, angle,t: TurretSpeed * Time.deltaTime));
+        }
+       // Debug.Log(GetComponent<Rigidbody2D>().rotation);
+
+        //transform.Rotate(Vector3.forward);
+    }
+
+    /*
+    IEnumerator ShootAtPlayer(float timePerShot)
+    {
+        while (GetComponent<Robot>().rightArm != null && GetComponent<AIChase>().isChasing == true)
+        {
+            yield return new WaitForSeconds(timePerShot);
+          //  GetComponent<Robot>().rightArm.Fire(Target.GetComponent<Robot>().transform.position);
+        }
+    }
+    */
 }

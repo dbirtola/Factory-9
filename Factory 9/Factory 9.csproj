@@ -308,6 +308,7 @@
     <Compile Include="Assets\Scripts\KillZone.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\Activateable.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\Dispenser.cs" />
+    <Compile Include="Assets\Scripts\Mechanisms\FactoryMachine.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\Rope.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\SlidingUpDoor.cs" />
     <Compile Include="Assets\Scripts\Player.cs" />
