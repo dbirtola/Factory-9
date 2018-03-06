@@ -54,8 +54,11 @@
      <Compile Include="Assets\AirVent.cs" />
      <Compile Include="Assets\AirVentEntrance.cs" />
      <Compile Include="Assets\ConveyerBelt.cs" />
+     <Compile Include="Assets\Crusher.cs" />
+     <Compile Include="Assets\CrusherSensor.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
+     <Compile Include="Assets\InvisibleTrigger.cs" />
      <Compile Include="Assets\LevelLoadingBounds.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
      <Compile Include="Assets\Scripts\Activators\LeverHandle.cs" />
@@ -77,6 +80,8 @@
      <Compile Include="Assets\Scripts\KillZone.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Activateable.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Dispenser.cs" />
+     <Compile Include="Assets\Scripts\Mechanisms\FactoryMachine.cs" />
+     <Compile Include="Assets\Scripts\Mechanisms\MovingObjects.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Rope.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\SlidingUpDoor.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
@@ -85,6 +90,7 @@
      <Compile Include="Assets\Scripts\Robots\BasicLeftArm.cs" />
      <Compile Include="Assets\Scripts\Robots\BasicLegs.cs" />
      <Compile Include="Assets\Scripts\Robots\BodyPart.cs" />
+     <Compile Include="Assets\Scripts\Robots\Destructable.cs" />
      <Compile Include="Assets\Scripts\Robots\GunRightArm.cs" />
      <Compile Include="Assets\Scripts\Robots\LeftArm.cs" />
      <Compile Include="Assets\Scripts\Robots\Legs.cs" />

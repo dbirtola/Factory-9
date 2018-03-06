@@ -4,7 +4,14 @@ using UnityEngine;
 
 public class Arm : BodyPart {
 
-    public float pushingPower = 200f;
+    
+    public float pushingSpeed;
+    public float pushableMass;
+
+    public GameObject owner;
+
+    public Vector2 punchRange;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -18,6 +25,33 @@ public class Arm : BodyPart {
     public virtual void Fire(Vector3 targetLocation)
     {
 
+    }
+
+
+    public virtual void Punch()
+    {
+        var anim = GetComponent<Animator>();
+        anim.SetTrigger("Punch");
+
+        var colliders = Physics2D.OverlapBoxAll(transform.position + transform.right * 0.5f, punchRange, 0);
+        foreach(Collider2D c in colliders)
+        {
+            //Check if owner
+            if (c.gameObject == owner)
+                continue;
+
+
+            
+
+            if (c.GetComponent<Robot>())
+            {
+                c.GetComponent<Robot>().takeDamage(1, gameObject);
+            }
+            if (c.GetComponent<Destructable>())
+            {
+                c.GetComponent<Destructable>().takeDamage(1);
+            }
+        }
     }
     
 }

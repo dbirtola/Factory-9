@@ -11,7 +11,7 @@ public class VisionCone : MonoBehaviour {
         var vis = owningAIVision.GetComponent<AIVision>();
         if (col.gameObject.GetComponent<Player>() && vis != null && col.gameObject.GetComponent<PlayerController>().isStealthed == false)
         {
-            vis.playerSpottedEvent.Invoke(col.gameObject);
+            //vis.playerSpottedEvent.Invoke(col.gameObject);
             Vector2 direction = (col.gameObject.transform.position - transform.position).normalized;
             RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 10);
             Debug.DrawRay(transform.position, direction * 10, Color.green);
