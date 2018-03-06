@@ -184,32 +184,30 @@ public class Robot : MonoBehaviour {
     public LeftArm EquipLeftArm(LeftArm newArm)
     {
         LeftArm temp = leftArm;
-        if(leftArm != null)
-            pushingPower -= leftArm.pushingPower;
 
         newArm.transform.SetParent(transform.Find("LeftArmSlot"));
         newArm.transform.localPosition = Vector3.zero;
         newArm.transform.rotation = Quaternion.identity;
+        newArm.transform.localScale = Vector3.one;
         Destroy(newArm.GetComponent<Rigidbody2D>());
 
         leftArm = newArm;
-        pushingPower += newArm.pushingPower;
+        newArm.owner = gameObject;
         return temp;
     }
 
     public RightArm EquipRightArm(RightArm newArm)
     {
         RightArm temp = rightArm;
-        if(rightArm != null)
-            pushingPower -= rightArm.pushingPower;
 
         newArm.transform.SetParent(transform.Find("RightArmSlot"));
         newArm.transform.localPosition = Vector3.zero;
         newArm.transform.rotation = Quaternion.identity;
+        newArm.transform.localScale = Vector3.one;
         Destroy(newArm.GetComponent<Rigidbody2D>());
 
         rightArm = newArm;
-        pushingPower += newArm.pushingPower;
+        newArm.owner = gameObject;
 
         return temp;
     }
@@ -256,11 +254,10 @@ public class Robot : MonoBehaviour {
         {
             return false;
         }
-        pushingPower -= lostArm.pushingPower;
         lostArm.transform.SetParent(null);
         //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
         lostArm.gameObject.AddComponent<Rigidbody2D>();
-
+        lostArm.owner = null;
         lostArm = null;
         return true;
     }

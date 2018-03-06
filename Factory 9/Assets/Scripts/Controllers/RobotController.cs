@@ -21,7 +21,7 @@ public class RobotController : MonoBehaviour {
 
     Rigidbody2D rb;
     Robot robot;
-    
+
 
     bool pushing = false;
     private float timeAttatchedToWall;
@@ -55,7 +55,7 @@ public class RobotController : MonoBehaviour {
     void Update()
     {
         //Update the animator parameters
-        if(robot.legs != null)
+        if (robot.legs != null)
         {
             var anim = robot.legs.GetComponent<Animator>();
             anim.SetFloat("HorizontalSpeed", rb.velocity.x);
@@ -63,11 +63,11 @@ public class RobotController : MonoBehaviour {
             anim.SetInteger("RobotState", (int)state);
             anim.SetBool("Pushing", pushing);
         }
-        if(robot.leftArm != null)
+        if (robot.leftArm != null)
         {
 
         }
-        if(robot.rightArm != null)
+        if (robot.rightArm != null)
         {
             var anim = robot.rightArm.GetComponent<Animator>();
             anim.SetFloat("HorizontalSpeed", rb.velocity.x);
@@ -76,7 +76,7 @@ public class RobotController : MonoBehaviour {
 
 
 
-       
+
     }
 
     void FixedUpdate()
@@ -99,8 +99,6 @@ public class RobotController : MonoBehaviour {
         }
 
         //Check if on ground
-
-        
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
@@ -111,10 +109,10 @@ public class RobotController : MonoBehaviour {
         //Have the robot grab the wall
         if (state == RobotState.OnWall && rb.velocity.y <= 0)
         {
-            if(rb.velocity.y <= 0)
+            if (rb.velocity.y <= 0)
                 rb.velocity = new Vector2(rb.velocity.x, 0);
-            
-            if(Time.time - timeAttatchedToWall >= wallStickDuration)
+
+            if (Time.time - timeAttatchedToWall >= wallStickDuration)
                 state = RobotState.InAir;
 
         }
@@ -129,10 +127,10 @@ public class RobotController : MonoBehaviour {
         }
     }
 
-    
+
     public void FireRightArm(Vector3 targetPosition)
     {
-        if(robot.rightArm != null)
+        if (robot.rightArm != null)
         {
             robot.rightArm.Fire(targetPosition);
         }
@@ -140,15 +138,84 @@ public class RobotController : MonoBehaviour {
 
     public void FireLeftArm(Vector3 targetPosition)
     {
-        if(robot.leftArm != null)
+        if (robot.leftArm != null)
         {
             robot.leftArm.Fire(targetPosition);
         }
     }
 
+
+    public void Punch()
+    {
+        if (robot.rightArm != null)
+        {
+            robot.rightArm.Punch();
+        } else if (robot.leftArm != null)
+        {
+            robot.leftArm.Punch();
+        }
+    }
+
+    //Should move to robot itself not controller
+    public bool pushObject(GameObject other)
+    {
+        Arm strongerArm = null;
+        Debug.Log("Pushing?");
+        if (state == RobotState.OnGround && (robot.rightArm != null || robot.leftArm != null))
+        {
+            //Determine the stronger arm
+            if (robot.rightArm != null && robot.leftArm != null)
+            {
+                if (robot.rightArm.pushableMass > robot.leftArm.pushableMass)
+                {
+                    strongerArm = robot.rightArm;
+
+                }
+                else
+                {
+                    strongerArm = robot.leftArm;
+                }
+            }
+            else
+            {
+                //Select either if only 1 arm exists
+                if (robot.rightArm != null)
+                    strongerArm = robot.rightArm;
+                if (robot.leftArm != null)
+                    strongerArm = robot.leftArm;
+            }
+
+
+
+        }
+        if (strongerArm == null)
+            return false;
+
+        //state = RobotState.Pushing;
+        
+        Vector3 direction;
+        if (isFacingLeft)
+        {
+            direction = Vector3.left;
+        }
+        else
+        {
+            direction = Vector3.right;
+        }
+
+        Rigidbody2D otherRB = other.gameObject.GetComponent<Rigidbody2D>();
+        if (otherRB != null && otherRB.mass < strongerArm.pushableMass)
+        {
+            //otherRB.AddForce(direction * robot.pushingPower);
+            otherRB.velocity = new Vector2(direction.x * strongerArm.pushingSpeed, otherRB.velocity.y);
+        }
+
+        return true;
+
+    }
+
     public void MoveHorizontal(float speed)
     {
-
         //transform.position += Vector3.right * speed;
         rb.AddForce(Vector2.right * speed * Time.deltaTime);
 
@@ -159,34 +226,16 @@ public class RobotController : MonoBehaviour {
             state = RobotState.OnGround;
         }
 
-
+        //Asume we arent pushing unless we are running into an object
+        pushing = false;
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x * 0.2f, Color.white, 0.2f);
         RaycastHit2D pushHit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 1, 0) + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x, 0.2f);
-        if(state == RobotState.OnGround && robot.pushingPower != 0 && pushHit.collider != null && pushHit.distance <= 0.2f)
+        if(state == RobotState.OnGround && pushHit.collider != null && pushHit.distance <= 0.1f)
         {
-            Debug.Log("PushingL " + pushHit.collider.gameObject);
-            //state = RobotState.Pushing;
-            pushing = true;
-            Vector3 direction;
-            if (isFacingLeft)
-            {
-                direction = Vector3.left;
-            }
-            else
-            {
-                direction = Vector3.right;
-            }
-
-            Rigidbody2D otherRB = pushHit.collider.gameObject.GetComponent<Rigidbody2D>();
-            if(otherRB != null)
-            {
-                otherRB.AddForce(direction * robot.pushingPower);
-            }
-
-        }else
-        {
-            pushing = false;
+            pushing = pushObject(pushHit.collider.gameObject);
         }
+
+
         //Animations
 
         if (robot.legs != null)
@@ -299,10 +348,9 @@ public class RobotController : MonoBehaviour {
     
     void OnCollisionStay2D(Collision2D col)
     {
+            
 
         /*
-        if(state == RobotState.OnGround)
-        {
             //This treats up as 0 degrees. Left and right are 90 degrees.
             float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
 
@@ -318,11 +366,17 @@ public class RobotController : MonoBehaviour {
                     direction = Vector3.right;
                 }
                 pushing = true;
-                
+
+
+
 
                 Rigidbody2D otherRb = col.gameObject.GetComponent<Rigidbody2D>();
                 if (otherRb != null)
-                    otherRb.AddForce(direction * robot.pushingPower * Time.deltaTime);
+                {
+                    
+                }
+                    
+                    //otherRb.AddForce(direction * robot.pushingPower * Time.deltaTime);
 
             }else
             {
@@ -335,8 +389,37 @@ public class RobotController : MonoBehaviour {
             pushing = false;
         }
 
+        
+
+        /*
+        if (state == RobotState.OnGround && (robot.rightArm != null || robot.leftArm != null))
+        {
+            //Debug.Log("PushingL " + pushHit.collider.gameObject);
+            //state = RobotState.Pushing;
+            pushing = true;
+            Vector3 direction;
+            if (isFacingLeft)
+            {
+                direction = Vector3.left;
+            }
+            else
+            {
+                direction = Vector3.right;
+            }
+
+            Rigidbody2D otherRB = pushHit.collider.gameObject.GetComponent<Rigidbody2D>();
+            if (otherRB != null)
+            {
+                otherRB.AddForce(direction * robot.pushingPower);
+            }
+
+        }
+        else
+        {
+            pushing = false;
+        }
         */
-           
+
     }
 
     void OnCollisionEnter2D(Collision2D col)

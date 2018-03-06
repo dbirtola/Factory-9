@@ -38,6 +38,7 @@ GameObject:
   - component: {fileID: 4593674377172134}
   - component: {fileID: 50180087226808362}
   - component: {fileID: 66981384235853786}
+  - component: {fileID: 114158658001795138}
   m_Layer: 0
   m_Name: ScenicCore
   m_TagString: Untagged
@@ -310,6 +311,26 @@ CompositeCollider2D:
       - {x: -0.052500002, y: -0.355}
       - {x: -0.005, y: -0.355}
   m_VertexDistance: 0.0005
+--- !u!114 &114158658001795138
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936902927341974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: f32e39ee1704af84da08c425d11f3b32, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  legs: {fileID: 0}
+  leftArm: {fileID: 0}
+  rightArm: {fileID: 0}
+  headLampActive: 0
+  isInvulnerable: 0
+  speed: 100
+  jumpPower: 200
+  pushingPower: 0
+  invulnerableTimeAfterDamaged: 0.5
 --- !u!212 &212579946718137584
 SpriteRenderer:
   m_ObjectHideFlags: 1
