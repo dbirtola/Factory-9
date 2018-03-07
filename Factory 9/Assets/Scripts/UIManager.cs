@@ -32,6 +32,8 @@ public class UIManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        if (transform.Find("Levels") == null)
+            return;
         if (Input.GetKey(KeyCode.Tab))
         {
             transform.Find("Levels").gameObject.SetActive(true);
