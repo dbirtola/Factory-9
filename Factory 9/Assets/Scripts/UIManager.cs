@@ -4,20 +4,45 @@ using UnityEngine;
 
 public class UIManager : MonoBehaviour {
 
+    public static UIManager uiManager;
+
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+       
     }
 
 	// Use this for initialization
 	void Start () {
-        PlayerController.playerController.playerRobot.robotDiedEvent.AddListener(ShowDeathScreen);
+        if(uiManager != null)
+        {
+            Destroy(uiManager.gameObject);
+                return;
+        }else
+        {
+            uiManager = this;
+        }
+        Init();
 	}
 	
+    public void Init()
+    {
+        PlayerController.playerController.playerRobot.robotDiedEvent.AddListener(ShowDeathScreen);
+
+    }
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            transform.Find("Levels").gameObject.SetActive(true);
+        }else
+        {
+            transform.Find("Levels").gameObject.SetActive(false);
+
+        }
 	}
+
+
 
     public void ShowDeathScreen(GameObject killer)
     {

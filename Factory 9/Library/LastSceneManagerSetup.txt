@@ -1,4 +1,15 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/TestLevelDavid.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/LukeTest.unity
+=======
+- path: Assets/Scenes/Init.unity
+>>>>>>> dd1777918531e03a869ee70f1066fc4f897f232f
+>>>>>>> 04a4768695d63033be98c6ad9a29d1de2616a15f
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/Main.unity
+  isLoaded: 1
+  isActive: 0

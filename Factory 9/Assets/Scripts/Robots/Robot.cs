@@ -32,7 +32,7 @@ public class Robot : MonoBehaviour {
 
     public float pushingPower = 0f;
 
-    public const float impactThresholdForDamage = 40;
+    public float impactThresholdForDamage = 40;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 
     void Awake()
@@ -111,18 +111,27 @@ public class Robot : MonoBehaviour {
         if (!col.gameObject.GetComponent<Rigidbody2D>())
             return;
 
-        Debug.Log("Please?");
+
+            float sum = 0;
+            foreach (ContactPoint2D cp in col.contacts)
+            {
+                sum += cp.normalImpulse;
+            }
+            Debug.Log("Damage: " + sum);
+
+        
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
-            Debug.Log("Contacts: " + col.contacts.Length);
+
             if(col.contacts.Length <= 0)
             {
                 Debug.Log("Contacts 0");
                 return;
             }
 
-            Debug.Log("Nomral force: " + col.contacts[0].normalImpulse);
-            if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
+
+           // if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
+           if(sum >= impactThresholdForDamage)
             {
                 Debug.Log("Took damage from impulse of: " + col.contacts[0].normalImpulse + "(" + col.gameObject + ")");
                   

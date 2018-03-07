@@ -15,7 +15,10 @@ public class SlidingUpDoor : Activateable {
     {
         if(activated == false)
         {
-            GetComponent<Animation>().Play("SlidingUpDoorAnimation");
+            Animation anim = GetComponent<Animation>();
+            anim["SlidingUpDoorAnimation"].speed = 1;
+            anim["SlidingUpDoorAnimation"].time = 0;
+            anim.Play("SlidingUpDoorAnimation");
             GetComponent<Collider2D>().isTrigger = true;
         }
     }
@@ -24,10 +27,12 @@ public class SlidingUpDoor : Activateable {
     {
         if(activated == true)
         {
+            
             Animation anim = GetComponent<Animation>();
             anim["SlidingUpDoorAnimation"].speed = -1;
             anim["SlidingUpDoorAnimation"].time = anim["SlidingUpDoorAnimation"].length;
             anim.Play("SlidingUpDoorAnimation");
+            
             GetComponent<Collider2D>().isTrigger = false;
 
         }
