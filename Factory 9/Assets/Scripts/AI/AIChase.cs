@@ -29,7 +29,7 @@ public class AIChase : MonoBehaviour {
             }
 
             //If robot gets too close to the player, slow down
-            if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) < 2)
+            if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) < 1)
             {
 
                // GetComponent<RobotController>().MoveHorizontal(0);//has no speed
