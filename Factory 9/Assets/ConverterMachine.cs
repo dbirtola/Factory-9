@@ -2,13 +2,15 @@
 using System.Collections.Generic;
 using UnityEngine;
 
-public class ConverterMachine : MonoBehaviour {
+public class ConverterMachine : Switch{
     public IngredientAmountPair[] ingredients;
 
     public GameObject outputPrefab;
 
     public TextMesh[] ingredientTexts;
 
+
+    bool hasFinished = false;
 	// Use this for initialization
 	void Start () {
 		if(ingredients == null)
@@ -29,7 +31,9 @@ public class ConverterMachine : MonoBehaviour {
 
     public bool receivedIngredient(Ingredient ingredient)
     {
-        for(int i = 0; i < ingredients.Length; i++)
+        if (hasFinished == true)
+            return false;
+        for (int i = 0; i < ingredients.Length; i++)
         {
             if (ingredients[i].ingredient == ingredient.ingredient)
             {
@@ -57,6 +61,11 @@ public class ConverterMachine : MonoBehaviour {
         //Satisfied
         var spot = transform.Find("OutputSpot");
         Instantiate(outputPrefab, spot.transform.position, Quaternion.identity);
+        hasFinished = true;
+        foreach(Activateable ai in targetObjects)
+        {
+            ai.Activate();
+        }
         return true;
     }
 
