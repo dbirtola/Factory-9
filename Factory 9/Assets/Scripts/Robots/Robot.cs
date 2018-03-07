@@ -122,7 +122,7 @@ public class Robot : MonoBehaviour {
         
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
-
+            Debug.Log(col.gameObject + " passed the test with : " + col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude + " vs " + GetComponent<Rigidbody2D>().velocity.magnitude);
             if(col.contacts.Length <= 0)
             {
                 Debug.Log("Contacts 0");
@@ -206,6 +206,7 @@ public class Robot : MonoBehaviour {
     public LeftArm EquipLeftArm(LeftArm newArm)
     {
         LeftArm temp = leftArm;
+        LoseArm(temp);
 
         newArm.transform.SetParent(transform.Find("LeftArmSlot"));
         newArm.transform.localPosition = Vector3.zero;
@@ -221,6 +222,7 @@ public class Robot : MonoBehaviour {
     public RightArm EquipRightArm(RightArm newArm)
     {
         RightArm temp = rightArm;
+        LoseArm(temp);
 
         newArm.transform.SetParent(transform.Find("RightArmSlot"));
         newArm.transform.localPosition = Vector3.zero;
@@ -234,6 +236,12 @@ public class Robot : MonoBehaviour {
         return temp;
     }
 
+    IEnumerator addForceNextFrame(GameObject go, Vector2 force)
+    {
+        yield return null;
+        go.GetComponent<Rigidbody2D>().AddForce(force);
+
+    }
 
     public void takeDamage(int damage, GameObject attacker)
     {
@@ -245,11 +253,15 @@ public class Robot : MonoBehaviour {
         //We want the player to first lose his arms, then lose his legs. If he has neither he dies
         for(int i = 0; i < damage; i++)
         {
-            if (LoseArm() == false)
+            if (LoseArm(leftArm) == false)
             {
-                if (LoseLegs(new Vector2(0, 0)) == false)
+                if(LoseArm(rightArm) == false)
                 {
-                    Die();
+                    if (LoseLegs(new Vector2(0, 0)) == false)
+                    {
+                        Die();
+                    }
+
                 }
             }
         }
@@ -258,10 +270,13 @@ public class Robot : MonoBehaviour {
     }
 
 
-    public bool LoseArm(bool shouldKnock = false)
+    public bool LoseArm(Arm arm, bool shouldKnock = false)
     {
-        Arm lostArm = null;
+        if (arm == null)
+            return false;
+        Arm lostArm = arm;
         //If we have a left arm we will drop it. If not we drop the right arm. If neither we return false and move on
+        /*
         if (leftArm != null)
         {
             lostArm = leftArm;
@@ -276,6 +291,7 @@ public class Robot : MonoBehaviour {
         {
             return false;
         }
+        */
         lostArm.transform.SetParent(null);
         //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
         lostArm.gameObject.AddComponent<Rigidbody2D>();
