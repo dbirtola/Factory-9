@@ -52,8 +52,11 @@ public class FactoryMachine : MonoBehaviour {
         yield return new WaitForSeconds(pauseTime);
         Destroy(input);
         spawnPosition = transform.position;
-        output = outputObject[counter].gameObject;
-        Instantiate(output, spawnPosition, Quaternion.identity);
+        if (outputObject.Length > 0)
+        {
+            output = outputObject[counter].gameObject;
+            Instantiate(output, spawnPosition, Quaternion.identity);
+        }
         GetComponent<BoxCollider2D>().isTrigger = true;
     }
 }
