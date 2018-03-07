@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/PartsLevel.unity
-=======
-- path: Assets/Scenes/LukeLevel-Aseembly_Room.unity
->>>>>>> 5fa877f87800dfc62c1efe5f3429f6260a170355
+- path: Assets/Scenes/TestLevelDavid.unity
   isLoaded: 1
   isActive: 1
