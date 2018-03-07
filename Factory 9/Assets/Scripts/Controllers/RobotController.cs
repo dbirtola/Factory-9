@@ -120,6 +120,10 @@ public class RobotController : MonoBehaviour {
 
         if (state == RobotState.OnGround && rb.velocity.magnitude <= 0.2f)
         {
+            //Spaghetti
+            if (transform.Find("Body") == null)
+                return;
+            
             if (transform.Find("Body").GetComponent<Animator>() != null)
             {
                 transform.Find("Body").GetComponent<Animator>().Play("Idle");

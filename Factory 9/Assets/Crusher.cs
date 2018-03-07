@@ -49,7 +49,8 @@ public class Crusher : MonoBehaviour {
             Debug.Log("Smashed: " + col.gameObject);
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
-            if(col.gameObject.transform.Find("body").gameObject != null)
+            //Spaghetti?
+            if(col.gameObject.transform.Find("Body") != null)
                 Destroy(col.gameObject.transform.Find("Body").gameObject);
             Instantiate(crushedCoreObject, col.gameObject.transform, false);
 
