@@ -120,7 +120,7 @@ public class MovingObjects : MonoBehaviour
 
         isWaiting = true;
         //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0,y: 0);
         yield return new WaitForSeconds(waitTime);
         isWaiting = false;
         GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);

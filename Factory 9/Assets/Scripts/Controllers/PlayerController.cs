@@ -148,8 +148,20 @@ public class PlayerController : MonoBehaviour {
         //Looting body parts
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Vector2 pos = new Vector2(transform.position.x + 1 * transform.lossyScale.x, transform.position.y);
-            var colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 2.5f), 0);
+            Collider2D[] colls;
+            if(playerRobot.legs != null)
+            {
+
+                Vector2 pos = new Vector2(transform.position.x + 1.5f * transform.lossyScale.x, transform.position.y);
+                colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 2.5f), 0);
+
+            }else
+            {
+                Vector2 pos = new Vector2(transform.position.x, transform.position.y);
+                colls = Physics2D.OverlapBoxAll(pos, new Vector2(3, 2.5f), 0);
+
+            }
+
 
             foreach(Collider2D col in colls)
             {

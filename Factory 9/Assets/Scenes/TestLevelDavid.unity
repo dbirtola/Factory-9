@@ -22148,6 +22148,16 @@ Prefab:
       propertyPath: m_Constraints
       value: 4
       objectReference: {fileID: 0}
+    - target: {fileID: 50509222129789116, guid: 34fb7a7019cca8f4d914c0c0ff4267f3,
+        type: 2}
+      propertyPath: m_Mass
+      value: 20
+      objectReference: {fileID: 0}
+    - target: {fileID: 61863589925177278, guid: 34fb7a7019cca8f4d914c0c0ff4267f3,
+        type: 2}
+      propertyPath: m_UsedByComposite
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 34fb7a7019cca8f4d914c0c0ff4267f3, type: 2}
   m_IsPrefabParent: 0

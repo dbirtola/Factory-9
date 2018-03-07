@@ -44,15 +44,23 @@ public class Crusher : MonoBehaviour {
 
         if (col.gameObject.GetComponent<Robot>())
         {
-
+            //Cant hit a stealthed player
+            if (col.gameObject.GetComponent<PlayerController>())
+            {
+                if (col.gameObject.GetComponent<PlayerController>().isStealthed == true)
+                    return;
+            }
+        
             timeLastCrushed = Time.time;
             Debug.Log("Smashed: " + col.gameObject);
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
-            if(col.gameObject.transform.Find("body").gameObject != null)
+            //Spaghetti?
+            if(col.gameObject.transform.Find("Body") != null)
                 Destroy(col.gameObject.transform.Find("Body").gameObject);
-            Instantiate(crushedCoreObject, col.gameObject.transform, false);
-
+            var temp = Instantiate(crushedCoreObject, col.gameObject.transform.position, Quaternion.identity);
+            temp.transform.SetParent(col.gameObject.transform);
+            temp.GetComponent<Rigidbody2D>().AddForce(Vector3.up * 500);
         }
 
 

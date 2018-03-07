@@ -13,13 +13,19 @@ public class VisionCone : MonoBehaviour {
         {
             //vis.playerSpottedEvent.Invoke(col.gameObject);
             Vector2 direction = (col.gameObject.transform.position - transform.position).normalized;
-            RaycastHit2D hit = Physics2D.Raycast(transform.position, direction, 10);
-            Debug.DrawRay(transform.position, direction * 10, Color.green);
+            Vector3 direction3 = (col.gameObject.transform.position - transform.position).normalized;
+            RaycastHit2D hit = Physics2D.Raycast(transform.parent.position + Vector3.right* transform.lossyScale.x * 0.2f, direction, 10);
+            Debug.DrawRay(transform.parent.position + Vector3.right * transform.lossyScale.x * 0.2f, direction * 10, Color.green);
             if (hit.collider.gameObject.GetComponent<Player>())
             {
 
                 vis.playerSpottedEvent.Invoke(col.gameObject);
 
+            }
+            else
+            {
+                Debug.Log("Hit : " + hit.collider.gameObject);
+                     
             }
         }
     }
