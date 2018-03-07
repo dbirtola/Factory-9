@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212978039158811268}
   - component: {fileID: 50332166565866118}
   - component: {fileID: 60425546687932810}
+  - component: {fileID: 114653687245760410}
   m_Layer: 0
   m_Name: Cylinder
   m_TagString: Untagged
@@ -36,7 +37,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1034834059814532}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -7.347551, y: 27.50099, z: 0.2109375}
+  m_LocalPosition: {x: 243.81892, y: -188.56793, z: 0.2109375}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -92,6 +93,18 @@ PolygonCollider2D:
       - {x: 0.31, y: 0.48999998}
       - {x: 0.29749998, y: 0.5025}
       - {x: -0.295, y: 0.5025}
+--- !u!114 &114653687245760410
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1034834059814532}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 519201cc1626682469c91c4c8defee1d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ingredient: 4
 --- !u!212 &212978039158811268
 SpriteRenderer:
   m_ObjectHideFlags: 1
