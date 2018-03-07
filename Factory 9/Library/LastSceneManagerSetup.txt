@@ -1,16 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/LukeTest.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/TestLevelDavid.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/LukeTest.unity
-=======
-- path: Assets/Scenes/Init.unity
->>>>>>> dd1777918531e03a869ee70f1066fc4f897f232f
->>>>>>> 04a4768695d63033be98c6ad9a29d1de2616a15f
->>>>>>> 59d4eca136247ef44d9a63ae916228ad9ece1843
   isLoaded: 1
   isActive: 1
