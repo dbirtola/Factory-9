@@ -105,15 +105,26 @@ public class PlayerController : MonoBehaviour {
         if (Input.GetKeyDown(KeyCode.G))
         {
             playerRobot.headLampActive = !playerRobot.headLampActive;
+            if(playerRobot.headLampActive == true)
+            {
+                LeaveStealth();
+            }
             //playerRC.SetHeadlightOn(true);
         }
 
-        if (Input.GetKeyDown(KeyCode.Mouse0))
+        if (Input.GetKeyDown(KeyCode.Mouse1))
         {
 
             Vector2 mousePosition = PlayerController.GetMouseInWorldSpace();
 
             playerRC.FireRightArm(mousePosition);
+            LeaveStealth();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Mouse0))
+        {
+            playerRC.Punch();
+            LeaveStealth();
         }
 
 
@@ -129,6 +140,7 @@ public class PlayerController : MonoBehaviour {
             if(GetComponent<Rigidbody2D>().velocity.magnitude <= 0.5f && playerRC.state == RobotState.OnGround)
             {
                 EnterStealth();
+                playerRobot.headLampActive = false;
             }
         }
 
@@ -136,7 +148,7 @@ public class PlayerController : MonoBehaviour {
         //Looting body parts
         if (Input.GetKeyDown(KeyCode.E))
         {
-            Vector2 pos = new Vector2(transform.position.x + 1, transform.position.y);
+            Vector2 pos = new Vector2(transform.position.x + 1 * transform.lossyScale.x, transform.position.y);
             var colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 2.5f), 0);
 
             foreach(Collider2D col in colls)

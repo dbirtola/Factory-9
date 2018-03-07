@@ -20,6 +20,6 @@ public class LevelLoadingBounds : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D col)
     {
         if (col.gameObject.GetComponent<Player>())
-            SceneManager.LoadScene(SceneToBeLoaded, LoadSceneMode.Additive);
+            SceneManager.LoadSceneAsync(SceneToBeLoaded, LoadSceneMode.Additive);
     }
 }

@@ -19,10 +19,10 @@ public class AirVentEntrance : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        if (col.gameObject.GetComponent<Player>() == null)
+        //Only allow player, and only if he has no legs
+        if (col.gameObject.GetComponent<Player>() == null || col.gameObject.GetComponent<Robot>().legs != null)
             return;
 
-        Debug.Log("Col : " + col.gameObject);
 
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"));
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"));
@@ -38,7 +38,6 @@ public class AirVentEntrance : MonoBehaviour {
         //Use the x axis to determine if the object exited from the left or the right 
         Vector3 vectorToPlayer = (col.gameObject.transform.position - transform.position);
         float angle = Vector2.SignedAngle(transform.right, vectorToPlayer);
-        Debug.Log(angle);
         if(angle < 0)
         {
 

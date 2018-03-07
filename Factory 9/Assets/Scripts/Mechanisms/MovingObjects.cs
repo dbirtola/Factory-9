@@ -59,7 +59,6 @@ public class MovingObjects : MonoBehaviour
             GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
 
 
-
             if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
             {
 
@@ -110,7 +109,7 @@ public class MovingObjects : MonoBehaviour
     {
         Debug.Log("WAITT");
         isWaiting = true;
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
+        //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 
         yield return new WaitForSeconds(waitTime);
         isWaiting = false;
