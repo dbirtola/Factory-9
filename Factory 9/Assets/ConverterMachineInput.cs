@@ -16,7 +16,6 @@ public class ConverterMachineInput : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        Debug.Log("FUCKL");
         if (col.gameObject.GetComponent<Ingredient>())
         {
             transform.parent.gameObject.GetComponent<ConverterMachine>().receivedIngredient(col.gameObject.GetComponent<Ingredient>());

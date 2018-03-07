@@ -23,6 +23,8 @@ public class FactoryCamera : MonoBehaviour {
 
     void FixedUpdate()
     {
+        if (target == false)
+            return;
 
         if (shouldTrackTarget == false)
             return;

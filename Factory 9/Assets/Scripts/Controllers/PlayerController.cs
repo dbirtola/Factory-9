@@ -30,6 +30,14 @@ public class PlayerController : MonoBehaviour {
     void Awake()
     {
         DontDestroyOnLoad(gameObject);
+        if (playerController != null)
+        {
+            Destroy(gameObject);
+        }
+        else
+        {
+            playerController = this;
+        }
 
 
         rb = GetComponent<Rigidbody2D>();
@@ -40,13 +48,6 @@ public class PlayerController : MonoBehaviour {
 
     void Start()
     {
-        if(playerController != null)
-        {
-            Destroy(gameObject);
-        }else
-        {
-            playerController = this;
-        }
 
         player = GetComponent<Player>();
 
@@ -265,6 +266,5 @@ public class PlayerController : MonoBehaviour {
 
     public void OnDeath(GameObject killer)
     {
-        Debug.Log("You have died");
     }
 }
