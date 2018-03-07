@@ -30,7 +30,6 @@ public class FactoryMachine : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D coll)
     {
-        Debug.Log("COLLIDED");
 
         for (int i = 0; i < inputObject.Length; i++)
         {
@@ -39,7 +38,6 @@ public class FactoryMachine : MonoBehaviour {
             else
                 if (coll.gameObject.tag == inputObject[i].gameObject.tag)//delete scrap metal and instantiate Missile
             {
-                Debug.Log("DETECTED");
                 counter = i;
                 coll.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<BoxCollider2D>().isTrigger = false;
