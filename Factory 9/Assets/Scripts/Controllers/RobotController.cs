@@ -160,7 +160,6 @@ public class RobotController : MonoBehaviour {
     public bool pushObject(GameObject other)
     {
         Arm strongerArm = null;
-        Debug.Log("Pushing?");
         if (state == RobotState.OnGround && (robot.rightArm != null || robot.leftArm != null))
         {
             //Determine the stronger arm
@@ -331,7 +330,6 @@ public class RobotController : MonoBehaviour {
 
     void HitWall(GameObject wall)
     {
-        Debug.Log("HitWall");
         if(lastSurfaceHit != wall)
         {
             timeAttatchedToWall = Time.time;
