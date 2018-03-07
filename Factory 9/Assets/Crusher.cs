@@ -52,7 +52,6 @@ public class Crusher : MonoBehaviour {
             }
         
             timeLastCrushed = Time.time;
-            Debug.Log("Smashed: " + col.gameObject);
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
             //Spaghetti?
@@ -67,7 +66,6 @@ public class Crusher : MonoBehaviour {
         StopAllCoroutines();
         if(col.gameObject != transform.parent.gameObject)
         {
-            Debug.Log(col.gameObject + "CRUSHER");
             StartCoroutine(ReturnCrusherHead(5));
         }
 
