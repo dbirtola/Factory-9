@@ -28,13 +28,18 @@ public class UIManager : MonoBehaviour {
     public void Init()
     {
         PlayerController.playerController.playerRobot.robotDiedEvent.AddListener(ShowDeathScreen);
-        Debug.Log("Set event to event of: " + PlayerController.playerController.playerRobot);
-        Debug.Log("Also null? : " + PlayerController.playerController);
 
     }
 	// Update is called once per frame
 	void Update () {
-		
+        if (Input.GetKey(KeyCode.Tab))
+        {
+            transform.Find("Levels").gameObject.SetActive(true);
+        }else
+        {
+            transform.Find("Levels").gameObject.SetActive(false);
+
+        }
 	}
 
 

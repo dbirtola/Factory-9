@@ -277,7 +277,7 @@ public class RobotController : MonoBehaviour {
 
             
            if(state == RobotState.OnWall)  {
-                Debug.Log("Flipping legs");
+
                 robot.legs.GetComponent<SpriteRenderer>().flipX = true;
                 transform.Find("Body").GetComponent<SpriteRenderer>().flipX = true;
             }else
