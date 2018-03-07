@@ -32,7 +32,7 @@ public class Robot : MonoBehaviour {
 
     public float pushingPower = 0f;
 
-    public float impactThresholdForDamage = 40;
+    public const float impactThresholdForDamage = 80;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 
     void Awake()
