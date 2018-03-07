@@ -56,8 +56,15 @@ public class Robot : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         //Debugging
-        if(GetComponent<Player>())
-            transform.Find("Body").Find("HeadLamp").gameObject.SetActive(headLampActive);
+        if (GetComponent<Player>())
+        {
+            if (transform.Find("Body") == null)
+                return;
+            if (transform.Find("Body").Find("HeadLamp") == null)
+                return;
+            if(transform.Find("Body").Find("HeadLamp").gameObject != null)
+                transform.Find("Body").Find("HeadLamp").gameObject.SetActive(headLampActive);
+        }
 		
 	}
 

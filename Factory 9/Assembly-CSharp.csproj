@@ -53,12 +53,19 @@
   <ItemGroup>
      <Compile Include="Assets\AirVent.cs" />
      <Compile Include="Assets\AirVentEntrance.cs" />
+     <Compile Include="Assets\ConverterMachine.cs" />
+     <Compile Include="Assets\ConverterMachineInput.cs" />
      <Compile Include="Assets\ConveyerBelt.cs" />
      <Compile Include="Assets\Crusher.cs" />
      <Compile Include="Assets\CrusherSensor.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
+     <Compile Include="Assets\Ingredient.cs" />
      <Compile Include="Assets\InvisibleTrigger.cs" />
+     <Compile Include="Assets\LavaDamageCollider.cs" />
+     <Compile Include="Assets\LavaPool.cs" />
+     <Compile Include="Assets\Lavaspout.cs" />
+     <Compile Include="Assets\LegBoxPath.cs" />
      <Compile Include="Assets\LevelLoadingBounds.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
      <Compile Include="Assets\Scripts\Activators\LeverHandle.cs" />
@@ -79,6 +86,7 @@
      <Compile Include="Assets\Scripts\FinishDoor.cs" />
      <Compile Include="Assets\Scripts\KillZone.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Activateable.cs" />
+     <Compile Include="Assets\Scripts\Mechanisms\DestroyPipe.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Dispenser.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\FactoryMachine.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\MovingObjects.cs" />
@@ -100,6 +108,7 @@
      <Compile Include="Assets\Scripts\Robots\RobotHeadLamp.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Rotator.cs" />
+     <Compile Include="Assets\TestParticleCollsion.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
