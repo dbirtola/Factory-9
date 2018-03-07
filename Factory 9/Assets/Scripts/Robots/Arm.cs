@@ -33,7 +33,7 @@ public class Arm : BodyPart {
         var anim = GetComponent<Animator>();
         anim.SetTrigger("Punch");
 
-        var colliders = Physics2D.OverlapBoxAll(transform.position + transform.right * 0.5f, punchRange, 0);
+        var colliders = Physics2D.OverlapBoxAll(transform.position + transform.right * transform.lossyScale.x * 0.5f, punchRange, 0);
         foreach(Collider2D c in colliders)
         {
             //Check if owner

@@ -167,6 +167,7 @@ public class Robot : MonoBehaviour {
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         newLegs.transform.SetParent(transform.Find("LegsSlot"), false);
         newLegs.transform.localPosition = Vector3.zero;
+        newLegs.transform.localScale = Vector3.one;
         newLegs.transform.rotation = Quaternion.identity;
         Destroy(newLegs.GetComponent<Rigidbody2D>());
         //newLegs.GetComponent<Rigidbody2D>().simulated = false;

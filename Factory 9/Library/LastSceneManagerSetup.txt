@@ -1,4 +1,23 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/LukeTest.unity
+=======
+<<<<<<< HEAD
+=======
+- path: Assets/Scenes/Main.unity
+<<<<<<< HEAD
+=======
+  isLoaded: 1
+  isActive: 0
+>>>>>>> 29ee9056119e93bc093e431c22bc05f420e7fcc2
+- path: Assets/Scenes/CrusherIncinerator.unity
+>>>>>>> 43eb5373f0a2653e1e4818e7553a75921f26745c
+>>>>>>> b42db2512c2636ed07ac6b093f6c8dcc7160e92e
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/PartsLevel.unity
+  isLoaded: 0
+  isActive: 0
+- path: Assets/Scenes/LukeLevel-Aseembly_Room.unity
+  isLoaded: 0
+  isActive: 0
