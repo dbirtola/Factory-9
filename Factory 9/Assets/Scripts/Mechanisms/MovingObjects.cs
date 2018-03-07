@@ -5,6 +5,8 @@ using UnityEngine;
 public class MovingObjects : MonoBehaviour
 {
 
+
+
     //Wait time at positions
     public float waitTime;
 
@@ -12,7 +14,7 @@ public class MovingObjects : MonoBehaviour
     public GameObject PathObject;//Parent contains children nodes with Waypoints
     private Transform[] Waypoints;
     private int NumOfWaypoints;
-    private int currentPatrolIndex = 0;
+    public int startPoint = 0;
     private Transform currentPatrolPoint;
 
     //movement Variables
@@ -33,6 +35,14 @@ public class MovingObjects : MonoBehaviour
         }
         if (NumOfWaypoints <= 0)//If there are no waypoints, RETURN
             return;
+
+        if (startPoint > NumOfWaypoints)
+            startPoint = NumOfWaypoints - 1;
+        else if (startPoint < 0)
+            startPoint = 0;
+        else
+            startPoint = startPoint - 1;
+
     }
 
     // Update is called once per frame
@@ -41,9 +51,9 @@ public class MovingObjects : MonoBehaviour
         if (isWaiting == false)
         {
 
+ 
 
-
-            currentPatrolPoint = Waypoints[currentPatrolIndex];//set patrol point
+            currentPatrolPoint = Waypoints[startPoint];//set patrol point
             WayPointDirection = currentPatrolPoint.position - transform.position;//find the direction to travel
 
             WayPointDirection.Normalize();
@@ -66,17 +76,17 @@ public class MovingObjects : MonoBehaviour
 
 
                 //check to see if we have any more patrol points
-                if (currentPatrolIndex + 1 < Waypoints.Length)
+                if (startPoint + 1 < Waypoints.Length)
                 {
-                    currentPatrolIndex++;//increment index
-                    currentPatrolPoint = Waypoints[currentPatrolIndex];//set the new patrol point
+                    startPoint++;//increment index
+                    currentPatrolPoint = Waypoints[startPoint];//set the new patrol point
                     WayPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
                     FindDirection();
                 }
                 else // end of array is reached, loop back through the patrol points
                 {
-                    currentPatrolIndex = 0;
-                    currentPatrolPoint = Waypoints[currentPatrolIndex];//set the new patrol point
+                    startPoint = 0;
+                    currentPatrolPoint = Waypoints[startPoint];//set the new patrol point
                     WayPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
                     FindDirection();
                 }
@@ -107,7 +117,7 @@ public class MovingObjects : MonoBehaviour
     }
     IEnumerator WaitAtWayPoint(float waitTime)
     {
-        Debug.Log("WAITT");
+
         isWaiting = true;
         //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
 

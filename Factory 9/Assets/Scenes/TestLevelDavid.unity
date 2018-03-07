@@ -388,7 +388,7 @@ GameObject:
   m_Component:
   - component: {fileID: 55413699}
   m_Layer: 0
-  m_Name: Waypoint (1)
+  m_Name: Waypoint 2
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -4055,7 +4055,7 @@ GameObject:
   m_Component:
   - component: {fileID: 282230667}
   m_Layer: 0
-  m_Name: Waypoint (2)
+  m_Name: Waypoint 3
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15421,7 +15421,7 @@ GameObject:
   m_Component:
   - component: {fileID: 675140824}
   m_Layer: 0
-  m_Name: Waypoint
+  m_Name: Waypoint1
   m_TagString: Untagged
   m_Icon: {fileID: -964228994112308473, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -15690,7 +15690,8 @@ MonoBehaviour:
   m_EditorClassIdentifier: 
   waitTime: 0
   PathObject: {fileID: 391907719}
-  speed: 10
+  startPoint: 4
+  speed: 3
 --- !u!1001 &711058330
 Prefab:
   m_ObjectHideFlags: 0
@@ -29241,7 +29242,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1475364237}
   m_Layer: 0
-  m_Name: Waypoint (3)
+  m_Name: Waypoint 4
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -29269,7 +29270,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1481151076}
   m_Layer: 0
-  m_Name: Waypoint (4)
+  m_Name: Waypoint 5
   m_TagString: Untagged
   m_Icon: {fileID: 5132851093641282708, guid: 0000000000000000d000000000000000, type: 0}
   m_NavMeshLayer: 0
@@ -37255,6 +37256,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1977931592}
+  - component: {fileID: 1977931593}
   m_Layer: 0
   m_Name: DestroyObj
   m_TagString: Untagged
@@ -37275,6 +37277,19 @@ Transform:
   m_Father: {fileID: 2055052314}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1977931593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977931591}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 04445fd0aa9e3ea4ca229aac870eb694, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inputObject:
+  - {fileID: 1034834059814532, guid: 72b9c91cbdf2ffd40826c13f39cae319, type: 2}
 --- !u!1001 &1982526288
 Prefab:
   m_ObjectHideFlags: 0
