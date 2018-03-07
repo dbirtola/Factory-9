@@ -103,33 +103,38 @@ public class Robot : MonoBehaviour {
 
     public void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.GetComponent<HingeJoint2D>())
+
+
+
+        //Only deal damage if player is slower than the other object
+        //Player should not take damage for going too fast
+        if (!col.gameObject.GetComponent<Rigidbody2D>())
+            return;
+
+        Debug.Log("Please?");
+        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
-            
-
-            //Only deal damage if player is slower than the other object
-            //Player should not take damage for going too fast
-            if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+            Debug.Log("Contacts: " + col.contacts.Length);
+            if(col.contacts.Length <= 0)
             {
-                if(col.contacts.Length <= 0)
-                {
-                    Debug.Log("Contacts 0");
-                    return;
-                }
-
-                if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
-                {
-                    Debug.Log("Took damage from impulse of: " + col.contacts[0].normalImpulse + "(" + col.gameObject + ")");
-                  
-                    takeDamage(1, col.gameObject);
-                }
-
+                Debug.Log("Contacts 0");
+                return;
             }
-                //Debug.Log(col.relativeVelocity.magnitude * col.gameObject.GetComponent<Rigidbody2D>().mass);// < impactThresholdForDamage);
+
+            Debug.Log("Nomral force: " + col.contacts[0].normalImpulse);
+            if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
+            {
+                Debug.Log("Took damage from impulse of: " + col.contacts[0].normalImpulse + "(" + col.gameObject + ")");
+                  
+                takeDamage(1, col.gameObject);
+            }
+
+        }
+            //Debug.Log(col.relativeVelocity.magnitude * col.gameObject.GetComponent<Rigidbody2D>().mass);// < impactThresholdForDamage);
 
 
             
-        }
+        
     }
 
     public bool addLegs(Legs newLegs)
