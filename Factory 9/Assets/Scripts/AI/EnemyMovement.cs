@@ -104,6 +104,8 @@ public class EnemyMovement : MonoBehaviour {
             else
             {
                 GetComponent<RobotController>().MoveHorizontal(currentSpeed);//keep moving robot 
+              //  StartCoroutine(TestIfStuck(3f));
+
             }
 
 
@@ -118,5 +120,20 @@ public class EnemyMovement : MonoBehaviour {
         yield return new WaitForSeconds(pauseTime);
         isPatrolling = true;
     }
-
+    /*
+    IEnumerator TestIfStuck(float Pause)
+    {
+        if (isPatrolling == true)
+        {
+            //Vector2 Position = transform.position - transform.position;
+            if (GetComponent<Rigidbody2D>().velocity.x < 1 && GetComponent<Rigidbody2D>().velocity.y < 1 && GetComponent<Robot>().speed != 0)
+            {
+                Debug.Log("ENTREEDDDDDDDDDDDD");
+                yield return new WaitForSeconds(Pause);
+                if (GetComponent<Rigidbody2D>().velocity.x < 1 && GetComponent<Rigidbody2D>().velocity.y < 1)
+                    isPatrolling = false;
+            }
+        }
+    }
+    */
 }
