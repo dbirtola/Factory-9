@@ -53,11 +53,14 @@
   <ItemGroup>
      <Compile Include="Assets\AirVent.cs" />
      <Compile Include="Assets\AirVentEntrance.cs" />
+     <Compile Include="Assets\ConverterMachine.cs" />
+     <Compile Include="Assets\ConverterMachineInput.cs" />
      <Compile Include="Assets\ConveyerBelt.cs" />
      <Compile Include="Assets\Crusher.cs" />
      <Compile Include="Assets\CrusherSensor.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
+     <Compile Include="Assets\Ingredient.cs" />
      <Compile Include="Assets\InvisibleTrigger.cs" />
      <Compile Include="Assets\LevelLoadingBounds.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
@@ -100,6 +103,7 @@
      <Compile Include="Assets\Scripts\Robots\RobotHeadLamp.cs" />
      <Compile Include="Assets\Scripts\UIManager.cs" />
      <Compile Include="Assets\Scripts\Utility\Rotator.cs" />
+     <Compile Include="Assets\TestParticleCollsion.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
