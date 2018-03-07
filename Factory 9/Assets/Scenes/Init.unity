@@ -2559,7 +2559,6 @@ MonoBehaviour:
   speed: 7200
   jumpPower: 3400
   pushingPower: 0
-  impactThresholdForDamage: 40
   invulnerableTimeAfterDamaged: 0.5
 --- !u!50 &1689613280
 Rigidbody2D:
@@ -2863,7 +2862,7 @@ Light:
   serializedVersion: 8
   m_Type: 1
   m_Color: {r: 1, g: 1, b: 1, a: 1}
-  m_Intensity: 1
+  m_Intensity: 0.2
   m_Range: 10
   m_SpotAngle: 30
   m_CookieSize: 10

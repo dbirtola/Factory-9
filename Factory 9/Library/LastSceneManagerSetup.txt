@@ -1,16 +1,7 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/LukeTest.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/DamenTestOfLuke.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/LukeTest.unity
-=======
-- path: Assets/Scenes/TestLevelDavid.unity
->>>>>>> b86f00737733230196a5b4ee5710ed557f815932
->>>>>>> 403a73092e0e89fff243b4ef87a044ad25ae40ea
->>>>>>> 13ac51909c356f0ef9dd6903018636820e9bb710
+- path: Assets/Scenes/Init.unity
+  isLoaded: 1
+  isActive: 0
+- path: Assets/Scenes/CrusherIncinerator.unity
   isLoaded: 1
   isActive: 1
