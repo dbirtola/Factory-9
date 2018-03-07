@@ -25,7 +25,7 @@ GameObject:
   - component: {fileID: 50593159967405754}
   m_Layer: 0
   m_Name: Exploding Crates
-  m_TagString: Untagged
+  m_TagString: Exploding Crate
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

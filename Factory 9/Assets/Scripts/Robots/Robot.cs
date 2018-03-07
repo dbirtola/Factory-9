@@ -112,12 +112,12 @@ public class Robot : MonoBehaviour {
             return;
 
 
-            float sum = 0;
-            foreach (ContactPoint2D cp in col.contacts)
-            {
-                sum += cp.normalImpulse;
-            }
-            Debug.Log("Damage: " + sum);
+        float sum = 0;
+        foreach (ContactPoint2D cp in col.contacts)
+        {
+            sum += cp.normalImpulse;
+        }
+        Debug.Log("Damage: " + sum);
 
         
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)

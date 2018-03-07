@@ -6,6 +6,7 @@ TagManager:
   tags:
   - ScrapMetal
   - Cylinder
+  - Exploding Crate
   layers:
   - Default
   - TransparentFX

@@ -57,7 +57,7 @@ public class GameManager : MonoBehaviour {
             {
                 Debug.Log("Going to level: " + level);
                 PlayerController.player.transform.position = checkPointLevelPair.checkPoint.transform.position;
-
+                activeCheckpoint = checkPointLevelPair.checkPoint;
             }
         }
     }
