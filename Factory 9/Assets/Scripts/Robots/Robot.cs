@@ -292,6 +292,12 @@ public class Robot : MonoBehaviour {
             return false;
         }
         */
+        if (arm == leftArm)
+            leftArm = null;
+        if (arm == rightArm)
+            rightArm = null;
+
+
         lostArm.transform.SetParent(null);
         //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
         lostArm.gameObject.AddComponent<Rigidbody2D>();
