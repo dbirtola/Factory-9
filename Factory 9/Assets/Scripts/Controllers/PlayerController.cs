@@ -153,7 +153,7 @@ public class PlayerController : MonoBehaviour {
             if(playerRobot.legs != null)
             {
 
-                Vector2 pos = new Vector2(transform.position.x + 1.5f * transform.lossyScale.x, transform.position.y);
+                Vector2 pos = new Vector2(transform.position.x + 1f * transform.lossyScale.x, transform.position.y);
                 colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 2.5f), 0);
 
             }else
