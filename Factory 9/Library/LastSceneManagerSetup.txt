@@ -1,4 +1,16 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/DamenTest.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Main.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/TestLevelDavid.unity
+=======
+- path: Assets/Scenes/Init.unity
+>>>>>>> b95160d818de78c74dbeec0e09e5d9e91cdd1983
+>>>>>>> 947e233082ae948b9114e5137e56f67b9c1a6e3a
+>>>>>>> 696ce171dc3ce07796ad68be19aec1d4983ba075
   isLoaded: 1
   isActive: 1
