@@ -34,7 +34,7 @@ public class EnemyMovement : MonoBehaviour {
     {
         currentSpeed = GetComponent<Robot>().speed;
 
-        if (isPatrolling)
+        if (isPatrolling && GetComponent<Robot>().legs != null)
         {
             if (patrolPoints.Length <= 0)
                 return;
