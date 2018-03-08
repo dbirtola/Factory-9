@@ -9,6 +9,8 @@ public class ConverterMachine : Switch{
 
     public TextMesh[] ingredientTexts;
 
+    public float buildTime;
+
 
     bool hasFinished = false;
 	// Use this for initialization
@@ -50,6 +52,11 @@ public class ConverterMachine : Switch{
         return checkSatisfied();
     }
 
+    IEnumerator BuildTime(float pauseTime)
+    {
+        yield return new WaitForSeconds(pauseTime);
+    }
+
     bool checkSatisfied()
     {
         foreach(IngredientAmountPair iaPair in ingredients)
@@ -59,8 +66,9 @@ public class ConverterMachine : Switch{
         }
 
         //Satisfied
+        StartCoroutine(BuildTime(buildTime));
         var spot = transform.Find("OutputSpot");
-        Instantiate(outputPrefab, spot.transform.position, Quaternion.identity);
+                Instantiate(outputPrefab, spot.transform.position, Quaternion.identity);
         hasFinished = true;
         foreach(Activateable ai in targetObjects)
         {
