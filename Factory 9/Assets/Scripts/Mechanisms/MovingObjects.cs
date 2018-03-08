@@ -38,7 +38,7 @@ public class MovingObjects : MonoBehaviour
 
         if (startPoint > NumOfWaypoints)
             startPoint = NumOfWaypoints - 1;
-        else if (startPoint < 0)
+        else if (startPoint <= 0)
             startPoint = 0;
         else
             startPoint = startPoint - 1;
