@@ -6,36 +6,31 @@ using UnityEngine;
 public class SlidingUpDoor : Activateable {
     private AudioSource audioSource;
 
-    public void Start()
+    public override void Start()
     {
+        base.Start();
         audioSource = GetComponent<AudioSource>();
     }
 
     public void Open()
     {
-        if(activated == false)
-        {
-            Animation anim = GetComponent<Animation>();
-            anim["SlidingUpDoorAnimation"].speed = 1;
-            anim["SlidingUpDoorAnimation"].time = 0;
-            anim.Play("SlidingUpDoorAnimation");
-            GetComponent<Collider2D>().isTrigger = true;
-        }
+        Animation anim = GetComponent<Animation>();
+        anim["SlidingUpDoorAnimation"].speed = 1;
+        anim["SlidingUpDoorAnimation"].time = 0;
+        anim.Play("SlidingUpDoorAnimation");
+        GetComponent<Collider2D>().isTrigger = true;
+        
     }
 
     public void Close()
     {
-        if(activated == true)
-        {
+        Animation anim = GetComponent<Animation>();
+        anim["SlidingUpDoorAnimation"].speed = -1;
+        anim["SlidingUpDoorAnimation"].time = anim["SlidingUpDoorAnimation"].length;
+        anim.Play("SlidingUpDoorAnimation");
             
-            Animation anim = GetComponent<Animation>();
-            anim["SlidingUpDoorAnimation"].speed = -1;
-            anim["SlidingUpDoorAnimation"].time = anim["SlidingUpDoorAnimation"].length;
-            anim.Play("SlidingUpDoorAnimation");
-            
-            GetComponent<Collider2D>().isTrigger = false;
-
-        }
+        GetComponent<Collider2D>().isTrigger = false;
+      
     }
 
     public override void Activate()

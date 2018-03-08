@@ -21,6 +21,7 @@ GameObject:
   - component: {fileID: 4013463978583114}
   - component: {fileID: 114497777090883528}
   - component: {fileID: 50477379619366842}
+  - component: {fileID: 114259096025776258}
   m_Layer: 0
   m_Name: LegRope
   m_TagString: Untagged
@@ -339,7 +340,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1017809098600702}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -14.629433, y: 7.8073273, z: 0.116368026}
+  m_LocalPosition: {x: -91.30139, y: -120.63379, z: 0.116368026}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4099155514025566}
@@ -1309,6 +1310,21 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 1, y: 1}
   m_EdgeRadius: 0
+--- !u!114 &114259096025776258
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1017809098600702}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: a3f4822cfe2232246a6abf3358023cd2, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  waitTime: 0
+  PathObject: {fileID: 0}
+  startPoint: 0
+  speed: 0
 --- !u!114 &114414604207104290
 MonoBehaviour:
   m_ObjectHideFlags: 1

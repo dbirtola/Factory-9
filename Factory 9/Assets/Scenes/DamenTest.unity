@@ -6266,7 +6266,7 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4227467444824376, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -50.018
+      value: -51.424
       objectReference: {fileID: 0}
     - target: {fileID: 4227467444824376, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
       propertyPath: m_LocalPosition.z
@@ -6298,11 +6298,11 @@ Prefab:
       objectReference: {fileID: 0}
     - target: {fileID: 4227467444824376, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
       propertyPath: m_LocalScale.x
-      value: 5.136445
+      value: 2.324158
       objectReference: {fileID: 0}
     - target: {fileID: 4227467444824376, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
       propertyPath: m_LocalScale.y
-      value: 15.3775
+      value: 15.377505
       objectReference: {fileID: 0}
     - target: {fileID: 4227467444824376, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
       propertyPath: m_LocalEulerAnglesHint.z
@@ -15621,14 +15621,14 @@ MonoBehaviour:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 2032803358}
-  m_Enabled: 0
+  m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 6acf3eacdeb67be4fa20802fdef12d56, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   ropePath: {fileID: 2032803358}
-  ropePrefab: {fileID: 0}
-  boxPrefab: {fileID: 0}
+  ropePrefab: {fileID: 1017809098600702, guid: 5fe1678768e2b8540b266454afae8e6c, type: 2}
+  boxPrefab: {fileID: 1589238189462772, guid: f69bd76dafb0c3b4a9d26e8a97385a97, type: 2}
   ropeStorage: {fileID: 1422289968}
   boxStorage: {fileID: 517293675}
 --- !u!4 &2032803360

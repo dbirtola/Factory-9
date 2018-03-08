@@ -17,9 +17,13 @@ public class LegBoxPath : MonoBehaviour {
         for (int i = 0; i < transform.childCount; i++)
         {
             var rp = Instantiate(ropePrefab, transform.GetChild(i).position, Quaternion.identity);
-            var bp = Instantiate(boxStorage, transform.GetChild(i).position - new Vector3(0, 3.7f, 0), Quaternion.identity);
+            var bp = Instantiate(boxPrefab, transform.GetChild(i).position - new Vector3(0, 3.7f, 0), Quaternion.identity);
             rp.transform.SetParent(ropeStorage.transform);
             bp.transform.SetParent(boxStorage.transform);
+
+
+            rp.GetComponent<MovingObjects>().PathObject = gameObject;
+            rp.GetComponent<MovingObjects>().startPoint = i;
         }
 	}   
 	
