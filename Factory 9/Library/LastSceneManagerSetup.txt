@@ -1,4 +1,7 @@
 sceneSetups:
-- path: Assets/Scenes/DamenTest.unity
+- path: Assets/Scenes/Init.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/Main.unity
+  isLoaded: 0
+  isActive: 0
