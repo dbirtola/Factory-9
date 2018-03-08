@@ -17,6 +17,11 @@ public class LavaPool : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
+        if (col.gameObject.GetComponent<Player>())
+        {
+            col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
+            return;
+        }
         if (col.GetComponent<Rigidbody2D>())
         {
             Destroy(col.gameObject);

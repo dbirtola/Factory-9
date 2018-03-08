@@ -42,6 +42,14 @@ public class UIManager : MonoBehaviour {
             transform.Find("Levels").gameObject.SetActive(false);
 
         }
+
+        if (Input.GetKey(KeyCode.C))
+        {
+            transform.Find("Controls").gameObject.SetActive(true);
+        }else
+        {
+            transform.Find("Controls").gameObject.SetActive(false);
+        }
 	}
 
 

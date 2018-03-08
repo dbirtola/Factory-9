@@ -31,6 +31,7 @@ public class GameManager : MonoBehaviour {
             return;
         }
         gameManager = gameObject.GetComponent<GameManager>();
+        GoToLevel("Main");
 
 	}
 	
@@ -50,7 +51,13 @@ public class GameManager : MonoBehaviour {
 
     public void GoToLevel(string level)
     {
+        Scene currentScene = SceneManager.GetActiveScene();
         SceneManager.LoadSceneAsync(level, LoadSceneMode.Additive);
+        if(currentScene != SceneManager.GetSceneByName("Init"))
+        {
+            SceneManager.UnloadSceneAsync(currentScene);
+        }
+        SceneManager.sceneLoaded += OnLoaded;
         foreach(checkPointLevelPair checkPointLevelPair in checkPointLevelPairs)
         {
             if (checkPointLevelPair.LevelName == level)
@@ -60,6 +67,11 @@ public class GameManager : MonoBehaviour {
                 activeCheckpoint = checkPointLevelPair.checkPoint;
             }
         }
+    }
+
+    public void OnLoaded(Scene loaded, LoadSceneMode sceneMode)
+    {
+        SceneManager.SetActiveScene(loaded);
     }
 
     public void RestartLevel()
@@ -72,6 +84,7 @@ public class GameManager : MonoBehaviour {
         Destroy(PlayerController.player.gameObject);
         SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
         //PlayerController.player.transform.position = activeCheckpoint.transform.position;
+        //Alow the scene to load
         yield return null;
         var player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         DontDestroyOnLoad(player.gameObject);

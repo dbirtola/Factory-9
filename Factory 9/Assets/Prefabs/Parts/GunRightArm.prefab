@@ -177,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 05a45baa23f82484d91d06b4794b5b8f, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushingPower: 200
+  pushingSpeed: 3
+  pushableMass: 50
   owner: {fileID: 0}
   punchRange: {x: 2, y: 2}
   projectile: {fileID: 1628977543485810, guid: 150738fdf75b9534382062fe81f73717, type: 2}

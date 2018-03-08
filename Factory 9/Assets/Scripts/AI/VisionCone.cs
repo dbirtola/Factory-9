@@ -15,7 +15,7 @@ public class VisionCone : MonoBehaviour {
             Vector2 direction = (col.gameObject.transform.position - transform.parent.position + Vector3.right * transform.lossyScale.x).normalized;
             RaycastHit2D hit = Physics2D.Raycast(transform.parent.position + Vector3.right* transform.lossyScale.x * 0.2f, direction, 10);
             Debug.DrawRay(transform.parent.position + Vector3.right * transform.lossyScale.x * 0.2f, direction * 10, Color.green);
-            if (hit.collider.gameObject == null)
+            if (hit.collider == null)
                 return;
             if (hit.collider.gameObject.GetComponent<Player>())
             {

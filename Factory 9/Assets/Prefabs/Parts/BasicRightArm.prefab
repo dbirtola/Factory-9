@@ -177,7 +177,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: d5b18aa46c980b743bc12b35ec2d3e5b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  pushingPower: 200
+  pushingSpeed: 3
+  pushableMass: 50
   owner: {fileID: 0}
   punchRange: {x: 1, y: 1}
 --- !u!212 &212184318239926038
