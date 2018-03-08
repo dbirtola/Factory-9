@@ -34,15 +34,26 @@ public class LeverSwitch : Switch {
             anim["BasicLeverToggle"].speed = 1;
             anim["BasicLeverToggle"].time = 0;
             anim.Play("BasicLeverToggle");
-            activateTargets();
+            //activateTargets();
             initialPosition = false;
         }else
         {
             anim["BasicLeverToggle"].speed = -1;
             anim["BasicLeverToggle"].time = anim["BasicLeverToggle"].length;
             anim.Play("BasicLeverToggle");
-            deactivateTargets();
+            //deactivateTargets();
             initialPosition = true;
+        }
+
+        foreach(Activateable act in targetObjects)
+        {
+            if (act.activated)
+            {
+                act.Deactivate();
+            }else
+            {
+                act.Activate();
+            }
         }
 
     }

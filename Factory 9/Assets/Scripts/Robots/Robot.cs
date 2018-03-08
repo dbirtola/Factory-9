@@ -117,12 +117,12 @@ public class Robot : MonoBehaviour {
         {
             sum += cp.normalImpulse;
         }
-        Debug.Log("Damage: " + sum);
+
 
         
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
-            Debug.Log(col.gameObject + " passed the test with : " + col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude + " vs " + GetComponent<Rigidbody2D>().velocity.magnitude);
+
             if(col.contacts.Length <= 0)
             {
                 Debug.Log("Contacts 0");
@@ -194,7 +194,7 @@ public class Robot : MonoBehaviour {
         //newLegs.GetComponent<Rigidbody2D>().simulated = false;
 
 
-        LoseLegs(new Vector2(0, 0));
+        LoseLegs(false);
 
         jumpPower += newLegs.jumpPowerBoost;
         speed += newLegs.speedBoost;
@@ -253,11 +253,11 @@ public class Robot : MonoBehaviour {
         //We want the player to first lose his arms, then lose his legs. If he has neither he dies
         for(int i = 0; i < damage; i++)
         {
-            if (LoseArm(leftArm) == false)
+            if (LoseArm(leftArm, true) == false)
             {
-                if(LoseArm(rightArm) == false)
+                if(LoseArm(rightArm, true) == false)
                 {
-                    if (LoseLegs(new Vector2(0, 0)) == false)
+                    if (LoseLegs(true) == false)
                     {
                         Die();
                     }
@@ -292,19 +292,31 @@ public class Robot : MonoBehaviour {
             return false;
         }
         */
+        if (arm == leftArm)
+            leftArm = null;
+        if (arm == rightArm)
+            rightArm = null;
+
+
         lostArm.transform.SetParent(null);
         //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
         lostArm.gameObject.AddComponent<Rigidbody2D>();
+        StartCoroutine(addForceNextFrame(lostArm.gameObject, GetRandomVector(30, 30)));
         lostArm.owner = null;
         lostArm = null;
         return true;
     }
-
-    public bool LoseLegs(Vector2 knockPower)
+    Vector2 GetRandomVector(float x, float y)
+    {
+        return new Vector2(Random.Range(-1 * x, x), Random.Range(-1 * y, y));
+    }
+    
+    public bool LoseLegs(bool shouldKNock)
     {
         if (legs == null)
             return false;
 
+        
         speed -= legs.speedBoost;
         jumpPower -= legs.jumpPowerBoost;
 
@@ -312,7 +324,8 @@ public class Robot : MonoBehaviour {
         var rb = legs.gameObject.AddComponent<Rigidbody2D>();
         rb.mass = 10;
         //legs.GetComponent<Rigidbody2D>().isKinematic = false;
-        rb.AddForce(knockPower);
+        //rb.AddForce(GetRandomVector(100, 100);
+        StartCoroutine(addForceNextFrame(legs.gameObject, GetRandomVector(1000, 1000)));
         legs = null;
 
         //Allow robot core to rotate freely

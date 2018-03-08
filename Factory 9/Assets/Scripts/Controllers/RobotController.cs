@@ -100,7 +100,9 @@ public class RobotController : MonoBehaviour {
 
         //Check if on ground
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
-        Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
+       // RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.up * -1, 1.5f);
+
+        Debug.DrawRay(transform.position, Vector3.up * -1 * 1.5f, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
         {
             state = RobotState.OnGround;

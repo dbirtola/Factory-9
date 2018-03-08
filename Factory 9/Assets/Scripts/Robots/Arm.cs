@@ -10,7 +10,13 @@ public class Arm : BodyPart {
 
     public GameObject owner;
 
-    public Vector2 punchRange;
+    private Vector2 punchRange;
+
+    void Awake()
+    {
+        //Cant make vectors const sadly
+        punchRange = new Vector2(1.3f, 1.3f);
+    }
 
 	// Use this for initialization
 	void Start () {

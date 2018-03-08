@@ -7,11 +7,19 @@ public class Lavaspout : Activateable {
 
     public float timeOn = -1f;
 	// Use this for initialization
-	void Start () {
-		
+	public override void Start () {
+        base.Start();
         if(timeOn != -1)
         {
             StartCoroutine(toggleOnOff());
+        }
+
+        if (activated)
+        {
+            transform.GetComponentInChildren<ParticleSystem>().enableEmission = true;
+        }else
+        {
+            transform.GetComponentInChildren<ParticleSystem>().enableEmission = false;
         }
 	}
 	

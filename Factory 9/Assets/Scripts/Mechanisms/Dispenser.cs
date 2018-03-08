@@ -11,7 +11,8 @@ public class Dispenser : Activateable{
     public float initialForce;
 
 	// Use this for initialization
-	void Start () {
+	public override void Start () {
+        base.Start();
         StartCoroutine(dispenseObjects());
 	}
 	
