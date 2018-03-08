@@ -14,7 +14,7 @@ public class AIChase : MonoBehaviour {
 
     // Update is called once per frame
     void Update() {
-        if (isChasing == true)
+        if (isChasing == true && GetComponent<Robot>().legs != null)
         {
             currentSpeed = GetComponent<Robot>().speed;
             GetComponent<EnemyMovement>().isPatrolling = false;

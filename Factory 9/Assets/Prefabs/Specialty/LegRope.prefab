@@ -1324,7 +1324,7 @@ MonoBehaviour:
   waitTime: 0
   PathObject: {fileID: 0}
   startPoint: 0
-  speed: 0
+  speed: 2
 --- !u!114 &114414604207104290
 MonoBehaviour:
   m_ObjectHideFlags: 1

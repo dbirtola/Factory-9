@@ -100,6 +100,29 @@ public class MovingObjects : MonoBehaviour
         }
     }
 
+    /*
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<RobotController>() && GetComponent<Rigidbody2D>().velocity.x != 0 && GetComponent<Rigidbody2D>().velocity.y != 0)
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+    }
+    
+    private void OnCollisionExit2D(Collision2D collision)
+    {
+       // if (collision.gameObject.GetComponent<RobotController>() && GetComponent<Rigidbody2D>().velocity.x != 0 && GetComponent<Rigidbody2D>().velocity.y != 0)
+         //   collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+         if (collision.gameObject.GetComponent<RobotController>() && collision.gameObject.GetComponent<RobotController>().state)
+    }
+
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        if (collision.gameObject.GetComponent<RobotController>())
+            collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+       // else if (collision.gameObject.GetComponent<RobotController>() && GetComponent<Rigidbody2D>().velocity.x == 0 && GetComponent<Rigidbody2D>().velocity.y == 0)
+       //     collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+        ;
+    }
+    */
     void FindDirection()
     {
         //Finds the Direction in which to Travel

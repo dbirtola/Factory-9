@@ -8,7 +8,13 @@ public class SlidingUpDoor : Activateable {
 
     public override void Start()
     {
-        base.Start();
+        if (activated)
+        {
+            Open();
+        }else
+        {
+            Close();
+        }
         audioSource = GetComponent<AudioSource>();
     }
 
@@ -35,14 +41,18 @@ public class SlidingUpDoor : Activateable {
 
     public override void Activate()
     {
-        Open();
+        if (!activated)
+        {
+            Open();
+        }
         base.Activate();
     }
 
     public override void Deactivate()
     {
         audioSource.Play();
-        Close();
+        if(activated)
+            Close();
         base.Deactivate();
     }
 

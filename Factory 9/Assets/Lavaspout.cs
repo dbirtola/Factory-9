@@ -13,6 +13,14 @@ public class Lavaspout : Activateable {
         {
             StartCoroutine(toggleOnOff());
         }
+
+        if (activated)
+        {
+            transform.GetComponentInChildren<ParticleSystem>().enableEmission = true;
+        }else
+        {
+            transform.GetComponentInChildren<ParticleSystem>().enableEmission = false;
+        }
 	}
 	
 
