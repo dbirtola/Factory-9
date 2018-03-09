@@ -48156,6 +48156,7 @@ MonoBehaviour:
   checkPointLevelPairs: []
   activeCheckpoint: {fileID: 0}
   playerPrefab: {fileID: 0}
+  hitPauseTime: 0.2
 --- !u!1 &1461286385
 GameObject:
   m_ObjectHideFlags: 0

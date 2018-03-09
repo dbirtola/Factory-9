@@ -35,10 +35,13 @@ public class Robot : MonoBehaviour {
     public const float impactThresholdForDamage = 80;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 
+    GameObject hitParticleEffect;
+
     void Awake()
     {
         robotDiedEvent = new RobotDiedEvent();
         robotDamagedEvent = new RobotDamagedEvent();
+        hitParticleEffect = Resources.Load("take_Damage") as GameObject;
     }
 
 	// Use this for initialization
@@ -249,7 +252,10 @@ public class Robot : MonoBehaviour {
             return;
 
         robotDamagedEvent.Invoke(attacker);
-
+        var particle = Instantiate(hitParticleEffect, transform.position, Quaternion.identity);
+        Destroy(particle, 1);
+        if (legs != null)
+            GameManager.HitPause();
         //We want the player to first lose his arms, then lose his legs. If he has neither he dies
         for(int i = 0; i < damage; i++)
         {
@@ -268,6 +274,8 @@ public class Robot : MonoBehaviour {
 
 
     }
+
+  
 
 
     public bool LoseArm(Arm arm, bool shouldKnock = false)
