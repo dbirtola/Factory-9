@@ -65,7 +65,7 @@ public class MovingObjects : MonoBehaviour
 
             //Set the Direction
             FindDirection();
-
+            
             GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
 
 

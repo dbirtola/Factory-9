@@ -133,7 +133,7 @@ public class Robot : MonoBehaviour {
            // if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
            if(sum >= impactThresholdForDamage)
             {
-                Debug.Log("Took damage from impulse of: " + col.contacts[0].normalImpulse + "(" + col.gameObject + ")");
+                Debug.Log("Took damage from sum of: " + sum + "(" + col.gameObject + ")");
                   
                 takeDamage(1, col.gameObject);
             }
