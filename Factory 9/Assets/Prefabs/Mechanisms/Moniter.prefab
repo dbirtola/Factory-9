@@ -80,9 +80,9 @@ Transform:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1725308328564358}
-  m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -91.23482, y: -7.50473, z: 0}
-  m_LocalScale: {x: 1.2470785, y: 1.0990267, z: 1}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: -184.18, y: -46.34, z: 3.25}
+  m_LocalScale: {x: 1.3298924, y: 1.1596212, z: 1}
   m_Children:
   - {fileID: 4262025117779298}
   - {fileID: 4973676129328298}
@@ -143,20 +143,20 @@ TextMesh:
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1931103402366684}
-  m_Text: "Press S while not\n moving to enter \nStealth Mode"
+  m_Text: 
   m_OffsetZ: 0
-  m_CharacterSize: 0.31
+  m_CharacterSize: 0.035
   m_LineSpacing: 1
   m_Anchor: 4
   m_Alignment: 1
   m_TabSize: 4
-  m_FontSize: 12
+  m_FontSize: 110
   m_FontStyle: 0
   m_RichText: 1
   m_Font: {fileID: 0}
   m_Color:
     serializedVersion: 2
-    rgba: 4281859840
+    rgba: 2318925568
 --- !u!108 &108968905043249316
 Light:
   m_ObjectHideFlags: 1
@@ -166,8 +166,8 @@ Light:
   m_Enabled: 1
   serializedVersion: 8
   m_Type: 2
-  m_Color: {r: 0.05103806, g: 0.12425146, b: 0.86764705, a: 1}
-  m_Intensity: 54.6
+  m_Color: {r: 0.09758868, g: 0.15146627, b: 0.6985294, a: 1}
+  m_Intensity: 1.79
   m_Range: 6.56
   m_SpotAngle: 30
   m_CookieSize: 10
