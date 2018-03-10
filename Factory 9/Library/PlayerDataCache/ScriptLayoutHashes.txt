@@ -1,11 +1,8 @@
 WindowsStandalone
 SceneListBegin?
 Assets/Scenes/Init.unity
-Assets/Scenes/Main.unity
-Assets/Scenes/AssemblyLevel.unity
-Assets/Scenes/CrusherIncinerator.unity
-Assets/Scenes/PartsLevel.unity
 SceneListEnd?
+62705a88523c712c0d456cf074c1c554 Assembly-CSharp.dll:.Monitor
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.FinishDoor
 05524b8f659e7bfe5756d1335fec24ba UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationPlayableAsset
 970a95104359198fe1a98ef48655de8c UnityEngine.Timeline.dll:UnityEngine.Timeline.ActivationTrack
@@ -141,7 +138,7 @@ c2275a8bfbb9f9942cad75ecdfded41d UnityEngine.HoloLens.dll:UnityEngine.XR.WSA.Spa
 28361c261df5ded769c9b989fae61d3d Assembly-CSharp.dll:.LevelLoadingBounds
 013965822c363d3165f0e63aaff91252 Assembly-CSharp.dll:.GrapplingHook
 12cbcaf0dcc1e507d0f6e103299db620 Assembly-CSharp.dll:.Crusher
-9e0c1e054cfca3dbe6c0639000c6cc43 Assembly-CSharp.dll:.ConverterMachine
+c8aa03f080839536b334760cf47a9532 Assembly-CSharp.dll:.ConverterMachine
 0d0550f386fa9f3912fe9d5b5f583b7d Assembly-CSharp.dll:.Switch
 6bacd0a0c6b6a773ad202627695b7bb6 Assembly-CSharp.dll:.SlidingUpDoor
 ad0843dc5844295eb779e75691b6f0e1 Assembly-CSharp.dll:.Destructable
@@ -200,5 +197,5 @@ bb6a9ea30019d6a604c3f60eebc807a4 Assembly-CSharp.dll:.BasicLegs
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.dontd
 05524b8f659e7bfe5756d1335fec24ba Assembly-CSharp.dll:.CrusherSensor
 0b0920841f80c0c505dd1922173da3b2 Assembly-CSharp.dll:.Robot
-e6cda1385e386f3654d401f410fff20a Assembly-CSharp.dll:.GameManager
+459bb2e8fa9da0de5d7d4e4887b5b878 Assembly-CSharp.dll:.GameManager
 f85f268491835562f095a2c71b938992 Assembly-CSharp.dll:.AirVent

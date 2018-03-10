@@ -82,11 +82,12 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator HitPauseRoutine()
     {
+        yield return new WaitForSecondsRealtime(0.035f);
         Time.timeScale = 0;
-        Camera.main.orthographicSize -= 1f;
+        Camera.main.orthographicSize -= 0.45f;
         yield return new WaitForSecondsRealtime(hitPauseTime);
         Time.timeScale = 1;
-        Camera.main.orthographicSize += 1f;
+        Camera.main.orthographicSize += 0.45f;
     }
 
     public void OnLoaded(Scene loaded, LoadSceneMode sceneMode)
