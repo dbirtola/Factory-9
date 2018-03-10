@@ -22,7 +22,7 @@ public class LavaPool : MonoBehaviour {
             col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
             return;
         }
-        if (col.GetComponent<Rigidbody2D>())
+        if (col.GetComponent<Rigidbody2D>() && col.gameObject.layer != LayerMask.NameToLayer("Platform")) 
         {
             Destroy(col.gameObject);
         }

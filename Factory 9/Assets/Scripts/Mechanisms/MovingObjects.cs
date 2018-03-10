@@ -38,7 +38,7 @@ public class MovingObjects : MonoBehaviour
 
         if (startPoint > NumOfWaypoints)
             startPoint = NumOfWaypoints - 1;
-        else if (startPoint < 0)
+        else if (startPoint <= 0)
             startPoint = 0;
         else
             startPoint = startPoint - 1;
@@ -65,7 +65,7 @@ public class MovingObjects : MonoBehaviour
 
             //Set the Direction
             FindDirection();
-
+            
             GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
 
 

@@ -14,18 +14,30 @@ public class LegBoxPath : MonoBehaviour {
         
 	// Use this for initialization
 	void Start () {
+
+	}   
+
+    public void GenerateBoxes()
+    {
         for (int i = 0; i < transform.childCount; i++)
         {
             var rp = Instantiate(ropePrefab, transform.GetChild(i).position, Quaternion.identity);
-            var bp = Instantiate(boxPrefab, transform.GetChild(i).position - new Vector3(0, 3.7f, 0), Quaternion.identity);
+            var bp = Instantiate(boxPrefab, transform.GetChild(i).position - new Vector3(0, 3.0f, 0), Quaternion.identity);
             rp.transform.SetParent(ropeStorage.transform);
             bp.transform.SetParent(boxStorage.transform);
 
 
             rp.GetComponent<MovingObjects>().PathObject = gameObject;
-            rp.GetComponent<MovingObjects>().startPoint = i;
+            rp.GetComponent<MovingObjects>().startPoint = i + 1;
+            if (i == transform.childCount - 1)
+                rp.GetComponent<MovingObjects>().startPoint = 0;
+
+            bp.GetComponent<HingeJoint2D>().connectedBody = rp.transform.GetChild(rp.transform.childCount - 1).GetComponent<Rigidbody2D>();
+
+
         }
-	}   
+
+    }
 	
 	// Update is called once per frame
 	void Update () {
