@@ -27,6 +27,8 @@ public class Robot : MonoBehaviour {
     public bool headLampActive = false;
     public bool isInvulnerable = false;
 
+    public RobotHeadLamp headLamp;
+
     public float speed = 100;
     public float jumpPower = 200;
 
@@ -35,10 +37,13 @@ public class Robot : MonoBehaviour {
     public const float impactThresholdForDamage = 80;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 
+    GameObject hitParticleEffect;
+
     void Awake()
     {
         robotDiedEvent = new RobotDiedEvent();
         robotDamagedEvent = new RobotDamagedEvent();
+        hitParticleEffect = Resources.Load("take_Damage") as GameObject;
     }
 
 	// Use this for initialization
@@ -62,8 +67,8 @@ public class Robot : MonoBehaviour {
                 return;
             if (transform.Find("Body").Find("HeadLamp") == null)
                 return;
-            if(transform.Find("Body").Find("HeadLamp").gameObject != null)
-                transform.Find("Body").Find("HeadLamp").gameObject.SetActive(headLampActive);
+            //if(transform.Find("Body").Find("HeadLamp").gameObject != null)
+                //transform.Find("Body").Find("HeadLamp").gameObject.SetActive(headLampActive);
         }
 		
 	}
@@ -185,6 +190,11 @@ public class Robot : MonoBehaviour {
             transform.rotation = Quaternion.identity;
         }
 
+        LoseLegs(false);
+
+        jumpPower += newLegs.jumpPowerBoost;
+        speed += newLegs.speedBoost;
+
         rb.constraints = RigidbodyConstraints2D.FreezeRotation;
         newLegs.transform.SetParent(transform.Find("LegsSlot"), false);
         newLegs.transform.localPosition = Vector3.zero;
@@ -194,10 +204,7 @@ public class Robot : MonoBehaviour {
         //newLegs.GetComponent<Rigidbody2D>().simulated = false;
 
 
-        LoseLegs(false);
 
-        jumpPower += newLegs.jumpPowerBoost;
-        speed += newLegs.speedBoost;
 
         legs = newLegs;
         return true;
@@ -250,6 +257,18 @@ public class Robot : MonoBehaviour {
 
         robotDamagedEvent.Invoke(attacker);
 
+        if(headLamp != null && headLamp.headLampOn == true)
+        {
+            headLamp.TurnOn(true);
+        }
+
+        var particle = Instantiate(hitParticleEffect, transform.position, Quaternion.identity);
+        Destroy(particle, 1);
+
+        if (legs != null)
+            GameManager.HitPause();
+
+
         //We want the player to first lose his arms, then lose his legs. If he has neither he dies
         for(int i = 0; i < damage; i++)
         {
@@ -268,6 +287,8 @@ public class Robot : MonoBehaviour {
 
 
     }
+
+  
 
 
     public bool LoseArm(Arm arm, bool shouldKnock = false)

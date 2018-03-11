@@ -55,20 +55,6 @@ public class PlayerController : MonoBehaviour {
     }
 
 
-    /*
-     *         base.Fire();
-
-        Vector2 mousePosition = PlayerController.GetMouseInWorldSpace();
-        Vector3 temp = new Vector3(mousePosition.x, mousePosition.y, 0);
-        transform.up = -1 *( temp - transform.position);
-
-        Vector3 projectilePos = transform.TransformPoint(projectileSpawnPoint);
-        var proj = Instantiate(projectile, projectilePos, Quaternion.identity);
-        proj.GetComponent<Projectile>().destination = mousePosition;
-        Physics2D.IgnoreCollision(proj.GetComponent<Collider2D>(), transform.parent.parent.GetComponent<Collider2D>());
-
-    */
-
 	
 	// Update is called once per frame
 	void Update () {
@@ -105,8 +91,17 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.G))
         {
-            playerRobot.headLampActive = !playerRobot.headLampActive;
-            if(playerRobot.headLampActive == true)
+            //playerRobot.headLampActive = !playerRobot.headLampActive;
+            if (playerRobot.headLamp.headLampOn)
+            {
+                playerRobot.headLamp.TurnOff(true);
+            }
+            else
+            {
+                playerRobot.headLamp.TurnOn(true);
+            }
+
+            if(playerRobot.headLamp.headLampOn == true)
             {
                 LeaveStealth();
             }
@@ -126,6 +121,11 @@ public class PlayerController : MonoBehaviour {
         {
             playerRC.Punch();
             LeaveStealth();
+        }
+
+        if (Input.GetKeyDown(KeyCode.Y))
+        {
+            ScriptableSequence.PlaySequenceByName("IntroSequence");
         }
 
 
@@ -222,6 +222,7 @@ public class PlayerController : MonoBehaviour {
     {
         movementEnabled = enabled;
     }
+
 
     public void DisableMovementForDuration(float duration)
     {

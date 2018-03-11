@@ -20,6 +20,10 @@ public class GameManager : MonoBehaviour {
 
     public GameObject playerPrefab;
 
+    public float hitPauseTime = 0.15f;
+
+    public bool loadMainOnStart = true;
+
 	// Use this for initialization
 	void Start () {
         DontDestroyOnLoad(gameObject);
@@ -31,7 +35,9 @@ public class GameManager : MonoBehaviour {
             return;
         }
         gameManager = gameObject.GetComponent<GameManager>();
-        GoToLevel("Main");
+
+        if(loadMainOnStart)
+            GoToLevel("Main");
 
 	}
 	
@@ -67,6 +73,21 @@ public class GameManager : MonoBehaviour {
                 activeCheckpoint = checkPointLevelPair.checkPoint;
             }
         }
+    }
+
+    static public void HitPause()
+    {
+        gameManager.StartCoroutine(gameManager.HitPauseRoutine());
+    }
+
+    public IEnumerator HitPauseRoutine()
+    {
+        yield return new WaitForSecondsRealtime(0.035f);
+        Time.timeScale = 0;
+        Camera.main.orthographicSize -= 0.45f;
+        yield return new WaitForSecondsRealtime(hitPauseTime);
+        Time.timeScale = 1;
+        Camera.main.orthographicSize += 0.45f;
     }
 
     public void OnLoaded(Scene loaded, LoadSceneMode sceneMode)

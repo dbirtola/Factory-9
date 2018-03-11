@@ -321,6 +321,7 @@
     <Compile Include="Assets\Scripts\FinishDoor.cs" />
     <Compile Include="Assets\Scripts\KillZone.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\Activateable.cs" />
+    <Compile Include="Assets\Scripts\Mechanisms\CyinderDoor.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\DestroyPipe.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\Dispenser.cs" />
     <Compile Include="Assets\Scripts\Mechanisms\FactoryMachine.cs" />
