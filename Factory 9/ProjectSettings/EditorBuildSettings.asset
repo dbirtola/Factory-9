@@ -11,7 +11,7 @@ EditorBuildSettings:
   - enabled: 1
     path: Assets/Scenes/Init.unity
     guid: 93b60d8382918fe4ebb83086e1a79e47
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/Main.unity
     guid: b517053ea8ad612468c2ec50c1e379aa
   - enabled: 0
@@ -20,12 +20,12 @@ EditorBuildSettings:
   - enabled: 0
     path: Assets/Scenes/TestSceneAdditive.unity
     guid: 620cb8f9be997fa43abe828c4a475a6a
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/AssemblyLevel.unity
     guid: 17ad29fff97e66942b7545503af8b436
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/CrusherIncinerator.unity
     guid: fe3c9f560b89a844db911855117c3476
-  - enabled: 0
+  - enabled: 1
     path: Assets/Scenes/PartsLevel.unity
     guid: f5c4e9f16600e3c45b505b029da18b83
