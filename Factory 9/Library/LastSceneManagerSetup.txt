@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/TestLevelDavid.unity
-=======
-- path: Assets/Scenes/DamenTestOfLuke.unity
->>>>>>> 6327b00da8ee068e7fd96b20d4ae193b3b1c2a7e
   isLoaded: 1
   isActive: 1

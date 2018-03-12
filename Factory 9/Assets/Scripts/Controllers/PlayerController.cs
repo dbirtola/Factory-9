@@ -125,7 +125,7 @@ public class PlayerController : MonoBehaviour {
 
         if (Input.GetKeyDown(KeyCode.Y))
         {
-            ScriptableSequence.PlaySequenceByName("IntroSequence");
+           // ScriptableSequence.PlaySequenceByName("IntroSequence");
         }
 
 
