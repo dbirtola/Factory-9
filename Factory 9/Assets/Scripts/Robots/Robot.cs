@@ -246,7 +246,8 @@ public class Robot : MonoBehaviour {
     IEnumerator addForceNextFrame(GameObject go, Vector2 force)
     {
         yield return null;
-        go.GetComponent<Rigidbody2D>().AddForce(force);
+        if(go != null & go.GetComponent<Rigidbody2D>() != null)
+            go.GetComponent<Rigidbody2D>().AddForce(force);
 
     }
 
