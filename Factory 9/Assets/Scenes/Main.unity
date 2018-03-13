@@ -3193,7 +3193,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &116292418
 Transform:
   m_ObjectHideFlags: 0
@@ -38075,7 +38075,7 @@ Prefab:
     - target: {fileID: 66307079415970288, guid: 5cfc7ec92a54e414796529068134702a,
         type: 2}
       propertyPath: m_ColliderPaths.Array.size
-      value: 0
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: 4946662037483830, guid: 5cfc7ec92a54e414796529068134702a, type: 2}
       propertyPath: m_LocalPosition.x
