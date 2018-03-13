@@ -73,6 +73,8 @@ public class GameManager : MonoBehaviour {
                 activeCheckpoint = checkPointLevelPair.checkPoint;
             }
         }
+
+
     }
 
     static public void HitPause()
@@ -103,10 +105,14 @@ public class GameManager : MonoBehaviour {
     IEnumerator restartLevel()
     {
         Destroy(PlayerController.player.gameObject);
-        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+        //SceneManager.LoadScene(SceneManager.GetSceneByName("Init").buildIndex, LoadSceneMode.Single);
+        int index = SceneManager.GetActiveScene().buildIndex;
+        SceneManager.UnloadSceneAsync(index);
+        SceneManager.LoadScene(index, LoadSceneMode.Additive);
         //PlayerController.player.transform.position = activeCheckpoint.transform.position;
         //Alow the scene to load
         yield return null;
+        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
         var player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
         DontDestroyOnLoad(player.gameObject);
         player.transform.position = activeCheckpoint.transform.position;

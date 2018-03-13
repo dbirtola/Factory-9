@@ -23,7 +23,7 @@ public class AirVentEntrance : MonoBehaviour {
         if (col.gameObject.GetComponent<Player>() == null || col.gameObject.GetComponent<Robot>().legs != null)
             return;
 
-
+        col.gameObject.GetComponent<PlayerController>().playerRC.isInAirVent = true;
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"));
         Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"));
 
@@ -35,6 +35,7 @@ public class AirVentEntrance : MonoBehaviour {
             return;
 
 
+
         //Use the x axis to determine if the object exited from the left or the right 
         Vector3 vectorToPlayer = (col.gameObject.transform.position - transform.position);
         float angle = Vector2.SignedAngle(transform.right, vectorToPlayer);
@@ -43,6 +44,7 @@ public class AirVentEntrance : MonoBehaviour {
 
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"), false);
             Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"), false);
+            col.gameObject.GetComponent<PlayerController>().playerRC.isInAirVent = false;
         }
 
     }
