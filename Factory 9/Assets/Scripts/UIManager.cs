@@ -8,7 +8,7 @@ public class UIManager : MonoBehaviour {
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
        
     }
 
