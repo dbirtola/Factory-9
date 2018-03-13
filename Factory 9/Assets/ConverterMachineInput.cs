@@ -20,6 +20,7 @@ public class ConverterMachineInput : MonoBehaviour {
         {
             transform.parent.gameObject.GetComponent<ConverterMachine>().receivedIngredient(col.gameObject.GetComponent<Ingredient>());
             Destroy(col.gameObject);
+           
         }
     }
 }

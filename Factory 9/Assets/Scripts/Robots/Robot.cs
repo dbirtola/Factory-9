@@ -34,8 +34,10 @@ public class Robot : MonoBehaviour {
 
     public float pushingPower = 0f;
 
-    public const float impactThresholdForDamage = 80;
+    public const float impactThresholdForDamage = 100;
     public  float invulnerableTimeAfterDamaged = 0.5f;
+
+    public bool isInAirVent = false;
 
     GameObject hitParticleEffect;
 
@@ -141,6 +143,11 @@ public class Robot : MonoBehaviour {
                 Debug.Log("Took damage from sum of: " + sum + "(" + col.gameObject + ")");
                   
                 takeDamage(1, col.gameObject);
+
+                if (col.gameObject.GetComponent<Destructable>())
+                {
+                    Destroy(col.gameObject);
+                }
             }
 
         }

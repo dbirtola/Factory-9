@@ -1171,7 +1171,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 758182484}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -120.18134, y: -169.6987, z: 20.535156}
+  m_LocalPosition: {x: -120.18134, y: -169.6987, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1067484626}
@@ -1558,7 +1558,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1028210603}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 333.82, y: -19.07, z: -20.433594}
+  m_LocalPosition: {x: 333.82, y: -19.07, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 758182485}
@@ -1701,7 +1701,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1056023218}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -69.28, y: 119.55, z: -20.433594}
+  m_LocalPosition: {x: -69.28, y: 119.55, z: 0}
   m_LocalScale: {x: 0.67, y: 0.57, z: 1}
   m_Children: []
   m_Father: {fileID: 758182485}
@@ -1803,7 +1803,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1067484623}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 143.82, y: 43.498703, z: -20.433594}
+  m_LocalPosition: {x: 143.82, y: 43.498703, z: 0}
   m_LocalScale: {x: 3.4374943, y: 2.824995, z: 1}
   m_Children: []
   m_Father: {fileID: 758182485}
@@ -1833,7 +1833,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1134053774}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -11.638664, y: -3.931305, z: -20.433594}
+  m_LocalPosition: {x: -11.638664, y: -3.931305, z: 0}
   m_LocalScale: {x: 2, y: 2, z: 1}
   m_Children: []
   m_Father: {fileID: 758182485}
@@ -2573,6 +2573,7 @@ GameObject:
   - component: {fileID: 1941490009}
   - component: {fileID: 1941490008}
   - component: {fileID: 1941490007}
+  - component: {fileID: 1941490012}
   m_Layer: 0
   m_Name: Main Camera (1)
   m_TagString: MainCamera
@@ -2659,6 +2660,17 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 0
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1941490012
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1941490006}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fde5d82e429504c43bf7eb95a24103c8, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
 --- !u!1 &1943802635
 GameObject:
   m_ObjectHideFlags: 0

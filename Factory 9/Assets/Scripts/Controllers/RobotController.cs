@@ -26,6 +26,8 @@ public class RobotController : MonoBehaviour {
     bool pushing = false;
     private float timeAttatchedToWall;
 
+    public bool isInAirVent = false;
+
     //These are variables to improve the feel of the robot
     //Bonus jump height when jumping off a wall
     public float WallJumpBonusPercent = 0.10f;
@@ -109,7 +111,7 @@ public class RobotController : MonoBehaviour {
         }
 
         //Have the robot grab the wall
-        if (state == RobotState.OnWall && rb.velocity.y <= 0)
+        if (state == RobotState.OnWall && rb.velocity.y <= 0 && isInAirVent == false)
         {
             if (rb.velocity.y <= 0)
                 rb.velocity = new Vector2(rb.velocity.x, 0);
