@@ -69,6 +69,7 @@
      <Compile Include="Assets\Lavaspout.cs" />
      <Compile Include="Assets\LegBoxPath.cs" />
      <Compile Include="Assets\LevelLoadingBounds.cs" />
+     <Compile Include="Assets\Moniter_Trigger.cs" />
      <Compile Include="Assets\Monitor.cs" />
      <Compile Include="Assets\ScriptableSequence.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
