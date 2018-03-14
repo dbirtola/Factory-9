@@ -74,6 +74,7 @@ public class RobotController : MonoBehaviour {
             var anim = robot.rightArm.GetComponent<Animator>();
             anim.SetFloat("HorizontalSpeed", rb.velocity.x);
             anim.SetInteger("RobotState", (int)state);
+            anim.SetBool("Pushing", pushing);
         }
 
 
