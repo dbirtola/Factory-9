@@ -1,11 +1,7 @@
 sceneSetups:
-<<<<<<< HEAD
 - path: Assets/Scenes/Init.unity
   isLoaded: 1
   isActive: 0
 - path: Assets/Scenes/CrusherIncinerator.unity
-=======
-- path: Assets/Scenes/LukeTest.unity
->>>>>>> 7695f53682b28a956af86bed3a039a64e7635dcc
   isLoaded: 1
   isActive: 1
