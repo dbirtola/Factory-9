@@ -129,10 +129,19 @@ public class Robot : MonoBehaviour {
         
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
-
-            if(col.contacts.Length <= 0)
+            //col.contacts[0].
+            if (GetComponent<Player>())
             {
-                Debug.Log("Contacts 0");
+
+                    Debug.Log("Relative Velocity: " + col.relativeVelocity);
+                Debug.Log(col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude + " vs " + GetComponent<Rigidbody2D>().velocity.magnitude);
+
+            }
+
+
+
+            if (col.contacts.Length <= 0)
+            {
                 return;
             }
 
@@ -156,6 +165,19 @@ public class Robot : MonoBehaviour {
 
             
         
+    }
+
+    public int getNumberOfParts()
+    {
+        int numParts = 0;
+        if (legs != null)
+            numParts++;
+        if (rightArm != null)
+            numParts++;
+        if (leftArm != null)
+            numParts++;
+
+        return numParts;
     }
 
     public bool addLegs(Legs newLegs)
@@ -258,7 +280,7 @@ public class Robot : MonoBehaviour {
 
     }
 
-    public void takeDamage(int damage, GameObject attacker)
+    public void takeDamage(int damage, GameObject attacker, bool withHitPause = true)
     {
         if (isInvulnerable == true)
             return;
@@ -273,7 +295,7 @@ public class Robot : MonoBehaviour {
         var particle = Instantiate(hitParticleEffect, transform.position, Quaternion.identity);
         Destroy(particle, 1);
 
-        if (legs != null)
+        if (legs != null && withHitPause == true)
             GameManager.HitPause();
 
 

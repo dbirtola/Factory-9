@@ -10,6 +10,10 @@ public class Dispenser : Activateable{
     //Always shoots out the forward y axis
     public float initialForce;
 
+    //Used to deactivate after x amount have been dispensed. leave at -1 for infinite
+    public float maxDispences = -1f;
+    private float numDispences = 0;
+
 	// Use this for initialization
 	public override void Start () {
         base.Start();
@@ -30,6 +34,17 @@ public class Dispenser : Activateable{
                 Vector3 pos = transform.TransformPoint(spawnPoint);
                 var core = Instantiate(dispensedObject, pos, Quaternion.identity);
                 core.GetComponent<Rigidbody2D>().AddForce(transform.up * initialForce);
+
+
+                if(maxDispences != -1)
+                {
+                    numDispences++;
+                    if (numDispences >= maxDispences)
+                    {
+                        Deactivate();
+                    }
+                }
+
             }
 
 

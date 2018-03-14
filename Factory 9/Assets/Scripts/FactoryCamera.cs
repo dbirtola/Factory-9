@@ -18,7 +18,7 @@ public class FactoryCamera : MonoBehaviour {
 
     void Start()
     {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
     }
 
     void FixedUpdate()

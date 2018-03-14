@@ -26,7 +26,7 @@ public class GameManager : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(gameObject);
+        //DontDestroyOnLoad(gameObject);
 
 
         if (gameManager != null)
@@ -105,18 +105,25 @@ public class GameManager : MonoBehaviour {
     IEnumerator restartLevel()
     {
         Destroy(PlayerController.player.gameObject);
+        var parts = FindObjectsOfType<BodyPart>();
+        foreach(var p in parts)
+        {
+            Destroy(p.gameObject);
+        }
         //SceneManager.LoadScene(SceneManager.GetSceneByName("Init").buildIndex, LoadSceneMode.Single);
         int index = SceneManager.GetActiveScene().buildIndex;
         SceneManager.UnloadSceneAsync(index);
+        //SceneManager.LoadScene(SceneManager.GetSceneByName("Init").buildIndex, LoadSceneMode.Single);
         SceneManager.LoadScene(index, LoadSceneMode.Additive);
         //PlayerController.player.transform.position = activeCheckpoint.transform.position;
         //Alow the scene to load
         yield return null;
         SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
         var player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
-        DontDestroyOnLoad(player.gameObject);
+        //var player = FindObjectOfType<Player>();
+        //DontDestroyOnLoad(player.gameObject);
         player.transform.position = activeCheckpoint.transform.position;
-        Camera.main.GetComponent<FactoryCamera>().target = player;
+        Camera.main.GetComponent<FactoryCamera>().target = player.gameObject;
         UIManager.uiManager.Init();
     }
 

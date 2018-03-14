@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
         if (playerController != null)
         {
             Destroy(gameObject);
@@ -130,11 +130,11 @@ public class PlayerController : MonoBehaviour {
         }
 
 
-        //Test function since enemies not implemented
+        //Allows players to drop body parts
         if (Input.GetKeyDown(KeyCode.T))
         {
-            //For testing
-            player.GetComponent<Robot>().takeDamage(1, gameObject);
+            if(player.GetComponent<Robot>().getNumberOfParts() > 0)
+                player.GetComponent<Robot>().takeDamage(1, gameObject, false);
         }
 
         if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
