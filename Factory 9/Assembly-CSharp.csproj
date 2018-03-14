@@ -60,6 +60,7 @@
      <Compile Include="Assets\Crusher.cs" />
      <Compile Include="Assets\CrusherSensor.cs" />
      <Compile Include="Assets\dontd.cs" />
+     <Compile Include="Assets\FirstMonitor.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
      <Compile Include="Assets\Ingredient.cs" />
@@ -71,6 +72,7 @@
      <Compile Include="Assets\LevelLoadingBounds.cs" />
      <Compile Include="Assets\Moniter_Trigger.cs" />
      <Compile Include="Assets\Monitor.cs" />
+     <Compile Include="Assets\OnDeathMonitor.cs" />
      <Compile Include="Assets\ScriptableSequence.cs" />
      <Compile Include="Assets\Scripts\Activators\BasicSwitch.cs" />
      <Compile Include="Assets\Scripts\Activators\LeverHandle.cs" />

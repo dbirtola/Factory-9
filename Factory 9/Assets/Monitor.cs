@@ -28,7 +28,6 @@ public class Monitor : Activateable {
 	}
 
 
-
     public override void Activate()
     {
         base.Activate();

@@ -30,7 +30,7 @@ public class PlayerController : MonoBehaviour {
 
     void Awake()
     {
-        DontDestroyOnLoad(gameObject);
+       // DontDestroyOnLoad(gameObject);
         if (playerController != null)
         {
             Destroy(gameObject);

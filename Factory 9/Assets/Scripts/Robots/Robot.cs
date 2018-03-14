@@ -129,10 +129,19 @@ public class Robot : MonoBehaviour {
         
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
-
-            if(col.contacts.Length <= 0)
+            //col.contacts[0].
+            if (GetComponent<Player>())
             {
-                Debug.Log("Contacts 0");
+
+                    Debug.Log("Relative Velocity: " + col.relativeVelocity);
+                Debug.Log(col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude + " vs " + GetComponent<Rigidbody2D>().velocity.magnitude);
+
+            }
+
+
+
+            if (col.contacts.Length <= 0)
+            {
                 return;
             }
 

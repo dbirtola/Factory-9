@@ -6,7 +6,7 @@ public class Checkpoint : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-        DontDestroyOnLoad(transform.parent.gameObject);
+       // DontDestroyOnLoad(transform.parent.gameObject);
 	}
 	
 	// Update is called once per frame

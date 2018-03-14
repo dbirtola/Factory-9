@@ -8,6 +8,10 @@ public class LeverSwitch : Switch {
 
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (col.contacts == null)
+            return;
+
+
         Vector2 colNorm = col.contacts[0].normal;
         float AngleOfCol = Vector2.Angle( colNorm, transform.right);
 
