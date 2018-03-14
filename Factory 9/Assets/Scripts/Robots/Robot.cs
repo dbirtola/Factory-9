@@ -167,6 +167,19 @@ public class Robot : MonoBehaviour {
         
     }
 
+    public int getNumberOfParts()
+    {
+        int numParts = 0;
+        if (legs != null)
+            numParts++;
+        if (rightArm != null)
+            numParts++;
+        if (leftArm != null)
+            numParts++;
+
+        return numParts;
+    }
+
     public bool addLegs(Legs newLegs)
     {
         Rigidbody2D rb = GetComponent<Rigidbody2D>();
@@ -267,7 +280,7 @@ public class Robot : MonoBehaviour {
 
     }
 
-    public void takeDamage(int damage, GameObject attacker)
+    public void takeDamage(int damage, GameObject attacker, bool withHitPause = true)
     {
         if (isInvulnerable == true)
             return;
@@ -282,7 +295,7 @@ public class Robot : MonoBehaviour {
         var particle = Instantiate(hitParticleEffect, transform.position, Quaternion.identity);
         Destroy(particle, 1);
 
-        if (legs != null)
+        if (legs != null && withHitPause == true)
             GameManager.HitPause();
 
 
