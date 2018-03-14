@@ -32,6 +32,7 @@ public class UIManager : MonoBehaviour {
     }
 	// Update is called once per frame
 	void Update () {
+        /*
         if (transform.Find("Levels") == null)
             return;
         if (Input.GetKey(KeyCode.Tab))
@@ -49,6 +50,30 @@ public class UIManager : MonoBehaviour {
         }else
         {
             transform.Find("Controls").gameObject.SetActive(false);
+        }*/
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            GameObject menu = transform.Find("Main Menu").gameObject;
+
+            bool windowWasOpen = false;
+
+            foreach(Transform t in transform)
+            {
+                if(t.gameObject.activeSelf == true)
+                {
+                    windowWasOpen = true;
+                    t.gameObject.SetActive(false);
+                }
+            }
+
+            if (windowWasOpen)
+                return;
+
+            menu.gameObject.SetActive(true);
+            
+            
+            
         }
 	}
 
