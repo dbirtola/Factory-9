@@ -32,7 +32,7 @@ public class Robot : MonoBehaviour {
     public float speed = 100;
     public float jumpPower = 200;
 
-    public float pushingPower = 0f;
+    private float pushingPower = 0f;
 
     public const float impactThresholdForDamage = 100;
     public  float invulnerableTimeAfterDamaged = 0.5f;
@@ -130,14 +130,6 @@ public class Robot : MonoBehaviour {
         if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
         {
             //col.contacts[0].
-            if (GetComponent<Player>())
-            {
-
-                    Debug.Log("Relative Velocity: " + col.relativeVelocity);
-                Debug.Log(col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude + " vs " + GetComponent<Rigidbody2D>().velocity.magnitude);
-
-            }
-
 
 
             if (col.contacts.Length <= 0)
@@ -149,7 +141,6 @@ public class Robot : MonoBehaviour {
            // if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
            if(sum >= impactThresholdForDamage)
             {
-                Debug.Log("Took damage from sum of: " + sum + "(" + col.gameObject + ")");
                   
                 takeDamage(1, col.gameObject);
 
