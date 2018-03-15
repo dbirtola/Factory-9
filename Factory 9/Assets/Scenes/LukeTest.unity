@@ -2342,7 +2342,7 @@ MonoBehaviour:
   legs: {fileID: 1829090775}
   leftArm: {fileID: 0}
   rightArm: {fileID: 0}
-  headLampActive: 0
+  headLampActive: 1
   isInvulnerable: 0
   headLamp: {fileID: 0}
   speed: 2700
@@ -3430,7 +3430,7 @@ MonoBehaviour:
   legs: {fileID: 66874526}
   leftArm: {fileID: 0}
   rightArm: {fileID: 0}
-  headLampActive: 0
+  headLampActive: 1
   isInvulnerable: 0
   headLamp: {fileID: 0}
   speed: 2700
@@ -11633,6 +11633,10 @@ Prefab:
       propertyPath: m_RootOrder
       value: 12
       objectReference: {fileID: 0}
+    - target: {fileID: 1225359232900380, guid: 6a3f90971d254164a85deeeff9fb4a11, type: 2}
+      propertyPath: m_Name
+      value: NewEnemy (4)
+      objectReference: {fileID: 0}
     - target: {fileID: 114535435768462964, guid: 6a3f90971d254164a85deeeff9fb4a11,
         type: 2}
       propertyPath: patrolPoints.Array.data[0]
@@ -11643,10 +11647,6 @@ Prefab:
       propertyPath: patrolPoints.Array.data[1]
       value: 
       objectReference: {fileID: 206357582}
-    - target: {fileID: 1225359232900380, guid: 6a3f90971d254164a85deeeff9fb4a11, type: 2}
-      propertyPath: m_Name
-      value: NewEnemy (4)
-      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a3f90971d254164a85deeeff9fb4a11, type: 2}
   m_IsPrefabParent: 0
@@ -34599,6 +34599,11 @@ Prefab:
       propertyPath: m_Range
       value: 22.8
       objectReference: {fileID: 0}
+    - target: {fileID: 114294474032487012, guid: 6a3f90971d254164a85deeeff9fb4a11,
+        type: 2}
+      propertyPath: headLampActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a3f90971d254164a85deeeff9fb4a11, type: 2}
   m_IsPrefabParent: 0
@@ -39573,7 +39578,7 @@ MonoBehaviour:
   legs: {fileID: 1974879882}
   leftArm: {fileID: 0}
   rightArm: {fileID: 0}
-  headLampActive: 0
+  headLampActive: 1
   isInvulnerable: 0
   headLamp: {fileID: 0}
   speed: 2700
@@ -55300,6 +55305,11 @@ Prefab:
       propertyPath: m_Range
       value: 22.8
       objectReference: {fileID: 0}
+    - target: {fileID: 114294474032487012, guid: 6a3f90971d254164a85deeeff9fb4a11,
+        type: 2}
+      propertyPath: headLampActive
+      value: 1
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a3f90971d254164a85deeeff9fb4a11, type: 2}
   m_IsPrefabParent: 0
@@ -58108,7 +58118,7 @@ MonoBehaviour:
   legs: {fileID: 1328704500}
   leftArm: {fileID: 0}
   rightArm: {fileID: 0}
-  headLampActive: 0
+  headLampActive: 1
   isInvulnerable: 0
   headLamp: {fileID: 0}
   speed: 2700
