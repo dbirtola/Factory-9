@@ -285,6 +285,7 @@
     <Compile Include="Assets\AirVent.cs" />
     <Compile Include="Assets\AirVentEntrance.cs" />
     <Compile Include="Assets\ArmSpawner.cs" />
+    <Compile Include="Assets\BrightnessSlider.cs" />
     <Compile Include="Assets\Checkpoint.cs" />
     <Compile Include="Assets\ConverterMachine.cs" />
     <Compile Include="Assets\ConverterMachineInput.cs" />

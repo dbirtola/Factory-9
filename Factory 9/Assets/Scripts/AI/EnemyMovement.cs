@@ -35,8 +35,10 @@ public class EnemyMovement : MonoBehaviour {
 
         if (isPatrolling && GetComponent<Robot>().legs != null)
         {
-
-            GetComponentInChildren<RobotHeadLamp>().SetColor(c:GetComponentInChildren<RobotHeadLamp>().defaultColor);
+            if (GetComponentInChildren<RobotHeadLamp>())
+            {
+                GetComponentInChildren<RobotHeadLamp>().SetColor(c: GetComponentInChildren<RobotHeadLamp>().defaultColor);
+            }
 
             if (patrolPoints.Length <= 0)
                 return;
@@ -60,7 +62,7 @@ public class EnemyMovement : MonoBehaviour {
             //GetComponent<Rigidbody2D>().transform.position
             if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
             {
-               // GetComponent<Rigidbody2D>().velocity = stoppingForce;
+                // GetComponent<Rigidbody2D>().velocity = stoppingForce;
                 StartCoroutine(PausePatrol(waitTime));
                 //we have reached the patrol point
                 //load up next patrol point if we have not reached the last patrol point
@@ -81,7 +83,7 @@ public class EnemyMovement : MonoBehaviour {
                     else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
                         currentSpeed = -1 * currentSpeed;
 
-                  //  GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+                    //  GetComponent<RobotController>().MoveHorizontal(currentSpeed);
 
                 }
                 else // end of array is reached, loop back through the patrol points
@@ -106,7 +108,7 @@ public class EnemyMovement : MonoBehaviour {
             else
             {
                 GetComponent<RobotController>().MoveHorizontal(currentSpeed);//keep moving robot 
-              //  StartCoroutine(TestIfStuck(3f));
+                                                                             //  StartCoroutine(TestIfStuck(3f));
 
             }
 
@@ -115,7 +117,10 @@ public class EnemyMovement : MonoBehaviour {
 
         }
         else if (GetComponent<Robot>().legs == null)//If robot has no legs, turn off head lamp
-        GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
+            if (GetComponentInChildren<RobotHeadLamp>())
+            {
+                GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
+            }
 
     }
 
