@@ -137,9 +137,9 @@ public class PlayerController : MonoBehaviour {
                 player.GetComponent<Robot>().takeDamage(1, gameObject, false);
         }
 
-        if(Input.GetKeyDown(KeyCode.DownArrow) || Input.GetKeyDown(KeyCode.S))
+        if(Input.GetKeyDown(KeyCode.S))
         {
-            if(GetComponent<Rigidbody2D>().velocity.magnitude <= 0.5f && playerRC.state == RobotState.OnGround)
+            if(GetComponent<Rigidbody2D>().velocity.magnitude <= 1f && playerRC.state == RobotState.OnGround)
             {
                 EnterStealth();
                 playerRobot.headLampActive = false;
