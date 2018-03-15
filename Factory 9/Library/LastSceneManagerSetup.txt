@@ -1,8 +1,7 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/FinalLevel.unity
-=======
-- path: Assets/Scenes/CrusherIncinerator.unity
->>>>>>> d67b1dca844e8afe33352846f0a37ba2d20f2a4a
+- path: Assets/Scenes/Init.unity
   isLoaded: 1
   isActive: 1
+- path: Assets/Scenes/Main.unity
+  isLoaded: 1
+  isActive: 0
