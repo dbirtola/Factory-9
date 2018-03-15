@@ -28,6 +28,7 @@ public class Lavaspout : Activateable {
     {
         while (true)
         {
+
             Activate();
             yield return new WaitForSeconds(timeOn);
 
@@ -43,9 +44,9 @@ public class Lavaspout : Activateable {
 
     public override void Activate()
     {
-        base.Activate();
 
         transform.GetComponentInChildren<ParticleSystem>().enableEmission = true;
+        base.Activate();
 
     }
     public override void Deactivate()

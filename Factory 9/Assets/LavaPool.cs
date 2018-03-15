@@ -24,7 +24,7 @@ public class LavaPool : MonoBehaviour {
         }
         if (col.GetComponent<Rigidbody2D>() && col.gameObject.layer != LayerMask.NameToLayer("Platform")) 
         {
-            Destroy(col.gameObject);
+            Destroy(col.transform.root.gameObject);
         }
     }
 }
