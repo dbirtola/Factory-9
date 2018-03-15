@@ -3542,6 +3542,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &98152397
 GameObject:
   m_ObjectHideFlags: 0
@@ -5197,6 +5199,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &131938234
 GameObject:
   m_ObjectHideFlags: 0
@@ -5790,6 +5794,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &148374687
 GameObject:
   m_ObjectHideFlags: 0
@@ -8844,6 +8850,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1001 &220273919
 Prefab:
   m_ObjectHideFlags: 0
@@ -9873,6 +9881,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &241538327
 GameObject:
   m_ObjectHideFlags: 0
@@ -13498,6 +13508,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &334703251
 GameObject:
   m_ObjectHideFlags: 0
@@ -18636,6 +18648,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &416256796
 GameObject:
   m_ObjectHideFlags: 0
@@ -20063,6 +20077,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1001 &466406207
 Prefab:
   m_ObjectHideFlags: 0
@@ -24660,11 +24676,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4472630474375646, guid: 4a1e8a3a8b9190443938dee11befa174, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -156.01956
+      value: -105.08
       objectReference: {fileID: 0}
     - target: {fileID: 4472630474375646, guid: 4a1e8a3a8b9190443938dee11befa174, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -138.192
+      value: -149.47
       objectReference: {fileID: 0}
     - target: {fileID: 4472630474375646, guid: 4a1e8a3a8b9190443938dee11befa174, type: 2}
       propertyPath: m_LocalPosition.z
@@ -26782,11 +26798,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.334702
+      value: -12.334694
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.845001
+      value: -22.165
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.z
@@ -32372,6 +32388,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &778264307
 GameObject:
   m_ObjectHideFlags: 0
@@ -32533,6 +32551,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1001 &779300684
 Prefab:
   m_ObjectHideFlags: 0
@@ -35582,6 +35602,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &855025651
 GameObject:
   m_ObjectHideFlags: 0
@@ -37179,7 +37201,7 @@ GameObject:
   - component: {fileID: 877502157}
   - component: {fileID: 877502156}
   - component: {fileID: 877502155}
-  - component: {fileID: 877502154}
+  - component: {fileID: 877502158}
   m_Layer: 0
   m_Name: pipe_2
   m_TagString: Untagged
@@ -37187,26 +37209,6 @@ GameObject:
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
   m_IsActive: 1
---- !u!50 &877502154
-Rigidbody2D:
-  serializedVersion: 4
-  m_ObjectHideFlags: 0
-  m_PrefabParentObject: {fileID: 0}
-  m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 877502153}
-  m_BodyType: 1
-  m_Simulated: 1
-  m_UseFullKinematicContacts: 0
-  m_UseAutoMass: 0
-  m_Mass: 1
-  m_LinearDrag: 0
-  m_AngularDrag: 0.05
-  m_GravityScale: 1
-  m_Material: {fileID: 0}
-  m_Interpolate: 0
-  m_SleepingMode: 1
-  m_CollisionDetection: 0
-  m_Constraints: 0
 --- !u!60 &877502155
 PolygonCollider2D:
   m_ObjectHideFlags: 0
@@ -37295,6 +37297,24 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 15
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 154.48001}
+--- !u!114 &877502158
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 877502153}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: d5e0b931335008d4e8a2c8c6c6de6ffb, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  activated: 1
+  dispensedObject: {fileID: 1616503744030822, guid: 7dce47318c2a1164b9ea21846da812d0,
+    type: 2}
+  timeBetweenDispenses: 3
+  spawnPoint: {x: 1.96, y: 0}
+  initialForce: 500
+  maxDispences: -1
 --- !u!1001 &884656492
 Prefab:
   m_ObjectHideFlags: 0
@@ -37304,7 +37324,7 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4186562889340408, guid: 7b39651b1ac57754099c29d338bb14f7, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -2.2873783
+      value: -2.26
       objectReference: {fileID: 0}
     - target: {fileID: 4186562889340408, guid: 7b39651b1ac57754099c29d338bb14f7, type: 2}
       propertyPath: m_LocalPosition.y
@@ -39273,6 +39293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &923199052
 GameObject:
   m_ObjectHideFlags: 0
@@ -39722,6 +39744,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &932969898
 GameObject:
   m_ObjectHideFlags: 0
@@ -40095,6 +40119,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &944445710
 GameObject:
   m_ObjectHideFlags: 0
@@ -41359,6 +41385,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &964975898
 GameObject:
   m_ObjectHideFlags: 0
@@ -41520,6 +41548,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &966378421
 GameObject:
   m_ObjectHideFlags: 0
@@ -42524,6 +42554,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &981298885
 GameObject:
   m_ObjectHideFlags: 0
@@ -43261,6 +43293,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1007143010
 GameObject:
   m_ObjectHideFlags: 0
@@ -43422,6 +43456,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1010110839
 GameObject:
   m_ObjectHideFlags: 0
@@ -44537,11 +44573,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.560009
+      value: -9.560001
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.845001
+      value: -22.165
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.z
@@ -47103,6 +47139,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1001 &1102976133
 Prefab:
   m_ObjectHideFlags: 0
@@ -49597,6 +49635,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1156187289
 GameObject:
   m_ObjectHideFlags: 0
@@ -50437,11 +50477,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -12.700002
+      value: -12.699994
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.11
+      value: -21.43
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.z
@@ -51137,11 +51177,11 @@ Prefab:
     m_Modifications:
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.x
-      value: -9.560002
+      value: -9.56
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.y
-      value: -18.11
+      value: -21.43
       objectReference: {fileID: 0}
     - target: {fileID: 4672366937510564, guid: e217a843fde168145b24a075087bb605, type: 2}
       propertyPath: m_LocalPosition.z
@@ -52729,6 +52769,12 @@ Prefab:
       propertyPath: m_SortingOrder
       value: 5
       objectReference: {fileID: 0}
+    - target: {fileID: 114634985274316036, guid: 6fff0ca5824ef8d47a408a2e1812e615,
+        type: 2}
+      propertyPath: dispensedObject
+      value: 
+      objectReference: {fileID: 1616503744030822, guid: 7dce47318c2a1164b9ea21846da812d0,
+        type: 2}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fff0ca5824ef8d47a408a2e1812e615, type: 2}
   m_IsPrefabParent: 0
@@ -54218,6 +54264,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1267140480
 GameObject:
   m_ObjectHideFlags: 0
@@ -55733,6 +55781,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1312238183
 GameObject:
   m_ObjectHideFlags: 0
@@ -58134,6 +58184,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1370673136
 GameObject:
   m_ObjectHideFlags: 0
@@ -63731,7 +63783,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1480088074}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -25.57, y: -131.52, z: 0}
+  m_LocalPosition: {x: -25.68, y: -131.24, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -65353,6 +65405,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1527592562
 GameObject:
   m_ObjectHideFlags: 0
@@ -66387,6 +66441,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1539129626
 GameObject:
   m_ObjectHideFlags: 0
@@ -66548,6 +66604,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1547173117
 GameObject:
   m_ObjectHideFlags: 0
@@ -68096,6 +68154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1580162131
 GameObject:
   m_ObjectHideFlags: 0
@@ -77622,6 +77682,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1739096547
 GameObject:
   m_ObjectHideFlags: 0
@@ -78305,6 +78367,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1768209338
 GameObject:
   m_ObjectHideFlags: 0
@@ -81108,6 +81172,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1818739057
 GameObject:
   m_ObjectHideFlags: 0
@@ -82238,6 +82304,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1838919401
 GameObject:
   m_ObjectHideFlags: 0
@@ -82641,6 +82709,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1846677753
 GameObject:
   m_ObjectHideFlags: 0
@@ -83354,6 +83424,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1857813141
 GameObject:
   m_ObjectHideFlags: 0
@@ -83902,6 +83974,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1868502505
 GameObject:
   m_ObjectHideFlags: 0
@@ -84351,6 +84425,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1876628396
 GameObject:
   m_ObjectHideFlags: 0
@@ -85078,6 +85154,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1884067829
 GameObject:
   m_ObjectHideFlags: 0
@@ -85404,6 +85482,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1893034413
 GameObject:
   m_ObjectHideFlags: 0
@@ -87873,6 +87953,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &1928881246
 GameObject:
   m_ObjectHideFlags: 0
@@ -89679,6 +89761,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1001 &1975000850
 Prefab:
   m_ObjectHideFlags: 0
@@ -90581,6 +90665,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &2004230931
 GameObject:
   m_ObjectHideFlags: 0
@@ -94647,6 +94733,8 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
+  primaryParticles: {fileID: 0}
+  secondaryParticle: {fileID: 0}
 --- !u!1 &2101479987
 GameObject:
   m_ObjectHideFlags: 0

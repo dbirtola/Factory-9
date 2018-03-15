@@ -45,12 +45,13 @@ public class Crusher : MonoBehaviour {
         if (col.gameObject.GetComponent<Robot>())
         {
             //Cant hit a stealthed player
+            /*
             if (col.gameObject.GetComponent<PlayerController>())
             {
                 if (col.gameObject.GetComponent<PlayerController>().isStealthed == true)
                     return;
             }
-        
+        */
             timeLastCrushed = Time.time;
             GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
             col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
