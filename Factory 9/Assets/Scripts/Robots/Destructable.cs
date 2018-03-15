@@ -3,25 +3,26 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class Destructable : MonoBehaviour {
+    bool applicationQuitting = false;
 
     public int health = 1;
 
     public GameObject primaryParticles;
     public GameObject secondaryParticle;
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
+    // Use this for initialization
+    void Start() {
+
+    }
+
+    // Update is called once per frame
+    void Update() {
+
+    }
 
     public void takeDamage(int damage)
     {
         health -= damage;
-        if(health <= 0)
+        if (health <= 0)
         {
 
 
@@ -30,9 +31,16 @@ public class Destructable : MonoBehaviour {
         }
     }
 
+    void OnApplicationQuit() { 
+        applicationQuitting = true;
+    }
+
 
     public void OnDestroy()
     {
+        if (applicationQuitting)
+            return;
+
         if (primaryParticles != null)
         {
             var temp = Instantiate(primaryParticles, transform.position, Quaternion.identity);
@@ -41,7 +49,6 @@ public class Destructable : MonoBehaviour {
         if (secondaryParticle != null)
         {
             var temp = Instantiate(secondaryParticle, transform.position, Quaternion.identity);
-            Debug.Log(temp + " was spawned");
             Destroy(temp, 1.5f);
         }
 

@@ -44,7 +44,7 @@ public class GameManager : MonoBehaviour {
 
 
 
-        SceneManager.sceneLoaded += OnLoaded;
+        //SceneManager.sceneLoaded += OnLoaded;
     }
 	
 	// Update is called once per frame
@@ -100,37 +100,34 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void RestartLevel()
+    public void RestartFromCheckpoint()
     {
-        StartCoroutine(restartLevel());
+        StartCoroutine(restartFromCheckpoint());
+
+      
     }
 
-    IEnumerator restartLevel()
+    IEnumerator restartFromCheckpoint()
     {
-        Destroy(PlayerController.player.gameObject);
-        var parts = FindObjectsOfType<BodyPart>();
-        foreach (var p in parts)
+        PlayerController.player.gameObject.SetActive(false);
+        yield return StartCoroutine(loadLevel(activeCheckpoint.sceneName, true));
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName("Init"));
+
+        if (PlayerController.player != null)
         {
-            Destroy(p.gameObject);
+            Destroy(PlayerController.player.gameObject);
+            yield return null;
         }
-
-        //Unload our current scene
-        int index = SceneManager.GetActiveScene().buildIndex;
-        AsyncOperation operation = SceneManager.UnloadSceneAsync(index);
-        yield return operation;
-
-        //Reload that current scene
-        AsyncOperation op = SceneManager.LoadSceneAsync(index, LoadSceneMode.Additive);
-        yield return op;
-
-        SceneManager.SetActiveScene(SceneManager.GetSceneByBuildIndex(index));
-
         var player = Instantiate(playerPrefab, transform.position, Quaternion.identity);
-        //var player = FindObjectOfType<Player>();
-        //DontDestroyOnLoad(player.gameObject);
+
+        // GameObject player = PlayerController.player.gameObject;
         player.transform.position = activeCheckpoint.transform.position;
+        PlayerController.player.gameObject.SetActive(true);
         Camera.main.GetComponent<FactoryCamera>().target = player.gameObject;
+
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(activeCheckpoint.sceneName));
         UIManager.uiManager.Init();
+
     }
 
     public void ResetToCheckpoint(bool unloadOthers = true)
@@ -140,10 +137,11 @@ public class GameManager : MonoBehaviour {
 
     public void loadLevelAsync(string level)
     {
-        StartCoroutine(loadLevel(level, false);
+        StartCoroutine(loadLevel(level, false));
     }
     public IEnumerator loadLevel(string levelName, bool unloadOthers = true)
     {
+        Debug.Log("Loading scnee: " + levelName);
         AsyncOperation asyncOp;
 
         if (unloadOthers == true)
@@ -163,7 +161,7 @@ public class GameManager : MonoBehaviour {
         yield return asyncOp;
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(levelName));
-
+        
         yield return true;
 
     }
@@ -195,10 +193,10 @@ public class GameManager : MonoBehaviour {
         }
         */
 
-        asyncOp = SceneManager.LoadSceneAsync(checkpoint.scene.name, LoadSceneMode.Additive);
+        asyncOp = SceneManager.LoadSceneAsync(checkpoint.sceneName, LoadSceneMode.Additive);
         yield return asyncOp;
 
-        SceneManager.SetActiveScene(checkpoint.scene);
+        SceneManager.SetActiveScene(SceneManager.GetSceneByName(checkpoint.sceneName));
 
         Destroy(PlayerController.player.gameObject);
         var p = Instantiate(playerPrefab, checkpoint.transform.position, Quaternion.identity);

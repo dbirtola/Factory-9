@@ -81,6 +81,7 @@ public class UIManager : MonoBehaviour {
 
     public void ShowDeathScreen(GameObject killer)
     {
+        Debug.Log("SHOWING DEATH SCREEN");
         var ds = transform.Find("DeathScreen").gameObject;
         ds.SetActive(true);
     }

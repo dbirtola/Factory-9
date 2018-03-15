@@ -5,7 +5,7 @@ using UnityEngine.SceneManagement;
 
 public class Checkpoint : MonoBehaviour {
 
-    public Scene scene;
+    public string sceneName;
 
 	// Use this for initialization
 	void Start () {

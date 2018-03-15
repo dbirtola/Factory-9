@@ -433,7 +433,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 1}
   m_AnchorMax: {x: 0, y: 1}
-  m_AnchoredPosition: {x: 111.13501, y: -11.586345}
+  m_AnchoredPosition: {x: 111.13501, y: -11.586334}
   m_SizeDelta: {x: 221.28998, y: 19.4}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &72455419
@@ -781,7 +781,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1654681170}
-        m_MethodName: RestartLevel
+        m_MethodName: RestartFromCheckpoint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -2659,6 +2659,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284bcd5747b0c294ba234fe24334d5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: AssemblyLevel
 --- !u!1 &1048539984
 GameObject:
   m_ObjectHideFlags: 0
@@ -2799,6 +2800,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284bcd5747b0c294ba234fe24334d5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: Main
 --- !u!1 &1067484623
 GameObject:
   m_ObjectHideFlags: 0
@@ -2852,6 +2854,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284bcd5747b0c294ba234fe24334d5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: CrusherIncinerator
 --- !u!4 &1067484626
 Transform:
   m_ObjectHideFlags: 0
@@ -3092,6 +3095,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 284bcd5747b0c294ba234fe24334d5fc, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  sceneName: PartsLevel
 --- !u!1 &1145509719
 GameObject:
   m_ObjectHideFlags: 0
@@ -3801,7 +3805,7 @@ MonoBehaviour:
   playerPrefab: {fileID: 1438897712629014, guid: 6ee6ce152cd5f4841b62283c3bf0e52a,
     type: 2}
   hitPauseTime: 0.15
-  loadMainOnStart: 1
+  loadMainOnStart: 0
 --- !u!4 &1654681171
 Transform:
   m_ObjectHideFlags: 0
@@ -4307,7 +4311,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 1689613276}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -189.46133, y: -50.148697, z: 0}
+  m_LocalPosition: {x: 37.9, y: -31.4, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1608536261}
@@ -5255,7 +5259,7 @@ MonoBehaviour:
     m_PersistentCalls:
       m_Calls:
       - m_Target: {fileID: 1654681170}
-        m_MethodName: RestartLevel
+        m_MethodName: RestartFromCheckpoint
         m_Mode: 1
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
@@ -5265,8 +5269,8 @@ MonoBehaviour:
           m_StringArgument: 
           m_BoolArgument: 0
         m_CallState: 2
-      - m_Target: {fileID: 590095837}
-        m_MethodName: SetActive
+      - m_Target: {fileID: 517418987}
+        m_MethodName: 
         m_Mode: 6
         m_Arguments:
           m_ObjectArgument: {fileID: 0}
