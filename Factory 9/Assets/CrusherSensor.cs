@@ -19,6 +19,12 @@ public class CrusherSensor : MonoBehaviour {
     {
         if (col.gameObject.GetComponent<Robot>())
         {
+            if (col.gameObject.GetComponent<PlayerController>())
+            {
+                if (col.gameObject.GetComponent<PlayerController>().isStealthed)
+                    return;
+            }
+
             transform.parent.GetComponentInChildren<Crusher>().Crush();
         }
     }

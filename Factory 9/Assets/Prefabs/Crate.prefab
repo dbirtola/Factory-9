@@ -22,6 +22,8 @@ GameObject:
   - component: {fileID: 212330459697569558}
   - component: {fileID: 50053475911573774}
   - component: {fileID: 60058556003849120}
+  - component: {fileID: 233280635824643668}
+  - component: {fileID: 114733581613697910}
   m_Layer: 0
   m_Name: Crate
   m_TagString: Untagged
@@ -36,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1851386237298254}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -8.275614, y: 26.237318, z: 0.2109375}
-  m_LocalScale: {x: 1.7377014, y: 1.7377014, z: 1.7377014}
+  m_LocalPosition: {x: -117.278, y: -47.91, z: 0}
+  m_LocalScale: {x: 2.56, y: 2.51, z: 1.7377014}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -53,7 +55,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 25
+  m_Mass: 50.29
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 1
@@ -76,9 +78,9 @@ PolygonCollider2D:
   m_UsedByComposite: 0
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
-    border: {x: 0.275, y: 0.2775, z: 0.2725, w: 0.2725}
+    border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 1.28, y: 1.28}
+    oldSize: {x: 0.7325, y: 0.7325}
     newSize: {x: 1, y: 1}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
@@ -91,6 +93,22 @@ PolygonCollider2D:
       - {x: -0.36749998, y: -0.36749998}
       - {x: 0.36749998, y: -0.36749998}
       - {x: 0.36749998, y: 0.37}
+--- !u!114 &114733581613697910
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851386237298254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: fccace27a14ed3f459c27b21f96b9acd, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  health: 1
+  primaryParticles: {fileID: 1081446411559168, guid: 496570989d248344c95a918c5190c830,
+    type: 2}
+  secondaryParticle: {fileID: 1535918158291412, guid: bb54c92f509d6b94a860200170446368,
+    type: 2}
 --- !u!212 &212330459697569558
 SpriteRenderer:
   m_ObjectHideFlags: 1
@@ -105,7 +123,7 @@ SpriteRenderer:
   m_LightProbeUsage: 1
   m_ReflectionProbeUsage: 1
   m_Materials:
-  - {fileID: 10754, guid: 0000000000000000f000000000000000, type: 0}
+  - {fileID: 2100000, guid: f0c87cd9f74385244bf092d53aa1f7df, type: 2}
   m_StaticBatchInfo:
     firstSubMesh: 0
     subMeshCount: 0
@@ -124,8 +142,8 @@ SpriteRenderer:
   m_LightmapParameters: {fileID: 0}
   m_SortingLayerID: 0
   m_SortingLayer: 0
-  m_SortingOrder: 0
-  m_Sprite: {fileID: 21300000, guid: d2634492d58d35e47b8af5848e10864e, type: 3}
+  m_SortingOrder: 23
+  m_Sprite: {fileID: 21300000, guid: 1911ad0469cc24c45aa58379a041e27d, type: 3}
   m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
@@ -135,3 +153,26 @@ SpriteRenderer:
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1
   m_MaskInteraction: 0
+--- !u!233 &233280635824643668
+HingeJoint2D:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1851386237298254}
+  m_Enabled: 1
+  serializedVersion: 4
+  m_EnableCollision: 0
+  m_ConnectedRigidBody: {fileID: 0}
+  m_BreakForce: Infinity
+  m_BreakTorque: Infinity
+  m_AutoConfigureConnectedAnchor: 1
+  m_Anchor: {x: 0, y: 0.37}
+  m_ConnectedAnchor: {x: 0.14396667, y: -0.0014877319}
+  m_UseMotor: 0
+  m_Motor:
+    m_MotorSpeed: 0
+    m_MaximumMotorForce: 10000
+  m_UseLimits: 0
+  m_AngleLimits:
+    m_LowerAngle: 0
+    m_UpperAngle: 359
