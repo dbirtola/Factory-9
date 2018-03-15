@@ -23,6 +23,13 @@ public class ScriptableSequence : MonoBehaviour {
     //Will be used to play your sequence from other scripts without getting an explicit reference
     protected string sequenceName;
 
+    protected FactoryCamera factoryCamera;
+
+    protected virtual void Start()
+    {
+        factoryCamera = FindObjectOfType<FactoryCamera>();
+    }
+
     //Allows you to start the sequence without getting a reference to it from any script.
     //The names are case sensitive
     static public bool PlaySequenceByName(string sequenceName)

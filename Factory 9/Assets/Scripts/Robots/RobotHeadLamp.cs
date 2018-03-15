@@ -8,10 +8,16 @@ public class RobotHeadLamp : MonoBehaviour {
     public bool headLampOn = false;
 
     Animator animator;
+    Light headLight;
+    public Color defaultColor { get; private set; }
+
     void Awake()
     {
         animator = GetComponent<Animator>();
+        headLight = GetComponent<Light>();
+        defaultColor = headLight.color;
     }
+
 	// Use this for initialization
 	void Start () {
 		
@@ -35,6 +41,11 @@ public class RobotHeadLamp : MonoBehaviour {
         }
 
   
+    }
+
+    public void SetColor(Color c)
+    {
+        headLight.color = c;
     }
 
     public void Flicker()
