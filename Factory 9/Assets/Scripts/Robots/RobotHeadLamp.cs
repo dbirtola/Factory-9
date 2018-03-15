@@ -10,6 +10,8 @@ public class RobotHeadLamp : MonoBehaviour {
     Animator animator;
     Light headLight;
     public Color defaultColor { get; private set; }
+    public Color chaseColor;
+
 
     void Awake()
     {
@@ -20,7 +22,7 @@ public class RobotHeadLamp : MonoBehaviour {
 
 	// Use this for initialization
 	void Start () {
-		
+
 	}
 	
 	// Update is called once per frame

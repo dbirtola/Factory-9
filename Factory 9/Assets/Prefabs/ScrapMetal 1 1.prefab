@@ -22,7 +22,7 @@ GameObject:
   - component: {fileID: 212185142303314278}
   - component: {fileID: 61766895846420684}
   - component: {fileID: 50655979256700712}
-  m_Layer: 8
+  m_Layer: 0
   m_Name: ScrapMetal 1 1
   m_TagString: ScrapMetal
   m_Icon: {fileID: 0}
