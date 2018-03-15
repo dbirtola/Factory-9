@@ -16,6 +16,12 @@ public class AIChase : MonoBehaviour {
     void Update() {
         if (isChasing == true && GetComponent<Robot>().legs != null)
         {
+            //Set Head lamp Red
+            GetComponentInChildren<RobotHeadLamp>().SetColor(c:GetComponentInChildren<RobotHeadLamp>().chaseColor);
+           // GetComponentInChildren<RobotHeadLamp>().FlickerLight(true);
+
+            // GetComponent<Robot>().headLamp.SetColor(Color.red);
+
             currentSpeed = GetComponent<Robot>().speed;
             GetComponent<EnemyMovement>().isPatrolling = false;
             StartCoroutine(ChasingDirection(.35f));
@@ -32,7 +38,7 @@ public class AIChase : MonoBehaviour {
             if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) < 1)
             {
 
-               // GetComponent<RobotController>().MoveHorizontal(0);//has no speed
+                // GetComponent<RobotController>().MoveHorizontal(0);//has no speed
                 StartCoroutine(RobotStuck(.45f));
                 GetComponent<RobotController>().MoveHorizontal(0);//has no speed
 
@@ -42,9 +48,13 @@ public class AIChase : MonoBehaviour {
                 //   GetComponent<RobotController>().MoveHorizontal((GetComponent<Robot>().speed)/2);
             }
         }
+        else if (GetComponent<Robot>().legs == null)//If robot has no legs, turn off head lamp
+         GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
+
+
     }
 
-    
+
     IEnumerator RobotStuck(float pauseTime)
     {
         isChasing = false;

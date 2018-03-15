@@ -28,7 +28,6 @@ public class EnemyMovement : MonoBehaviour {
         }
         
     }
-
     // Update is called once per frame
     void Update()
     {
@@ -36,6 +35,9 @@ public class EnemyMovement : MonoBehaviour {
 
         if (isPatrolling && GetComponent<Robot>().legs != null)
         {
+
+            GetComponentInChildren<RobotHeadLamp>().SetColor(c:GetComponentInChildren<RobotHeadLamp>().defaultColor);
+
             if (patrolPoints.Length <= 0)
                 return;
 
@@ -63,7 +65,7 @@ public class EnemyMovement : MonoBehaviour {
                 //we have reached the patrol point
                 //load up next patrol point if we have not reached the last patrol point
 
-               
+
                 //check to see if we have any more patrol points
                 if (currentPatrolIndex + 1 < patrolPoints.Length)
                 {
@@ -112,6 +114,9 @@ public class EnemyMovement : MonoBehaviour {
 
 
         }
+        else if (GetComponent<Robot>().legs == null)//If robot has no legs, turn off head lamp
+        GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
+
     }
 
     IEnumerator PausePatrol(float pauseTime) {
