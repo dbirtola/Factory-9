@@ -32,6 +32,9 @@ public class RobotHeadLamp : MonoBehaviour {
 
     public void TurnOn(bool flicker = false)
     {
+        if (headLampOn)
+            return;
+
         Debug.Log("Turning on");
         headLampOn = true;
         animator.SetBool("On", true);
@@ -58,7 +61,10 @@ public class RobotHeadLamp : MonoBehaviour {
 
     public void TurnOff(bool flicker = false)
     {
-        if(animator == null)
+        if (headLampOn == false)
+            return;
+
+        if (animator == null)
         {
             headLight.intensity = 0;
             return;

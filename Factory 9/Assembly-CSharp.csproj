@@ -98,6 +98,7 @@
      <Compile Include="Assets\Scripts\Mechanisms\CyinderDoor.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\DestroyPipe.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Dispenser.cs" />
+     <Compile Include="Assets\Scripts\Mechanisms\Dispenser2.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\FactoryMachine.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\MovingObjects.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Rope.cs" />

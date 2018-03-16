@@ -9,7 +9,7 @@ public class EnemyMovement : MonoBehaviour {
     public Transform[] patrolPoints;//array of patrol points enemy will travel to in order
     private Transform currentPatrolPoint;//the current patrol point the enemy is traveling to
     private int currentPatrolIndex;//array index counter
-
+    //private bool pause = false;
 
     private Vector2 patrolPointDirection;//vector in direction of currentPatrolPoint
     private float currentSpeed;
@@ -51,63 +51,65 @@ public class EnemyMovement : MonoBehaviour {
             else if (patrolPointDirection.x < 0)// && currentSpeed > 0)// speed was positive, make it negative
                 currentSpeed = -1 * currentSpeed;
 
-
-            GetComponent<RobotController>().MoveHorizontal(currentSpeed);
-
-
-
-            //GetComponent<Rigidbody2D>().transform.position
-            if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
-            {
-                // GetComponent<Rigidbody2D>().velocity = stoppingForce;
-                StartCoroutine(PausePatrol(waitTime));
-                //we have reached the patrol point
-                //load up next patrol point if we have not reached the last patrol point
+          //  if (pause == false)
+         //  {
+                GetComponent<RobotController>().MoveHorizontal(currentSpeed);
 
 
-                //check to see if we have any more patrol points
-                if (currentPatrolIndex + 1 < patrolPoints.Length)
+
+                //GetComponent<Rigidbody2D>().transform.position
+                if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
                 {
+                    // GetComponent<Rigidbody2D>().velocity = stoppingForce;
+                    StartCoroutine(PausePatrol(waitTime));
+                    //we have reached the patrol point
+                    //load up next patrol point if we have not reached the last patrol point
 
-                    //move to the next patrol point in the array
-                    currentPatrolIndex++;//increment index
-                    currentPatrolPoint = patrolPoints[currentPatrolIndex];//set the new patrol point
 
-                    patrolPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
+                    //check to see if we have any more patrol points
+                    if (currentPatrolIndex + 1 < patrolPoints.Length)
+                    {
 
-                    if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
-                        currentSpeed = -1 * currentSpeed;
-                    else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
-                        currentSpeed = -1 * currentSpeed;
+                        //move to the next patrol point in the array
+                        currentPatrolIndex++;//increment index
+                        currentPatrolPoint = patrolPoints[currentPatrolIndex];//set the new patrol point
 
-                    //  GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+                        patrolPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
+
+                        if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
+                            currentSpeed = -1 * currentSpeed;
+                        else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
+                            currentSpeed = -1 * currentSpeed;
+
+                        //  GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+
+                    }
+                    else // end of array is reached, loop back through the patrol points
+                    {
+
+                        currentPatrolIndex = 0;
+
+                        currentPatrolPoint = patrolPoints[currentPatrolIndex];//set the new patrol point
+
+                        patrolPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
+
+                        if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
+                            currentSpeed = -1 * currentSpeed;
+                        else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
+                            currentSpeed = -1 * currentSpeed;
+                        //   GetComponent<RobotController>().MoveHorizontal(currentSpeed);
+
+
+                    }
 
                 }
-                else // end of array is reached, loop back through the patrol points
+                else
                 {
-
-                    currentPatrolIndex = 0;
-
-                    currentPatrolPoint = patrolPoints[currentPatrolIndex];//set the new patrol point
-
-                    patrolPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
-
-                    if (patrolPointDirection.x > 0 && currentSpeed < 0)//set speed positive if speed was negative
-                        currentSpeed = -1 * currentSpeed;
-                    else if (patrolPointDirection.x < 0 && currentSpeed > 0)// speed was positive, make it negative
-                        currentSpeed = -1 * currentSpeed;
-                    //   GetComponent<RobotController>().MoveHorizontal(currentSpeed);
-
+                    GetComponent<RobotController>().MoveHorizontal(currentSpeed);//keep moving robot 
+                                                                                 //  StartCoroutine(TestIfStuck(3f));
 
                 }
-
-            }
-            else
-            {
-                GetComponent<RobotController>().MoveHorizontal(currentSpeed);//keep moving robot 
-                                                                             //  StartCoroutine(TestIfStuck(3f));
-
-            }
+          //  }
 
 
 
@@ -122,10 +124,12 @@ public class EnemyMovement : MonoBehaviour {
     }
 
     IEnumerator PausePatrol(float pauseTime) {
-        isPatrolling = false;
         //pause enemy at patrol point
+        // pause = true;
+        isPatrolling = false;
         yield return new WaitForSeconds(pauseTime);
         isPatrolling = true;
+       // pause = false;
     }
     /*
     IEnumerator TestIfStuck(float Pause)

@@ -1,4 +1,17 @@
+<<<<<<< HEAD
 sceneSetups:
 - path: Assets/Scenes/MainReal.unity
+=======
+<<<<<<< HEAD
+sceneSetups:
+- path: Assets/Scenes/Init.unity
+=======
+<<<<<<< HEAD
+sceneSetups: []
+=======
+sceneSetups:
+- path: Assets/Scenes/CopyPartsLevel.unity
+>>>>>>> bbe04532bc30395af3a55e53eb41309b2f59921e
+>>>>>>> db7e9b14e93f8193a4841a6805a0b3b260b72fae
   isLoaded: 1
   isActive: 1

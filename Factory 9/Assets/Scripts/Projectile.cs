@@ -28,6 +28,11 @@ public class Projectile : MonoBehaviour {
         {
             col.gameObject.GetComponent<Robot>().takeDamage(1, gameObject);
         }
+        else if(col.gameObject.GetComponent<Destructable>())
+        {
+            col.gameObject.GetComponent<Destructable>().takeDamage(1);
+        }
+
         if (destroyOnImpact)
             Destroy(gameObject);
     }
