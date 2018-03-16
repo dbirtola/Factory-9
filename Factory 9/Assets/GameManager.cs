@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour {
 
     public void GoToLevel(string level)
     {
+        StartCoroutine(gotoLevel(level));
+        /*
         ///Scene currentScene = SceneManager.GetActiveScene();
 
         if(SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Init"))
@@ -69,6 +71,31 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadSceneAsync(level, LoadSceneMode.Additive);
 
         //SceneManager.sceneLoaded += OnLoaded;
+        */
+    }
+
+    public IEnumerator gotoLevel(string level)
+    {
+        //Put up splash screen
+
+        yield return StartCoroutine(loadLevel(level, true));
+
+        //Move player
+        foreach (checkPointLevelPair checkPointLevelPair in checkPointLevelPairs)
+        {
+            if (checkPointLevelPair.LevelName == level)
+            {
+                PlayerController.player.transform.position = checkPointLevelPair.checkPoint.transform.position;
+                activeCheckpoint = checkPointLevelPair.checkPoint;
+
+                Vector3 newCameraPosition = PlayerController.player.transform.position;
+                newCameraPosition.z = Camera.main.transform.position.z;
+                Camera.main.transform.position = newCameraPosition;
+
+            }
+        }
+        //Take down splash screen
+
 
     }
 
