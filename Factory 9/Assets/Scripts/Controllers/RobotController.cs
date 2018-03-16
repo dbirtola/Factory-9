@@ -240,7 +240,17 @@ public class RobotController : MonoBehaviour {
         RaycastHit2D pushHit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 1, 0) + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x, 0.2f);
         if(state == RobotState.OnGround && pushHit.collider != null && pushHit.distance <= 0.1f)
         {
-            pushing = pushObject(pushHit.collider.gameObject);
+            if (pushHit.collider.gameObject.GetComponent<PlayerController>()) {
+                if (!pushHit.collider.gameObject.GetComponent<PlayerController>().isStealthed)
+                {
+                    pushing = pushObject(pushHit.collider.gameObject);
+                }
+
+            }else
+            {
+                pushing = pushObject(pushHit.collider.gameObject);
+
+            }
         }
 
 

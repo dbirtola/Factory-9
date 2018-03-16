@@ -59,6 +59,8 @@ public class GameManager : MonoBehaviour {
 
     public void GoToLevel(string level)
     {
+        StartCoroutine(gotoLevel(level));
+        /*
         ///Scene currentScene = SceneManager.GetActiveScene();
 
         if(SceneManager.GetActiveScene() != SceneManager.GetSceneByName("Init"))
@@ -69,36 +71,39 @@ public class GameManager : MonoBehaviour {
         SceneManager.LoadSceneAsync(level, LoadSceneMode.Additive);
 
         //SceneManager.sceneLoaded += OnLoaded;
-
+        */
     }
 
-    public void OnLoaded(Scene loaded, LoadSceneMode sceneMode)
+    public IEnumerator gotoLevel(string level)
     {
-        if(loaded == SceneManager.GetSceneByName("Init"))
+        var parts = FindObjectsOfType<BodyPart>();
+        foreach(BodyPart part in parts)
         {
-            return;
+            Destroy(part.gameObject);
         }
+        //Put up splash screen
 
+        yield return StartCoroutine(loadLevel(level, true));
 
-        SceneManager.SetActiveScene(loaded);
-
+        //Move player
         foreach (checkPointLevelPair checkPointLevelPair in checkPointLevelPairs)
         {
-            if (checkPointLevelPair.LevelName == loaded.name)
+            if (checkPointLevelPair.LevelName == level)
             {
-                Debug.Log("Going to level: " + loaded.name);
                 PlayerController.player.transform.position = checkPointLevelPair.checkPoint.transform.position;
                 activeCheckpoint = checkPointLevelPair.checkPoint;
+
+                Vector3 newCameraPosition = PlayerController.player.transform.position;
+                newCameraPosition.z = Camera.main.transform.position.z;
+                Camera.main.transform.position = newCameraPosition;
+
             }
         }
+        //Take down splash screen
 
-        SceneManager.UnloadSceneAsync(sceneToBeUnloaded.buildIndex);
-    }
-
-    public void OnUnloaded(Scene unloaded)
-    {
 
     }
+
 
     public void RestartFromCheckpoint()
     {
@@ -178,7 +183,7 @@ public class GameManager : MonoBehaviour {
             Destroy(part.gameObject);
         }
 
-        /*
+        
         if (unloadOthers == true)
         {
             for(int i = 0; i < SceneManager.sceneCount; i++)
@@ -191,7 +196,7 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
-        */
+        
 
         asyncOp = SceneManager.LoadSceneAsync(checkpoint.sceneName, LoadSceneMode.Additive);
         yield return asyncOp;
