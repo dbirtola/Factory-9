@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/CrusherIncinerator.unity
-=======
-- path: Assets/Scenes/PartsLevel.unity
->>>>>>> b9ded5a1d8cac1cf762a66f2af6c2e99f6ab3ee8
+- path: Assets/Scenes/CopyPartsLevel.unity
   isLoaded: 1
   isActive: 1
