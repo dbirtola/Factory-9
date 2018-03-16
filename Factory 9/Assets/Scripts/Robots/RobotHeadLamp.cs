@@ -58,6 +58,12 @@ public class RobotHeadLamp : MonoBehaviour {
 
     public void TurnOff(bool flicker = false)
     {
+        if(animator == null)
+        {
+            headLight.intensity = 0;
+            return;
+        }
+
         headLampOn = false;
         animator.SetBool("On", false);
         if (flicker)

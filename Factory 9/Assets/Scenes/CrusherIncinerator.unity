@@ -39783,7 +39783,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 894327008}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -31.99, y: -125.92, z: 0}
+  m_LocalPosition: {x: -29.33, y: -125.92, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -68669,7 +68669,7 @@ Prefab:
       propertyPath: m_Text
       value: 'Now Entering:
 
-        Incinerter Room'
+        Incinerator Room'
       objectReference: {fileID: 0}
     - target: {fileID: 23439084030309678, guid: e98a4aecf2e81e348b6ee5732daf1c91,
         type: 2}

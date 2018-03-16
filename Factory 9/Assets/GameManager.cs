@@ -134,11 +134,12 @@ public class GameManager : MonoBehaviour {
         UIManager.uiManager.Init();
 
     }
-
+    /*
     public void ResetToCheckpoint(bool unloadOthers = true)
     {
         StartCoroutine(resetToCheckpoint(activeCheckpoint, unloadOthers));
     }
+    */
 
     public void loadLevelAsync(string level)
     {
@@ -146,20 +147,34 @@ public class GameManager : MonoBehaviour {
     }
     public IEnumerator loadLevel(string levelName, bool unloadOthers = true)
     {
+        
         Debug.Log("Loading scnee: " + levelName);
         AsyncOperation asyncOp;
 
+        var parts = FindObjectsOfType<BodyPart>();
+        foreach (BodyPart part in parts)
+        {
+            Destroy(part.gameObject);
+        }
+        List<Scene> scenesToBeUnloaded = new List<Scene>();
+        //SceneManager.SetActiveScene(SceneManager.GetSceneByName("Init"));
         if (unloadOthers == true)
         {
             for (int i = 0; i < SceneManager.sceneCount; i++)
             {
                 if (SceneManager.GetSceneAt(i).name != "Init")
                 {
-
-                    asyncOp = SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(i));
-                    yield return asyncOp;
+                    scenesToBeUnloaded.Add(SceneManager.GetSceneAt(i));
+                    //asyncOp = SceneManager.UnloadSceneAsync(SceneManager.GetSceneAt(i));
+                    //yield return asyncOp;
                 }
             }
+        }
+
+        foreach(Scene s in scenesToBeUnloaded)
+        {
+            asyncOp = SceneManager.UnloadSceneAsync(s);
+            yield return asyncOp;
         }
 
         asyncOp = SceneManager.LoadSceneAsync(levelName, LoadSceneMode.Additive);
@@ -172,7 +187,7 @@ public class GameManager : MonoBehaviour {
     }
 
 
-
+    /*
     IEnumerator resetToCheckpoint(Checkpoint checkpoint, bool unloadOthers = true)
     {
         AsyncOperation asyncOp;
@@ -211,7 +226,7 @@ public class GameManager : MonoBehaviour {
 
 
     }
-   
+   */
 
     /*
     public IEnumerator StartLevel(string levelName, Checkpoint checkpoint)

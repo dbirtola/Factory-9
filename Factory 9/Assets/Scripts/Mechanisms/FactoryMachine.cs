@@ -33,7 +33,7 @@ public class FactoryMachine : MonoBehaviour {
 
         if (coll.gameObject.GetComponent<Player>())
         {
-            coll.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
+            //coll.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
             return;
         }
         for (int i = 0; i < inputObject.Length; i++)
