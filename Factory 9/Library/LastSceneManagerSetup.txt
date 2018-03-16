@@ -1,4 +1,8 @@
+<<<<<<< HEAD
+sceneSetups: []
+=======
 sceneSetups:
 - path: Assets/Scenes/CopyPartsLevel.unity
   isLoaded: 1
   isActive: 1
+>>>>>>> 9e7a954ea8a50559565e01765a0b1e37bb1fe0b9
