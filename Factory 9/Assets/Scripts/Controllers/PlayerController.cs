@@ -115,6 +115,8 @@ public class PlayerController : MonoBehaviour {
             Vector2 mousePosition = PlayerController.GetMouseInWorldSpace();
 
             playerRC.FireRightArm(mousePosition);
+
+            
             LeaveStealth();
         }
 
@@ -142,7 +144,10 @@ public class PlayerController : MonoBehaviour {
             if(GetComponent<Rigidbody2D>().velocity.magnitude <= 1f && playerRC.state == RobotState.OnGround)
             {
                 EnterStealth();
-                playerRobot.headLampActive = false;
+                if (playerRobot.GetComponentInChildren<RobotHeadLamp>())
+                {
+                    playerRobot.GetComponentInChildren<RobotHeadLamp>().TurnOff();
+                }
             }
         }
 
@@ -154,8 +159,8 @@ public class PlayerController : MonoBehaviour {
             if(playerRobot.legs != null)
             {
 
-                Vector2 pos = new Vector2(transform.position.x + 1f * transform.lossyScale.x, transform.position.y);
-                colls = Physics2D.OverlapBoxAll(pos, new Vector2(1, 2.5f), 0);
+                Vector2 pos = new Vector2(transform.position.x + 0.5f * transform.lossyScale.x, transform.position.y);
+                colls = Physics2D.OverlapBoxAll(pos, new Vector2(2f, 2.5f), 0);
 
             }else
             {

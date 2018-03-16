@@ -19,8 +19,8 @@ public class AirVentEntrance : MonoBehaviour {
 
     void OnTriggerEnter2D(Collider2D col)
     {
-        //Only allow player, and only if he has no legs
-        if (col.gameObject.GetComponent<Player>() == null || col.gameObject.GetComponent<Robot>().legs != null)
+        //Only allow player, and only if he is in ball form
+        if (col.gameObject.GetComponent<Player>() == null || col.gameObject.GetComponent<Robot>().getNumberOfParts() > 0)
             return;
 
         col.gameObject.GetComponent<PlayerController>().playerRC.isInAirVent = true;

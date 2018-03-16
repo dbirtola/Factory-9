@@ -6,8 +6,15 @@ public class LeverSwitch : Switch {
 
     bool initialPosition = true;
 
+    float cooldown = 0.25f;
+    bool canFlip = true;
+
     void OnCollisionEnter2D(Collision2D col)
     {
+        if (canFlip == false)
+            return;
+
+
         if (col.contacts == null)
             return;
         
@@ -23,7 +30,7 @@ public class LeverSwitch : Switch {
         {
             //Debug.Log("Toggling!");
             Toggle();
-
+            StartCoroutine(startCooldown());
         }
     }
 
@@ -60,5 +67,12 @@ public class LeverSwitch : Switch {
             }
         }
 
+    }
+
+    IEnumerator startCooldown()
+    {
+        canFlip = false;
+        yield return new WaitForSeconds(cooldown);
+        canFlip = true;
     }
 }
