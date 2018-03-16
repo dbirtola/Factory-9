@@ -18,7 +18,7 @@ public class KillZone : MonoBehaviour {
     {
         if (col.gameObject.GetComponent<Robot>())
         {
-            col.gameObject.GetComponent<Robot>().Die();
+            col.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
         }
     }
 }
