@@ -31,6 +31,11 @@ public class FactoryMachine : MonoBehaviour {
     void OnTriggerEnter2D(Collider2D coll)
     {
 
+        if (coll.gameObject.GetComponent<Player>())
+        {
+            //coll.gameObject.GetComponent<Robot>().takeDamage(5, gameObject);
+            return;
+        }
         for (int i = 0; i < inputObject.Length; i++)
         {
             if (inputObject[i] == null)

@@ -16,22 +16,24 @@ public class AIChase : MonoBehaviour {
     void Update() {
         if (isChasing == true && GetComponent<Robot>().legs != null)
         {
-            //Set Head lamp Red
-            GetComponentInChildren<RobotHeadLamp>().SetColor(c:GetComponentInChildren<RobotHeadLamp>().chaseColor);
-           // GetComponentInChildren<RobotHeadLamp>().FlickerLight(true);
+            //Set Head lamp to Chase mode
+            if (GetComponentInChildren<RobotHeadLamp>())
+            {
+                ChaseHeadLamp(true);
+                // GetComponentInChildren<RobotHeadLamp>().chase = true;
+            }
 
-            // GetComponent<Robot>().headLamp.SetColor(Color.red);
 
             currentSpeed = GetComponent<Robot>().speed;
             GetComponent<EnemyMovement>().isPatrolling = false;
             StartCoroutine(ChasingDirection(.35f));
 
-            if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) > 20)
+            if (Vector2.Distance(GetComponent<AIController>().target.transform.position, transform.position) > 12)
             { // if the player get far away, then go back to patrolling
                 isChasing = false;
                 GetComponent<EnemyMovement>().isPatrolling = true;
-                GetComponent<RobotController>().MoveHorizontal(0);//has no speed
-                StartCoroutine(RobotStuck(2f));
+                // GetComponent<RobotController>().MoveHorizontal(0);//has no speed
+                // StartCoroutine(RobotStuck(2f));
             }
 
             //If robot gets too close to the player, slow down
@@ -48,12 +50,31 @@ public class AIChase : MonoBehaviour {
                 //   GetComponent<RobotController>().MoveHorizontal((GetComponent<Robot>().speed)/2);
             }
         }
-        else if (GetComponent<Robot>().legs == null)//If robot has no legs, turn off head lamp
-         GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
-
+        else if (GetComponent<Robot>().legs == null && GetComponentInChildren<RobotHeadLamp>())//If robot has no legs, turn off head lamp
+            GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
+        else if (isChasing == false && GetComponentInChildren<RobotHeadLamp>())
+            ChaseHeadLamp(false);
 
     }
 
+    public void ChaseHeadLamp(bool chase = false)
+    {
+        if (chase)
+        {
+            GetComponentInChildren<RobotHeadLamp>().SetColor(GetComponentInChildren<RobotHeadLamp>().chaseColor);
+            GetComponentInChildren<RobotHeadLamp>().headLight.intensity = 100f;
+            GetComponentInChildren<RobotHeadLamp>().headLight.spotAngle = 35;
+            // StartCoroutine(Flicker(.5f));
+
+        }
+        else
+        {
+            GetComponentInChildren<RobotHeadLamp>().SetColor(GetComponentInChildren<RobotHeadLamp>().defaultColor);
+            GetComponentInChildren<RobotHeadLamp>().headLight.intensity = 37.85f;
+            GetComponentInChildren<RobotHeadLamp>().headLight.spotAngle = 27;
+        }
+
+    }
 
     IEnumerator RobotStuck(float pauseTime)
     {

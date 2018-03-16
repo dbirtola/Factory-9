@@ -343,7 +343,9 @@ public class Robot : MonoBehaviour {
         lostArm.transform.SetParent(null);
         //lostArm.GetComponent<Rigidbody2D>().isKinematic = false;
         lostArm.gameObject.AddComponent<Rigidbody2D>();
-        StartCoroutine(addForceNextFrame(lostArm.gameObject, GetRandomVector(30, 30)));
+        lostArm.transform.position += transform.right * transform.lossyScale.x;
+        lostArm.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+        StartCoroutine(addForceNextFrame(lostArm.gameObject, transform.right * transform.lossyScale.x * 200));
         lostArm.owner = null;
         lostArm = null;
         return true;
@@ -364,6 +366,12 @@ public class Robot : MonoBehaviour {
 
         legs.transform.SetParent(null);
         var rb = legs.gameObject.AddComponent<Rigidbody2D>();
+        legs.transform.position += transform.up * -0.15f;
+        legs.transform.position += transform.right * transform.lossyScale.x * 0.3f;
+        legs.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
+        StartCoroutine(addForceNextFrame(legs.gameObject, transform.right * transform.lossyScale.x * 800));
+
+
         rb.mass = 10;
         //legs.GetComponent<Rigidbody2D>().isKinematic = false;
         //rb.AddForce(GetRandomVector(100, 100);

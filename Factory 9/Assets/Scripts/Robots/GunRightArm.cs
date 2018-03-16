@@ -11,6 +11,9 @@ public class GunRightArm : RightArm {
 
     float timeFired = -1;
 
+    bool canFire = true;
+    private float cooldown = 0.3f;
+
 	// Use this for initialization
 	void Start () {
 		
@@ -40,6 +43,12 @@ public class GunRightArm : RightArm {
     public override void Fire(Vector3 targetPosition)
     {
         base.Fire(targetPosition);
+
+        if (canFire == false)
+            return;
+        canFire = false;
+        StartCoroutine(startCooldown());
+
         Vector3 temp = new Vector3(targetPosition.x, targetPosition.y, 0);
         transform.right = ( temp - transform.position);
 
@@ -65,7 +74,11 @@ public class GunRightArm : RightArm {
         }
     }
 
-
+    IEnumerator startCooldown()
+    {
+        yield return new WaitForSeconds(cooldown);
+        canFire = true;
+    }
 
     void OnDrawGizmosSelected()
     {

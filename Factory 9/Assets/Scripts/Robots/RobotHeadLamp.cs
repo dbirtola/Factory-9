@@ -8,10 +8,9 @@ public class RobotHeadLamp : MonoBehaviour {
     public bool headLampOn = false;
 
     Animator animator;
-    Light headLight;
+    public Light headLight;
     public Color defaultColor { get; private set; }
     public Color chaseColor;
-
 
     void Awake()
     {
@@ -27,7 +26,9 @@ public class RobotHeadLamp : MonoBehaviour {
 	
 	// Update is called once per frame
 	void Update () {
-	}
+
+      
+    }
 
     public void TurnOn(bool flicker = false)
     {
@@ -57,6 +58,12 @@ public class RobotHeadLamp : MonoBehaviour {
 
     public void TurnOff(bool flicker = false)
     {
+        if(animator == null)
+        {
+            headLight.intensity = 0;
+            return;
+        }
+
         headLampOn = false;
         animator.SetBool("On", false);
         if (flicker)
@@ -76,7 +83,15 @@ public class RobotHeadLamp : MonoBehaviour {
 
         }
     }
-
-
     
+
+    //not used
+    IEnumerator Flicker(float pauseTime)
+    {
+
+            headLight.intensity = 0f;
+            yield return new WaitForSeconds(pauseTime);
+            headLight.intensity = 100f;
+    }
+
 }
