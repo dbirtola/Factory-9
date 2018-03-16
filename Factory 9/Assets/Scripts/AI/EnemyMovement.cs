@@ -35,10 +35,7 @@ public class EnemyMovement : MonoBehaviour {
 
         if (isPatrolling && GetComponent<Robot>().legs != null)
         {
-            if (GetComponentInChildren<RobotHeadLamp>())
-            {
-                GetComponentInChildren<RobotHeadLamp>().SetColor(c: GetComponentInChildren<RobotHeadLamp>().defaultColor);
-            }
+
 
             if (patrolPoints.Length <= 0)
                 return;
