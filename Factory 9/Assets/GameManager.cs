@@ -76,6 +76,11 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator gotoLevel(string level)
     {
+        var parts = FindObjectsOfType<BodyPart>();
+        foreach(BodyPart part in parts)
+        {
+            Destroy(part.gameObject);
+        }
         //Put up splash screen
 
         yield return StartCoroutine(loadLevel(level, true));
@@ -99,33 +104,6 @@ public class GameManager : MonoBehaviour {
 
     }
 
-    public void OnLoaded(Scene loaded, LoadSceneMode sceneMode)
-    {
-        if(loaded == SceneManager.GetSceneByName("Init"))
-        {
-            return;
-        }
-
-
-        SceneManager.SetActiveScene(loaded);
-
-        foreach (checkPointLevelPair checkPointLevelPair in checkPointLevelPairs)
-        {
-            if (checkPointLevelPair.LevelName == loaded.name)
-            {
-                Debug.Log("Going to level: " + loaded.name);
-                PlayerController.player.transform.position = checkPointLevelPair.checkPoint.transform.position;
-                activeCheckpoint = checkPointLevelPair.checkPoint;
-            }
-        }
-
-        SceneManager.UnloadSceneAsync(sceneToBeUnloaded.buildIndex);
-    }
-
-    public void OnUnloaded(Scene unloaded)
-    {
-
-    }
 
     public void RestartFromCheckpoint()
     {
@@ -205,7 +183,7 @@ public class GameManager : MonoBehaviour {
             Destroy(part.gameObject);
         }
 
-        /*
+        
         if (unloadOthers == true)
         {
             for(int i = 0; i < SceneManager.sceneCount; i++)
@@ -218,7 +196,7 @@ public class GameManager : MonoBehaviour {
                 }
             }
         }
-        */
+        
 
         asyncOp = SceneManager.LoadSceneAsync(checkpoint.sceneName, LoadSceneMode.Additive);
         yield return asyncOp;

@@ -50,9 +50,9 @@ public class AIChase : MonoBehaviour {
                 //   GetComponent<RobotController>().MoveHorizontal((GetComponent<Robot>().speed)/2);
             }
         }
-        else if (GetComponent<Robot>().legs == null)//If robot has no legs, turn off head lamp
+        else if (GetComponent<Robot>().legs == null && GetComponentInChildren<RobotHeadLamp>())//If robot has no legs, turn off head lamp
             GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
-        else if (isChasing == false)
+        else if (isChasing == false && GetComponentInChildren<RobotHeadLamp>())
             ChaseHeadLamp(false);
 
     }
