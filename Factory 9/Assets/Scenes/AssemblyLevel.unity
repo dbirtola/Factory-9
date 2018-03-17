@@ -57671,7 +57671,11 @@ Prefab:
         type: 2}
       propertyPath: targetObjects.Array.data[0]
       value: 
+<<<<<<< HEAD
       objectReference: {fileID: 682216744}
+=======
+      objectReference: {fileID: 1449486094}
+>>>>>>> f0538c12b4433a13836d424d45ea5c5440158e78
     - target: {fileID: 4209572406843144, guid: 6943d7f08b91bc94c9b17b2622cc6c77, type: 2}
       propertyPath: m_LocalScale.x
       value: -1
