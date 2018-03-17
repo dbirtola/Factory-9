@@ -23,6 +23,7 @@ GameObject:
   - component: {fileID: 60005638485229268}
   - component: {fileID: 114680981503308400}
   - component: {fileID: 50593159967405754}
+  - component: {fileID: 114721958084181994}
   m_Layer: 0
   m_Name: Exploding Crates
   m_TagString: Exploding Crate
@@ -104,6 +105,18 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredient: 0
+--- !u!114 &114721958084181994
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1502788830405758}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!212 &212200234067307292
 SpriteRenderer:
   m_ObjectHideFlags: 1

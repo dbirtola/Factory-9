@@ -34,7 +34,7 @@ public class Robot : MonoBehaviour {
 
     private float pushingPower = 0f;
 
-    public const float impactThresholdForDamage = 100;
+    public const float impactThresholdForDamage = 90;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 
     public bool isInAirVent = false;
@@ -126,13 +126,20 @@ public class Robot : MonoBehaviour {
         }
 
 
+        //if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+
+        // 
+
+        if (!col.gameObject.GetComponent<VelocityTracker>() || !GetComponent<VelocityTracker>())
+        {
+            return;
+        }
         
-        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+       if(col.gameObject.GetComponent<VelocityTracker>().velocity.magnitude >= GetComponent<VelocityTracker>().velocity.magnitude)
         {
             //col.contacts[0].
 
-
-            if (col.contacts.Length <= 0)
+           if (col.contacts.Length <= 0)
             {
                 return;
             }
@@ -141,7 +148,9 @@ public class Robot : MonoBehaviour {
            // if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
            if(sum >= impactThresholdForDamage)
             {
-                  
+
+                //Debug.Log(gameObject + " lost with : " + GetComponent<VelocityTracker>().velocity.magnitude + " vs " + col.gameObject.GetComponent<VelocityTracker>().velocity.magnitude);
+                //Debug.Log(gameObject + " had " + gameObject.GetComponent<Rigidbody2D>().velocity + " vs " + col.gameObject.GetComponent<Rigidbody2D>().velocity);
                 takeDamage(1, col.gameObject);
 
                 if (col.gameObject.GetComponent<Destructable>())
@@ -269,6 +278,24 @@ public class Robot : MonoBehaviour {
         if(go != null & go.GetComponent<Rigidbody2D>() != null)
             go.GetComponent<Rigidbody2D>().AddForce(force);
 
+    }
+
+    public void stripRobot()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (LoseArm(leftArm, true) == false)
+            {
+                if (LoseArm(rightArm, true) == false)
+                {
+                    if (LoseLegs(true) == false)
+                    {
+                        //Die();
+                    }
+
+                }
+            }
+        }
     }
 
     public void takeDamage(int damage, GameObject attacker, bool withHitPause = true)

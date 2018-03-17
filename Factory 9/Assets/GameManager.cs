@@ -108,14 +108,34 @@ public class GameManager : MonoBehaviour {
     }
 
 
-    public IEnumerator fadeOut(Image img)
+    public void FadeToBlack()
     {
-        while(img.color.a > 0)
+        fadeToBlackImage.gameObject.SetActive(true);
+        StartCoroutine(fadeOut(fadeToBlackImage, true));
+    }
+
+    public IEnumerator fadeOut(Image img, bool reverse = false)
+    {
+        if(reverse == false)
         {
-            Color c = img.color;
-            c.a -= fadeSpeed * Time.deltaTime;
-            img.color = c;
-            yield return null;
+            while (img.color.a > 0)
+            {
+                Color c = img.color;
+                c.a -= fadeSpeed * Time.deltaTime;
+                img.color = c;
+                yield return null;
+            }
+
+        }else
+        {
+
+            while (img.color.a < 1)
+            {
+                Color c = img.color;
+                c.a += fadeSpeed * Time.deltaTime;
+                img.color = c;
+                yield return null;
+            }
         }
 
         yield return true;
@@ -123,6 +143,7 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator gotoLevel(string level)
     {
+        PlayerController.playerController.playerRobot.stripRobot();
         var parts = FindObjectsOfType<BodyPart>();
         foreach(BodyPart part in parts)
         {
@@ -164,6 +185,8 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator restartFromCheckpoint()
     {
+
+        PlayerController.playerController.playerRobot.stripRobot() ;
         PlayerController.player.gameObject.SetActive(false);
         yield return StartCoroutine(loadLevel(activeCheckpoint.sceneName, true));
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Init"));

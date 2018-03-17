@@ -22,6 +22,7 @@ GameObject:
   - component: {fileID: 212403840112327320}
   - component: {fileID: 60083884427803154}
   - component: {fileID: 50506804911157100}
+  - component: {fileID: 114883493464150228}
   m_Layer: 0
   m_Name: finalmissile
   m_TagString: Exploding Crate
@@ -162,6 +163,18 @@ PolygonCollider2D:
       - {x: 0.4075, y: -1.77875}
       - {x: 0.4175, y: -1.76375}
       - {x: 0.415, y: -1.69625}
+--- !u!114 &114883493464150228
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1486158491215650}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!212 &212403840112327320
 SpriteRenderer:
   m_ObjectHideFlags: 1

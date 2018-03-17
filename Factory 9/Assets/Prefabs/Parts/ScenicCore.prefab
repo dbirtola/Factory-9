@@ -39,6 +39,7 @@ GameObject:
   - component: {fileID: 50180087226808362}
   - component: {fileID: 66981384235853786}
   - component: {fileID: 114158658001795138}
+  - component: {fileID: 114837169988352516}
   m_Layer: 0
   m_Name: ScenicCore
   m_TagString: Untagged
@@ -332,6 +333,18 @@ MonoBehaviour:
   jumpPower: 200
   invulnerableTimeAfterDamaged: 0.5
   isInAirVent: 0
+--- !u!114 &114837169988352516
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1936902927341974}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!212 &212579946718137584
 SpriteRenderer:
   m_ObjectHideFlags: 1
