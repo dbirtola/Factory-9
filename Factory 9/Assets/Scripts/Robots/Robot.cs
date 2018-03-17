@@ -127,10 +127,18 @@ public class Robot : MonoBehaviour {
 
 
         
-        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+       // 
+       /*
+       if(!col.gameObject.GetComponent<VelocityTracker>() || !GetComponent<VelocityTracker>())
         {
+            return;
+        }
+        
+       if(col.gameObject.GetComponent<VelocityTracker>().velocity.magnitude >= GetComponent<VelocityTracker>().velocity.magnitude)
+       */
+        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+            {
             //col.contacts[0].
-
 
             if (col.contacts.Length <= 0)
             {
@@ -141,7 +149,9 @@ public class Robot : MonoBehaviour {
            // if(col.contacts[0].normalImpulse >= impactThresholdForDamage)
            if(sum >= impactThresholdForDamage)
             {
-                  
+
+                //Debug.Log(gameObject + " lost with : " + GetComponent<VelocityTracker>().velocity.magnitude + " vs " + col.gameObject.GetComponent<VelocityTracker>().velocity.magnitude);
+                //Debug.Log(gameObject + " had " + gameObject.GetComponent<Rigidbody2D>().velocity + " vs " + col.gameObject.GetComponent<Rigidbody2D>().velocity);
                 takeDamage(1, col.gameObject);
 
                 if (col.gameObject.GetComponent<Destructable>())

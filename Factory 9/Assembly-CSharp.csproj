@@ -62,6 +62,7 @@
      <Compile Include="Assets\Crusher.cs" />
      <Compile Include="Assets\CrusherSensor.cs" />
      <Compile Include="Assets\dontd.cs" />
+     <Compile Include="Assets\EndGearSequence.cs" />
      <Compile Include="Assets\FirstMonitor.cs" />
      <Compile Include="Assets\GameManager.cs" />
      <Compile Include="Assets\GrapplingHook.cs" />
@@ -126,6 +127,7 @@
      <Compile Include="Assets\StartScreenButtons.cs" />
      <Compile Include="Assets\TestParticleCollsion.cs" />
      <Compile Include="Assets\UIHomeScreen.cs" />
+     <Compile Include="Assets\VelocityTracker.cs" />
  <Reference Include="UnityEngine.UI">
  <HintPath>C:/Program Files/Unity/Editor/Data/UnityExtensions/Unity/GUISystem/UnityEngine.UI.dll</HintPath>
  </Reference>
