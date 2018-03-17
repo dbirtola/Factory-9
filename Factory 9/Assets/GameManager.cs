@@ -143,6 +143,7 @@ public class GameManager : MonoBehaviour {
 
     public IEnumerator gotoLevel(string level)
     {
+        PlayerController.playerController.playerRobot.takeDamage(5, gameObject, false);
         var parts = FindObjectsOfType<BodyPart>();
         foreach(BodyPart part in parts)
         {
@@ -184,6 +185,8 @@ public class GameManager : MonoBehaviour {
 
     IEnumerator restartFromCheckpoint()
     {
+
+        PlayerController.playerController.playerRobot.takeDamage(5, gameObject, false);
         PlayerController.player.gameObject.SetActive(false);
         yield return StartCoroutine(loadLevel(activeCheckpoint.sceneName, true));
         SceneManager.SetActiveScene(SceneManager.GetSceneByName("Init"));

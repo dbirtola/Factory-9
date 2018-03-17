@@ -42,6 +42,7 @@ public class Dispenser2 : Activateable{
                     numDispences++;
                     if (numDispences >= maxDispences)
                     {
+                        numDispences = 0;
                         Deactivate();
                     }
                 }

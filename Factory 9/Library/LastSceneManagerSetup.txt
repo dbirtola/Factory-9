@@ -1,16 +1,4 @@
 sceneSetups:
 - path: Assets/Scenes/Init.unity
   isLoaded: 1
-  isActive: 0
-- path: Assets/Scenes/Main.unity
-  isLoaded: 1
-  isActive: 0
-- path: Assets/Scenes/CrusherIncinerator.unity
-  isLoaded: 1
-  isActive: 0
-- path: Assets/Scenes/PartsLevel.unity
-  isLoaded: 1
-  isActive: 0
-- path: Assets/Scenes/AssemblyLevel.unity
-  isLoaded: 1
   isActive: 1

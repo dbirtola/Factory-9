@@ -34,7 +34,7 @@ public class Robot : MonoBehaviour {
 
     private float pushingPower = 0f;
 
-    public const float impactThresholdForDamage = 100;
+    public const float impactThresholdForDamage = 90;
     public  float invulnerableTimeAfterDamaged = 0.5f;
 
     public bool isInAirVent = false;

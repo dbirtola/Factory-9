@@ -25,6 +25,9 @@ public class ScriptableSequence : MonoBehaviour {
 
     protected FactoryCamera factoryCamera;
 
+
+    bool hasPlayed = false;
+
     protected virtual void Start()
     {
         factoryCamera = FindObjectOfType<FactoryCamera>();
@@ -55,12 +58,17 @@ public class ScriptableSequence : MonoBehaviour {
     //but returns false if your initialize function fails
     public bool Play()
     {
+        if (hasPlayed == true)
+            return false;
+
         if (!Initialize())
         {
             return false;
         }
-        
+
+        hasPlayed = true;
         StartCoroutine(PlayScriptedSequence());
+
         return true;
     }
 
