@@ -115,11 +115,9 @@ public class EnemyMovement : MonoBehaviour {
 
 
         }
-        else if (GetComponent<Robot>().legs == null)//If robot has no legs, turn off head lamp
-            if (GetComponentInChildren<RobotHeadLamp>())
-            {
-                GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
-            }
+        else if (GetComponent<Robot>().legs == null && GetComponentInChildren<RobotHeadLamp>())//If robot has no legs, turn off head lamp
+            GetComponentInChildren<RobotHeadLamp>().TurnOff(true);
+
 
     }
 
