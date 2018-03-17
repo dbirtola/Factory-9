@@ -303,6 +303,7 @@
     <Compile Include="Assets\Lavaspout.cs" />
     <Compile Include="Assets\LegBoxPath.cs" />
     <Compile Include="Assets\LevelLoadingBounds.cs" />
+    <Compile Include="Assets\Materials\MonitorDoorTrigger.cs" />
     <Compile Include="Assets\Moniter_Trigger.cs" />
     <Compile Include="Assets\Monitor.cs" />
     <Compile Include="Assets\OnDeathMonitor.cs" />
@@ -351,7 +352,9 @@
     <Compile Include="Assets\Scripts\ScriptableSequences\IntroSequence.cs" />
     <Compile Include="Assets\Scripts\UIManager.cs" />
     <Compile Include="Assets\Scripts\Utility\Rotator.cs" />
+    <Compile Include="Assets\StartScreenButtons.cs" />
     <Compile Include="Assets\TestParticleCollsion.cs" />
+    <Compile Include="Assets\UIHomeScreen.cs" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <Target Name="GenerateTargetFrameworkMonikerAttribute" />
