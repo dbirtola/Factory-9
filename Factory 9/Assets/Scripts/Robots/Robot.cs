@@ -387,5 +387,9 @@ public class Robot : MonoBehaviour {
     public void Die(GameObject killer = null)
     {
         robotDiedEvent.Invoke(killer);
+        if (GetComponent<PlayerController>())
+        {
+            GetComponent<PlayerController>().SetMovementEnabled(false);
+        }
     }
 }

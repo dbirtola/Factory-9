@@ -12907,7 +12907,7 @@ Transform:
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 397188627}
   m_LocalRotation: {x: -0, y: -0, z: -0.18921705, w: -0.9819353}
-  m_LocalPosition: {x: -189.45, y: -191.3, z: 0}
+  m_LocalPosition: {x: 14.9, y: -29.7, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 1520403219}
@@ -75656,7 +75656,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   m_Navigation:
-    m_Mode: 3
+    m_Mode: 0
     m_SelectOnUp: {fileID: 0}
     m_SelectOnDown: {fileID: 0}
     m_SelectOnLeft: {fileID: 0}
