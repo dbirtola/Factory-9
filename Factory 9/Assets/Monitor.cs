@@ -30,6 +30,8 @@ public class Monitor : Activateable {
 
     public override void Activate()
     {
+        if (activated == true)
+            return;
         base.Activate();
         textMesh.SetActive(true);
         light.SetActive(true);

@@ -5,7 +5,7 @@ using UnityEngine;
 public class Moniter_Trigger : Switch
 {
     // Use this for initialization
-    private void OnTriggerEnter2D(Collider2D coll)
+    protected virtual void OnTriggerEnter2D(Collider2D coll)
     {
         if (coll.gameObject.GetComponent<PlayerController>() == null)
         {
@@ -17,6 +17,9 @@ public class Moniter_Trigger : Switch
             activatable.Activate();
         }
     }
+
+
+
     void Start()
     {
 
