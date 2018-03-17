@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/TestReverseMovement.unity
-=======
 - path: Assets/Scenes/Init.unity
->>>>>>> cafb60d87346246d14c980f226f791b9129c21ff
   isLoaded: 1
   isActive: 1
