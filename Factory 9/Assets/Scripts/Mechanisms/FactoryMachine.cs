@@ -44,7 +44,7 @@ public class FactoryMachine : MonoBehaviour {
                 if (coll.gameObject.tag == inputObject[i].gameObject.tag)//delete scrap metal and instantiate Missile
             {
                 counter = i;
-                coll.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+                //coll.gameObject.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
                 GetComponent<BoxCollider2D>().isTrigger = false;
                 input = coll.gameObject;
                 StartCoroutine(BuildTime(buildTime));
