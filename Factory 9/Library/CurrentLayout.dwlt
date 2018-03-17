@@ -316,7 +316,7 @@ MonoBehaviour:
     height: 353
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SearchFilter:
-    m_NameFilter: init
+    m_NameFilter: 
     m_ClassNames: []
     m_AssetLabels: []
     m_AssetBundleNames: []
@@ -327,18 +327,18 @@ MonoBehaviour:
     m_ShowAllHits: 0
     m_SearchArea: 0
     m_Folders:
-    - Assets/Prefabs
+    - Assets
   m_ViewMode: 1
   m_StartGridSize: 64
   m_LastFolders:
-  - Assets/Prefabs
+  - Assets
   m_LastFoldersGridSize: -1
   m_LastProjectPath: C:\Users\Damen\Documents\GitHub\Factory-9\Factory 9
   m_IsLocked: 0
   m_FolderTreeState:
     scrollPos: {x: 0, y: 12}
-    m_SelectedIDs: 
-    m_LastClickedID: 0
+    m_SelectedIDs: 32280000
+    m_LastClickedID: 10290
     m_ExpandedIDs: 0000000032280000e0290000342a0000a62a00003e2b00002c2d0000442d0000242f00005e2f0000a234000000ca9a3bffffff7f
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -394,7 +394,7 @@ MonoBehaviour:
   m_ListAreaState:
     m_SelectedInstanceIDs: 
     m_LastClickedInstanceID: 0
-    m_HadKeyboardFocusLastEvent: 1
+    m_HadKeyboardFocusLastEvent: 0
     m_ExpandedInstanceIDs: c623000000000000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
@@ -484,10 +484,10 @@ MonoBehaviour:
     height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_TreeViewState:
-    scrollPos: {x: 0, y: 0}
-    m_SelectedIDs: f4290000
-    m_LastClickedID: 0
-    m_ExpandedIDs: be4ff9ffd663fbff9698fbffd4d9fcfff2e9fcff6c58feff7858feff9efbffff000000003630000092300000883100009a3100008a3200009c320000e03200004a330000aa330000c6330000b07f0000d2990000a8a20000a84301004845010058460100184a01004c4a0100384c0100
+    scrollPos: {x: 0, y: 137}
+    m_SelectedIDs: 1ea20000
+    m_LastClickedID: 41502
+    m_ExpandedIDs: 5687ffffecb3ffffb8b4ffff80c8ffffd0cfffff06d9ffff50e9ffff54e9ffff9efbffff00000000983200001ea2000054a4000082a40000e4a40000
     m_RenameOverlay:
       m_UserAcceptedRename: 0
       m_Name: 
@@ -538,14 +538,14 @@ MonoBehaviour:
     height: 552
   m_PersistentViewDataDictionary: {fileID: 0}
   m_SceneLighting: 1
-  lastFramingTime: 1029.3891697140132
+  lastFramingTime: 305.23679395901087
   m_2DMode: 1
   m_isRotationLocked: 0
   m_AudioPlay: 0
   m_Position:
-    m_Target: {x: -28.301619, y: -177.05695, z: 0.041001696}
+    m_Target: {x: -273.93155, y: -51.396965, z: 3.452665}
     speed: 2
-    m_Value: {x: -28.301619, y: -177.05695, z: 0.041001696}
+    m_Value: {x: -273.93155, y: -51.396965, z: 3.452665}
   m_RenderMode: 0
   m_ValidateTrueMetals: 0
   m_SceneViewState:
@@ -573,9 +573,9 @@ MonoBehaviour:
     speed: 2
     m_Value: {x: 0, y: 0, z: 0, w: 1}
   m_Size:
-    m_Target: 7.8282075
+    m_Target: 28.466003
     speed: 2
-    m_Value: 7.8282075
+    m_Value: 28.466003
   m_Ortho:
     m_Target: 1
     speed: 2
