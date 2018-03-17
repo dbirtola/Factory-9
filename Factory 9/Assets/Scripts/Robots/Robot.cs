@@ -126,21 +126,20 @@ public class Robot : MonoBehaviour {
         }
 
 
-        
-       // 
-       /*
-       if(!col.gameObject.GetComponent<VelocityTracker>() || !GetComponent<VelocityTracker>())
+        //if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
+
+        // 
+
+        if (!col.gameObject.GetComponent<VelocityTracker>() || !GetComponent<VelocityTracker>())
         {
             return;
         }
         
        if(col.gameObject.GetComponent<VelocityTracker>().velocity.magnitude >= GetComponent<VelocityTracker>().velocity.magnitude)
-       */
-        if (col.gameObject.GetComponent<Rigidbody2D>().velocity.magnitude >= GetComponent<Rigidbody2D>().velocity.magnitude)
-            {
+        {
             //col.contacts[0].
 
-            if (col.contacts.Length <= 0)
+           if (col.contacts.Length <= 0)
             {
                 return;
             }

@@ -887,6 +887,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 23532472}
   m_Script: {fileID: 11500000, guid: 5fdc3120709164b43b8274f91462cb34, type: 3}
+--- !u!1 &23532474 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1725308328564358, guid: e98a4aecf2e81e348b6ee5732daf1c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 23532472}
+--- !u!114 &23532475
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 23532474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &28184188
 GameObject:
   m_ObjectHideFlags: 0
@@ -1046,6 +1063,7 @@ GameObject:
   - component: {fileID: 31536875}
   - component: {fileID: 31536874}
   - component: {fileID: 31536873}
+  - component: {fileID: 31536878}
   m_Layer: 0
   m_Name: Exploding Crates (15)
   m_TagString: Exploding Crate
@@ -1176,6 +1194,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 143
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &31536878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 31536872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &32490126
 Prefab:
   m_ObjectHideFlags: 0
@@ -1248,6 +1278,7 @@ GameObject:
   - component: {fileID: 37022450}
   - component: {fileID: 37022449}
   - component: {fileID: 37022448}
+  - component: {fileID: 37022453}
   m_Layer: 0
   m_Name: Exploding Crates (145)
   m_TagString: Exploding Crate
@@ -1378,6 +1409,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 111
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &37022453
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 37022447}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &41209486
 Prefab:
   m_ObjectHideFlags: 0
@@ -1452,6 +1495,7 @@ GameObject:
   - component: {fileID: 43568362}
   - component: {fileID: 43568361}
   - component: {fileID: 43568360}
+  - component: {fileID: 43568365}
   m_Layer: 0
   m_Name: Exploding Crates (21)
   m_TagString: Exploding Crate
@@ -1582,6 +1626,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 102
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &43568365
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 43568359}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &43954864
 Prefab:
   m_ObjectHideFlags: 0
@@ -1742,6 +1798,7 @@ GameObject:
   m_Component:
   - component: {fileID: 47735423}
   - component: {fileID: 47735422}
+  - component: {fileID: 47735424}
   m_Layer: 0
   m_Name: cylinder
   m_TagString: Untagged
@@ -1806,6 +1863,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 170
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 11.47}
+--- !u!114 &47735424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 47735421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &60184557
 GameObject:
   m_ObjectHideFlags: 0
@@ -2242,6 +2311,7 @@ GameObject:
   - component: {fileID: 79474789}
   - component: {fileID: 79474788}
   - component: {fileID: 79474787}
+  - component: {fileID: 79474792}
   m_Layer: 0
   m_Name: Exploding Crates (20)
   m_TagString: Exploding Crate
@@ -2372,6 +2442,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 179
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &79474792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 79474786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &81606634
 GameObject:
   m_ObjectHideFlags: 0
@@ -2477,6 +2559,7 @@ GameObject:
   - component: {fileID: 88658875}
   - component: {fileID: 88658874}
   - component: {fileID: 88658873}
+  - component: {fileID: 88658878}
   m_Layer: 0
   m_Name: ScenicCore (1)
   m_TagString: Untagged
@@ -2681,6 +2764,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 124
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &88658878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 88658872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &92990745
 GameObject:
   m_ObjectHideFlags: 0
@@ -3196,6 +3291,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 100740786}
+  - component: {fileID: 100740787}
   m_Layer: 0
   m_Name: Lights (1)
   m_TagString: Untagged
@@ -3240,6 +3336,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 25
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &100740787
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 100740785}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &109978109
 GameObject:
   m_ObjectHideFlags: 0
@@ -3418,6 +3526,7 @@ GameObject:
   - component: {fileID: 112309184}
   - component: {fileID: 112309183}
   - component: {fileID: 112309182}
+  - component: {fileID: 112309187}
   m_Layer: 0
   m_Name: Exploding Crates (121)
   m_TagString: Exploding Crate
@@ -3548,6 +3657,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 89
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &112309187
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 112309181}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &112553840
 GameObject:
   m_ObjectHideFlags: 0
@@ -3650,6 +3771,7 @@ GameObject:
   m_Component:
   - component: {fileID: 114595192}
   - component: {fileID: 114595191}
+  - component: {fileID: 114595193}
   m_Layer: 0
   m_Name: Spotlight (2)
   m_TagString: Untagged
@@ -3708,6 +3830,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 136
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: -45}
+--- !u!114 &114595193
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 114595190}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &115676588
 GameObject:
   m_ObjectHideFlags: 0
@@ -4417,6 +4551,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 151406840}
   m_Script: {fileID: 11500000, guid: 5751fae6eb3ccb04cbcf8ae69020a776, type: 3}
+--- !u!1 &151406842 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1394082396367006, guid: 036c6832c47f9844cbb34fb23d15446f,
+    type: 2}
+  m_PrefabInternal: {fileID: 151406840}
+--- !u!114 &151406843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 151406842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &155205831
 GameObject:
   m_ObjectHideFlags: 0
@@ -4502,6 +4653,7 @@ GameObject:
   - component: {fileID: 155913424}
   - component: {fileID: 155913423}
   - component: {fileID: 155913422}
+  - component: {fileID: 155913426}
   m_Layer: 0
   m_Name: Missile_Complete (2)
   m_TagString: Exploding Crate
@@ -4689,6 +4841,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 120
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &155913426
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 155913421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &160670945
 GameObject:
   m_ObjectHideFlags: 0
@@ -5241,6 +5405,7 @@ GameObject:
   - component: {fileID: 185388789}
   - component: {fileID: 185388788}
   - component: {fileID: 185388787}
+  - component: {fileID: 185388792}
   m_Layer: 0
   m_Name: Exploding Crates (107)
   m_TagString: Exploding Crate
@@ -5371,6 +5536,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 87
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &185388792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 185388786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &187368021
 GameObject:
   m_ObjectHideFlags: 0
@@ -5542,6 +5719,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 189779939}
+--- !u!1 &189779941 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 189779939}
+--- !u!114 &189779942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 189779941}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &192273124
 GameObject:
   m_ObjectHideFlags: 0
@@ -5628,6 +5822,7 @@ GameObject:
   - component: {fileID: 192321379}
   - component: {fileID: 192321378}
   - component: {fileID: 192321377}
+  - component: {fileID: 192321382}
   m_Layer: 0
   m_Name: Exploding Crates (140)
   m_TagString: Exploding Crate
@@ -5758,6 +5953,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 182
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &192321382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 192321376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &193018757
 GameObject:
   m_ObjectHideFlags: 0
@@ -5771,6 +5978,7 @@ GameObject:
   - component: {fileID: 193018760}
   - component: {fileID: 193018759}
   - component: {fileID: 193018758}
+  - component: {fileID: 193018763}
   m_Layer: 0
   m_Name: Exploding Crates (128)
   m_TagString: Exploding Crate
@@ -5901,6 +6109,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 161
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &193018763
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 193018757}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &194626879
 GameObject:
   m_ObjectHideFlags: 0
@@ -6142,6 +6362,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1034834059814532, guid: 72b9c91cbdf2ffd40826c13f39cae319,
     type: 2}
   m_PrefabInternal: {fileID: 203206442}
+--- !u!114 &203206444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 203206443}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &208207139
 GameObject:
   m_ObjectHideFlags: 0
@@ -6225,6 +6457,7 @@ GameObject:
   - component: {fileID: 208455773}
   - component: {fileID: 208455772}
   - component: {fileID: 208455771}
+  - component: {fileID: 208455774}
   m_Layer: 0
   m_Name: pipe_2 (5)
   m_TagString: Untagged
@@ -6320,6 +6553,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 173
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &208455774
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 208455770}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &208637644
 Prefab:
   m_ObjectHideFlags: 0
@@ -6448,6 +6693,7 @@ GameObject:
   - component: {fileID: 213742032}
   - component: {fileID: 213742031}
   - component: {fileID: 213742030}
+  - component: {fileID: 213742033}
   m_Layer: 0
   m_Name: pipe_2 (6)
   m_TagString: Untagged
@@ -6543,6 +6789,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 131
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &213742033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 213742029}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &221320418
 GameObject:
   m_ObjectHideFlags: 0
@@ -6556,6 +6814,7 @@ GameObject:
   - component: {fileID: 221320421}
   - component: {fileID: 221320420}
   - component: {fileID: 221320419}
+  - component: {fileID: 221320424}
   m_Layer: 0
   m_Name: Exploding Crates (123)
   m_TagString: Exploding Crate
@@ -6686,6 +6945,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 155
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &221320424
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 221320418}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &223078393
 GameObject:
   m_ObjectHideFlags: 0
@@ -7170,6 +7441,7 @@ GameObject:
   - component: {fileID: 233512024}
   - component: {fileID: 233512023}
   - component: {fileID: 233512022}
+  - component: {fileID: 233512027}
   m_Layer: 0
   m_Name: Exploding Crates (142)
   m_TagString: Exploding Crate
@@ -7300,6 +7572,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 123
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &233512027
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 233512021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &234562875
 Prefab:
   m_ObjectHideFlags: 0
@@ -7354,6 +7638,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &234562876 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 234562875}
+--- !u!114 &234562877
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 234562876}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &236034080
 Prefab:
   m_ObjectHideFlags: 0
@@ -7408,6 +7709,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5975b39c0244c04784aa3b46bc5c483, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &236034081 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552966496903798, guid: a5975b39c0244c04784aa3b46bc5c483,
+    type: 2}
+  m_PrefabInternal: {fileID: 236034080}
+--- !u!114 &236034082
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 236034081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &237630327
 GameObject:
   m_ObjectHideFlags: 0
@@ -7509,6 +7827,7 @@ GameObject:
   m_Component:
   - component: {fileID: 239638823}
   - component: {fileID: 239638822}
+  - component: {fileID: 239638824}
   m_Layer: 0
   m_Name: VentBackground (11)
   m_TagString: Untagged
@@ -7573,6 +7892,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 81
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &239638824
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 239638821}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &240721557
 GameObject:
   m_ObjectHideFlags: 0
@@ -7582,6 +7913,7 @@ GameObject:
   m_Component:
   - component: {fileID: 240721559}
   - component: {fileID: 240721558}
+  - component: {fileID: 240721560}
   m_Layer: 0
   m_Name: Trigger Collider
   m_TagString: Untagged
@@ -7614,6 +7946,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 176
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &240721560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 240721557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &245025551
 Prefab:
   m_ObjectHideFlags: 0
@@ -7731,6 +8075,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4958229314973558, guid: e98a4aecf2e81e348b6ee5732daf1c91,
     type: 2}
   m_PrefabInternal: {fileID: 245025551}
+--- !u!1 &245025554 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1725308328564358, guid: e98a4aecf2e81e348b6ee5732daf1c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 245025551}
+--- !u!114 &245025555
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 245025554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &251005772
 GameObject:
   m_ObjectHideFlags: 0
@@ -8226,6 +8587,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &270684332
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 270684329}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &276269369
 GameObject:
   m_ObjectHideFlags: 0
@@ -8239,6 +8612,7 @@ GameObject:
   - component: {fileID: 276269372}
   - component: {fileID: 276269371}
   - component: {fileID: 276269370}
+  - component: {fileID: 276269375}
   m_Layer: 0
   m_Name: Exploding Crates (24)
   m_TagString: Exploding Crate
@@ -8369,6 +8743,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 105
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &276269375
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 276269369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &284034180
 GameObject:
   m_ObjectHideFlags: 0
@@ -8874,6 +9260,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5975b39c0244c04784aa3b46bc5c483, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &304189763 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552966496903798, guid: a5975b39c0244c04784aa3b46bc5c483,
+    type: 2}
+  m_PrefabInternal: {fileID: 304189762}
+--- !u!114 &304189764
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 304189763}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &305440982
 GameObject:
   m_ObjectHideFlags: 0
@@ -8884,6 +9287,7 @@ GameObject:
   - component: {fileID: 305440985}
   - component: {fileID: 305440984}
   - component: {fileID: 305440983}
+  - component: {fileID: 305440986}
   m_Layer: 0
   m_Name: Moniter Trigger (5)
   m_TagString: Untagged
@@ -8942,6 +9346,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 99
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &305440986
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 305440982}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &306254952
 Prefab:
   m_ObjectHideFlags: 0
@@ -9316,6 +9732,7 @@ GameObject:
   - component: {fileID: 317876117}
   - component: {fileID: 317876116}
   - component: {fileID: 317876115}
+  - component: {fileID: 317876118}
   m_Layer: 0
   m_Name: Moniter Trigger (4)
   m_TagString: Untagged
@@ -9374,6 +9791,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 79
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &317876118
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 317876114}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &325339360
 GameObject:
   m_ObjectHideFlags: 0
@@ -9996,6 +10425,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65a78741a9b74eb4d8575ef698383d96, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &350655506 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1370679127972372, guid: 65a78741a9b74eb4d8575ef698383d96,
+    type: 2}
+  m_PrefabInternal: {fileID: 350655505}
+--- !u!114 &350655507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 350655506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &352935899
 GameObject:
   m_ObjectHideFlags: 0
@@ -10303,6 +10749,7 @@ GameObject:
   - component: {fileID: 367520875}
   - component: {fileID: 367520874}
   - component: {fileID: 367520873}
+  - component: {fileID: 367520878}
   m_Layer: 0
   m_Name: Exploding Crates (118)
   m_TagString: Exploding Crate
@@ -10433,6 +10880,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 107
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &367520878
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 367520872}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &372340129
 GameObject:
   m_ObjectHideFlags: 0
@@ -10806,6 +11265,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 383348452}
+--- !u!1 &383348454 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 383348452}
+--- !u!114 &383348455
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 383348454}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &384984481
 Prefab:
   m_ObjectHideFlags: 0
@@ -11280,6 +11756,18 @@ Light:
   m_UseColorTemperature: 0
   m_ShadowRadius: 0
   m_ShadowAngle: 0
+--- !u!114 &401054481
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 401054479}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &404465998
 Prefab:
   m_ObjectHideFlags: 0
@@ -11334,6 +11822,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &404465999 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 404465998}
+--- !u!114 &404466000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 404465999}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &407088307
 GameObject:
   m_ObjectHideFlags: 0
@@ -11519,6 +12024,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 2f7cd6584143f6043b6b138644ea969a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &407717471 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1585692713706062, guid: 2f7cd6584143f6043b6b138644ea969a,
+    type: 2}
+  m_PrefabInternal: {fileID: 407717470}
+--- !u!114 &407717472
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 407717471}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &411897208
 GameObject:
   m_ObjectHideFlags: 0
@@ -11789,6 +12311,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 418018548}
   m_Script: {fileID: 11500000, guid: 5751fae6eb3ccb04cbcf8ae69020a776, type: 3}
+--- !u!1 &418018550 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1394082396367006, guid: 036c6832c47f9844cbb34fb23d15446f,
+    type: 2}
+  m_PrefabInternal: {fileID: 418018548}
+--- !u!114 &418018551
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418018550}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &418684624
 GameObject:
   m_ObjectHideFlags: 0
@@ -11798,6 +12337,7 @@ GameObject:
   m_Component:
   - component: {fileID: 418684626}
   - component: {fileID: 418684625}
+  - component: {fileID: 418684627}
   m_Layer: 0
   m_Name: Paint_no escape (3)
   m_TagString: Untagged
@@ -11862,6 +12402,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 106
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.5670002}
+--- !u!114 &418684627
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 418684624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &422752804
 GameObject:
   m_ObjectHideFlags: 0
@@ -11875,6 +12427,7 @@ GameObject:
   - component: {fileID: 422752807}
   - component: {fileID: 422752806}
   - component: {fileID: 422752805}
+  - component: {fileID: 422752810}
   m_Layer: 0
   m_Name: Exploding Crates (117)
   m_TagString: Exploding Crate
@@ -12005,6 +12558,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 88
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &422752810
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 422752804}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &424083876
 GameObject:
   m_ObjectHideFlags: 0
@@ -12425,6 +12990,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f382ead48bc64342948ed9f2ee220a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &434520898 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1713110866600384, guid: 0f382ead48bc64342948ed9f2ee220a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 434520897}
+--- !u!114 &434520899
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 434520898}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &435907653
 Prefab:
   m_ObjectHideFlags: 0
@@ -13108,6 +13690,7 @@ GameObject:
   m_Component:
   - component: {fileID: 463821341}
   - component: {fileID: 463821340}
+  - component: {fileID: 463821342}
   m_Layer: 0
   m_Name: Paint_no escape
   m_TagString: Untagged
@@ -13172,6 +13755,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 171
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.6}
+--- !u!114 &463821342
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 463821339}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &466784420
 GameObject:
   m_ObjectHideFlags: 0
@@ -13272,6 +13867,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 472610691}
+  - component: {fileID: 472610692}
   m_Layer: 0
   m_Name: Office (4)
   m_TagString: Untagged
@@ -13317,6 +13913,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 30
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &472610692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 472610690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &473303609
 GameObject:
   m_ObjectHideFlags: 0
@@ -13660,6 +14268,7 @@ GameObject:
   - component: {fileID: 485612470}
   - component: {fileID: 485612469}
   - component: {fileID: 485612468}
+  - component: {fileID: 485612473}
   m_Layer: 0
   m_Name: Exploding Crates (127)
   m_TagString: Exploding Crate
@@ -13790,6 +14399,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 91
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &485612473
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 485612467}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &488092557
 GameObject:
   m_ObjectHideFlags: 0
@@ -13928,6 +14549,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72b9c91cbdf2ffd40826c13f39cae319, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &488984635 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1034834059814532, guid: 72b9c91cbdf2ffd40826c13f39cae319,
+    type: 2}
+  m_PrefabInternal: {fileID: 488984634}
+--- !u!114 &488984636
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 488984635}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &490798742
 GameObject:
   m_ObjectHideFlags: 0
@@ -14062,6 +14700,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 491452406}
   m_Script: {fileID: 11500000, guid: 5751fae6eb3ccb04cbcf8ae69020a776, type: 3}
+--- !u!1 &491452408 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1394082396367006, guid: 036c6832c47f9844cbb34fb23d15446f,
+    type: 2}
+  m_PrefabInternal: {fileID: 491452406}
+--- !u!114 &491452409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 491452408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &491623992
 GameObject:
   m_ObjectHideFlags: 0
@@ -14545,6 +15200,7 @@ GameObject:
   - component: {fileID: 534141809}
   - component: {fileID: 534141808}
   - component: {fileID: 534141807}
+  - component: {fileID: 534141812}
   m_Layer: 0
   m_Name: Exploding Crates (16)
   m_TagString: Exploding Crate
@@ -14675,6 +15331,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 117
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &534141812
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 534141806}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &536561904
 GameObject:
   m_ObjectHideFlags: 0
@@ -22675,6 +23343,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredient: 3
+--- !u!1 &540524055 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1225359232900380, guid: 6a3f90971d254164a85deeeff9fb4a11,
+    type: 2}
+  m_PrefabInternal: {fileID: 540524050}
+--- !u!114 &540524056
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 540524055}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &546756539
 GameObject:
   m_ObjectHideFlags: 0
@@ -22827,6 +23512,7 @@ GameObject:
   m_Component:
   - component: {fileID: 555171844}
   - component: {fileID: 555171843}
+  - component: {fileID: 555171845}
   m_Layer: 0
   m_Name: moniter
   m_TagString: Untagged
@@ -22891,6 +23577,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 39
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &555171845
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 555171842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &563869470
 GameObject:
   m_ObjectHideFlags: 0
@@ -22977,6 +23675,7 @@ GameObject:
   - component: {fileID: 563975479}
   - component: {fileID: 563975478}
   - component: {fileID: 563975477}
+  - component: {fileID: 563975482}
   m_Layer: 0
   m_Name: Exploding Crates (132)
   m_TagString: Exploding Crate
@@ -23107,6 +23806,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 162
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &563975482
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 563975476}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &567386378
 Prefab:
   m_ObjectHideFlags: 0
@@ -23153,6 +23864,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 3eb70747a514a9849bb764ca342eed0a, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &567386379 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1446126186935668, guid: 3eb70747a514a9849bb764ca342eed0a,
+    type: 2}
+  m_PrefabInternal: {fileID: 567386378}
+--- !u!114 &567386380
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 567386379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &570849368
 GameObject:
   m_ObjectHideFlags: 0
@@ -23235,6 +23963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 571667498}
   - component: {fileID: 571667497}
+  - component: {fileID: 571667499}
   m_Layer: 0
   m_Name: VentBackground (10)
   m_TagString: Untagged
@@ -23299,6 +24028,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 82
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &571667499
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 571667496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &576120862
 GameObject:
   m_ObjectHideFlags: 0
@@ -23851,6 +24592,7 @@ GameObject:
   - component: {fileID: 605524845}
   - component: {fileID: 605524844}
   - component: {fileID: 605524843}
+  - component: {fileID: 605524846}
   m_Layer: 0
   m_Name: Moniter Trigger (3)
   m_TagString: Untagged
@@ -23909,6 +24651,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 40
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &605524846
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 605524842}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &612967684
 GameObject:
   m_ObjectHideFlags: 0
@@ -24390,6 +25144,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0f382ead48bc64342948ed9f2ee220a8, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &613762019 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1713110866600384, guid: 0f382ead48bc64342948ed9f2ee220a8,
+    type: 2}
+  m_PrefabInternal: {fileID: 613762018}
+--- !u!114 &613762020
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 613762019}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &616070848
 Prefab:
   m_ObjectHideFlags: 0
@@ -24444,6 +25215,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &616070849 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 616070848}
+--- !u!114 &616070850
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 616070849}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &616429274
 Prefab:
   m_ObjectHideFlags: 0
@@ -25430,6 +26218,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6fff0ca5824ef8d47a408a2e1812e615, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &647323129 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1324513569943776, guid: 6fff0ca5824ef8d47a408a2e1812e615,
+    type: 2}
+  m_PrefabInternal: {fileID: 647323128}
+--- !u!114 &647323130
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 647323129}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &650634497
 Prefab:
   m_ObjectHideFlags: 0
@@ -25561,6 +26366,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &650634501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 650634498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &657688079
 GameObject:
   m_ObjectHideFlags: 0
@@ -25790,6 +26607,7 @@ GameObject:
   - component: {fileID: 663941232}
   - component: {fileID: 663941231}
   - component: {fileID: 663941230}
+  - component: {fileID: 663941235}
   m_Layer: 0
   m_Name: Exploding Crates (134)
   m_TagString: Exploding Crate
@@ -25920,6 +26738,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 159
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &663941235
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 663941229}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &664578287
 GameObject:
   m_ObjectHideFlags: 0
@@ -26098,6 +26928,7 @@ GameObject:
   - component: {fileID: 674685224}
   - component: {fileID: 674685223}
   - component: {fileID: 674685222}
+  - component: {fileID: 674685227}
   m_Layer: 0
   m_Name: Exploding Crates (119)
   m_TagString: Exploding Crate
@@ -26228,6 +27059,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 103
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &674685227
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 674685221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &682216743
 Prefab:
   m_ObjectHideFlags: 0
@@ -26328,6 +27171,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 682216743}
   m_Script: {fileID: 11500000, guid: d5e0b931335008d4e8a2c8c6c6de6ffb, type: 3}
+--- !u!1 &682216745 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1324513569943776, guid: 6fff0ca5824ef8d47a408a2e1812e615,
+    type: 2}
+  m_PrefabInternal: {fileID: 682216743}
+--- !u!114 &682216746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682216745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &682984052
 GameObject:
   m_ObjectHideFlags: 0
@@ -26337,6 +27197,7 @@ GameObject:
   m_Component:
   - component: {fileID: 682984054}
   - component: {fileID: 682984053}
+  - component: {fileID: 682984055}
   m_Layer: 0
   m_Name: Paint_no escape (1)
   m_TagString: Untagged
@@ -26401,6 +27262,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 141
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -3.5670002}
+--- !u!114 &682984055
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 682984052}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &683285006
 Prefab:
   m_ObjectHideFlags: 0
@@ -26462,6 +27335,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 683285006}
   m_Script: {fileID: 11500000, guid: 5751fae6eb3ccb04cbcf8ae69020a776, type: 3}
+--- !u!1 &683285008 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1394082396367006, guid: 036c6832c47f9844cbb34fb23d15446f,
+    type: 2}
+  m_PrefabInternal: {fileID: 683285006}
+--- !u!114 &683285009
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 683285008}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &687399238
 GameObject:
   m_ObjectHideFlags: 0
@@ -26709,6 +27599,7 @@ GameObject:
   m_Component:
   - component: {fileID: 692511692}
   - component: {fileID: 692511691}
+  - component: {fileID: 692511693}
   m_Layer: 0
   m_Name: VentBackground (15)
   m_TagString: Untagged
@@ -26773,6 +27664,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 184
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &692511693
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 692511690}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &698102663
 GameObject:
   m_ObjectHideFlags: 0
@@ -26944,6 +27847,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 698630921}
+--- !u!1 &698630923 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 698630921}
+--- !u!114 &698630924
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 698630923}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &705525576
 GameObject:
   m_ObjectHideFlags: 0
@@ -27710,6 +28630,7 @@ GameObject:
   - component: {fileID: 727516099}
   - component: {fileID: 727516098}
   - component: {fileID: 727516097}
+  - component: {fileID: 727516102}
   m_Layer: 0
   m_Name: Exploding Crates (137)
   m_TagString: Exploding Crate
@@ -27840,6 +28761,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 90
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &727516102
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 727516096}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &727834110
 GameObject:
   m_ObjectHideFlags: 0
@@ -27877,6 +28810,7 @@ GameObject:
   m_Component:
   - component: {fileID: 729189716}
   - component: {fileID: 729189715}
+  - component: {fileID: 729189717}
   m_Layer: 0
   m_Name: Paint_no escape (5)
   m_TagString: Untagged
@@ -27941,6 +28875,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 92
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.030001}
+--- !u!114 &729189717
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 729189714}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &737922440
 GameObject:
   m_ObjectHideFlags: 0
@@ -27954,6 +28900,7 @@ GameObject:
   - component: {fileID: 737922443}
   - component: {fileID: 737922442}
   - component: {fileID: 737922441}
+  - component: {fileID: 737922446}
   m_Layer: 0
   m_Name: Exploding Crates (141)
   m_TagString: Exploding Crate
@@ -28084,6 +29031,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 163
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &737922446
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 737922440}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &742994562
 GameObject:
   m_ObjectHideFlags: 0
@@ -28390,6 +29349,7 @@ GameObject:
   m_Component:
   - component: {fileID: 758782559}
   - component: {fileID: 758782558}
+  - component: {fileID: 758782560}
   m_Layer: 0
   m_Name: Paint_no escape (4)
   m_TagString: Untagged
@@ -28454,6 +29414,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 187
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.97200006}
+--- !u!114 &758782560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 758782557}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &759434315
 GameObject:
   m_ObjectHideFlags: 0
@@ -28856,6 +29828,7 @@ GameObject:
   - component: {fileID: 779407355}
   - component: {fileID: 779407354}
   - component: {fileID: 779407353}
+  - component: {fileID: 779407358}
   m_Layer: 0
   m_Name: Exploding Crates (131)
   m_TagString: Exploding Crate
@@ -28986,6 +29959,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 109
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &779407358
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 779407352}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &780870783
 GameObject:
   m_ObjectHideFlags: 0
@@ -29242,6 +30227,7 @@ GameObject:
   - component: {fileID: 786447941}
   - component: {fileID: 786447940}
   - component: {fileID: 786447939}
+  - component: {fileID: 786447944}
   m_Layer: 0
   m_Name: Exploding Crates (143)
   m_TagString: Exploding Crate
@@ -29372,6 +30358,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 132
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &786447944
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786447938}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &786976520
 GameObject:
   m_ObjectHideFlags: 0
@@ -29385,6 +30383,7 @@ GameObject:
   - component: {fileID: 786976523}
   - component: {fileID: 786976522}
   - component: {fileID: 786976521}
+  - component: {fileID: 786976526}
   m_Layer: 0
   m_Name: Exploding Crates (109)
   m_TagString: Exploding Crate
@@ -29515,6 +30514,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 130
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &786976526
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 786976520}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &788760603
 GameObject:
   m_ObjectHideFlags: 0
@@ -29620,6 +30631,7 @@ GameObject:
   - component: {fileID: 793448140}
   - component: {fileID: 793448139}
   - component: {fileID: 793448138}
+  - component: {fileID: 793448143}
   m_Layer: 0
   m_Name: Exploding Crates (104)
   m_TagString: Exploding Crate
@@ -29750,6 +30762,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 127
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &793448143
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 793448137}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &798086942
 GameObject:
   m_ObjectHideFlags: 0
@@ -30071,6 +31095,7 @@ GameObject:
   - component: {fileID: 815864580}
   - component: {fileID: 815864579}
   - component: {fileID: 815864578}
+  - component: {fileID: 815864583}
   m_Layer: 0
   m_Name: CoreDispenser (17)
   m_TagString: Untagged
@@ -30219,6 +31244,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 108
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &815864583
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 815864577}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &816306872
 Prefab:
   m_ObjectHideFlags: 0
@@ -30317,6 +31354,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 816306872}
   m_Script: {fileID: 11500000, guid: d5e0b931335008d4e8a2c8c6c6de6ffb, type: 3}
+--- !u!1 &816306874 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1324513569943776, guid: 6fff0ca5824ef8d47a408a2e1812e615,
+    type: 2}
+  m_PrefabInternal: {fileID: 816306872}
+--- !u!114 &816306875
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 816306874}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &820393418
 GameObject:
   m_ObjectHideFlags: 0
@@ -30602,6 +31656,7 @@ GameObject:
   m_Component:
   - component: {fileID: 827824928}
   - component: {fileID: 827824927}
+  - component: {fileID: 827824929}
   m_Layer: 0
   m_Name: VentBackground (7)
   m_TagString: Untagged
@@ -30666,6 +31721,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 149
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &827824929
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 827824926}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &830538874
 GameObject:
   m_ObjectHideFlags: 0
@@ -31075,6 +32142,7 @@ GameObject:
   m_Component:
   - component: {fileID: 847084195}
   - component: {fileID: 847084194}
+  - component: {fileID: 847084196}
   m_Layer: 0
   m_Name: Paint_no escape (7)
   m_TagString: Untagged
@@ -31139,6 +32207,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 164
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -9.63}
+--- !u!114 &847084196
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 847084193}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &849887837
 GameObject:
   m_ObjectHideFlags: 0
@@ -31422,6 +32502,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &852448179 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 852448178}
+--- !u!114 &852448180
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 852448179}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &852889217
 GameObject:
   m_ObjectHideFlags: 0
@@ -31622,6 +32719,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &865925666 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 865925665}
+--- !u!114 &865925667
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 865925666}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &874925246
 GameObject:
   m_ObjectHideFlags: 0
@@ -31799,6 +32913,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &881684923
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881684921}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &881749994
 GameObject:
   m_ObjectHideFlags: 0
@@ -31809,6 +32935,7 @@ GameObject:
   - component: {fileID: 881749997}
   - component: {fileID: 881749996}
   - component: {fileID: 881749995}
+  - component: {fileID: 881749998}
   m_Layer: 0
   m_Name: pipe_corner (3)
   m_TagString: Untagged
@@ -31930,6 +33057,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 125
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -90}
+--- !u!114 &881749998
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 881749994}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &892355313
 GameObject:
   m_ObjectHideFlags: 0
@@ -32352,6 +33491,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6943d7f08b91bc94c9b17b2622cc6c77, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &917490745 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1390256859768526, guid: 6943d7f08b91bc94c9b17b2622cc6c77,
+    type: 2}
+  m_PrefabInternal: {fileID: 917490744}
+--- !u!114 &917490746
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 917490745}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &929542498
 GameObject:
   m_ObjectHideFlags: 0
@@ -32365,6 +33521,7 @@ GameObject:
   - component: {fileID: 929542501}
   - component: {fileID: 929542500}
   - component: {fileID: 929542499}
+  - component: {fileID: 929542504}
   m_Layer: 0
   m_Name: Exploding Crates (105)
   m_TagString: Exploding Crate
@@ -32495,6 +33652,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 166
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &929542504
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 929542498}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &931497852
 Prefab:
   m_ObjectHideFlags: 0
@@ -32714,6 +33883,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 934008252}
+--- !u!1 &934008254 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 934008252}
+--- !u!114 &934008255
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 934008254}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &938608118
 Prefab:
   m_ObjectHideFlags: 0
@@ -32770,6 +33956,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0db7dae14b28f5c428c592fa0d690aff, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &938608119 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1684047306238716, guid: 0db7dae14b28f5c428c592fa0d690aff,
+    type: 2}
+  m_PrefabInternal: {fileID: 938608118}
+--- !u!114 &938608120
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 938608119}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &940313298
 Prefab:
   m_ObjectHideFlags: 0
@@ -32890,6 +34093,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 0db7dae14b28f5c428c592fa0d690aff, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &940325369 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1684047306238716, guid: 0db7dae14b28f5c428c592fa0d690aff,
+    type: 2}
+  m_PrefabInternal: {fileID: 940325368}
+--- !u!114 &940325370
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 940325369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &942683272
 Prefab:
   m_ObjectHideFlags: 0
@@ -33178,6 +34398,7 @@ GameObject:
   - component: {fileID: 943937490}
   - component: {fileID: 943937489}
   - component: {fileID: 943937488}
+  - component: {fileID: 943937493}
   m_Layer: 0
   m_Name: HangingLight (13)
   m_TagString: Untagged
@@ -33306,6 +34527,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 154
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &943937493
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 943937487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &945009552
 Prefab:
   m_ObjectHideFlags: 0
@@ -41197,6 +42430,23 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   ingredient: 3
+--- !u!1 &945009555 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1225359232900380, guid: 6a3f90971d254164a85deeeff9fb4a11,
+    type: 2}
+  m_PrefabInternal: {fileID: 945009552}
+--- !u!114 &945009556
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 945009555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &945348430
 GameObject:
   m_ObjectHideFlags: 0
@@ -42515,6 +43765,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 992000494}
+--- !u!1 &992000496 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 992000494}
+--- !u!114 &992000497
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 992000496}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &995031554
 GameObject:
   m_ObjectHideFlags: 0
@@ -42528,6 +43795,7 @@ GameObject:
   - component: {fileID: 995031557}
   - component: {fileID: 995031556}
   - component: {fileID: 995031555}
+  - component: {fileID: 995031560}
   m_Layer: 0
   m_Name: Exploding Crates (144)
   m_TagString: Exploding Crate
@@ -42658,6 +43926,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 178
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &995031560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 995031554}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1001825038
 GameObject:
   m_ObjectHideFlags: 0
@@ -42667,6 +43947,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1001825040}
   - component: {fileID: 1001825039}
+  - component: {fileID: 1001825041}
   m_Layer: 0
   m_Name: Paint_AOOT
   m_TagString: Untagged
@@ -42731,6 +44012,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 118
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 8.05}
+--- !u!114 &1001825041
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1001825038}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1003720083
 GameObject:
   m_ObjectHideFlags: 0
@@ -43129,6 +44422,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5975b39c0244c04784aa3b46bc5c483, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1020223895 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552966496903798, guid: a5975b39c0244c04784aa3b46bc5c483,
+    type: 2}
+  m_PrefabInternal: {fileID: 1020223894}
+--- !u!114 &1020223896
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1020223895}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1024494261
 GameObject:
   m_ObjectHideFlags: 0
@@ -43137,6 +44447,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1024494262}
+  - component: {fileID: 1024494263}
   m_Layer: 0
   m_Name: Platforms (1)
   m_TagString: Untagged
@@ -43230,6 +44541,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 156
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1024494263
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1024494261}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1025361694
 Prefab:
   m_ObjectHideFlags: 0
@@ -43578,6 +44901,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1106729587577618, guid: 66424ecc2a9de614daafb71f328ec5f9,
     type: 2}
   m_PrefabInternal: {fileID: 1032317464}
+--- !u!114 &1032317466
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1032317465}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1032956455
 GameObject:
   m_ObjectHideFlags: 0
@@ -43853,6 +45188,7 @@ GameObject:
   - component: {fileID: 1037233313}
   - component: {fileID: 1037233312}
   - component: {fileID: 1037233311}
+  - component: {fileID: 1037233316}
   m_Layer: 0
   m_Name: Exploding Crates (18)
   m_TagString: Exploding Crate
@@ -43983,6 +45319,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 165
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1037233316
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1037233310}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1047895623
 GameObject:
   m_ObjectHideFlags: 0
@@ -44065,6 +45413,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051119740}
   - component: {fileID: 1051119739}
+  - component: {fileID: 1051119741}
   m_Layer: 0
   m_Name: VentBackground (8)
   m_TagString: Untagged
@@ -44129,6 +45478,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 101
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1051119741
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051119738}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1051953290
 GameObject:
   m_ObjectHideFlags: 0
@@ -44138,6 +45499,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1051953292}
   - component: {fileID: 1051953291}
+  - component: {fileID: 1051953293}
   m_Layer: 0
   m_Name: warhead
   m_TagString: Untagged
@@ -44202,6 +45564,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 135
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 13.57}
+--- !u!114 &1051953293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1051953290}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1052689158
 GameObject:
   m_ObjectHideFlags: 0
@@ -44438,6 +45812,7 @@ GameObject:
   - component: {fileID: 1055024229}
   - component: {fileID: 1055024228}
   - component: {fileID: 1055024227}
+  - component: {fileID: 1055024232}
   m_Layer: 0
   m_Name: Exploding Crates (17)
   m_TagString: Exploding Crate
@@ -44568,6 +45943,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 93
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1055024232
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1055024226}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1057231728
 GameObject:
   m_ObjectHideFlags: 0
@@ -45156,6 +46543,7 @@ GameObject:
   - component: {fileID: 1080671981}
   - component: {fileID: 1080671980}
   - component: {fileID: 1080671979}
+  - component: {fileID: 1080671984}
   m_Layer: 0
   m_Name: Exploding Crates (111)
   m_TagString: Exploding Crate
@@ -45286,6 +46674,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 110
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1080671984
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1080671978}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1084675841
 GameObject:
   m_ObjectHideFlags: 0
@@ -45299,6 +46699,7 @@ GameObject:
   - component: {fileID: 1084675844}
   - component: {fileID: 1084675843}
   - component: {fileID: 1084675842}
+  - component: {fileID: 1084675847}
   m_Layer: 0
   m_Name: Exploding Crates (112)
   m_TagString: Exploding Crate
@@ -45429,6 +46830,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 146
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1084675847
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1084675841}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1087628767
 Prefab:
   m_ObjectHideFlags: 0
@@ -45561,6 +46974,7 @@ GameObject:
   - component: {fileID: 1099070101}
   - component: {fileID: 1099070100}
   - component: {fileID: 1099070099}
+  - component: {fileID: 1099070104}
   m_Layer: 0
   m_Name: Warhead
   m_TagString: Untagged
@@ -45727,6 +47141,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 96
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1099070104
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1099070098}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1101911500
 GameObject:
   m_ObjectHideFlags: 0
@@ -45827,6 +47253,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1103421034}
+  - component: {fileID: 1103421035}
   m_Layer: 0
   m_Name: Pipe SYstem
   m_TagString: Untagged
@@ -45877,6 +47304,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 28
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1103421035
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1103421033}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1106037301
 GameObject:
   m_ObjectHideFlags: 0
@@ -46005,6 +47444,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1110583918}
+  - component: {fileID: 1110583919}
   m_Layer: 0
   m_Name: Office (3)
   m_TagString: Untagged
@@ -46060,6 +47500,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 29
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1110583919
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1110583917}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1117721652
 Prefab:
   m_ObjectHideFlags: 0
@@ -46205,6 +47657,7 @@ GameObject:
   - component: {fileID: 1126949290}
   - component: {fileID: 1126949289}
   - component: {fileID: 1126949288}
+  - component: {fileID: 1126949293}
   m_Layer: 0
   m_Name: Exploding Crates (133)
   m_TagString: Exploding Crate
@@ -46335,6 +47788,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 85
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1126949293
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1126949287}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1128393504
 GameObject:
   m_ObjectHideFlags: 0
@@ -46348,6 +47813,7 @@ GameObject:
   - component: {fileID: 1128393507}
   - component: {fileID: 1128393506}
   - component: {fileID: 1128393505}
+  - component: {fileID: 1128393510}
   m_Layer: 0
   m_Name: Exploding Crates (116)
   m_TagString: Exploding Crate
@@ -46478,6 +47944,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 138
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1128393510
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1128393504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1131565094
 GameObject:
   m_ObjectHideFlags: 0
@@ -46666,6 +48144,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1136104489}
   - component: {fileID: 1136104488}
+  - component: {fileID: 1136104490}
   m_Layer: 0
   m_Name: Paint_no escape (6)
   m_TagString: Untagged
@@ -46730,6 +48209,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 126
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 9.6}
+--- !u!114 &1136104490
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1136104487}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1137885517
 Prefab:
   m_ObjectHideFlags: 0
@@ -47117,6 +48608,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &1145935628
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1145935626}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1148994376
 GameObject:
   m_ObjectHideFlags: 0
@@ -47198,6 +48701,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1159074381}
+  - component: {fileID: 1159074382}
   m_Layer: 0
   m_Name: Detail
   m_TagString: Untagged
@@ -47228,6 +48732,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 148
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1159074382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1159074380}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1160010279
 GameObject:
   m_ObjectHideFlags: 0
@@ -47590,6 +49106,7 @@ GameObject:
   - component: {fileID: 1180905498}
   - component: {fileID: 1180905497}
   - component: {fileID: 1180905496}
+  - component: {fileID: 1180905501}
   m_Layer: 0
   m_Name: Exploding Crates (19)
   m_TagString: Exploding Crate
@@ -47720,6 +49237,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 145
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1180905501
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1180905495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1183131541
 GameObject:
   m_ObjectHideFlags: 0
@@ -47728,6 +49257,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1183131542}
+  - component: {fileID: 1183131543}
   m_Layer: 0
   m_Name: Wall Details
   m_TagString: Untagged
@@ -47771,6 +49301,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 13
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1183131543
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1183131541}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1183728730
 GameObject:
   m_ObjectHideFlags: 0
@@ -47926,6 +49468,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1197700896}
   - component: {fileID: 1197700895}
+  - component: {fileID: 1197700897}
   m_Layer: 0
   m_Name: moniter (2)
   m_TagString: Untagged
@@ -47990,6 +49533,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 137
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1197700897
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1197700894}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1201715573
 GameObject:
   m_ObjectHideFlags: 0
@@ -48078,6 +49633,7 @@ GameObject:
   - component: {fileID: 1202262327}
   - component: {fileID: 1202262326}
   - component: {fileID: 1202262325}
+  - component: {fileID: 1202262329}
   m_Layer: 0
   m_Name: Missile_Complete (1)
   m_TagString: Exploding Crate
@@ -48265,6 +49821,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 168
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1202262329
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1202262324}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1210002718
 GameObject:
   m_ObjectHideFlags: 0
@@ -48278,6 +49846,7 @@ GameObject:
   - component: {fileID: 1210002721}
   - component: {fileID: 1210002720}
   - component: {fileID: 1210002719}
+  - component: {fileID: 1210002724}
   m_Layer: 0
   m_Name: Exploding Crates (126)
   m_TagString: Exploding Crate
@@ -48408,6 +49977,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 128
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1210002724
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1210002718}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1213353939
 GameObject:
   m_ObjectHideFlags: 0
@@ -48417,6 +49998,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1213353941}
   - component: {fileID: 1213353940}
+  - component: {fileID: 1213353942}
   m_Layer: 0
   m_Name: VentBackground (9)
   m_TagString: Untagged
@@ -48481,6 +50063,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 185
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1213353942
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1213353939}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1217175376
 GameObject:
   m_ObjectHideFlags: 0
@@ -48494,6 +50088,7 @@ GameObject:
   - component: {fileID: 1217175379}
   - component: {fileID: 1217175378}
   - component: {fileID: 1217175377}
+  - component: {fileID: 1217175382}
   m_Layer: 0
   m_Name: Exploding Crates (106)
   m_TagString: Exploding Crate
@@ -48624,6 +50219,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 86
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1217175382
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1217175376}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1222079007
 GameObject:
   m_ObjectHideFlags: 0
@@ -48707,6 +50314,7 @@ GameObject:
   - component: {fileID: 1222256608}
   - component: {fileID: 1222256607}
   - component: {fileID: 1222256606}
+  - component: {fileID: 1222256609}
   m_Layer: 0
   m_Name: pipe_2 (10)
   m_TagString: Untagged
@@ -48802,6 +50410,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 174
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1222256609
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1222256605}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1230813611
 GameObject:
   m_ObjectHideFlags: 0
@@ -48888,6 +50508,7 @@ GameObject:
   - component: {fileID: 1231534677}
   - component: {fileID: 1231534676}
   - component: {fileID: 1231534675}
+  - component: {fileID: 1231534680}
   m_Layer: 0
   m_Name: Exploding Crates (135)
   m_TagString: Exploding Crate
@@ -49018,6 +50639,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 152
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231534680
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231534674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1231891241
 GameObject:
   m_ObjectHideFlags: 0
@@ -49026,6 +50659,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1231891242}
+  - component: {fileID: 1231891243}
   m_Layer: 0
   m_Name: Exploding Crates
   m_TagString: Untagged
@@ -49074,6 +50708,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 27
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1231891243
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1231891241}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1232156899
 GameObject:
   m_ObjectHideFlags: 0
@@ -49277,6 +50923,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: c65f5b080fec6ea469279d856071cb13, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1235413064 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1466970909608992, guid: c65f5b080fec6ea469279d856071cb13,
+    type: 2}
+  m_PrefabInternal: {fileID: 1235413063}
+--- !u!114 &1235413065
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1235413064}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1236223709
 GameObject:
   m_ObjectHideFlags: 0
@@ -49286,6 +50949,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1236223711}
   - component: {fileID: 1236223710}
+  - component: {fileID: 1236223712}
   m_Layer: 0
   m_Name: idleLegs
   m_TagString: Untagged
@@ -49350,6 +51014,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 97
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0.6}
+--- !u!114 &1236223712
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1236223709}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1239271505
 GameObject:
   m_ObjectHideFlags: 0
@@ -49474,6 +51150,18 @@ GameObject:
   m_PrefabParentObject: {fileID: 1106729587577618, guid: 66424ecc2a9de614daafb71f328ec5f9,
     type: 2}
   m_PrefabInternal: {fileID: 1243485794}
+--- !u!114 &1243485796
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1243485795}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1248472432
 GameObject:
   m_ObjectHideFlags: 0
@@ -49630,6 +51318,7 @@ GameObject:
   - component: {fileID: 1256047424}
   - component: {fileID: 1256047423}
   - component: {fileID: 1256047422}
+  - component: {fileID: 1256047427}
   m_Layer: 0
   m_Name: Exploding Crates (120)
   m_TagString: Exploding Crate
@@ -49760,6 +51449,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 122
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1256047427
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1256047421}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1259946528
 GameObject:
   m_ObjectHideFlags: 0
@@ -50038,6 +51739,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1272736019}
   m_Script: {fileID: 11500000, guid: 5fdc3120709164b43b8274f91462cb34, type: 3}
+--- !u!1 &1272736021 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1725308328564358, guid: e98a4aecf2e81e348b6ee5732daf1c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1272736019}
+--- !u!114 &1272736022
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1272736021}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1275004024
 GameObject:
   m_ObjectHideFlags: 0
@@ -50550,6 +52268,7 @@ GameObject:
   - component: {fileID: 1291071789}
   - component: {fileID: 1291071788}
   - component: {fileID: 1291071787}
+  - component: {fileID: 1291071792}
   m_Layer: 0
   m_Name: Exploding Crates (138)
   m_TagString: Exploding Crate
@@ -50680,6 +52399,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 153
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1291071792
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1291071786}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1296422103
 GameObject:
   m_ObjectHideFlags: 0
@@ -50842,6 +52573,7 @@ GameObject:
   - component: {fileID: 1297773104}
   - component: {fileID: 1297773103}
   - component: {fileID: 1297773102}
+  - component: {fileID: 1297773105}
   m_Layer: 8
   m_Name: Ground (101)
   m_TagString: Untagged
@@ -50934,6 +52666,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 112
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1297773105
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1297773101}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1299462546
 Prefab:
   m_ObjectHideFlags: 0
@@ -51129,6 +52873,7 @@ GameObject:
   - component: {fileID: 1309108400}
   - component: {fileID: 1309108399}
   - component: {fileID: 1309108398}
+  - component: {fileID: 1309108408}
   m_Layer: 10
   m_Name: NewEnemy (6)
   m_TagString: Untagged
@@ -51951,6 +53696,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 31
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1309108408
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1309108397}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1313591487
 GameObject:
   m_ObjectHideFlags: 0
@@ -52093,6 +53850,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1319768383}
   - component: {fileID: 1319768382}
+  - component: {fileID: 1319768384}
   m_Layer: 0
   m_Name: Spotlight
   m_TagString: Untagged
@@ -52151,6 +53909,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 116
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: -45}
+--- !u!114 &1319768384
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1319768381}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1322133569
 GameObject:
   m_ObjectHideFlags: 0
@@ -52302,6 +54072,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1322963512}
+  - component: {fileID: 1322963513}
   m_Layer: 0
   m_Name: VEnt SYstem
   m_TagString: Untagged
@@ -52343,6 +54114,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 76
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1322963513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1322963511}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1328481260
 GameObject:
   m_ObjectHideFlags: 0
@@ -52429,6 +54212,7 @@ GameObject:
   - component: {fileID: 1330023510}
   - component: {fileID: 1330023509}
   - component: {fileID: 1330023508}
+  - component: {fileID: 1330023513}
   m_Layer: 0
   m_Name: Exploding Crates (122)
   m_TagString: Exploding Crate
@@ -52559,6 +54343,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 180
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1330023513
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1330023507}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1331249777
 GameObject:
   m_ObjectHideFlags: 0
@@ -52801,6 +54597,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1333651534}
   m_Script: {fileID: 11500000, guid: 5fdc3120709164b43b8274f91462cb34, type: 3}
+--- !u!1 &1333651536 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1725308328564358, guid: e98a4aecf2e81e348b6ee5732daf1c91,
+    type: 2}
+  m_PrefabInternal: {fileID: 1333651534}
+--- !u!114 &1333651537
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1333651536}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1334102132
 GameObject:
   m_ObjectHideFlags: 0
@@ -52811,6 +54624,7 @@ GameObject:
   - component: {fileID: 1334102135}
   - component: {fileID: 1334102134}
   - component: {fileID: 1334102133}
+  - component: {fileID: 1334102136}
   m_Layer: 0
   m_Name: pipe_2 (8)
   m_TagString: Untagged
@@ -52906,6 +54720,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 84
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1334102136
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1334102132}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1335104172
 Prefab:
   m_ObjectHideFlags: 0
@@ -53048,6 +54874,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 1335419330}
+--- !u!1 &1335419332 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1335419330}
+--- !u!114 &1335419333
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1335419332}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1339748627
 GameObject:
   m_ObjectHideFlags: 0
@@ -53518,6 +55361,7 @@ GameObject:
   - component: {fileID: 1358986509}
   - component: {fileID: 1358986508}
   - component: {fileID: 1358986507}
+  - component: {fileID: 1358986512}
   m_Layer: 0
   m_Name: Exploding Crates (125)
   m_TagString: Exploding Crate
@@ -53648,6 +55492,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 181
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1358986512
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1358986506}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1368731198
 Prefab:
   m_ObjectHideFlags: 0
@@ -53996,6 +55852,7 @@ GameObject:
   - component: {fileID: 1383133225}
   - component: {fileID: 1383133224}
   - component: {fileID: 1383133223}
+  - component: {fileID: 1383133228}
   m_Layer: 0
   m_Name: Exploding Crates (136)
   m_TagString: Exploding Crate
@@ -54126,6 +55983,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 160
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1383133228
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1383133222}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1385635613
 GameObject:
   m_ObjectHideFlags: 0
@@ -54285,6 +56154,7 @@ GameObject:
   - component: {fileID: 1399304840}
   - component: {fileID: 1399304839}
   - component: {fileID: 1399304838}
+  - component: {fileID: 1399304843}
   m_Layer: 0
   m_Name: Exploding Crates (115)
   m_TagString: Exploding Crate
@@ -54415,6 +56285,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 113
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1399304843
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1399304837}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1400784523
 GameObject:
   m_ObjectHideFlags: 0
@@ -55054,6 +56936,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 156dd18090af22e43993bd2b889aa25e, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1413292639 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1628977543485810, guid: 156dd18090af22e43993bd2b889aa25e,
+    type: 2}
+  m_PrefabInternal: {fileID: 1413292638}
+--- !u!114 &1413292640
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1413292639}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1414790221
 GameObject:
   m_ObjectHideFlags: 0
@@ -55064,6 +56963,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1414790223}
   - component: {fileID: 1414790222}
+  - component: {fileID: 1414790224}
   m_Layer: 0
   m_Name: Spotlight (3)
   m_TagString: Untagged
@@ -55122,6 +57022,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 183
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: -45}
+--- !u!114 &1414790224
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1414790221}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1420312894
 Prefab:
   m_ObjectHideFlags: 0
@@ -55731,6 +57643,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6943d7f08b91bc94c9b17b2622cc6c77, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1426698768 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1390256859768526, guid: 6943d7f08b91bc94c9b17b2622cc6c77,
+    type: 2}
+  m_PrefabInternal: {fileID: 1426698767}
+--- !u!114 &1426698769
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1426698768}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1427104071
 Prefab:
   m_ObjectHideFlags: 0
@@ -55919,6 +57848,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1433200629 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1433200628}
+--- !u!114 &1433200630
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1433200629}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1437300504
 Prefab:
   m_ObjectHideFlags: 0
@@ -56483,6 +58429,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1449486090}
   m_Script: {fileID: 11500000, guid: d5e0b931335008d4e8a2c8c6c6de6ffb, type: 3}
+--- !u!1 &1449486092 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1324513569943776, guid: 6fff0ca5824ef8d47a408a2e1812e615,
+    type: 2}
+  m_PrefabInternal: {fileID: 1449486090}
+--- !u!114 &1449486093
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1449486092}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1450866770
 Prefab:
   m_ObjectHideFlags: 0
@@ -56767,6 +58730,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6943d7f08b91bc94c9b17b2622cc6c77, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1469565873 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1390256859768526, guid: 6943d7f08b91bc94c9b17b2622cc6c77,
+    type: 2}
+  m_PrefabInternal: {fileID: 1469565872}
+--- !u!114 &1469565874
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1469565873}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1473416430
 GameObject:
   m_ObjectHideFlags: 0
@@ -57109,6 +59089,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &1479857545
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1479857543}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1480478069
 GameObject:
   m_ObjectHideFlags: 0
@@ -57502,6 +59494,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &1491880259
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1491880257}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1492967510
 GameObject:
   m_ObjectHideFlags: 0
@@ -57924,6 +59928,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 7b39651b1ac57754099c29d338bb14f7, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1506341385 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1007587898693498, guid: 7b39651b1ac57754099c29d338bb14f7,
+    type: 2}
+  m_PrefabInternal: {fileID: 1506341384}
+--- !u!114 &1506341386
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1506341385}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1509186848
 GameObject:
   m_ObjectHideFlags: 0
@@ -59222,6 +61243,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1520912419 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1520912418}
+--- !u!114 &1520912420
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1520912419}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1524667738
 GameObject:
   m_ObjectHideFlags: 0
@@ -59643,6 +61681,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 1538092676}
+--- !u!1 &1538092678 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1538092676}
+--- !u!114 &1538092679
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1538092678}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1540234783
 GameObject:
   m_ObjectHideFlags: 0
@@ -59863,6 +61918,7 @@ GameObject:
   - component: {fileID: 1547807502}
   - component: {fileID: 1547807501}
   - component: {fileID: 1547807500}
+  - component: {fileID: 1547807505}
   m_Layer: 0
   m_Name: ConverterMachine_Legs
   m_TagString: Untagged
@@ -60037,6 +62093,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 41
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1547807505
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1547807499}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1548197085
 GameObject:
   m_ObjectHideFlags: 0
@@ -60046,6 +62114,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1548197087}
   - component: {fileID: 1548197086}
+  - component: {fileID: 1548197088}
   m_Layer: 0
   m_Name: X_red (5)
   m_TagString: Untagged
@@ -60110,6 +62179,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 150
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1548197088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1548197085}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1551636476
 Prefab:
   m_ObjectHideFlags: 0
@@ -60164,6 +62245,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1551636477 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1551636476}
+--- !u!114 &1551636478
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1551636477}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1552103420
 GameObject:
   m_ObjectHideFlags: 0
@@ -60777,6 +62875,7 @@ GameObject:
   - component: {fileID: 1565416084}
   - component: {fileID: 1565416083}
   - component: {fileID: 1565416082}
+  - component: {fileID: 1565416088}
   m_Layer: 0
   m_Name: BasicLegs (1)
   m_TagString: Untagged
@@ -61047,6 +63146,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 172
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -78.47}
+--- !u!114 &1565416088
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1565416081}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1574784017
 Prefab:
   m_ObjectHideFlags: 0
@@ -61975,6 +64086,7 @@ GameObject:
   - component: {fileID: 1597495382}
   - component: {fileID: 1597495381}
   - component: {fileID: 1597495380}
+  - component: {fileID: 1597495383}
   m_Layer: 0
   m_Name: pipe_2 (7)
   m_TagString: Untagged
@@ -62070,6 +64182,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 188
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1597495383
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1597495379}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1600635972
 GameObject:
   m_ObjectHideFlags: 0
@@ -62403,6 +64527,23 @@ Prefab:
     - {fileID: 114611394842663124, guid: 8f0b183d250a144459a736c3ff43f76d, type: 2}
   m_ParentPrefab: {fileID: 100100000, guid: 8f0b183d250a144459a736c3ff43f76d, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1611384675 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1002647821221526, guid: 8f0b183d250a144459a736c3ff43f76d,
+    type: 2}
+  m_PrefabInternal: {fileID: 1611384674}
+--- !u!114 &1611384676
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1611384675}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1617509566
 GameObject:
   m_ObjectHideFlags: 0
@@ -63092,6 +65233,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 8e840d86cd629f649ac32eac30ef3556, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1645911061 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1386128895623836, guid: 8e840d86cd629f649ac32eac30ef3556,
+    type: 2}
+  m_PrefabInternal: {fileID: 1645911060}
+--- !u!114 &1645911062
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1645911061}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1651596623
 Prefab:
   m_ObjectHideFlags: 0
@@ -63146,6 +65304,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1651596624 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1651596623}
+--- !u!114 &1651596625
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1651596624}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1652673060
 GameObject:
   m_ObjectHideFlags: 0
@@ -63758,6 +65933,23 @@ Transform:
   m_PrefabParentObject: {fileID: 4957160232523886, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
     type: 2}
   m_PrefabInternal: {fileID: 1664901344}
+--- !u!1 &1664901346 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1318422403450690, guid: 7cd075ed39924dd4fa4bed98db10e8a0,
+    type: 2}
+  m_PrefabInternal: {fileID: 1664901344}
+--- !u!114 &1664901347
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1664901346}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1667887712
 Prefab:
   m_ObjectHideFlags: 0
@@ -64057,6 +66249,7 @@ GameObject:
   - component: {fileID: 1680305071}
   - component: {fileID: 1680305070}
   - component: {fileID: 1680305069}
+  - component: {fileID: 1680305074}
   m_Layer: 0
   m_Name: Exploding Crates (114)
   m_TagString: Exploding Crate
@@ -64187,6 +66380,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 186
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1680305074
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1680305068}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1688067210
 Prefab:
   m_ObjectHideFlags: 0
@@ -64286,6 +66491,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &1688067213
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1688067211}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1689549286
 GameObject:
   m_ObjectHideFlags: 0
@@ -64642,6 +66859,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1702578677}
+  - component: {fileID: 1702578678}
   m_Layer: 0
   m_Name: ThingsThatShouldNotBeDuplicated
   m_TagString: Untagged
@@ -64662,6 +66880,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 26
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1702578678
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1702578676}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1708700877
 GameObject:
   m_ObjectHideFlags: 0
@@ -64767,6 +66997,7 @@ GameObject:
   - component: {fileID: 1725577280}
   - component: {fileID: 1725577279}
   - component: {fileID: 1725577278}
+  - component: {fileID: 1725577283}
   m_Layer: 0
   m_Name: Exploding Crates (110)
   m_TagString: Exploding Crate
@@ -64897,6 +67128,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 94
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1725577283
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1725577277}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1725634753
 GameObject:
   m_ObjectHideFlags: 0
@@ -65309,6 +67552,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1738673543}
+  - component: {fileID: 1738673544}
   m_Layer: 0
   m_Name: GameObject (4)
   m_TagString: Untagged
@@ -65329,6 +67573,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 129
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1738673544
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1738673542}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1738885245
 GameObject:
   m_ObjectHideFlags: 0
@@ -65499,6 +67755,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1747348443}
   - component: {fileID: 1747348442}
+  - component: {fileID: 1747348444}
   m_Layer: 0
   m_Name: Spotlight (1)
   m_TagString: Untagged
@@ -65557,6 +67814,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 144
   m_LocalEulerAnglesHint: {x: 90, y: -45, z: -45}
+--- !u!114 &1747348444
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1747348441}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1750918666
 GameObject:
   m_ObjectHideFlags: 0
@@ -65705,6 +67974,7 @@ GameObject:
   - component: {fileID: 1755075687}
   - component: {fileID: 1755075686}
   - component: {fileID: 1755075685}
+  - component: {fileID: 1755075692}
   m_Layer: 0
   m_Name: SuperArms (3)
   m_TagString: Untagged
@@ -65949,6 +68219,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 169
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1755075692
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1755075684}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1756669509
 GameObject:
   m_ObjectHideFlags: 0
@@ -65962,6 +68244,7 @@ GameObject:
   - component: {fileID: 1756669512}
   - component: {fileID: 1756669511}
   - component: {fileID: 1756669510}
+  - component: {fileID: 1756669515}
   m_Layer: 0
   m_Name: Exploding Crates (25)
   m_TagString: Exploding Crate
@@ -66092,6 +68375,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 157
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1756669515
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1756669509}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1757057555
 GameObject:
   m_ObjectHideFlags: 0
@@ -66783,6 +69078,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 6a3f90971d254164a85deeeff9fb4a11, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1766258534 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1225359232900380, guid: 6a3f90971d254164a85deeeff9fb4a11,
+    type: 2}
+  m_PrefabInternal: {fileID: 1766258533}
+--- !u!114 &1766258535
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1766258534}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1768697945
 GameObject:
   m_ObjectHideFlags: 0
@@ -66792,6 +69104,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1768697947}
   - component: {fileID: 1768697946}
+  - component: {fileID: 1768697948}
   m_Layer: 0
   m_Name: moniter (1)
   m_TagString: Untagged
@@ -66856,6 +69169,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1768697948
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1768697945}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1768999225
 GameObject:
   m_ObjectHideFlags: 0
@@ -66956,6 +69281,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1769220173}
+  - component: {fileID: 1769220174}
   m_Layer: 0
   m_Name: Enemy Paths
   m_TagString: Untagged
@@ -66988,6 +69314,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 177
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1769220174
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1769220172}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1770259627
 GameObject:
   m_ObjectHideFlags: 0
@@ -67426,6 +69764,7 @@ GameObject:
   - component: {fileID: 1785456033}
   - component: {fileID: 1785456032}
   - component: {fileID: 1785456031}
+  - component: {fileID: 1785456036}
   m_Layer: 0
   m_Name: Exploding Crates (129)
   m_TagString: Exploding Crate
@@ -67556,6 +69895,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 158
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1785456036
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1785456030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1790275876
 GameObject:
   m_ObjectHideFlags: 0
@@ -67638,6 +69989,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1798861216}
   - component: {fileID: 1798861215}
+  - component: {fileID: 1798861217}
   m_Layer: 0
   m_Name: cube_L (15)
   m_TagString: Untagged
@@ -67702,6 +70054,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 151
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1798861217
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1798861214}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1800992039
 Prefab:
   m_ObjectHideFlags: 0
@@ -68649,6 +71013,23 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 1821739961}
   m_Script: {fileID: 11500000, guid: d5e0b931335008d4e8a2c8c6c6de6ffb, type: 3}
+--- !u!1 &1821739963 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1324513569943776, guid: 6fff0ca5824ef8d47a408a2e1812e615,
+    type: 2}
+  m_PrefabInternal: {fileID: 1821739961}
+--- !u!114 &1821739964
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1821739963}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1824999439
 Prefab:
   m_ObjectHideFlags: 0
@@ -69297,6 +71678,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1836487979}
   - component: {fileID: 1836487978}
+  - component: {fileID: 1836487980}
   m_Layer: 0
   m_Name: pipe_corner (2)
   m_TagString: Untagged
@@ -69361,6 +71743,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 35
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: -180}
+--- !u!114 &1836487980
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1836487977}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1841200012
 Prefab:
   m_ObjectHideFlags: 0
@@ -69497,6 +71891,7 @@ GameObject:
   - component: {fileID: 1850679737}
   - component: {fileID: 1850679736}
   - component: {fileID: 1850679735}
+  - component: {fileID: 1850679745}
   m_Layer: 10
   m_Name: NewEnemy (11)
   m_TagString: Untagged
@@ -70319,6 +72714,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 147
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1850679745
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1850679734}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1852445474
 GameObject:
   m_ObjectHideFlags: 0
@@ -70332,6 +72739,7 @@ GameObject:
   - component: {fileID: 1852445477}
   - component: {fileID: 1852445476}
   - component: {fileID: 1852445475}
+  - component: {fileID: 1852445480}
   m_Layer: 0
   m_Name: Exploding Crates (124)
   m_TagString: Exploding Crate
@@ -70462,6 +72870,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 119
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1852445480
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1852445474}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1855417746
 GameObject:
   m_ObjectHideFlags: 0
@@ -70965,6 +73385,7 @@ GameObject:
   - component: {fileID: 1885857996}
   - component: {fileID: 1885857995}
   - component: {fileID: 1885857994}
+  - component: {fileID: 1885857997}
   m_Layer: 8
   m_Name: Ground (102)
   m_TagString: Untagged
@@ -71057,6 +73478,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 115
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1885857997
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1885857993}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1888944252
 Prefab:
   m_ObjectHideFlags: 0
@@ -71243,6 +73676,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1889778308 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 1889778307}
+--- !u!114 &1889778309
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1889778308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1892441273
 GameObject:
   m_ObjectHideFlags: 0
@@ -71962,6 +74412,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1919384729}
   - component: {fileID: 1919384728}
+  - component: {fileID: 1919384730}
   m_Layer: 0
   m_Name: Paint_no escape (8)
   m_TagString: Untagged
@@ -72026,6 +74477,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 133
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 15.030001}
+--- !u!114 &1919384730
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1919384727}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1920571718
 Prefab:
   m_ObjectHideFlags: 0
@@ -72131,6 +74594,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 72b9c91cbdf2ffd40826c13f39cae319, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1928743408 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1034834059814532, guid: 72b9c91cbdf2ffd40826c13f39cae319,
+    type: 2}
+  m_PrefabInternal: {fileID: 1928743407}
+--- !u!114 &1928743409
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1928743408}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1939233816
 GameObject:
   m_ObjectHideFlags: 0
@@ -72144,6 +74624,7 @@ GameObject:
   - component: {fileID: 1939233819}
   - component: {fileID: 1939233818}
   - component: {fileID: 1939233817}
+  - component: {fileID: 1939233822}
   m_Layer: 0
   m_Name: Exploding Crates (14)
   m_TagString: Exploding Crate
@@ -72274,6 +74755,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 140
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1939233822
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1939233816}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1941652090
 Prefab:
   m_ObjectHideFlags: 0
@@ -72321,6 +74814,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 15e48844120ba804c8db512e77977151, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1941652091 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1888871145447298, guid: 15e48844120ba804c8db512e77977151,
+    type: 2}
+  m_PrefabInternal: {fileID: 1941652090}
+--- !u!114 &1941652092
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1941652091}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1945475250
 GameObject:
   m_ObjectHideFlags: 0
@@ -73057,6 +75567,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: a5975b39c0244c04784aa3b46bc5c483, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &1977061495 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1552966496903798, guid: a5975b39c0244c04784aa3b46bc5c483,
+    type: 2}
+  m_PrefabInternal: {fileID: 1977061494}
+--- !u!114 &1977061496
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1977061495}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &1980003587
 Prefab:
   m_ObjectHideFlags: 0
@@ -73491,6 +76018,7 @@ GameObject:
   - component: {fileID: 1986920027}
   - component: {fileID: 1986920026}
   - component: {fileID: 1986920025}
+  - component: {fileID: 1986920030}
   m_Layer: 0
   m_Name: Exploding Crates (113)
   m_TagString: Exploding Crate
@@ -73621,6 +76149,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 167
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1986920030
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1986920024}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1987568345
 GameObject:
   m_ObjectHideFlags: 0
@@ -73941,6 +76481,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &1988191371
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1988191369}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1992755308
 GameObject:
   m_ObjectHideFlags: 0
@@ -73949,6 +76501,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 1992755309}
+  - component: {fileID: 1992755310}
   m_Layer: 0
   m_Name: Office (5)
   m_TagString: Untagged
@@ -74010,6 +76563,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 95
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &1992755310
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1992755308}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &1995649223
 GameObject:
   m_ObjectHideFlags: 0
@@ -74111,6 +76676,7 @@ GameObject:
   m_Component:
   - component: {fileID: 1997137676}
   - component: {fileID: 1997137675}
+  - component: {fileID: 1997137677}
   m_Layer: 0
   m_Name: Paint_no escape (2)
   m_TagString: Untagged
@@ -74175,6 +76741,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 142
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 3.8530002}
+--- !u!114 &1997137677
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1997137674}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &2002357204
 GameObject:
   m_ObjectHideFlags: 0
@@ -75374,6 +77952,18 @@ PolygonCollider2D:
       - {x: 1.6075, y: 0.3425}
       - {x: 1.405, y: 0.3425}
       - {x: 1.3924999, y: 0.3275}
+--- !u!114 &2013635564
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2013635562}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &2015939035
 GameObject:
   m_ObjectHideFlags: 0
@@ -76796,6 +79386,7 @@ GameObject:
   - component: {fileID: 2068345591}
   - component: {fileID: 2068345590}
   - component: {fileID: 2068345589}
+  - component: {fileID: 2068345593}
   m_Layer: 0
   m_Name: Missile_Complete
   m_TagString: Exploding Crate
@@ -76984,6 +79575,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 139
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2068345593
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2068345588}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &2071068612
 Prefab:
   m_ObjectHideFlags: 0
@@ -77188,6 +79791,7 @@ GameObject:
   m_Component:
   - component: {fileID: 2078071506}
   - component: {fileID: 2078071505}
+  - component: {fileID: 2078071507}
   m_Layer: 0
   m_Name: X_red (1)
   m_TagString: Untagged
@@ -77252,6 +79856,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 78
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 18.88}
+--- !u!114 &2078071507
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2078071504}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &2078376614
 GameObject:
   m_ObjectHideFlags: 0
@@ -78271,6 +80887,7 @@ GameObject:
   - component: {fileID: 2127010587}
   - component: {fileID: 2127010586}
   - component: {fileID: 2127010585}
+  - component: {fileID: 2127010588}
   m_Layer: 0
   m_Name: pipe_2 (9)
   m_TagString: Untagged
@@ -78366,6 +80983,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 114
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2127010588
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2127010584}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &2133327564
 Prefab:
   m_ObjectHideFlags: 0
@@ -78580,6 +81209,23 @@ Prefab:
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: eb017717f9b128e41922e6b0fe5e27a1, type: 2}
   m_IsPrefabParent: 0
+--- !u!1 &2135796585 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1062719958533648, guid: eb017717f9b128e41922e6b0fe5e27a1,
+    type: 2}
+  m_PrefabInternal: {fileID: 2135796584}
+--- !u!114 &2135796586
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2135796585}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1 &2136236706
 GameObject:
   m_ObjectHideFlags: 0
@@ -78590,6 +81236,7 @@ GameObject:
   - component: {fileID: 2136236709}
   - component: {fileID: 2136236708}
   - component: {fileID: 2136236707}
+  - component: {fileID: 2136236710}
   m_Layer: 0
   m_Name: Moniter Trigger (2)
   m_TagString: Untagged
@@ -78648,6 +81295,18 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 49
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &2136236710
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2136236706}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!1001 &2136370853
 Prefab:
   m_ObjectHideFlags: 0
@@ -78885,3 +81544,20 @@ MonoBehaviour:
     type: 2}
   m_PrefabInternal: {fileID: 2143316331}
   m_Script: {fileID: 11500000, guid: 5751fae6eb3ccb04cbcf8ae69020a776, type: 3}
+--- !u!1 &2143316333 stripped
+GameObject:
+  m_PrefabParentObject: {fileID: 1394082396367006, guid: 036c6832c47f9844cbb34fb23d15446f,
+    type: 2}
+  m_PrefabInternal: {fileID: 2143316331}
+--- !u!114 &2143316334
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 2143316333}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
