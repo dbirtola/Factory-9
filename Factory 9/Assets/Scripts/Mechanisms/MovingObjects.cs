@@ -5,7 +5,8 @@ using UnityEngine;
 public class MovingObjects : MonoBehaviour
 {
 
-
+    //if changing direction
+    public bool reverse = false;
 
     //Wait time at positions
     public float waitTime;
@@ -33,6 +34,7 @@ public class MovingObjects : MonoBehaviour
         {
             Waypoints[i] = PathObject.transform.GetChild(i);//store array with transforms of Children
         }
+
         if (NumOfWaypoints <= 0)//If there are no waypoints, RETURN
             return;
 
@@ -48,10 +50,13 @@ public class MovingObjects : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
-        if (isWaiting == false)
-        {
+        Forward();
+        Reverse();
+    }
 
- 
+    void Forward() {
+        if (isWaiting == false && reverse == false)
+        {
 
             currentPatrolPoint = Waypoints[startPoint];//set patrol point
             WayPointDirection = currentPatrolPoint.position - transform.position;//find the direction to travel
@@ -59,15 +64,10 @@ public class MovingObjects : MonoBehaviour
             WayPointDirection.Normalize();
             VelocityDirectionAndMagnitude = speed * WayPointDirection;
 
-
-
-
-
             //Set the Direction
             FindDirection();
-            
-            GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
 
+            GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
 
             if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
             {
@@ -99,30 +99,51 @@ public class MovingObjects : MonoBehaviour
             }
         }
     }
+    void Reverse() {
+        if (isWaiting == false && reverse == true)
+        {
+            currentPatrolPoint = Waypoints[startPoint];//set patrol point
+            WayPointDirection = currentPatrolPoint.position - transform.position;//find the direction to travel
 
-    /*
-    private void OnCollisionEnter2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<RobotController>() && GetComponent<Rigidbody2D>().velocity.x != 0 && GetComponent<Rigidbody2D>().velocity.y != 0)
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-    }
-    
-    private void OnCollisionExit2D(Collision2D collision)
-    {
-       // if (collision.gameObject.GetComponent<RobotController>() && GetComponent<Rigidbody2D>().velocity.x != 0 && GetComponent<Rigidbody2D>().velocity.y != 0)
-         //   collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-         if (collision.gameObject.GetComponent<RobotController>() && collision.gameObject.GetComponent<RobotController>().state)
-    }
+            WayPointDirection.Normalize();
+            VelocityDirectionAndMagnitude = speed * WayPointDirection;
 
-    private void OnCollisionStay2D(Collision2D collision)
-    {
-        if (collision.gameObject.GetComponent<RobotController>())
-            collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-       // else if (collision.gameObject.GetComponent<RobotController>() && GetComponent<Rigidbody2D>().velocity.x == 0 && GetComponent<Rigidbody2D>().velocity.y == 0)
-       //     collision.gameObject.GetComponent<Rigidbody2D>().velocity = GetComponent<Rigidbody2D>().velocity;
-        ;
+            //Set the Direction
+            FindDirection();
+
+            GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
+
+            if (Vector2.Distance(transform.position, currentPatrolPoint.position) <= 1.2)
+            {
+
+                StartCoroutine(WaitAtWayPoint(waitTime));
+
+
+                //check to see if we have any more patrol points
+                if (startPoint - 1 >= 0)
+                {
+                    startPoint--;
+                    currentPatrolPoint = Waypoints[startPoint];//set the new patrol point
+                    WayPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
+                    FindDirection();
+                }
+                else // end of array is reached, loop back through the patrol points
+                {
+                    startPoint = Waypoints.Length-1;
+                    currentPatrolPoint = Waypoints[startPoint];//set the new patrol point
+                    WayPointDirection = currentPatrolPoint.position - transform.position;//find the new direction
+                    FindDirection();
+                }
+            }
+            else
+            {
+                GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
+
+
+            }
+        }
+
     }
-    */
     void FindDirection()
     {
         //Finds the Direction in which to Travel
@@ -143,10 +164,12 @@ public class MovingObjects : MonoBehaviour
 
         isWaiting = true;
         //GetComponent<Rigidbody2D>().velocity = new Vector2(0, 0);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(0,y: 0);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(0, y: 0);
         yield return new WaitForSeconds(waitTime);
         isWaiting = false;
         GetComponent<Rigidbody2D>().velocity = new Vector2(VelocityDirectionAndMagnitude.x, VelocityDirectionAndMagnitude.y);
 
     }
+
+
 }
