@@ -298,6 +298,7 @@
     <Compile Include="Assets\GrapplingHook.cs" />
     <Compile Include="Assets\Ingredient.cs" />
     <Compile Include="Assets\InvisibleTrigger.cs" />
+    <Compile Include="Assets\JumpSequence.cs" />
     <Compile Include="Assets\LavaDamageCollider.cs" />
     <Compile Include="Assets\LavaPool.cs" />
     <Compile Include="Assets\Lavaspout.cs" />

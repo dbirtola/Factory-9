@@ -1,4 +1,12 @@
 sceneSetups:
+<<<<<<< HEAD
 - path: Assets/Scenes/DamenTest.unity
+=======
+<<<<<<< HEAD
+- path: Assets/Scenes/Main.unity
+=======
+- path: Assets/Scenes/FinalLevel.unity
+>>>>>>> c03b01b781efcfa5ae34fbbea497e8a5c92f79a3
+>>>>>>> 4fd38906aa4346d12b90a5acd5b27e99c5b9722a
   isLoaded: 1
   isActive: 1
