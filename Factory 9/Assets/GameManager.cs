@@ -2,7 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.SceneManagement;
-
+using UnityEngine.UI;
 
 [System.Serializable]
 public class checkPointLevelPair
@@ -25,6 +25,10 @@ public class GameManager : MonoBehaviour {
     public bool loadMainOnStart = true;
 
     public Scene sceneToBeUnloaded;
+
+    public Image fadeToBlackImage;
+    public float fadeSpeed = 0.5f;
+
 
 	// Use this for initialization
 	void Start () {
@@ -74,6 +78,48 @@ public class GameManager : MonoBehaviour {
         */
     }
 
+    public void StartGame()
+    {
+        StartCoroutine(startGame());
+    }
+    public IEnumerator startGame()
+    {
+        fadeToBlackImage.gameObject.SetActive(true);
+
+        yield return StartCoroutine(loadLevel("Main", true));
+        Checkpoint mainCheckPoint = null;
+        foreach(checkPointLevelPair cp in checkPointLevelPairs)
+        {
+            if (cp.LevelName == "Main")
+                mainCheckPoint = cp.checkPoint;
+        }
+
+        PlayerController.player.transform.position = mainCheckPoint.transform.position;
+        activeCheckpoint = mainCheckPoint;
+
+        Vector3 newCameraPosition = PlayerController.player.transform.position;
+        newCameraPosition.z = Camera.main.transform.position.z;
+        Camera.main.transform.position = newCameraPosition;
+
+        yield return StartCoroutine(fadeOut(fadeToBlackImage));
+        fadeToBlackImage.gameObject.SetActive(false);
+
+    }
+
+
+    public IEnumerator fadeOut(Image img)
+    {
+        while(img.color.a > 0)
+        {
+            Color c = img.color;
+            c.a -= fadeSpeed * Time.deltaTime;
+            img.color = c;
+            yield return null;
+        }
+
+        yield return true;
+    }
+
     public IEnumerator gotoLevel(string level)
     {
         var parts = FindObjectsOfType<BodyPart>();
@@ -96,9 +142,11 @@ public class GameManager : MonoBehaviour {
                 Vector3 newCameraPosition = PlayerController.player.transform.position;
                 newCameraPosition.z = Camera.main.transform.position.z;
                 Camera.main.transform.position = newCameraPosition;
+                Camera.main.GetComponent<FactoryCamera>().target = PlayerController.player.gameObject;
 
             }
         }
+        
         //Take down splash screen
 
 
