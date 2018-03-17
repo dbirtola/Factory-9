@@ -67,6 +67,7 @@
      <Compile Include="Assets\GrapplingHook.cs" />
      <Compile Include="Assets\Ingredient.cs" />
      <Compile Include="Assets\InvisibleTrigger.cs" />
+     <Compile Include="Assets\JumpSequence.cs" />
      <Compile Include="Assets\LavaDamageCollider.cs" />
      <Compile Include="Assets\LavaPool.cs" />
      <Compile Include="Assets\Lavaspout.cs" />
@@ -104,6 +105,7 @@
      <Compile Include="Assets\Scripts\Mechanisms\MovingObjects.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\Rope.cs" />
      <Compile Include="Assets\Scripts\Mechanisms\SlidingUpDoor.cs" />
+     <Compile Include="Assets\Scripts\Mechanisms\WorkerDispenser.cs" />
      <Compile Include="Assets\Scripts\Player.cs" />
      <Compile Include="Assets\Scripts\Projectile.cs" />
      <Compile Include="Assets\Scripts\Robots\Arm.cs" />
