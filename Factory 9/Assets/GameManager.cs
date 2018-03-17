@@ -100,6 +100,7 @@ public class GameManager : MonoBehaviour {
         Vector3 newCameraPosition = PlayerController.player.transform.position;
         newCameraPosition.z = Camera.main.transform.position.z;
         Camera.main.transform.position = newCameraPosition;
+        Camera.main.GetComponent<FactoryCamera>().target = PlayerController.player.gameObject;
 
         yield return StartCoroutine(fadeOut(fadeToBlackImage));
         fadeToBlackImage.gameObject.SetActive(false);
@@ -146,7 +147,8 @@ public class GameManager : MonoBehaviour {
 
             }
         }
-        
+
+        PlayerController.playerController.SetMovementEnabled(true);
         //Take down splash screen
 
 
@@ -180,6 +182,7 @@ public class GameManager : MonoBehaviour {
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(activeCheckpoint.sceneName));
         UIManager.uiManager.Init();
+        PlayerController.playerController.SetMovementEnabled(true);
 
     }
     /*
@@ -229,7 +232,7 @@ public class GameManager : MonoBehaviour {
         yield return asyncOp;
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(levelName));
-        
+        PlayerController.playerController.SetMovementEnabled(true);
         yield return true;
 
     }
