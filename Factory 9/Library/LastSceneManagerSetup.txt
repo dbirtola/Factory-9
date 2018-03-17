@@ -1,23 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/PartsLevel.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Init.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/LukeTest.unity
-=======
-<<<<<<< HEAD
-- path: Assets/Scenes/Init.unity
-=======
-- path: Assets/Scenes/FinalLevel.unity
->>>>>>> 4d5cc89f5032312df04aa789d19d84ad8ee79f43
->>>>>>> ce2765fd1f4a0b7a396d8c3713e4b1851fbb202c
->>>>>>> 5c3d21fa51a8c7336dc749928043fbba36d0bc8d
->>>>>>> a38240e37fde7c5f590a6a74052e59a67f101937
-  isLoaded: 1
-  isActive: 1
 - path: Assets/Scenes/Main.unity
   isLoaded: 1
-  isActive: 0
+  isActive: 1
