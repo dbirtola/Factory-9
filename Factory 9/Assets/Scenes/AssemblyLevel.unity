@@ -10422,6 +10422,46 @@ Prefab:
       propertyPath: m_RootOrder
       value: 20
       objectReference: {fileID: 0}
+    - target: {fileID: 61906321316409084, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Offset.x
+      value: -0.65
+      objectReference: {fileID: 0}
+    - target: {fileID: 61906321316409084, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Offset.y
+      value: 1.44
+      objectReference: {fileID: 0}
+    - target: {fileID: 61906321316409084, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Size.x
+      value: 3.13
+      objectReference: {fileID: 0}
+    - target: {fileID: 61906321316409084, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Size.y
+      value: 8.06
+      objectReference: {fileID: 0}
+    - target: {fileID: 61906321316409084, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 212498229649537236, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212842871449163436, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
+    - target: {fileID: 212398276165740012, guid: 65a78741a9b74eb4d8575ef698383d96,
+        type: 2}
+      propertyPath: m_Enabled
+      value: 0
+      objectReference: {fileID: 0}
     m_RemovedComponents: []
   m_ParentPrefab: {fileID: 100100000, guid: 65a78741a9b74eb4d8575ef698383d96, type: 2}
   m_IsPrefabParent: 0
@@ -57626,12 +57666,12 @@ Prefab:
         type: 2}
       propertyPath: targetObjects.Array.data[1]
       value: 
-      objectReference: {fileID: 682216744}
+      objectReference: {fileID: 1449486094}
     - target: {fileID: 114588947343960884, guid: 6943d7f08b91bc94c9b17b2622cc6c77,
         type: 2}
       propertyPath: targetObjects.Array.data[0]
       value: 
-      objectReference: {fileID: 0}
+      objectReference: {fileID: 682216744}
     - target: {fileID: 4209572406843144, guid: 6943d7f08b91bc94c9b17b2622cc6c77, type: 2}
       propertyPath: m_LocalScale.x
       value: -1
