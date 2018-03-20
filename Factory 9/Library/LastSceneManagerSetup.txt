@@ -1,8 +1,4 @@
 sceneSetups:
-<<<<<<< HEAD
-- path: Assets/Scenes/NEWASSEMBLYLEVEL.unity
-=======
-- path: Assets/Scenes/AssemblyLevel.unity
->>>>>>> f06ae503e59381f4e5fe006d67b6035b1b3ab668
+- path: Assets/Scenes/Init.unity
   isLoaded: 1
   isActive: 1
