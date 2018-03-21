@@ -280,6 +280,24 @@ public class Robot : MonoBehaviour {
 
     }
 
+    public void stripRobot()
+    {
+        for (int i = 0; i < 5; i++)
+        {
+            if (LoseArm(leftArm, true) == false)
+            {
+                if (LoseArm(rightArm, true) == false)
+                {
+                    if (LoseLegs(true) == false)
+                    {
+                        //Die();
+                    }
+
+                }
+            }
+        }
+    }
+
     public void takeDamage(int damage, GameObject attacker, bool withHitPause = true)
     {
         if (isInvulnerable == true)
