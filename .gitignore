@@ -3,4 +3,5 @@
 
 !.gitignore
 !/Assets/
-!/ProjectSettings/!/Build/
+!/ProjectSettings/
+!/Build/
