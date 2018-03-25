@@ -14,8 +14,8 @@ public class PlayerController : MonoBehaviour {
     public bool leftMovementEnabled = true;
     public bool rightMovementEnabled = true;
 
-    
 
+    public bool isInVent = false;
 
     public bool isStealthed = false;
 
