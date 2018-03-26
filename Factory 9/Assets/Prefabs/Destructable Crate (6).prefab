@@ -38,8 +38,8 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1002647821221526}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -17.8623, y: 0.1127, z: 0}
-  m_LocalScale: {x: 0.8552707, y: 0.8552707, z: 1.5394871}
+  m_LocalPosition: {x: -17.36, y: 0.112703115, z: 0}
+  m_LocalScale: {x: 0.85527223, y: 0.85527223, z: 1.53949}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 0
@@ -105,8 +105,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   health: 1
-  primaryParticles: {fileID: 0}
-  secondaryParticle: {fileID: 0}
+  primaryParticles: {fileID: 1081446411559168, guid: 496570989d248344c95a918c5190c830,
+    type: 2}
+  secondaryParticle: {fileID: 1535918158291412, guid: bb54c92f509d6b94a860200170446368,
+    type: 2}
 --- !u!114 &114723044459098126
 MonoBehaviour:
   m_ObjectHideFlags: 1

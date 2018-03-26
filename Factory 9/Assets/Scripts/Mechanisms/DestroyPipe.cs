@@ -27,7 +27,6 @@ public class DestroyPipe : MonoBehaviour {
             else
                 if (coll.gameObject.tag == inputObject[i].gameObject.tag)//delete object
             {
-                Debug.Log("tage equal");
                 input = inputObject[i];
                 Destroy(input);
                // GetComponent<BoxCollider2D>().isTrigger = false;

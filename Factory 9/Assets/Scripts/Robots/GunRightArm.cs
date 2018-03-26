@@ -12,7 +12,7 @@ public class GunRightArm : RightArm {
     float timeFired = -1;
 
     bool canFire = true;
-    private float cooldown = 0.3f;
+    public float cooldown = 0.3f;
 
 	// Use this for initialization
 	void Start () {
