@@ -159,6 +159,10 @@ public class GameManager : MonoBehaviour {
             if (checkPointLevelPair.LevelName == level)
             {
                 PlayerController.player.transform.position = checkPointLevelPair.checkPoint.transform.position;
+
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"), false);
+                Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"), false);
+
                 activeCheckpoint = checkPointLevelPair.checkPoint;
 
                 Vector3 newCameraPosition = PlayerController.player.transform.position;
@@ -170,6 +174,7 @@ public class GameManager : MonoBehaviour {
         }
 
         PlayerController.playerController.SetMovementEnabled(true);
+
         //Take down splash screen
 
 
@@ -205,6 +210,9 @@ public class GameManager : MonoBehaviour {
 
         SceneManager.SetActiveScene(SceneManager.GetSceneByName(activeCheckpoint.sceneName));
         UIManager.uiManager.Init();
+
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Player"), LayerMask.NameToLayer("Platform"), false);
+        Physics2D.IgnoreLayerCollision(LayerMask.NameToLayer("Stealth"), LayerMask.NameToLayer("Platform"), false);
         PlayerController.playerController.SetMovementEnabled(true);
 
     }
