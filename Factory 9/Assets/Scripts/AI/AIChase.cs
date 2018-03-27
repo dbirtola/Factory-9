@@ -78,10 +78,10 @@ public class AIChase : MonoBehaviour {
 
     IEnumerator RobotStuck(float pauseTime)
     {
-        isChasing = false;
+      //  isChasing = false;
         //pause enemy at stuck position
         yield return new WaitForSeconds(pauseTime);
-        isChasing = true;
+      //  isChasing = true;
     }
 
     IEnumerator ChasingDirection(float pauseTime)

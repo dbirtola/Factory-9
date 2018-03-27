@@ -817,6 +817,7 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4689817291890364}
+  - component: {fileID: 114785642305769448}
   m_Layer: 0
   m_Name: LargeBrokenOffice
   m_TagString: Untagged
@@ -998,7 +999,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1799455787022690}
   m_LocalRotation: {x: -0, y: -0, z: 0.5284382, w: 0.8489718}
-  m_LocalPosition: {x: 7.5072, y: 0.6042176, z: 0.05}
+  m_LocalPosition: {x: 7.3893995, y: 0.6042176, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1143,7 +1144,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1976762967518886}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 5.940801, y: -0.14724733, z: 0.05}
+  m_LocalPosition: {x: 5.823001, y: -0.14724733, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1156,7 +1157,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648355626556954}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 8.488001, y: -0.008575439, z: 0.05}
+  m_LocalPosition: {x: 8.3702, y: -0.008575439, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1336,7 +1337,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1753786303308658}
   m_LocalRotation: {x: -0, y: -0, z: 0.5, w: 0.8660254}
-  m_LocalPosition: {x: 6.9456, y: 0.42022708, z: 0.05}
+  m_LocalPosition: {x: 6.8278, y: 0.42022708, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1492,7 +1493,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1823585755066670}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -26.84, y: -178.25, z: 0}
+  m_LocalPosition: {x: 17.45, y: -178.25, z: 0}
   m_LocalScale: {x: 0.8, y: 0.8, z: 1}
   m_Children:
   - {fileID: 4248911157866132}
@@ -1589,7 +1590,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1036730857337610}
   m_LocalRotation: {x: -0, y: -0, z: 0.7071068, w: 0.7071068}
-  m_LocalPosition: {x: 7.380801, y: -0.14724733, z: 0.05}
+  m_LocalPosition: {x: 7.263, y: -0.14724733, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1732,7 +1733,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1993030444887688}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 7.9813337, y: -0.008575439, z: 0.05}
+  m_LocalPosition: {x: 7.8635335, y: -0.008575439, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1758,7 +1759,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1135089070312254}
   m_LocalRotation: {x: -0, y: -0, z: 0.38268343, w: 0.92387956}
-  m_LocalPosition: {x: 6.616534, y: 0.04581706, z: 0.05}
+  m_LocalPosition: {x: 6.498734, y: 0.04581706, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
@@ -1771,12 +1772,24 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1300669217138716}
   m_LocalRotation: {x: -0, y: -0, z: 0.4059393, w: 0.9139001}
-  m_LocalPosition: {x: 8.139734, y: 0.7167562, z: 0.05}
+  m_LocalPosition: {x: 8.021934, y: 0.7167562, z: 0.05}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4122476282586864}
   m_RootOrder: 8
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 47.9}
+--- !u!114 &114785642305769448
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1823585755066670}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b82620712192e644aabe24ea7e57483b, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  velocity: {x: 0, y: 0}
 --- !u!212 &212006070004265988
 SpriteRenderer:
   m_ObjectHideFlags: 1

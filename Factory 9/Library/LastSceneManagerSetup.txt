@@ -1,13 +1,4 @@
 sceneSetups:
 - path: Assets/Scenes/PartsLevel.unity
-<<<<<<< HEAD
-=======
-  isLoaded: 0
-  isActive: 0
-- path: Assets/Scenes/Init.unity
->>>>>>> 47a0ee8e2f858ca8fae6114c47a45f2ad0103b30
   isLoaded: 1
   isActive: 1
-- path: Assets/Scenes/NEWASSEMBLYLEVEL.unity
-  isLoaded: 0
-  isActive: 0
