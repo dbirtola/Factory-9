@@ -50,7 +50,7 @@ public class SlidingUpDoor : Activateable {
 
     public override void Deactivate()
     {
-        audioSource.Play();
+        //audioSource.Play();
         if(activated)
             Close();
         base.Deactivate();
