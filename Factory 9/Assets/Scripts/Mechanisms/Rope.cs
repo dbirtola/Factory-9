@@ -4,98 +4,98 @@ using UnityEngine;
 
 public class Rope : Activateable {
 
+    //Prefab for the segments we should use constructing the rope. Should have a HingeJoint2D on them and a RigidBody2D.
     public GameObject ropeSegment;
+
+    //Number of sections to use when calling GenerateRope
     public int numberOfSections;
+
+    //Anchor point for each segments hingejoint to connect to newly created segments
     public Vector2 anchorPoint;
+
+    //Mass to assign to each segment. Increase to make rope break easier
     public float mass;
-    //Vector2 
-
-    public GameObject lastSegment { get; private set; }
-
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
-		
-	}
 
 
     public GameObject GetLastSegment()
     {
-        return transform.GetChild(transform.childCount - 1).gameObject;
+        if(transform.childCount > 0)
+        {
+            return transform.GetChild(transform.childCount - 1).gameObject;
+        }
+        else
+        {
+            return null;
+        }
     }
 
+
+    //Deletes existing segments and generates a new rope using numberOfSections segments
     public void GenerateRope()
     {
-        foreach (Transform t in transform)
+        for(int i = transform.childCount - 1; i >= 0; i--)
         {
-            DestroyImmediate(t.gameObject);
+            DestroyImmediate(transform.GetChild(i).gameObject);
         }
 
 
-
+        //Manually create the first segment, as AddSegment assumes lastSegment contains a valid gameobject.
         var initialSeg = Instantiate(ropeSegment, transform.position, Quaternion.identity);
         initialSeg.transform.SetParent(transform);
         initialSeg.transform.localPosition = Vector3.zero;
+
+        //Replace the typical HingeJoint with a FixedJoint so that the rope can be attached to a position in the world.
         DestroyImmediate(initialSeg.GetComponent<HingeJoint2D>());
         initialSeg.AddComponent<FixedJoint2D>();
-
-        lastSegment = initialSeg;
-        //-1 because we already created the intial segment.
-        for (int i = 1; i <= numberOfSections -1; i++)
+        
+        // -1 because we already created the intial segment.
+        for (int i = 0; i < numberOfSections -1; i++)
         {
-            /*
-            Vector3 pos = new Vector3(0, i * -0.2f, 0);
-
-            var seg = Instantiate(ropeSegment, pos, Quaternion.identity);
-            seg.transform.SetParent(transform);
-            seg.transform.localPosition = pos;
-            seg.GetComponent<Rigidbody2D>().mass = mass;
-
-
-            HingeJoint2D hj = seg.GetComponent<HingeJoint2D>();
-            hj.anchor = anchorPoint;
-            hj.connectedBody = lastSegment.GetComponent<Rigidbody2D>();
-            lastSegment = seg;
-            */
-
             AddSegment();
         }
     }
 
+    //Adds a new segment to the end of the rope.
     public GameObject AddSegment()
     {
         var lastSegment = GetLastSegment();
-        Vector3 pos = lastSegment.transform.localPosition + new Vector3(0, -0.2f, 0);
 
+        //In case the designer wants to use the AddSegment button instead of the GenerateRope button to start a rope.
+        if(lastSegment == null)
+        {
+            numberOfSections = 1;
+            GenerateRope();
+            return GetLastSegment();
+        }
+
+        //TODO: Calculate distance between segments based on the rope segment prefab passed in
+        Vector3 pos = pos = lastSegment.transform.localPosition + new Vector3(0, -0.2f, 0);
+
+        //Initialize the segment to match the ropes variables
         var seg = Instantiate(ropeSegment, pos, Quaternion.identity);
         seg.transform.SetParent(transform);
         seg.transform.localPosition = pos;
         seg.GetComponent<Rigidbody2D>().mass = mass;
 
 
-
+        //Connect the segment to the last segment in the rope
         HingeJoint2D hj = seg.GetComponent<HingeJoint2D>();
         hj.anchor = anchorPoint;
         hj.connectedBody = lastSegment.GetComponent<Rigidbody2D>();
-
-        lastSegment = seg;
+        
         return seg;
     }
 
 
-
+    //Removes the most recently aded segment
     public void DeleteLastSegment()
     {
-        DestroyImmediate(lastSegment.gameObject);
-        lastSegment = transform.GetChild(transform.childCount - 1).gameObject;
+        DestroyImmediate(GetLastSegment());
     }
 
 
-
+    //Activating a rope causes it to cut in half, destroying a segment in the center will destroy the
+    //physics constraints and release half of the rope
     public override void Activate()
     {
         base.Activate();
