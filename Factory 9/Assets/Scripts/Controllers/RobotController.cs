@@ -65,10 +65,6 @@ public class RobotController : MonoBehaviour {
             anim.SetInteger("RobotState", (int)state);
             anim.SetBool("Pushing", pushing);
         }
-        if (robot.leftArm != null)
-        {
-
-        }
         if (robot.rightArm != null)
         {
             var anim = robot.rightArm.GetComponent<Animator>();
@@ -88,14 +84,13 @@ public class RobotController : MonoBehaviour {
         if (lastSurfaceHit != null)
         {
             var distanceFromLastSurface = lastSurfaceHit.GetComponent<Collider2D>().Distance(GetComponent<Collider2D>());
-            //Debug.DrawLine(distanceFromLastSurface.pointA, distanceFromLastSurface.pointB, Color.white);
             if (distanceFromLastSurface.distance >= 0.2f)
             {
                 state = RobotState.InAir;
             }
         }
 
-        //Adding an additional force to make robots drop faster as to improve game feel.
+        //Adding an additional force to make robots drop faster after they reach the apex of their jump to improve game feel.
         if (state == RobotState.InAir && rb.velocity.y < 0)
         {
             rb.AddForce(new Vector2(0, TheFloatyFeelingFixingFloat * Time.deltaTime * 100));
@@ -103,7 +98,6 @@ public class RobotController : MonoBehaviour {
 
         //Check if on ground
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
-       // RaycastHit2D hit = Physics2D.Raycast(transform.position, Vector3.up * -1, 1.5f);
 
         Debug.DrawRay(transform.position, Vector3.up * -1 * 1.5f, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
@@ -111,18 +105,19 @@ public class RobotController : MonoBehaviour {
             state = RobotState.OnGround;
         }
 
-        //Have the robot grab the wall
+        //If robots are against a wall, "grab" the wall by zeroing out any falling velocity
         if (state == RobotState.OnWall && rb.velocity.y <= 0 && isInAirVent == false)
         {
             if (rb.velocity.y <= 0)
                 rb.velocity = new Vector2(rb.velocity.x, 0);
 
+            //Release from the wall if there was no input in wallStickDuration amount of time
             if (Time.time - timeAttatchedToWall >= wallStickDuration)
                 state = RobotState.InAir;
 
         }
 
-
+       
         if (state == RobotState.OnGround && rb.velocity.magnitude <= 0.2f)
         {
             //Spaghetti
@@ -137,6 +132,7 @@ public class RobotController : MonoBehaviour {
     }
 
 
+    //Activates the primary functionality the right arm has
     public void FireRightArm(Vector3 targetPosition)
     {
         if (robot.rightArm != null)
@@ -145,6 +141,7 @@ public class RobotController : MonoBehaviour {
         }
     }
 
+    //Activates the primary functionality of the left arm
     public void FireLeftArm(Vector3 targetPosition)
     {
         if (robot.leftArm != null)
@@ -153,7 +150,7 @@ public class RobotController : MonoBehaviour {
         }
     }
 
-
+    //Punch, prioritizing the right arm. If there is no right arm, attempt to punch with the left arm.
     public void Punch()
     {
         if (robot.rightArm != null)
@@ -165,7 +162,7 @@ public class RobotController : MonoBehaviour {
         }
     }
 
-    //Should move to robot itself not controller
+    //Applies a force to the object based on the punch strength of the robots strongest arm. Returns true if push was succesful. Should move to robot itself not controller
     public bool pushObject(GameObject other)
     {
         Arm strongerArm = null;
@@ -199,7 +196,6 @@ public class RobotController : MonoBehaviour {
         if (strongerArm == null)
             return false;
 
-        //state = RobotState.Pushing;
         
         Vector3 direction;
         if (isFacingLeft)
@@ -211,10 +207,10 @@ public class RobotController : MonoBehaviour {
             direction = Vector3.right;
         }
 
+        //Apply push force in proper direction on the game object that was passed in
         Rigidbody2D otherRB = other.gameObject.GetComponent<Rigidbody2D>();
         if (otherRB != null && otherRB.mass < strongerArm.pushableMass)
         {
-            //otherRB.AddForce(direction * robot.pushingPower);
             otherRB.velocity = new Vector2(direction.x * strongerArm.pushingSpeed, otherRB.velocity.y);
         }
 
@@ -222,11 +218,12 @@ public class RobotController : MonoBehaviour {
 
     }
 
+    //Moves the robot horizontally with 'speed' units of force per second. Negative speeds move left.
     public void MoveHorizontal(float speed)
     {
-        //transform.position += Vector3.right * speed;
         rb.AddForce(Vector2.right * speed * Time.deltaTime);
 
+        //Detect if the robot is still on the ground after the move
         RaycastHit2D hit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, 1f);
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - Vector3.up * 3), Vector3.up * -1, Color.white, 0.1f);
         if (hit.collider != null && hit.distance <= 0.2f)
@@ -236,6 +233,8 @@ public class RobotController : MonoBehaviour {
 
         //Asume we arent pushing unless we are running into an object
         pushing = false;
+        
+        //If we are running into an object and we are on the ground, push it
         Debug.DrawRay(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x * 0.2f, Color.white, 0.2f);
         RaycastHit2D pushHit = Physics2D.Raycast(GetComponent<Collider2D>().bounds.ClosestPoint(transform.position - new Vector3(0, 1, 0) + transform.right * transform.lossyScale.x * 3f), transform.right * transform.lossyScale.x, 0.2f);
         if(state == RobotState.OnGround && pushHit.collider != null && pushHit.distance <= 0.1f)
@@ -254,8 +253,7 @@ public class RobotController : MonoBehaviour {
         }
 
 
-        //Animations
-
+        //Updating animation states
         if (robot.legs != null)
         {
             if (speed > 0)
@@ -276,9 +274,10 @@ public class RobotController : MonoBehaviour {
     }
    
 
+    //Flips the robot to face left or right, updates animation states as needed
     public void FaceLeft(bool shouldFaceLeft = true)
     {
-
+        //Flip scale of character to make it face left.
         if (shouldFaceLeft)
         {
             transform.localScale = new Vector3(-1, 1, 1);
@@ -287,9 +286,10 @@ public class RobotController : MonoBehaviour {
             transform.localScale = new Vector3(1, 1, 1);
         }
         
+
+        //If the robot has legs and is against a wall, the legs need to be flipped opposite of their current sprite to line up with the wall
         if(robot.legs != null)
         {
-
             
            if(state == RobotState.OnWall)  {
 
@@ -306,18 +306,20 @@ public class RobotController : MonoBehaviour {
     }
 
 
-
+    //Has the robot jump based on the jump force set on the robot script
     public void Jump()
     {
         if (state != RobotState.InAir)
         {
             rb.AddForce(Vector2.up * robot.jumpPower);
+
+            //If the robot is on the wall we apply extra forces to help make wall jumping easier for players
             if(state == RobotState.OnWall)
             {
-                //Adding a bonus force to wall jumps for game feel
+                //Adding a bonus force upward to wall jumps for game feel
                 rb.AddForce(Vector2.up * robot.jumpPower * WallJumpBonusPercent);
 
-                //Calculate direction to push away from wall
+                //Calculate direction to push away from wall based on the location of the wall and the location of the robot
                 Vector2 dir = new Vector2();
                 if(lastSurfaceHit.transform.position.x - transform.position.x > 0)
                 {
@@ -337,6 +339,7 @@ public class RobotController : MonoBehaviour {
         }
     }
 
+    //Sets the robots state to OnGround and updates the animations
     void HitGround()
     {
         state = RobotState.OnGround;
@@ -347,6 +350,7 @@ public class RobotController : MonoBehaviour {
         }
     }
 
+    //Sets the robot state to OnWall, updates the lastSurfaceHit class value with the wall that they hit, and sets the wall grab timer
     void HitWall(GameObject wall)
     {
         if(lastSurfaceHit != wall)
@@ -358,10 +362,6 @@ public class RobotController : MonoBehaviour {
         lastSurfaceHit = wall;
     }
 
-    void HitCeiling()
-    {
-
-    }
     
     void OnCollisionStay2D(Collision2D col)
     {
@@ -439,10 +439,16 @@ public class RobotController : MonoBehaviour {
 
     }
 
+
     void OnCollisionEnter2D(Collision2D col)
     {
+        //Unity is sometimes calling this function without valid contacts in the Collision2D object
         if (col.contacts.Length < 1)
             return;
+
+
+        //We will classify surfaces hit as ground if the angle of collision is less than 45 degrees, walls if it is less than 100, and ceileings otherwise
+
 
         //This treats up as 0 degrees. Left and right are 90 degrees.
         float angleOfCollision = Vector2.Angle(col.contacts[0].normal, Vector2.up);
@@ -469,15 +475,12 @@ public class RobotController : MonoBehaviour {
             }
 
         }
-        else
-        {
-            HitCeiling();
-        }
         lastSurfaceHit = col.gameObject;
 
     }
     
 
+    //Turns the robots head light on or off
     public void SetHeadlightOn(bool on = true)
     {
         var light = GetComponentInChildren<RobotHeadLamp>();

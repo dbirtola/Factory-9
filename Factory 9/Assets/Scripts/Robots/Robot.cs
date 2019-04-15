@@ -4,6 +4,8 @@ using UnityEngine;
 using UnityEngine.Events;
 
 
+
+//These can be unified as one GameObjectEvent class
 public class RobotDiedEvent : UnityEvent<GameObject>
 {
 
